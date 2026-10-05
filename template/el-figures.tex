@@ -1,0 +1,39 @@
+% ============================================================
+%  Electromagnetics — figures, captions and tables
+%  A figure is template/figures/<name>.tex (TikZ / PGFPlots), always drawn left to right.
+% ============================================================
+\newsavebox{\ELfigbox}
+\newlength{\ELfigh}
+% the caption: "Figure 2.3" in the number colour, a thin gold stroke, the caption in slate
+\newcommand{\ELcaptionline}[3]{% label word, number, caption
+  {\small\color{ELcMuted}{\ELheadfont\bfseries\color{ELcNumber}#1~#2}%
+   \if\relax\detokenize{#3}\relax\else\hspace{0.55em}{\color{ELcAccent}\rule[-0.15em]{0.6pt}{0.9em}}\hspace{0.55em}#3\fi\par}}
+% the drawing, scaled down only when it would exceed the text width
+\newcommand{\ELfigmeasure}[1]{%
+  \sbox{\ELfigbox}{\begin{ELltr}\input{\ELroot/figures/#1}\end{ELltr}}%
+  \ifdim\wd\ELfigbox>\linewidth
+    \sbox{\ELfigbox}{\resizebox{\linewidth}{!}{\usebox{\ELfigbox}}}\fi
+  \setlength{\ELfigh}{\dimexpr\ht\ELfigbox+\dp\ELfigbox\relax}}
+% #1 = figure file, #2 = caption; drawing and caption never split
+% (the drawing and its caption are set in one box first, and exactly that height is reserved)
+\newsavebox{\ELfigfull}
+% A figure whose source has no caption text gets no caption and no number.
+\newcommand{\ELfigure}[2]{%
+  \par\ELfigmeasure{#1}%
+  \if\relax\detokenize{#2}\relax
+    \sbox{\ELfigfull}{\begin{minipage}{\linewidth}\centering\usebox{\ELfigbox}\end{minipage}}%
+  \else\refstepcounter{ELfig}%
+    \sbox{\ELfigfull}{\begin{minipage}{\linewidth}\centering\usebox{\ELfigbox}\par\vspace{0.55em}%
+      \ELcaptionline{\ELlangFigure}{\ELfignum}{#2}\end{minipage}}\fi
+  \Needspace*{\dimexpr\ht\ELfigfull+\dp\ELfigfull+0.6em\relax}%
+  \ifELmeasuring\else\label{fig:#1}\fi\vspace{0.5em}%
+  \noindent\usebox{\ELfigfull}\par\vspace{0.8em}}
+% a table caption (above the table)
+\newcommand{\ELtablecaption}[1]{\par\refstepcounter{ELtab}\noindent\hfil
+  \ELcaptionline{\ELlangTable}{\ELtabnum}{#1}\hfil\par\vspace{0.2em}}
+% tables: navy rules, a tinted head row
+\arrayrulecolor{ELnavy!70}
+\setlength{\heavyrulewidth}{0.8pt}
+\setlength{\lightrulewidth}{0.4pt}
+\newcommand{\ELtablehead}{\rowcolor{ELnavyT}}
+\renewcommand{\arraystretch}{1.15}

@@ -1,0 +1,69 @@
+% ============================================================
+%  Electromagnetics — direction helpers (RTL Persian / LTR English)
+%  Every direction-dependent decision of the style layer goes through these macros.
+% ============================================================
+\providecommand{\lr}[1]{\LR{#1}}
+\ifELrtl
+  \newenvironment{ELltr}{\begin{latin}}{\end{latin}}
+  \newcommand{\ELnum}[1]{\lr{\persianfont #1}}          % a number in Persian digits, never reversed
+  \newcommand{\ELheadfont}{\ELfaDisplay}                % display face of the edition
+  \newcommand{\ELprim}[1]{\RL{\persianfont #1}}         % text in the language of the edition
+  \newcommand{\ELprimD}[1]{\RL{\ELfaDisplay #1}}        % ... display weight
+  \newcommand{\ELoth}[1]{\lr{#1}}                       % text in the other language
+  \def\ELstart{east}\def\ELend{west}                    % TikZ anchors of the leading/trailing edge
+  \def\ELsgn{-1}\def\ELrsgn{1}                                      % +1 = reading direction runs to +x
+  \def\ELalign{right}                                   % TikZ align of the leading edge
+  % a box with a cut trailing top corner, inside the rectangle #1.south west / #1.north east
+  \def\ELcutpath#1#2{(#1.south east)--(#1.north east)--([xshift=#2]#1.north west)
+    --([yshift=-#2]#1.north west)--(#1.south west)--cycle}
+  \newcommand{\ELother}[1]{\lr{#1}}
+\else
+  \newenvironment{ELltr}{}{}
+  \newcommand{\ELnum}[1]{#1}
+  \newcommand{\ELheadfont}{\sffamily}
+  \newcommand{\ELprim}[1]{#1}
+  \newcommand{\ELprimD}[1]{#1}
+  \newcommand{\ELoth}[1]{\rl{#1}}
+  \def\ELstart{west}\def\ELend{east}
+  \def\ELsgn{1}\def\ELrsgn{-1}
+  \def\ELalign{left}
+  \def\ELcutpath#1#2{(#1.south west)--(#1.north west)--([xshift=-#2]#1.north east)
+    --([yshift=-#2]#1.north east)--(#1.south east)--cycle}
+  \newcommand{\ELother}[1]{\rl{#1}}
+\fi
+% an inline formula: always left to right, never split
+\newcommand{\ELim}[1]{\ifELrtl\lr{$#1$}\else$#1$\fi}
+% Persian words inside a formula run right to left
+\newcommand{\ELt}[1]{\mbox{\ifELrtl\RL{\persianfont #1}\else#1\fi}}
+% a word inside a formula: \ELtx{English}{فارسی}
+\newcommand{\ELtx}[2]{\ifELrtl\ELt{#2}\else\text{#1}\fi}
+% a word in a diagram, in the language of the document: \ELL{English}{فارسی}
+\ifELrtl\newcommand{\ELL}[2]{\RL{\persianfont #2}}\else\newcommand{\ELL}[2]{#1}\fi
+% Persian digits for a bookmark title (expandable)
+\newcommand{\ELbmnum}[1]{\ifELrtl\ifcase#1 ۰\or ۱\or ۲\or ۳\or ۴\or ۵\or ۶\or ۷\or ۸\or ۹\or ۱۰\or
+  ۱۱\or ۱۲\or ۱۳\or ۱۴\or ۱۵\or ۱۶\or ۱۷\or ۱۸\or ۱۹\or ۲۰\else #1\fi\else#1\fi}
+\providecommand{\tightlist}{\setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}}
+% "leads to" in running text: an arrow along the reading direction (the instructor's notes)
+\newcommand{\ELto}{\ifELrtl\leftarrow\else\rightarrow\fi}
+% A compound number (chapter.section, chapter-example).  In the Persian edition its groups run
+% right to left, as in the instructor's notes ("example 1-18" reads ۱۸-۱ on the page); the
+% digits of each group stay left to right.
+\ifELrtl
+\ExplSyntaxOn
+\seq_new:N \l__el_num_seq
+\tl_new:N \l__el_num_tl
+\cs_new_protected:Npn \__el_num_rev:n #1
+  {
+    \seq_set_split:NnV \l__el_num_seq {#1} \l__el_num_tl
+    \seq_reverse:N \l__el_num_seq
+    \ELnum { \seq_use:Nn \l__el_num_seq {#1} }
+  }
+\NewDocumentCommand \ELnumc { m }
+  {
+    \tl_set:Nx \l__el_num_tl {#1}
+    \tl_if_in:NnTF \l__el_num_tl {-} { \__el_num_rev:n {-} } { \__el_num_rev:n {.} }
+  }
+\ExplSyntaxOff
+\else
+\newcommand{\ELnumc}[1]{#1}
+\fi

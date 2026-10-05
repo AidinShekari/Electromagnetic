@@ -1,0 +1,22 @@
+% Ch1_5, slide 2: the derivative of a function of one variable (the rate of change at a point)
+% and the directional derivative of a function of several variables (contours of height, the
+% point P and a direction)
+\begin{tikzpicture}[scale=1]
+  \begin{scope}
+    \draw[ELax,line width=1.1pt] (0,0)--(4.0,0) node[ELlab,anchor=west]{$x$};
+    \draw[ELax,line width=1.1pt] (0,0)--(0,2.6) node[ELlab,anchor=south]{$f(x)$};
+    \draw[ELcurve] plot[smooth,tension=0.7] coordinates{(0.2,1.7)(0.55,2.0)(1.0,1.55)(1.5,1.05)(1.95,1.4)(2.25,1.6)(2.6,1.0)(3.1,0.55)(3.8,0.75)};
+    \node[ELpt] at (1.0,1.55) {};
+  \end{scope}
+  \begin{scope}[shift={(7.3,1.3)}]
+    \draw[ELax] (-2.2,-0.6)--(3.3,-0.6) node[ELlabs,anchor=west]{$x$};
+    \draw[ELax] (-1.7,-1.9)--(-1.7,2.0) node[ELlabs,anchor=south]{$y$};
+    \foreach \s/\l in {1/{$h=50\,\mathrm{m}$},1.7/{$40\,\mathrm{m}$},2.4/{$30\,\mathrm{m}$},3.1/{$20\,\mathrm{m}$}}{
+      \draw[ELcField!80,line width=0.7pt,scale=\s] plot[smooth cycle,tension=0.85] coordinates{(-0.6,0.05)(-0.25,0.42)(0.35,0.4)(0.7,0.12)(0.5,-0.3)(-0.05,-0.38)(-0.5,-0.25)};}
+    \foreach \s/\l in {1/{$h=50\,\mathrm{m}$},1.7/{$40\,\mathrm{m}$},2.4/{$30\,\mathrm{m}$},3.1/{$20\,\mathrm{m}$}}{
+      \node[ELlabs,fill=white,inner sep=1pt] at ({0.05*\s},{0.43*\s}) {\l};}
+    \node[ELpt] (P) at (1.2,0.12) {};
+    \node[ELlabs,anchor=south east] at (P) {$P$};
+    \draw[ELvec2] (P)--++(0.95,0.18);
+  \end{scope}
+\end{tikzpicture}

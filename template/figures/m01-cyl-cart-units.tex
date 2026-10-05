@@ -1,0 +1,18 @@
+% Ch1_3, slides 7-8: the unit vectors a_r, a_phi of a point and a_x, a_y (the xy-plane seen from
+% above: x downward, y to the right)
+\begin{tikzpicture}[x={(0,-1cm)},y={(1cm,0)},scale=1]
+  \def\p{38}\def\r{3.2}
+  \coordinate (O) at (0,0); \coordinate (P) at ({\r*cos(\p)},{\r*sin(\p)});
+  \draw[ELax] (O)--(3.2,0) node[ELlab,anchor=north]{$x$};
+  \draw[ELax] (O)--(0,4.0) node[ELlab,anchor=west]{$y$};
+  \draw[ELdash] (P)--(0,{\r*sin(\p)}) (P)--({\r*cos(\p)},0);
+  \draw[ELthin] (O)--(P) node[ELlab,anchor=south west,pos=0.55]{$r$};
+  \draw[ELthin,-{Stealth[length=4pt]}] (0.85,0) arc[start angle=0,end angle=\p,radius=0.85];
+  \node[ELlab,anchor=north east] at ({0.95*cos(\p/2)},{0.95*sin(\p/2)}) {$\phi$};
+  \fill[ELink] (P) circle (1.6pt);
+  \draw[ELvec,line width=1.1pt] (P)--++(0,0.9) node[ELlab,anchor=west]{$\uvec{y}$};
+  \draw[ELvec,line width=1.1pt] (P)--++(0.9,0) node[ELlab,anchor=north]{$\uvec{x}$};
+  \draw[ELvec2,line width=1.1pt] (P)--++({0.9*cos(\p)},{0.9*sin(\p)}) node[ELlab,anchor=north west]{$\uvec{r}$};
+  \draw[ELvec2,line width=1.1pt] (P)--++({-0.9*sin(\p)},{0.9*cos(\p)}) node[ELlab,anchor=south]{$\uvec{\phi}$};
+  \node[ELlab,anchor=south east] at (O) {$O$};
+\end{tikzpicture}

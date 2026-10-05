@@ -1,0 +1,2018 @@
+\ELhold
+
+\ELsection{سرفصل‌ها}{سرفصل‌ها}
+
+\begin{ELunit}
+
+\ELfigure{m01-course-outline}{}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{آنالیز برداری}{آنالیز برداری}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تحلیل یا آنالیز برداری}، یک ابزار ریاضی است که به کمک آن بیان و درک مفاهیم الکترومغناطیس ساده می‌شود.
+\item
+  کمیت‌ها در الکترومغناطیس به دو دسته زیر تقسیم می‌شوند.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{عددی (\lr{scalar}):} کمیتی است که به طور کامل با اندازه‌اش (مثبت یا منفی) مشخص می‌شود. مانند: بار، جریان الکتریکی، انرژی و\ldots{}
+  \item
+    \textbf{برداری (\lr{vector}):} کمیتی که با اندازه و جهت توصیف می‌شود. مانند شدت میدان الکتریکی و مغناطیسی و\ldots{}
+  \end{itemize}
+\item
+  هر دوی کمیت‌های فوق می‌توانند تابعی از مکان و زمان باشند.
+\end{itemize}
+
+\end{ELunit}
+
+\ELnextnum{1-1}
+
+\begin{ELexample}{}
+
+\begin{itemize}
+\tightlist
+\item
+  به نظر شما کمیت‌های زیر از چه نوعی هستند؟
+
+  \begin{itemize}
+  \tightlist
+  \item
+    دما
+  \item
+    توان
+  \item
+    نیرو
+  \item
+    اختلاف پتانسیل
+  \item
+    سرعت
+  \end{itemize}
+\item
+  به غیر از موارد فوق، چه کمیت‌های اسکالر و برداری دیگری را در حوزه فیزیک می‌توانید نام ببرید؟
+\end{itemize}
+
+\end{ELexample}
+
+\begin{ELunit}
+
+\ELfigure{m01-vector-analysis-map}{}
+
+\begin{itemize}
+\tightlist
+\item
+  چگونه می‌توان دو کمیت برداری را به صورت ترسیمی با هم جمع یا از هم کم کرد؟
+\item
+  چگونه می‌توان بردارها را در هم ضرب کرد؟ مفهوم این ضرب چیست؟ کاربردهای آن کجاست؟
+\end{itemize}
+
+\ELdisp{\vect{A}\ELbr =2\uvec{x}+3\uvec{y}+\uvec{z}\qquad\ELbr  \vect{B}\ELbr =\uvec{x}-2\uvec{y}+3\uvec{z}\qquad\ELbr  \vect{C}\ELbr =-\uvec{x}+4\uvec{y}-\uvec{z}}
+
+\begin{itemize}
+\tightlist
+\item
+  اندازه تصویر بردار \ELim{\vect{A}} بر بردار \ELim{\vect{B}} را بدست آورید.
+\item
+  زاویه بین بردارهای \ELim{\vect{A}} و \ELim{\vect{B}} چقدر است؟
+\item
+  مساحت مثلث تشکیل شده توسط دو بردار \ELim{\vect{A}} و \ELim{\vect{B}} چقدر می‌شود؟
+\item
+  بردار واحد عمود بر صفحه شامل دو بردار \ELim{\vect{A}} و \ELim{\vect{B}} را بدست آورید.
+\item
+  حجم متوازی‌السطوح حاصل از ۳ بردار \ELim{\vect{A}}، \ELim{\vect{B}} و \ELim{\vect{C}} چقدر است؟
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{جبر برداری}{جبر برداری}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  هر برداری دارای اندازه و جهت است.
+\end{itemize}
+
+\ELdisp{\vect{A}\ELbr =\uvec{A}A,\qquad\ELbr  \uvec{A}\ELbr =\frac{\vect{A}}{\abs{\vect{A}}}\ELbr =\frac{\vect{A}}{A}\quad\ELbr (\ELt{بردار یکه})}
+
+\ELfigure{m01-vector-magnitude}{}
+
+\end{ELunit}
+
+\begin{ELremark}{}
+
+برای هر کمیت برداری باید هم اندازه و هم جهت معلوم باشد. عدم مشخص کردن جهت یک کمیت برداری، به معنای نادیده گرفتن بخشی از اطلاعات آن کمیت است.
+
+\end{ELremark}
+
+\ELhold
+
+\ELsection{جمع بردارها}{جمع بردارها}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  جمع دو بردار به صورت ترسیمی
+
+  \begin{itemize}
+  \tightlist
+  \item
+    قاعده \textbf{متوازی‌الاضلاع}
+  \item
+    قاعده \textbf{ابتدا به انتها}
+  \end{itemize}
+\end{itemize}
+
+\ELfigure{m01-vector-sum}{}
+
+\begin{itemize}
+\tightlist
+\item
+  قوانین حاکم بر جمع بردارها
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{قانون جابجایی}
+    \ELdisp{\vect{A}+\vect{B}\ELbr =\vect{B}+\vect{A}}
+  \item
+    \textbf{قانون انجمنی}
+    \ELdisp{\vect{A}+(\vect{B}+\vect{C})\ELbr =(\vect{A}+\vect{B})+\vect{C}}
+  \end{itemize}
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{تفریق بردارها}{تفریق بردارها}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  تفریق برداری
+\end{itemize}
+
+\ELdisp{\vect{A}-\vect{B}\ELbr =\vect{A}+(-\vect{B})}
+
+\ELfigure{m01-vector-difference}{}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{ضرب بردارها}{ضرب بردارها}
+
+\begin{ELunit}
+
+\ELfigure{m01-products-map}{}
+
+\begin{itemize}
+\tightlist
+\item
+  ضرب یک اسکالر در بردار:
+\end{itemize}
+
+\ELdisp{k\vect{A}\ELbr =\uvec{A}(kA)}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{ضرب داخلی یا عددی}{ضرب داخلی یا عددی}
+
+\begin{ELdefinition}{تعریف ریاضی}
+
+\ELdisp{\vect{A}\cdot\vect{B}\triangleq AB\cos\theta_{AB}}
+- برابر است با حاصلضرب اندازه یک بردار در تصویر بردار دیگر بر بردار اول.
+
+\end{ELdefinition}
+
+\begin{ELunit}
+
+\ELfigure{m01-dot-product}{\ELim{\theta_{AB}}: زاویه کوچکتر بین دو بردار هنگامیکه ابتدای دو بردار
+به هم متصل می‌شود}
+
+\begin{itemize}
+\tightlist
+\item
+  ویژگی‌های ضرب داخلی
+
+  \begin{itemize}
+  \tightlist
+  \item
+    نتیجه ضرب داخلی دو بردار، یک کمیت اسکالر است.
+  \item
+    کمتر یا مساوی حاصلضرب اندازه‌های آن‌هاست.
+  \item
+    بسته به زاویه بین آن‌ها می‌تواند کمیتی مثبت یا منفی باشد.
+  \item
+    اگر بردارها عمود بر هم باشند، مساوی صفر است.
+  \item
+    جابجاپذیر و توزیع‌پذیر است.
+    \ELdisp{\vect{A}\cdot\vect{B}\ELbr =\vect{B}\cdot\vect{A},\qquad\ELbr  \vect{A}\cdot(\vect{B}+\vect{C})\ELbr =\vect{A}\cdot\vect{B}+\vect{A}\cdot\vect{C}}
+  \item
+    ضرب داخلی یک بردار در خودش
+    \ELdisp{\vect{A}\cdot\vect{A}\ELbr =A^2,\qquad\ELbr  A\ELbr =+\sqrt{\vect{A}\cdot\vect{A}}}
+  \end{itemize}
+\end{itemize}
+
+\end{ELunit}
+
+\ELnextnum{1-2}
+
+\begin{ELexample}{}
+
+با استفاده از مفهوم ضرب داخلی تصویر بردار \ELim{\vect{A}} بر \ELim{\vect{B}} را بدست آورید.
+
+\ELfigure{m01-ex2-statement}{}
+
+\begin{ELsolution}
+
+\ELfigure{m01-ex2-projection}{}
+
+اندازه تصویر بردار \ELim{\vect{A}} بر \ELim{\vect{B}}:
+\ELdisp{A\cos\theta_{AB}\ELbr =\frac{\vect{A}\cdot\vect{B}}{B}}
+تصویر بردار \ELim{\vect{A}} بر \ELim{\vect{B}}:
+\ELdisp{\frac{\vect{A}\cdot\vect{B}}{B}\uvec{B}\ELbr =\left(\frac{\vect{A}\cdot\vect{B}}{B}\right)\frac{\vect{B}}{B}\ELbr =\frac{\vect{A}\cdot\vect{B}}{B^2}\vect{B}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELnextnum{1-3}
+
+\begin{ELexample}{}
+
+قانون کسینوس‌ها در یک مثلث را با استفاده از مفهوم ضرب داخلی اثبات کنید.
+\ELdisp{C\ELbr =\sqrt{A^2+B^2-2AB\cos\alpha}}
+
+\ELfigure{m01-ex3-triangle}{}
+
+\begin{ELsolution}
+
+\ELfigure{m01-ex3-solution}{}
+
+\ELdisp{\vect{C}\ELbr =\vect{A}+\vect{B}}
+\ELdisp{\begin{aligned}C^2=\vect{C}\cdot\vect{C}&=(\vect{A}+\vect{B})\cdot(\vect{A}+\vect{B})\\&=\vect{A}\cdot\vect{A}+\vect{B}\cdot\vect{B}+2\vect{A}\cdot\vect{B}\\&=A^2+B^2+2AB\cos\theta_{AB}\end{aligned}}
+\ELdisp{\cos\theta_{AB}\ELbr =\cos(180^\circ-\alpha)\ELbr =-\cos\alpha}
+\ELdisp{C^2\ELbr =A^2+B^2-2AB\cos\alpha}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELhold
+
+\ELsection{ضرب خارجی یا برداری}{ضرب خارجی یا برداری}
+
+\begin{ELdefinition}{}
+
+\ELdisp{\vect{A}\times\vect{B}\triangleq\uvec{n}\abs{AB\sin\theta_{AB}}}
+
+\end{ELdefinition}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  اندازه این حاصلضرب برابر با مساحت متوازی‌الاضلاع ساخته شده توسط بردارهای \ELim{\vect{A}} و \ELim{\vect{B}} و جهت آن عمود بر هر دو بردار است.
+\end{itemize}
+
+\ELfigure{m01-cross-product}{}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  ویژگی‌های ضرب خارجی
+
+  \begin{itemize}
+  \tightlist
+  \item
+    نتیجه ضرب خارجی دو بردار یک کمیت برداری است.
+  \item
+    جابجاپذیر نیست
+    \ELdisp{\vect{B}\times\vect{A}\ELbr =-\vect{A}\times\vect{B}}
+  \item
+    توزیع‌پذیر است
+    \ELdisp{\vect{A}\times(\vect{B}+\vect{C})\ELbr =\vect{A}\times\vect{B}+\vect{A}\times\vect{C}}
+  \item
+    انجمن‌پذیر نیست
+    \ELdisp{\vect{A}\times(\vect{B}\times\vect{C})\neq(\vect{A}\times\vect{B})\times\vect{C}}
+  \end{itemize}
+\end{itemize}
+
+\ELnextnum{1-4}
+
+\begin{ELexample}{}
+
+قانون سینوس‌ها در یک مثلث را با استفاده از مفهوم ضرب خارجی اثبات کنید.
+\ELdisp{\frac{\sin A}{a}\ELbr =\frac{\sin B}{b}\ELbr =\frac{\sin C}{c}}
+
+\ELfigure{m01-ex4-triangle}{}
+
+\begin{ELsolution}
+
+مساحت مثلث:
+\ELdisp{\abs*{\tfrac12\vect{a}\times\vect{b}}\ELbr =\abs*{\tfrac12\vect{b}\times\vect{c}}\ELbr =\abs*{\tfrac12\vect{c}\times\vect{a}}}
+\ELdisp{ab\sin C\ELbr =bc\sin A\ELbr =ca\sin B}
+\ELdisp{\frac{\sin A}{a}\ELbr =\frac{\sin B}{b}\ELbr =\frac{\sin C}{c}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\end{ELjoin}
+
+\ELhold
+
+\ELsection{ضرب سه بردار}{ضرب سه بردار}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{ضرب سه‌گانه عددی}
+\end{itemize}
+
+\ELdisp{\vect{A}\cdot(\vect{B}\times\vect{C})\ELbr =\vect{B}\cdot(\vect{C}\times\vect{A})\ELbr =\vect{C}\cdot(\vect{A}\times\vect{B})}
+
+\begin{itemize}
+\tightlist
+\item
+  دارای اندازه‌ای برابر با حجم متوازی‌السطوح تشکیل یافته از سه بردار \ELim{\vect{A}}، \ELim{\vect{B}} و \ELim{\vect{C}}.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    مساحت قاعده: \ELim{\abs{\vect{B}\times\vect{C}}=\abs{BC\sin\theta_1}}
+  \item
+    اندازه ارتفاع: \ELim{\abs{A\cos\theta_2}}
+  \item
+    حجم متوازی‌السطوح: \ELim{\abs{ABC\sin\theta_1\cos\theta_2}}
+  \end{itemize}
+\end{itemize}
+
+\ELfigure{m01-triple-product}{}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{ضرب سه‌گانه برداری}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    معروف به قاعده \lr{back-cab}
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{\vect{A}\times(\vect{B}\times\vect{C})\ELbr =\vect{B}(\vect{A}\cdot\vect{C})-\vect{C}(\vect{A}\cdot\vect{B})}
+
+\end{ELunit}
+
+\ELnextnum{1-5}
+
+\begin{ELexample}{}
+
+عبارت \ELim{(\vect{A}\times\vect{B})\times\vect{C}} با کدامیک از عبارت‌های زیر برابر است؟
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{\vect{B}(\vect{A}\cdot\vect{C})-\vect{C}(\vect{A}\cdot\vect{B})}
+\item
+  \ELim{-\vect{B}(\vect{A}\cdot\vect{C})+\vect{C}(\vect{A}\cdot\vect{B})}
+\item
+  \ELim{-\vect{A}(\vect{C}\cdot\vect{B})+\vect{B}(\vect{C}\cdot\vect{A})}
+\item
+  \ELim{\vect{A}(\vect{C}\cdot\vect{B})-\vect{B}(\vect{C}\cdot\vect{A})}
+\end{itemize}
+
+\begin{ELsolution}
+
+\ELdisp{\begin{aligned}(\vect{A}\times\vect{B})\times\vect{C}&=-\vect{C}\times(\vect{A}\times\vect{B})\\&=-\vect{A}(\vect{C}\cdot\vect{B})+\vect{B}(\vect{C}\cdot\vect{A})\end{aligned}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELhold
+
+\ELsection{دستگاه‌های مختصات متعامد}{دستگاه‌های مختصات متعامد}
+
+\begin{ELunit}
+
+\ELfigure{m01-vector-analysis-map-coord}{}
+
+\begin{itemize}
+\item
+  صفحات اصلی در دستگاه‌های مختصات مختلف کدامند؟
+\item
+  بردارهای یکه در دستگاه‌های مختصات مختلف چگونه تعریف می‌شوند؟
+\item
+  نحوه محاسبه بردار مکان یک نقطه و بردار فاصله بین دو نقطه در دستگاه‌های مختصات مختلف چگونه است؟
+\item
+  طول، سطح و حجم دیفرانسیلی را در دستگاه‌های مختصات مختلف، جهت استفاده در انتگرال‌گیری، تعیین کنید.
+\item
+  نمایش بردار \ELim{\vect{A}=\uvec{r}(3\cos\phi)-\uvec{\phi}2r+\uvec{z}5} در مختصات کارتزین را بدست آورید.
+\item
+  موقعیت نقطه \ELim{P} در مختصات کروی \ELim{(8,120^\circ,330^\circ)} است. موقعیت این نقطه را در مختصات استوانه‌ای و کارتزین بیان کنید.
+\item
+  برای توصیف تغییرات مکانی کمیت‌های فیزیکی باید بتوانیم تمام نقاط فضا را به صورت یکتا و مناسب توصیف کنیم.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    این امر مستلزم بکارگیری یک دستگاه مختصات مناسب است.
+  \end{itemize}
+\item
+  قوانین الکترومغناطیسی به دستگاه مختصات وابسته نیستند.
+\item
+  جهت سادگی محاسبات از دستگاه مختصاتی که مناسب هندسه ساختار مسئله باشد، استفاده می‌شود.
+\item
+  در فضای سه بعدی یک نقطه می‌تواند در محل تقاطع سه سطح قرار گیرد.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    اگر این سه سطح دو به دو بر هم عمود باشند، یک دستگاه مختصات متعامد خواهیم داشت.
+  \end{itemize}
+\item
+  سه دستگاه متعامد مورد استفاده در این درس
+
+  \begin{itemize}
+  \tightlist
+  \item
+    مختصات کارتزین یا دکارتی یا قائم
+  \item
+    مختصات استوانه‌ای
+  \item
+    مختصات کروی
+  \end{itemize}
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{دستگاه مختصات کارتزین}{دستگاه مختصات کارتزین}
+
+\begin{ELunit}
+
+\ELfigure{m01-cartesian-planes}{}
+
+\begin{itemize}
+\item
+  هر نقطه \ELim{P(x_1,y_1,z_1)} محل تقاطع سه صفحه \ELim{x=x_1}، \ELim{y=y_1} و \ELim{z=z_1} است.
+\item
+  بردار یکه \ELim{\uvec{x}} \ELim{\ELto} بردار واحد عمود بر صفحه \ELim{x}-ثابت و در جهت مثبت
+\item
+  بردار یکه \ELim{\uvec{y}} \ELim{\ELto} بردار واحد عمود بر صفحه \ELim{y}-ثابت و در جهت مثبت
+\item
+  بردار یکه \ELim{\uvec{z}} \ELim{\ELto} بردار واحد عمود بر صفحه \ELim{z}-ثابت و در جهت مثبت
+\item
+  ضرب خارجی و داخلی بردارهای یکه
+\end{itemize}
+
+\ELdisp{\uvec{x}\times\uvec{y}\ELbr =\uvec{z},\qquad\ELbr  \uvec{y}\times\uvec{z}\ELbr =\uvec{x},\qquad\ELbr  \uvec{z}\times\uvec{x}\ELbr =\uvec{y}}
+
+\ELfigure{m01-cartesian-cycle}{}
+
+\ELdisp{\uvec{x}\cdot\uvec{y}\ELbr =\uvec{y}\cdot\uvec{z}\ELbr =\uvec{z}\cdot\uvec{x}\ELbr =0}
+\ELdisp{\uvec{x}\cdot\uvec{x}\ELbr =\uvec{y}\cdot\uvec{y}\ELbr =\uvec{z}\cdot\uvec{z}\ELbr =1}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  نمایش بردار دلخواه \ELim{\vect{A}} در مختصات کارتزین
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\vect{A}\ELbr =\uvec{x}A_x+\uvec{y}A_y+\uvec{z}A_z}
+\ELdisp{A\ELbr =\sqrt{A_x^2+A_y^2+A_z^2}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{بردار مکان}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    بردار مکان نقطه \ELim{P}، فاصله جهت‌دار از مبدأ به \ELim{P} است.
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{\vect{R}_1\ELbr =x_1\uvec{x}+y_1\uvec{y}+z_1\uvec{z},\qquad\ELbr  \vect{R}_2\ELbr =x_2\uvec{x}+y_2\uvec{y}+z_2\uvec{z}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{بردار فاصله}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    بردار جابجایی از یک نقطه به نقطه دیگر است.
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{\vect{R}_{12}\ELbr =\vect{R}_2-\vect{R}_1\ELbr =(x_2-x_1)\uvec{x}+(y_2-y_1)\uvec{y}+(z_2-z_1)\uvec{z}}
+
+\ELfigure{m01-position-vectors}{}
+
+\ELdisp{\vect{A}\ELbr =A_x\uvec{x}+A_y\uvec{y}+A_z\uvec{z},\qquad\ELbr  \vect{B}\ELbr =B_x\uvec{x}+B_y\uvec{y}+B_z\uvec{z}}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  ضرب داخلی دو بردار \ELim{\vect{A}} و \ELim{\vect{B}}
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\vect{A}\cdot\vect{B}\ELbr =A_xB_x+A_yB_y+A_zB_z}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  ضرب خارجی دو بردار \ELim{\vect{A}} و \ELim{\vect{B}}
+\end{itemize}
+
+\ELdisp{\begin{aligned}\vect{A}\times\vect{B}={}&A_xB_x\uvec{x}\times\uvec{x}+A_xB_y\uvec{x}\times\uvec{y}+A_xB_z\uvec{x}\times\uvec{z}\\&+A_yB_x\uvec{y}\times\uvec{x}+A_yB_y\uvec{y}\times\uvec{y}+A_yB_z\uvec{y}\times\uvec{z}\\&+A_zB_x\uvec{z}\times\uvec{x}+A_zB_y\uvec{z}\times\uvec{y}+A_zB_z\uvec{z}\times\uvec{z}\\={}&(A_yB_z-A_zB_y)\uvec{x}+(A_zB_x-A_xB_z)\uvec{y}+(A_xB_y-A_yB_x)\uvec{z}\end{aligned}}
+
+\begin{ELimportant}{}
+
+\ELdisp{\vect{A}\times\vect{B}\ELbr =\begin{vmatrix}\uvec{x}&\uvec{y}&\uvec{z}\\A_x&A_y&A_z\\B_x&B_y&B_z\end{vmatrix}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  طول دیفرانسیلی \ELim{\ELto} \textbf{بردار}
+\end{itemize}
+
+\ELdisp{\dif\vect{\ell}\ELbr =\uvec{x}\,dx+\uvec{y}\,dy+\uvec{z}\,dz}
+
+\begin{itemize}
+\tightlist
+\item
+  سطح دیفرانسیلی \ELim{\ELto} \textbf{بردار}
+\end{itemize}
+
+\ELdisp{d\vect{S}\ELbr =dS\,\uvec{n}}
+\ELdisp{d\vect{S}\ELbr =dy\,dz\,\uvec{x},\qquad\ELbr  d\vect{S}\ELbr =dx\,dz\,\uvec{y},\qquad\ELbr  d\vect{S}\ELbr =dx\,dy\,\uvec{z}}
+
+\begin{itemize}
+\tightlist
+\item
+  حجم دیفرانسیلی \ELim{\ELto} \textbf{اسکالر}
+\end{itemize}
+
+\ELdisp{dv\ELbr =dx\,dy\,dz}
+
+\ELfigure{m01-cartesian-differentials}{}
+
+\end{ELunit}
+
+\ELnextnum{1-6}
+
+\begin{ELexample}{}
+
+الف) برداری که نقطه ابتدای آن \ELim{P_1(1,3,2)} و نقطه انتهای آن \ELim{P_2(3,-2,4)} است را بدست آورید.
+
+ب) طول این بردار چقدر است؟
+
+\begin{ELsolution}
+
+\ELfigure{m01-ex6}{}
+
+الف)
+\ELdisp{\begin{aligned}\overrightarrow{P_1P_2}&=\overrightarrow{OP_2}-\overrightarrow{OP_1}\\&=(\uvec{x}3-\uvec{y}2+\uvec{z}4)-(\uvec{x}+\uvec{y}3+\uvec{z}2)\\&=\uvec{x}2-\uvec{y}5+\uvec{z}2\end{aligned}}
+ب)
+\ELdisp{P_1P_2\ELbr =\abs{\overrightarrow{P_1P_2}}\ELbr =\sqrt{2^2+(-5)^2+2^2}\ELbr =\sqrt{33}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELnextnum{1-7}
+
+\begin{ELexample}{}
+
+با فرض اینکه \ELim{\vect{A}=\uvec{x}5-\uvec{y}2+\uvec{z}}، آنگاه بردار یکه \ELim{\vect{B}} را به گونه‌ای بدست آورید که
+
+\begin{itemize}
+\tightlist
+\item
+  الف. \ELim{\vect{B}\parallel\vect{A}}
+\item
+  ب. \ELim{\vect{B}} در صفحه \ELim{xy} بوده و عمود بر \ELim{\vect{A}} باشد
+\end{itemize}
+
+\begin{ELsolution}
+
+الف.
+\ELdisp{\vect{B}\ELbr =\frac{\vect{A}}{A}\ELbr =\frac{\uvec{x}5-\uvec{y}2+\uvec{z}}{\sqrt{5^2+2^2+1^2}}\ELbr =\frac{\uvec{x}5-\uvec{y}2+\uvec{z}}{\sqrt{30}}}
+ب.
+\ELdisp{\begin{cases}B=\sqrt{B_x^2+B_y^2+B_z^2}=1\\B_z=0\\\vect{B}\cdot\vect{A}=5B_x-2B_y=0\end{cases}\quad\ELbr \ELbr \Rightarrow\quad\ELbr \begin{cases}B_x=\dfrac{2}{\sqrt{29}}\\\noalign{\vskip 2mm}B_y=\dfrac{5}{\sqrt{29}}\end{cases}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELhold
+
+\ELsection{دستگاه مختصات استوانه‌ای}{دستگاه مختصات استوانه‌ای}
+
+\begin{ELunit}
+
+\ELfigure{m01-cylindrical-surfaces}{}
+
+\begin{itemize}
+\tightlist
+\item
+  هر نقطه \ELim{P(r_1,\phi_1,z_1)} محل تقاطع استوانه \ELim{r=r_1}، نیم‌صفحه \ELim{\phi=\phi_1} و صفحه \ELim{z=z_1} است.
+\item
+  بردار یکه \ELim{\uvec{r}} \ELim{\ELto} بردار واحد عمود بر استوانه \ELim{r}-ثابت و در جهت مثبت
+\item
+  بردار یکه \ELim{\uvec{\phi}} \ELim{\ELto} بردار واحد عمود بر نیم‌صفحه \ELim{\phi}-ثابت و در جهت مثبت
+\item
+  بردار یکه \ELim{\uvec{z}} \ELim{\ELto} بردار واحد عمود بر صفحه \ELim{z}-ثابت و در جهت مثبت
+\end{itemize}
+
+\end{ELunit}
+
+\begin{ELremark}{}
+
+جهت بردارهای \ELim{\uvec{r}} و \ELim{\uvec{\phi}} در نقاط مختلف فضا تغییر می‌کند. این نکته در هنگام انتگرال‌گیری باید مورد دقت قرار گیرد.
+
+\end{ELremark}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  ضرب خارجی و داخلی بردارهای یکه
+\end{itemize}
+
+\ELdisp{\uvec{r}\times\uvec{\phi}\ELbr =\uvec{z},\qquad\ELbr  \uvec{\phi}\times\uvec{z}\ELbr =\uvec{r},\qquad\ELbr  \uvec{z}\times\uvec{r}\ELbr =\uvec{\phi}}
+
+\ELfigure{m01-cylindrical-cycle}{}
+
+\ELdisp{\uvec{r}\cdot\uvec{r}\ELbr =\uvec{\phi}\cdot\uvec{\phi}\ELbr =\uvec{z}\cdot\uvec{z}\ELbr =1}
+\ELdisp{\uvec{r}\cdot\uvec{\phi}\ELbr =\uvec{\phi}\cdot\uvec{z}\ELbr =\uvec{z}\cdot\uvec{r}\ELbr =0}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  نمایش بردار دلخواه \ELim{\vect{A}} در مختصات استوانه‌ای
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\vect{A}\ELbr =\uvec{r}A_r+\uvec{\phi}A_\phi+\uvec{z}A_z}
+\ELdisp{A\ELbr =\sqrt{A_r^2+A_\phi^2+A_z^2}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  بردار مکان
+\end{itemize}
+
+\ELfigure{m01-cylindrical-position}{}
+
+\ELdisp{\vect{R}\ELbr =r\uvec{r}+z\uvec{z}}
+
+\end{ELunit}
+
+\ELnextnum{1-8}
+
+\begin{ELexample}{}
+
+مختصات استوانه‌ای نقطه دلخواه \ELim{P} به صورت \ELim{(r,\phi,0)} است. بردار واحد از نقطه \ELim{z=h} روی محور \ELim{z} به سمت نقطه \ELim{P} را بیابید.
+
+\begin{ELsolution}
+
+\ELfigure{m01-ex8}{}
+
+\ELdisp{\overrightarrow{QP}\ELbr =\overrightarrow{OP}-\overrightarrow{OQ}\ELbr =(\uvec{r}r)-(\uvec{z}h)}
+\ELdisp{\uvec{QP}\ELbr =\frac{\overrightarrow{QP}}{\abs{\overrightarrow{QP}}}\ELbr =\frac{1}{\sqrt{r^2+h^2}}(\uvec{r}r-\uvec{z}h)}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  طول دیفرانسیلی \ELim{\ELto} \textbf{بردار}
+\end{itemize}
+
+\ELdisp{\dif\vect{\ell}\ELbr =\uvec{r}\,dr+\uvec{\phi}\,r\,d\phi+\uvec{z}\,dz}
+
+\begin{itemize}
+\tightlist
+\item
+  سطح دیفرانسیلی \ELim{\ELto} \textbf{بردار}
+\end{itemize}
+
+\ELdisp{d\vect{S}\ELbr =r\,d\phi\,dz\,\uvec{r},\qquad\ELbr  d\vect{S}\ELbr =dr\,dz\,\uvec{\phi},\qquad\ELbr  d\vect{S}\ELbr =r\,dr\,d\phi\,\uvec{z}}
+
+\begin{itemize}
+\tightlist
+\item
+  حجم دیفرانسیلی \ELim{\ELto} \textbf{اسکالر}
+\end{itemize}
+
+\ELdisp{dv\ELbr =r\,dr\,d\phi\,dz}
+
+\ELfigure{m01-cylindrical-differentials}{}
+
+\begin{itemize}
+\tightlist
+\item
+  تبدیل نمایش بردار از مختصات استوانه‌ای به کارتزین
+\end{itemize}
+
+\ELdisp{\vect{A}\ELbr =\uvec{r}A_r+\uvec{\phi}A_\phi+\uvec{z}A_z\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \vect{A}\ELbr =\uvec{x}A_x+\uvec{y}A_y+\uvec{z}A_z}
+
+\ELfigure{m01-cyl-cart-units}{}
+
+\ELdisp{\uvec{r}\ELbr =\cos\phi\,\uvec{x}+\sin\phi\,\uvec{y},\qquad\ELbr  \uvec{\phi}\ELbr =-\sin\phi\,\uvec{x}+\cos\phi\,\uvec{y},\qquad\ELbr  \uvec{z}\ELbr =\uvec{z}}
+
+\ELdisp{\begin{aligned}\vect{A}&=(\cos\phi\,\uvec{x}+\sin\phi\,\uvec{y})A_r\\&\quad+(-\sin\phi\,\uvec{x}+\cos\phi\,\uvec{y})A_\phi\\&\quad+\uvec{z}A_z\end{aligned}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \begin{aligned}\vect{A}&=\uvec{x}(\cos\phi\,A_r-\sin\phi\,A_\phi)\\&\quad+\uvec{y}(\sin\phi\,A_r+\cos\phi\,A_\phi)\\&\quad+\uvec{z}A_z\end{aligned}}
+
+\begin{itemize}
+\tightlist
+\item
+  تبدیل نمایش بردار از مختصات کارتزین به استوانه‌ای
+\end{itemize}
+
+\ELdisp{\vect{A}\ELbr =\uvec{x}A_x+\uvec{y}A_y+\uvec{z}A_z\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \vect{A}\ELbr =\uvec{r}A_r+\uvec{\phi}A_\phi+\uvec{z}A_z}
+
+\ELdisp{\uvec{x}\ELbr =\cos\phi\,\uvec{r}-\sin\phi\,\uvec{\phi},\qquad\ELbr  \uvec{y}\ELbr =\sin\phi\,\uvec{r}+\cos\phi\,\uvec{\phi},\qquad\ELbr  \uvec{z}\ELbr =\uvec{z}}
+
+\ELdisp{\begin{aligned}\vect{A}&=(\cos\phi\,\uvec{r}-\sin\phi\,\uvec{\phi})A_x\\&\quad+(\sin\phi\,\uvec{r}+\cos\phi\,\uvec{\phi})A_y\\&\quad+\uvec{z}A_z\end{aligned}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \begin{aligned}\vect{A}&=\uvec{r}(\cos\phi\,A_x+\sin\phi\,A_y)\\&\quad+\uvec{\phi}(-\sin\phi\,A_x+\cos\phi\,A_y)\\&\quad+\uvec{z}A_z\end{aligned}}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  تبدیل نمایش بردار از مختصات استوانه‌ای به کارتزین
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\begin{bmatrix}A_x\\A_y\\A_z\end{bmatrix}\ELbr =\begin{bmatrix}\cos\phi&-\sin\phi&0\\\sin\phi&\cos\phi&0\\0&0&1\end{bmatrix}\begin{bmatrix}A_r\\A_\phi\\A_z\end{bmatrix}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  تبدیل نمایش بردار از مختصات کارتزین به استوانه‌ای
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\begin{bmatrix}A_r\\A_\phi\\A_z\end{bmatrix}\ELbr =\begin{bmatrix}\cos\phi&\sin\phi&0\\-\sin\phi&\cos\phi&0\\0&0&1\end{bmatrix}\begin{bmatrix}A_x\\A_y\\A_z\end{bmatrix}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  تبدیل از مختصات استوانه‌ای به کارتزین
+\end{itemize}
+
+\ELdisp{x\ELbr =r\cos\phi,\qquad\ELbr  y\ELbr =r\sin\phi,\qquad\ELbr  z\ELbr =z}
+
+\begin{itemize}
+\tightlist
+\item
+  تبدیل از مختصات کارتزین به استوانه‌ای
+\end{itemize}
+
+\ELdisp{r\ELbr =\sqrt{x^2+y^2},\qquad\ELbr  \phi\ELbr =\tan^{-1}\frac{y}{x},\qquad\ELbr  z\ELbr =z}
+
+\ELfigure{m01-cyl-cart-coords}{}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{دستگاه مختصات کروی}{دستگاه مختصات کروی}
+
+\begin{ELunit}
+
+\ELfigure{m01-spherical-surfaces}{}
+
+\begin{itemize}
+\tightlist
+\item
+  هر نقطه \ELim{P(R_1,\theta_1,\phi_1)} محل تقاطع کره \ELim{R=R_1}، مخروط \ELim{\theta=\theta_1} و نیم‌صفحه \ELim{\phi=\phi_1}
+\item
+  بردار یکه \ELim{\uvec{R}} \ELim{\ELto} بردار واحد عمود بر کره \ELim{R}-ثابت و در جهت مثبت
+\item
+  بردار یکه \ELim{\uvec{\theta}} \ELim{\ELto} بردار واحد عمود بر مخروط \ELim{\theta}-ثابت و در جهت مثبت
+\item
+  بردار یکه \ELim{\uvec{\phi}} \ELim{\ELto} بردار واحد عمود بر نیم‌صفحه \ELim{\phi}-ثابت و در جهت مثبت
+\end{itemize}
+
+\end{ELunit}
+
+\begin{ELremark}{}
+
+جهت بردارهای \ELim{\uvec{R}}، \ELim{\uvec{\theta}} و \ELim{\uvec{\phi}} در نقاط مختلف فضا تغییر می‌کند. این نکته در هنگام انتگرال‌گیری باید مورد دقت قرار گیرد.
+
+\end{ELremark}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  ضرب خارجی و داخلی بردارهای یکه
+\end{itemize}
+
+\ELdisp{\uvec{R}\times\uvec{\theta}\ELbr =\uvec{\phi},\qquad\ELbr  \uvec{\theta}\times\uvec{\phi}\ELbr =\uvec{R},\qquad\ELbr  \uvec{\phi}\times\uvec{R}\ELbr =\uvec{\theta}}
+
+\ELfigure{m01-spherical-cycle}{}
+
+\ELdisp{\uvec{R}\cdot\uvec{R}\ELbr =\uvec{\theta}\cdot\uvec{\theta}\ELbr =\uvec{\phi}\cdot\uvec{\phi}\ELbr =1}
+\ELdisp{\uvec{R}\cdot\uvec{\theta}\ELbr =\uvec{\theta}\cdot\uvec{\phi}\ELbr =\uvec{\phi}\cdot\uvec{R}\ELbr =0}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  نمایش بردار دلخواه \ELim{\vect{A}} در مختصات کروی
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\vect{A}\ELbr =\uvec{R}A_R+\uvec{\theta}A_\theta+\uvec{\phi}A_\phi}
+\ELdisp{A\ELbr =\sqrt{A_R^2+A_\theta^2+A_\phi^2}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  بردار مکان
+\end{itemize}
+
+\ELfigure{m01-spherical-position}{}
+
+\ELdisp{\vect{R}\ELbr =R_1\uvec{R}}
+
+\begin{itemize}
+\tightlist
+\item
+  طول دیفرانسیلی \ELim{\ELto} \textbf{بردار}
+\end{itemize}
+
+\ELdisp{\dif\vect{\ell}\ELbr =\uvec{R}\,dR+\uvec{\theta}\,R\,d\theta+\uvec{\phi}\,R\sin\theta\,d\phi}
+
+\begin{itemize}
+\tightlist
+\item
+  سطح دیفرانسیلی \ELim{\ELto} \textbf{بردار}
+\end{itemize}
+
+\ELdisp{d\vect{S}\ELbr =R^2\sin\theta\,d\theta\,d\phi\,\uvec{R},\qquad\ELbr  d\vect{S}\ELbr =R\sin\theta\,dR\,d\phi\,\uvec{\theta},\qquad\ELbr  d\vect{S}\ELbr =R\,dR\,d\theta\,\uvec{\phi}}
+
+\begin{itemize}
+\tightlist
+\item
+  حجم دیفرانسیلی \ELim{\ELto} \textbf{اسکالر}
+\end{itemize}
+
+\ELdisp{dv\ELbr =R^2\sin\theta\,dR\,d\theta\,d\phi}
+
+\ELfigure{m01-spherical-differentials}{}
+
+\begin{itemize}
+\tightlist
+\item
+  تبدیل نمایش بردار از مختصات کروی به استوانه‌ای
+\end{itemize}
+
+\ELdisp{\vect{A}\ELbr =\uvec{R}A_R+\uvec{\theta}A_\theta+\uvec{\phi}A_\phi\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \vect{A}\ELbr =\uvec{r}A_r+\uvec{\phi}A_\phi+\uvec{z}A_z}
+
+\ELfigure{m01-sph-cyl-units}{}
+
+\ELdisp{\uvec{R}\ELbr =\sin\theta\,\uvec{r}+\cos\theta\,\uvec{z},\qquad\ELbr  \uvec{\theta}\ELbr =\cos\theta\,\uvec{r}-\sin\theta\,\uvec{z},\qquad\ELbr  \uvec{\phi}\ELbr =\uvec{\phi}}
+
+\ELdisp{\begin{aligned}\vect{A}&=(\sin\theta\,\uvec{r}+\cos\theta\,\uvec{z})A_R\\&\quad+(\cos\theta\,\uvec{r}-\sin\theta\,\uvec{z})A_\theta\\&\quad+\uvec{\phi}A_\phi\end{aligned}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \begin{aligned}\vect{A}&=\uvec{r}(\sin\theta\,A_R+\cos\theta\,A_\theta)\\&\quad+\uvec{\phi}A_\phi\\&\quad+\uvec{z}(\cos\theta\,A_R-\sin\theta\,A_\theta)\end{aligned}}
+
+\begin{itemize}
+\tightlist
+\item
+  تبدیل نمایش بردار از مختصات استوانه‌ای به کروی
+\end{itemize}
+
+\ELdisp{\vect{A}\ELbr =\uvec{r}A_r+\uvec{\phi}A_\phi+\uvec{z}A_z\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \vect{A}\ELbr =\uvec{R}A_R+\uvec{\theta}A_\theta+\uvec{\phi}A_\phi}
+
+\ELdisp{\uvec{r}\ELbr =\sin\theta\,\uvec{R}+\cos\theta\,\uvec{\theta},\qquad\ELbr  \uvec{\phi}\ELbr =\uvec{\phi},\qquad\ELbr  \uvec{z}\ELbr =\cos\theta\,\uvec{R}-\sin\theta\,\uvec{\theta}}
+
+\ELdisp{\begin{aligned}\vect{A}&=(\sin\theta\,\uvec{R}+\cos\theta\,\uvec{\theta})A_r\\&\quad+\uvec{\phi}A_\phi\\&\quad+(\cos\theta\,\uvec{R}-\sin\theta\,\uvec{\theta})A_z\end{aligned}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \begin{aligned}\vect{A}&=\uvec{R}(\sin\theta\,A_r+\cos\theta\,A_z)\\&\quad+\uvec{\theta}(\cos\theta\,A_r-\sin\theta\,A_z)\\&\quad+\uvec{\phi}A_\phi\end{aligned}}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  تبدیل نمایش بردار از مختصات کروی به استوانه‌ای
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\begin{bmatrix}A_r\\A_\phi\\A_z\end{bmatrix}\ELbr =\begin{bmatrix}\sin\theta&\cos\theta&0\\0&0&1\\\cos\theta&-\sin\theta&0\end{bmatrix}\begin{bmatrix}A_R\\A_\theta\\A_\phi\end{bmatrix}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  تبدیل نمایش بردار از مختصات استوانه‌ای به کروی
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\begin{bmatrix}A_R\\A_\theta\\A_\phi\end{bmatrix}\ELbr =\begin{bmatrix}\sin\theta&0&\cos\theta\\\cos\theta&0&-\sin\theta\\0&1&0\end{bmatrix}\begin{bmatrix}A_r\\A_\phi\\A_z\end{bmatrix}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  تبدیل نمایش بردار از مختصات کارتزین به کروی
+\end{itemize}
+
+\ELdisp{\vect{A}\ELbr =\uvec{x}A_x+\uvec{y}A_y+\uvec{z}A_z\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \vect{A}\ELbr =\uvec{R}A_R+\uvec{\theta}A_\theta+\uvec{\phi}A_\phi}
+
+\ELdisp{\left\{\begin{aligned}\uvec{x}&=\cos\phi\,\uvec{r}-\sin\phi\,\uvec{\phi}\\\uvec{y}&=\sin\phi\,\uvec{r}+\cos\phi\,\uvec{\phi}\\\uvec{z}&=\uvec{z}\end{aligned}\right.\qquad\ELbr \left\{\begin{aligned}\uvec{r}&=\sin\theta\,\uvec{R}+\cos\theta\,\uvec{\theta}\\\uvec{\phi}&=\uvec{\phi}\\\uvec{z}&=\cos\theta\,\uvec{R}-\sin\theta\,\uvec{\theta}\end{aligned}\right.}
+
+\ELdisp{\Longrightarrow\quad\ELbr \left\{\begin{aligned}\uvec{x}&=\sin\theta\cos\phi\,\uvec{R}+\cos\theta\cos\phi\,\uvec{\theta}-\sin\phi\,\uvec{\phi}\\\uvec{y}&=\sin\theta\sin\phi\,\uvec{R}+\cos\theta\sin\phi\,\uvec{\theta}+\cos\phi\,\uvec{\phi}\\\uvec{z}&=\cos\theta\,\uvec{R}-\sin\theta\,\uvec{\theta}\end{aligned}\right.}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{\begin{bmatrix}A_R\\A_\theta\\A_\phi\end{bmatrix}\ELbr =\begin{bmatrix}\sin\theta\cos\phi&\sin\theta\sin\phi&\cos\theta\\\cos\theta\cos\phi&\cos\theta\sin\phi&-\sin\theta\\-\sin\phi&\cos\phi&0\end{bmatrix}\begin{bmatrix}A_x\\A_y\\A_z\end{bmatrix}}
+
+\end{ELimportant}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  تبدیل نمایش بردار از مختصات کروی به کارتزین
+\end{itemize}
+
+\ELdisp{\vect{A}\ELbr =\uvec{R}A_R+\uvec{\theta}A_\theta+\uvec{\phi}A_\phi\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \vect{A}\ELbr =\uvec{x}A_x+\uvec{y}A_y+\uvec{z}A_z}
+
+\ELdisp{\left\{\begin{aligned}\uvec{R}&=\sin\theta\,\uvec{r}+\cos\theta\,\uvec{z}\\\uvec{\theta}&=\cos\theta\,\uvec{r}-\sin\theta\,\uvec{z}\\\uvec{\phi}&=\uvec{\phi}\end{aligned}\right.\qquad\ELbr \left\{\begin{aligned}\uvec{r}&=\cos\phi\,\uvec{x}+\sin\phi\,\uvec{y}\\\uvec{\phi}&=-\sin\phi\,\uvec{x}+\cos\phi\,\uvec{y}\\\uvec{z}&=\uvec{z}\end{aligned}\right.}
+
+\ELdisp{\Longrightarrow\quad\ELbr \left\{\begin{aligned}\uvec{R}&=\sin\theta\cos\phi\,\uvec{x}+\sin\theta\sin\phi\,\uvec{y}+\cos\theta\,\uvec{z}\\\uvec{\theta}&=\cos\theta\cos\phi\,\uvec{x}+\cos\theta\sin\phi\,\uvec{y}-\sin\theta\,\uvec{z}\\\uvec{\phi}&=-\sin\phi\,\uvec{x}+\cos\phi\,\uvec{y}\end{aligned}\right.}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{\begin{bmatrix}A_x\\A_y\\A_z\end{bmatrix}\ELbr =\begin{bmatrix}\sin\theta\cos\phi&\cos\theta\cos\phi&-\sin\phi\\\sin\theta\sin\phi&\cos\theta\sin\phi&\cos\phi\\\cos\theta&-\sin\theta&0\end{bmatrix}\begin{bmatrix}A_R\\A_\theta\\A_\phi\end{bmatrix}}
+
+\end{ELimportant}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  تبدیل از مختصات استوانه‌ای به کروی
+\end{itemize}
+
+\ELdisp{R\ELbr =\sqrt{r^2+z^2},\qquad\ELbr  \theta\ELbr =\tan^{-1}\frac{r}{z},\qquad\ELbr  \phi\ELbr =\phi}
+
+\begin{itemize}
+\tightlist
+\item
+  تبدیل از مختصات کروی به استوانه‌ای
+\end{itemize}
+
+\ELdisp{r\ELbr =R\sin\theta,\qquad\ELbr  \phi\ELbr =\phi,\qquad\ELbr  z\ELbr =R\cos\theta}
+
+\begin{itemize}
+\tightlist
+\item
+  تبدیل از مختصات کروی به کارتزین
+\end{itemize}
+
+\ELdisp{x\ELbr =R\sin\theta\cos\phi,\qquad\ELbr  y\ELbr =R\sin\theta\sin\phi,\qquad\ELbr  z\ELbr =R\cos\theta}
+
+\begin{itemize}
+\tightlist
+\item
+  تبدیل از مختصات کارتزین به کروی
+\end{itemize}
+
+\ELdisp{R\ELbr =\sqrt{x^2+y^2+z^2},\qquad\ELbr  \theta\ELbr =\tan^{-1}\frac{\sqrt{x^2+y^2}}{z},\qquad\ELbr  \phi\ELbr =\tan^{-1}\frac{y}{x}}
+
+\ELfigure{m01-sph-coords}{}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{انتگرال‌های شامل توابع برداری}{انتگرال‌های شامل توابع برداری}
+
+\begin{ELunit}
+
+\ELfigure{m01-vector-analysis-map-calc}{}
+
+\begin{itemize}
+\tightlist
+\item
+  انواع انتگرال‌های شامل توابع برداری که با آن‌ها سروکار داریم
+\end{itemize}
+
+\ELdisp{\int_C\vect{F}\,d\ell\qquad\ELbr  \iint_S\vect{F}\,ds\qquad\ELbr  \iiint_V\vect{F}\,dv}
+\ELdisp{\int_C V\,\dif\vect{\ell}}
+\ELdisp{\int_C\vect{F}\cdot\dif\vect{\ell}\qquad\ELbr  \iint_S\vect{A}\cdot d\vect{s}}
+\ELdisp{\int_C\vect{F}\times\dif\vect{\ell}}
+
+\end{ELunit}
+
+\begin{ELremark}{}
+
+نکات مهم در مورد انتگرال‌گیری شامل توابع برداری
+
+\begin{itemize}
+\tightlist
+\item
+  استفاده از دستگاه مختصات مناسب
+\item
+  تعیین صحیح طول، سطح و حجم دیفرانسیلی
+\item
+  دقت به تغییرات بردارهای یکه \ELim{\uvec{r}}، \ELim{\uvec{R}}، \ELim{\uvec{\theta}} و \ELim{\uvec{\phi}} در بازه انتگرال‌گیری
+\end{itemize}
+
+\end{ELremark}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  انتگرال از یک تابع برداری روی منحنی، سطح و حجم مشخص
+\end{itemize}
+
+\ELdisp{\int_C\vect{F}\,d\ell\qquad\ELbr  \iint_S\vect{F}\,ds\qquad\ELbr  \iiint_V\vect{F}\,dv}
+
+\begin{itemize}
+\tightlist
+\item
+  حاصل یک بردار است.
+\item
+  کاربردهای مهم در الکترومغناطیس: محاسبه شدت میدان الکتریکی ناشی از یک توزیع بار خطی، سطحی و حجمی
+\end{itemize}
+
+\ELdisp{\left\{\begin{aligned}\vect{E}&=\frac{1}{4\pi\varepsilon_0}\int_C\frac{\rho_\ell\,d\ell'(\vect{R}-\vect{R}')}{\abs{\vect{R}-\vect{R}'}^3}\\\vect{E}&=\frac{1}{4\pi\varepsilon_0}\iint_S\frac{\rho_s\,ds'(\vect{R}-\vect{R}')}{\abs{\vect{R}-\vect{R}'}^3}\\\vect{E}&=\frac{1}{4\pi\varepsilon_0}\iiint_V\frac{\rho_v\,dv'(\vect{R}-\vect{R}')}{\abs{\vect{R}-\vect{R}'}^3}\end{aligned}\right.}
+
+\end{ELunit}
+
+\ELnextnum{1-9}
+
+\begin{ELexample}{}
+
+انتگرال زیر را روی منحنی \ELim{C} محاسبه کنید.
+\ELdisp{\int_C\vect{F}\,d\ell,\qquad\ELbr  \vect{F}\ELbr =3\uvec{r}}
+
+\ELfigure{m01-ex9}{}
+
+\begin{ELsolution}
+
+\ELfigure{m01-ex9-solution}{}
+
+\ELdisp{d\ell\ELbr =r\,d\phi\ELbr =a\,d\phi}
+\ELdisp{\int_C\vect{F}\,d\ell\ELbr =\int_0^\pi 3\uvec{r}\,a\,d\phi\ELbr =3a\int_0^\pi(\cos\phi\,\uvec{x}+\sin\phi\,\uvec{y})\,d\phi\ELbr =6a\uvec{y}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  انتگرال از یک تابع اسکالر روی مسیر مشخص
+\end{itemize}
+
+\ELdisp{\int_C V\,\dif\vect{\ell}}
+
+\begin{itemize}
+\tightlist
+\item
+  حاصل یک بردار است.
+\item
+  کاربردهای مهم در الکترومغناطیس: محاسبه پتانسیل مغناطیسی ناشی از یک جریان خطی
+\end{itemize}
+
+\ELdisp{\vect{A}\ELbr =\frac{\mu_0I}{4\pi}\oint_C\frac{\dif\vect{\ell}'}{\abs{\vect{R}-\vect{R}'}}}
+
+\end{ELunit}
+
+\ELnextnum{1-10}
+
+\begin{ELexample}{}
+
+انتگرال زیر را در امتداد مسیرهای زیر محاسبه کنید
+
+\ELdisp{\int_O^P r^2\,\dif\vect{\ell},\qquad\ELbr  r^2\ELbr =x^2+y^2}
+
+\begin{itemize}
+\tightlist
+\item
+  مسیر \ELim{OP}
+\item
+  مسیر \ELim{OP_1P}
+\item
+  مسیر \ELim{OP_2P}
+\end{itemize}
+
+\ELfigure{m01-ex10}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  در امتداد مسیر \ELim{OP}
+\end{itemize}
+
+\ELdisp{\begin{aligned}\int_O^P r^2\,\dif\vect{\ell}&=\uvec{r}\int_0^{\sqrt2}r^2\,dr=\uvec{r}\,\frac{2\sqrt2}{3}\\&=\frac{2\sqrt2}{3}(\uvec{x}\cos45^\circ+\uvec{y}\sin45^\circ)\\&=\uvec{x}\frac23+\uvec{y}\frac23\end{aligned}}
+
+\begin{itemize}
+\tightlist
+\item
+  در امتداد مسیر \ELim{OP_1P}
+\end{itemize}
+
+\ELdisp{\begin{aligned}\int_O^P(x^2+y^2)\,\dif\vect{\ell}&=\uvec{y}\int_O^{P_1}y^2\,dy+\uvec{x}\int_{P_1}^P(x^2+1)\,dx\\&=\uvec{y}\tfrac13y^3\Big|_0^1+\uvec{x}\left(\tfrac13x^3+x\right)\Big|_0^1\\&=\uvec{x}\frac43+\uvec{y}\frac13\end{aligned}}
+
+\begin{itemize}
+\tightlist
+\item
+  در امتداد مسیر \ELim{OP_2P}
+\end{itemize}
+
+\ELdisp{\begin{aligned}\int_O^P(x^2+y^2)\,\dif\vect{\ell}&=\uvec{x}\int_O^{P_2}x^2\,dx+\uvec{y}\int_{P_2}^P(1+y^2)\,dy\\&=\uvec{x}\tfrac13x^3\Big|_0^1+\uvec{y}\left(y+\tfrac13y^3\right)\Big|_0^1\\&=\uvec{x}\frac13+\uvec{y}\frac43\end{aligned}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  انتگرال خطی عددی
+\end{itemize}
+
+\ELdisp{\int_C\vect{F}\cdot\dif\vect{\ell}}
+
+\begin{itemize}
+\tightlist
+\item
+  حاصل یک اسکالر است.
+\item
+  اگر \ELim{\vect{F}} نیرو باشد
+
+  \begin{itemize}
+  \tightlist
+  \item
+    کار انجام شده بوسیله نیرو برای حرکت دادن جسمی از نقطه \ELim{P_1} به نقطه \ELim{P_2} در امتداد مسیر مشخص شده \ELim{C}
+  \end{itemize}
+\item
+  کاربردهای مهم در الکترومغناطیس
+
+  \begin{itemize}
+  \tightlist
+  \item
+    محاسبه اختلاف پتانسیل الکتریکی بین نقاط \ELim{P_1} و \ELim{P_2}:
+    \ELdisp{V\ELbr =-\int_{P_1}^{P_2}\vect{E}\cdot\dif\vect{\ell}}
+  \item
+    قانون مداری آمپر:
+    \ELdisp{\mu_0I\ELbr =-\oint_C\vect{B}\cdot\dif\vect{\ell}}
+  \end{itemize}
+\end{itemize}
+
+\end{ELunit}
+
+\ELnextnum{1-11}
+
+\begin{ELexample}{}
+
+انتگرال زیر را در مسیر ربع دایره شکل روبرو محاسبه کنید.
+
+\ELdisp{\int_A^B\vect{F}\cdot\dif\vect{\ell},\qquad\ELbr  \vect{F}\ELbr =\uvec{x}xy-\uvec{y}2x}
+
+\ELfigure{m01-ex11}{}
+
+\begin{ELsolution}
+
+\ELdisp{\begin{bmatrix}F_r\\F_\phi\\F_z\end{bmatrix}\ELbr =\begin{bmatrix}\cos\phi&\sin\phi&0\\-\sin\phi&\cos\phi&0\\0&0&1\end{bmatrix}\begin{bmatrix}xy\\-2x\\0\end{bmatrix}}
+\ELdisp{\vect{F}\ELbr =\uvec{r}(xy\cos\phi-2x\sin\phi)-\uvec{\phi}(xy\sin\phi+2x\cos\phi)}
+\ELdisp{\dif\vect{\ell}\ELbr =\uvec{\phi}\,3\,d\phi\qquad\ELbr  \vect{F}\cdot\dif\vect{\ell}\ELbr =-3(xy\sin\phi+2x\cos\phi)\,d\phi}
+\ELdisp{x\ELbr =3\cos\phi\qquad\ELbr  y\ELbr =3\sin\phi}
+\ELdisp{\int_A^B\vect{F}\cdot\dif\vect{\ell}\ELbr =\int_0^{\pi/2}-3(9\sin^2\phi\cos\phi+6\cos^2\phi)\,d\phi\ELbr =-9\left(1+\frac{\pi}{2}\right)}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  انتگرال سطحی عددی
+\end{itemize}
+
+\ELdisp{\iint_S\vect{A}\cdot d\vect{s}}
+
+\begin{itemize}
+\tightlist
+\item
+  حاصل یک اسکالر است.
+\item
+  حاصل انتگرال \ELim{\ELto} شار میدان برداری \ELim{\vect{A}} که از سطح \ELim{S} می‌گذرد
+\item
+  سطح دیفرانسیلی برداری
+\end{itemize}
+
+\ELdisp{d\vect{s}\ELbr =\uvec{n}\,ds}
+
+\ELfigure{m01-surface-normals}{جهت \ELim{\mathbf{a}_n} برای سطح بسته: عمود بر سطح به سمت خارج حجم؛ برای
+سطح باز: وابسته به حرکت روی حاشیه سطح باز و با استفاده از قانون دست راست}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  کاربردهای مهم در الکترومغناطیس
+
+  \begin{itemize}
+  \tightlist
+  \item
+    قانون گوس در فضای آزاد:
+    \ELdisp{\oiint_S\vect{E}\cdot d\vect{s}\ELbr =\frac{Q}{\varepsilon_0}}
+  \item
+    محاسبه جریان الکتریکی:
+    \ELdisp{\iint_S\vect{J}\cdot d\vect{s}\ELbr =I}
+  \end{itemize}
+\end{itemize}
+
+\ELnextnum{1-12}
+
+\begin{ELexample}{}
+
+انتگرال زیر را روی سطح بسته‌ای حول محور \ELim{z} که با \ELim{z=\pm3} و \ELim{r=2} مشخص می‌شود، محاسبه کنید
+
+\ELdisp{\oint_S\vect{F}\cdot d\vect{s},\qquad\ELbr  \vect{F}\ELbr =\uvec{r}\frac{k_1}{r}+\uvec{z}k_2z}
+
+\ELfigure{m01-ex12}{}
+
+\begin{ELsolution}
+
+\ELdisp{\oint_S\vect{F}\cdot d\vect{s}\ELbr =\oint_S\vect{F}\cdot\uvec{n}\,ds\ELbr =\int_{\substack{\text{\lr{top}}\\\text{\lr{face}}}}\vect{F}\cdot\uvec{n}\,ds+\int_{\substack{\text{\lr{bottom}}\\\text{\lr{face}}}}\vect{F}\cdot\uvec{n}\,ds+\int_{\substack{\text{\lr{side}}\\\text{\lr{wall}}}}\vect{F}\cdot\uvec{n}\,ds}
+
+\begin{itemize}
+\tightlist
+\item
+  سطح بالایی
+\end{itemize}
+
+\ELdisp{z\ELbr =3,\quad\ELbr  \uvec{n}\ELbr =\uvec{z},\quad\ELbr  \vect{F}\cdot\uvec{n}\ELbr =k_2z\ELbr =3k_2,\quad\ELbr  ds\ELbr =r\,dr\,d\phi}
+\ELdisp{\int_{\substack{\text{\lr{top}}\\\text{\lr{face}}}}\vect{F}\cdot\uvec{n}\,ds\ELbr =\int_0^{2\pi}\!\!\int_0^2 3k_2\,r\,dr\,d\phi\ELbr =12\pi k_2}
+
+\begin{itemize}
+\tightlist
+\item
+  سطح پایینی
+\end{itemize}
+
+\ELdisp{z\ELbr =-3,\quad\ELbr  \uvec{n}\ELbr =-\uvec{z},\quad\ELbr  \vect{F}\cdot\uvec{n}\ELbr =-k_2z\ELbr =3k_2,\quad\ELbr  ds\ELbr =r\,dr\,d\phi}
+\ELdisp{\int_{\substack{\text{\lr{bottom}}\\\text{\lr{face}}}}\vect{F}\cdot\uvec{n}\,ds\ELbr =12\pi k_2}
+
+\begin{itemize}
+\tightlist
+\item
+  دیواره جانبی
+\end{itemize}
+
+\ELdisp{r\ELbr =2,\quad\ELbr  \uvec{n}\ELbr =\uvec{r},\quad\ELbr  \vect{F}\cdot\uvec{n}\ELbr =\frac{k_1}{r}\ELbr =\frac{k_1}{2},\quad\ELbr  ds\ELbr =r\,d\phi\,dz\ELbr =2\,d\phi\,dz}
+\ELdisp{\int_{\substack{\text{\lr{side}}\\\text{\lr{wall}}}}\vect{F}\cdot\uvec{n}\,ds\ELbr =\int_{-3}^3\!\int_0^{2\pi}k_1\,d\phi\,dz\ELbr =12\pi k_1}
+
+\ELdisp{\oint_S\vect{F}\cdot d\vect{s}\ELbr =12\pi k_2+12\pi k_2+12\pi k_1\ELbr =12\pi(k_1+2k_2)}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  انتگرال خطی برداری
+\end{itemize}
+
+\ELdisp{\int_C\vect{F}\times\dif\vect{\ell}}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  حاصل یک بردار است.
+\item
+  کاربردهای مهم در الکترومغناطیس
+
+  \begin{itemize}
+  \tightlist
+  \item
+    قانون بیوساوار:
+    \ELdisp{\vect{B}\ELbr =\frac{\mu_0I}{4\pi}\oint_C\frac{\dif\vect{\ell}\times(\vect{R}-\vect{R}')}{\abs{\vect{R}-\vect{R}'}^3}}
+  \item
+    محاسبه نیروی مغناطیسی وارد بر سیم حامل جریان در میدان مغناطیسی:
+    \ELdisp{\vect{F}\ELbr =I\oint_C\dif\vect{\ell}\times\vect{B}}
+  \end{itemize}
+\end{itemize}
+
+\ELnextnum{1-13}
+
+\begin{ELexample}{}
+
+انتگرال زیر را در مسیر \ELim{C} محاسبه کنید.
+
+\ELdisp{\int_C\vect{F}\times\dif\vect{\ell},\qquad\ELbr  \vect{F}\ELbr =2\uvec{z}}
+
+\ELfigure{m01-ex13}{}
+
+\begin{ELsolution}
+
+\ELdisp{\dif\vect{\ell}\ELbr =r\,d\phi\,\uvec{\phi}\ELbr =a\,d\phi\,\uvec{\phi}}
+\ELdisp{\begin{aligned}\int_C\vect{F}\times\dif\vect{\ell}&=\int_{2\pi}^0 2\uvec{z}\times a\,d\phi\,\uvec{\phi}=-2a\int_{2\pi}^0\uvec{r}\,d\phi\\&=-2a\int_{2\pi}^0(\cos\phi\,\uvec{x}+\sin\phi\,\uvec{y})\,d\phi=0\end{aligned}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\end{ELjoin}
+
+\ELhold
+
+\ELsection{عملیات مشتق‌گیری - گرادیان}{عملیات مشتق‌گیری - گرادیان}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{مفاهیم پیش‌نیاز برای ورود به بحث گرادیان}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    مفهوم مشتق از یک تابع تک‌متغیره
+
+    \begin{itemize}
+    \tightlist
+    \item
+      نرخ تغییرات تابع در نقطه مورد نظر
+    \end{itemize}
+  \item
+    مفهوم مشتق جهت‌دار از یک تابع چندمتغیره
+
+    \begin{itemize}
+    \tightlist
+    \item
+      نرخ تغییرات تابع در نقطه مورد نظر و در یک جهت مشخص شده
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\ELfigure{m01-derivative-concepts}{}
+
+\end{ELunit}
+
+\begin{ELdefinition}{گرادیان}
+
+گرادیانِ یک \textbf{کمیت اسکالر}، یک \textbf{کمیت برداری} است که در جهتی قرار می‌گیرد که کمیت اسکالر بیشترین افزایش را دارد و اندازه آن برابر با حداکثر نرخ افزایش کمیت اسکالر است.
+
+\ELdisp{\operatorname{grad}v\ELbr =\nabla v\ELbr =\uvec{n}\frac{dv}{dn}}
+
+\end{ELdefinition}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  مشتق جهت‌دار \ELim{v} در جهت \ELim{\dif\vect{\ell}}:
+\end{itemize}
+
+\ELdisp{\frac{dv}{d\ell}\ELbr =\nabla v\cdot\uvec{\ell}}
+
+\begin{itemize}
+\tightlist
+\item
+  گرادیان \ELim{v} بر سطوح \ELim{v} ثابت عمود است.
+\end{itemize}
+
+\ELfigure{m01-gradient-map}{}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  رابطه گرادیان در مختصات کارتزین به صورت زیر است
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\nabla v\ELbr =\frac{\partial v}{\partial x}\uvec{x}+\frac{\partial v}{\partial y}\uvec{y}+\frac{\partial v}{\partial z}\uvec{z}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  رابطه کلی گرادیان
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\nabla V\ELbr =\uvec{u_1}\frac{\partial V}{h_1\,\partial u_1}+\uvec{u_2}\frac{\partial V}{h_2\,\partial u_2}+\uvec{u_3}\frac{\partial V}{h_3\,\partial u_3}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\Needspace{10\baselineskip}
+\begin{longtable}[c]{llll}
+\toprule\noalign{}
+\ELtablehead ضرایب متری & کارتزین & استوانه‌ای & کروی \\\noalign{\vskip 4pt}
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\ELim{h_1} & \ELim{1} & \ELim{1} & \ELim{1} \\\noalign{\vskip 4pt}
+\ELim{h_2} & \ELim{1} & \ELim{r} & \ELim{R} \\\noalign{\vskip 4pt}
+\ELim{h_3} & \ELim{1} & \ELim{1} & \ELim{R\sin\theta} \\\noalign{\vskip 4pt}
+\end{longtable}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{مفهوم گرادیان}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    نمایش یک تپه با کانتورهای ارتفاع \ELim{\ELto} \ELim{h(x,y)}
+  \item
+    اگر توپی در نقطه \ELim{P} قرار داشته باشد، در چه جهتی حرکت می‌کند و مقدار نیروی وارد بر آن چقدر است؟
+
+    \begin{itemize}
+    \tightlist
+    \item
+      پاسخ متناسب با \ELim{-\nabla h} است.
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\ELfigure{m01-gradient-hill}{}
+
+\end{ELunit}
+
+\ELnextnum{1-14}
+
+\begin{ELexample}{}
+
+شدت میدان الکتریکی \ELim{\vect{E}} به صورت منهای گرادیان پتانسیل الکتریکی عددی \ELim{V} قابل دستیابی است. \ELim{\vect{E}} را در نقطه \ELim{(1,1,0)} بیابید اگر
+\ELdisp{V\ELbr =E_0R\cos\theta}
+
+\begin{ELsolution}
+
+\ELdisp{\vect{E}\ELbr =-\nabla V}
+\ELdisp{\begin{aligned}\vect{E}&=-\left[\uvec{R}\frac{\partial}{\partial R}+\uvec{\theta}\frac{\partial}{R\,\partial\theta}+\uvec{\phi}\frac{\partial}{R\sin\theta\,\partial\phi}\right]E_0R\cos\theta\\&=-(\uvec{R}\cos\theta-\uvec{\theta}\sin\theta)E_0\end{aligned}}
+\ELdisp{\vect{E}\ELbr =-\uvec{z}E_0}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELhold
+
+\ELsection{عملیات مشتق‌گیری - دیورژانس}{عملیات مشتق‌گیری - دیورژانس}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{مفاهیم پیش‌نیاز برای ورود به بحث دیورژانس}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    در مطالعه میدان‌های برداری، راحت‌تر است که تغییرات میدان را به صورت ترسیمی توسط خطوط شار نمایش دهیم. این‌ها خطوط یا منحنی‌های جهت‌داری هستند که در هر نقطه جهت میدان برداری را مشخص می‌کنند.
+  \end{itemize}
+\end{itemize}
+
+\ELfigure{m01-flux-lines}{}
+
+\begin{itemize}
+\tightlist
+\item
+  شار یک میدان برداری مشابه جریان یک سیال مانند آب است.
+\item
+  اگر \ELim{\vect{A}} یک بردار چگالی شار باشد، کل شار خروجی از سطح \ELim{S} برابر است با
+\end{itemize}
+
+\ELdisp{\oint_S\vect{A}\cdot d\vect{s}}
+
+\begin{itemize}
+\tightlist
+\item
+  در حجمی با یک سطح بسته، تنها وقتی شار اضافی ورودی یا خروجی وجود خواهد داشت که این حجم به ترتیب دارای یک چاه یا یک منبع باشد.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    شار خالص خروجی از \ELim{v_a} مثبت است: وجود منبع در حجم \ELim{v_a}
+  \item
+    شار خالص خروجی از \ELim{v_b} منفی است: وجود چاه در حجم \ELim{v_b}
+  \item
+    شار خالص خروجی از \ELim{v_c} صفر است.
+  \end{itemize}
+\end{itemize}
+
+\ELfigure{m01-source-sink}{}
+
+\end{ELunit}
+
+\begin{ELdefinition}{دیورژانس}
+
+دیورژانس \textbf{میدان برداری} \ELim{\vect{A}} در یک نقطه عبارتست از شار خالص خروجی \ELim{\vect{A}} در واحد حجم وقتی که این حجم حول نقطه به سمت صفر میل می‌کند
+
+\ELdisp{\operatorname{div}\vect{A}\triangleq\lim_{\Delta v\to0}\frac{\oint_S\vect{A}\cdot d\vect{s}}{\Delta v}}
+
+\end{ELdefinition}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  در مختصات کارتزین رابطه دیورژانس به صورت زیر است
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\operatorname{div}\vect{A}\ELbr =\frac{\partial A_x}{\partial x}+\frac{\partial A_y}{\partial y}+\frac{\partial A_z}{\partial z}\qquad\ELbr \qquad\ELbr  \nabla\cdot\vect{A}\equiv\operatorname{div}\vect{A}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  رابطه کلی دیورژانس
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\nabla\cdot\vect{A}\ELbr =\frac{1}{h_1h_2h_3}\left[\frac{\partial}{\partial u_1}(h_2h_3A_1)+\frac{\partial}{\partial u_2}(h_1h_3A_2)+\frac{\partial}{\partial u_3}(h_1h_2A_3)\right]}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\ELnextnum{1-15}
+
+\begin{ELexample}{}
+
+چگالی شار مغناطیسی \ELim{\vect{B}} در بیرون یک سیم طویل حامل جریان به صورت دایره‌ای و متناسب با معکوس فاصله از محور سیم است. دیورژانس \ELim{\vect{B}} را بیابید.
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  با فرض منطبق بودن سیم بر محور \ELim{z}
+\end{itemize}
+
+\ELdisp{\vect{B}\ELbr =\uvec{\phi}\frac{k}{r}}
+\ELdisp{\nabla\cdot\vect{B}\ELbr =\frac1r\frac{\partial}{\partial r}(rB_r)+\frac1r\frac{\partial B_\phi}{\partial\phi}+\frac{\partial B_z}{\partial z}}
+\ELdisp{\nabla\cdot\vect{B}\ELbr =0}
+
+\ELfigure{m01-ex15}{}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELhold
+
+\ELsection{عملیات مشتق‌گیری - کرل}{عملیات مشتق‌گیری - کرل}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{مفاهیم پیش‌نیاز برای ورود به بحث کرل}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    گردش یک میدان برداری به دور یک مسیر بسته
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{\text{\lr{Circulation of }}\vect{A}\text{\lr{ around contour }}C\triangleq\oint_C\vect{A}\cdot\dif\vect{\ell}}
+
+\begin{itemize}
+\tightlist
+\item
+  معنای فیزیکی گردش به نوع میدانی که بردار \ELim{\vect{A}} نمایش می‌دهد بستگی دارد.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    اگر \ELim{\vect{A}} نیروی وارد بر یک جسم باشد، گردش \ELim{\vect{A}} کار انجام شده توسط نیرو برای حرکت جسم به دور مسیر است.
+  \end{itemize}
+\end{itemize}
+
+\end{ELunit}
+
+\begin{ELdefinition}{کرل}
+
+کرل \textbf{میدان برداری} \ELim{\vect{A}} در یک نقطه \textbf{برداری} است که اندازه آن حداکثر گردش خالص \ELim{\vect{A}} در واحد سطح است وقتی که سطح حول نقطه به سمت صفر میل می‌کند و جهت آن جهت عمود سطح است زمانی که سطح طوری جهت داده شده باشد که گردش خالص را حداکثر کند.
+
+\ELdisp{\operatorname{curl}\vect{A}\equiv\nabla\times\vect{A}\triangleq\lim_{\Delta s\to0}\frac{1}{\Delta s}\left[\uvec{n}\oint_C\vect{A}\cdot\dif\vect{\ell}\right]_{\max}}
+
+\end{ELdefinition}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  در مختصات کارتزین رابطه کرل به صورت زیر است
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\nabla\times\vect{A}\ELbr =\begin{vmatrix}\uvec{x}&\uvec{y}&\uvec{z}\\[1mm]\dfrac{\partial}{\partial x}&\dfrac{\partial}{\partial y}&\dfrac{\partial}{\partial z}\\[3mm]A_x&A_y&A_z\end{vmatrix}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  رابطه کلی کرل
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\nabla\times\vect{A}\ELbr =\frac{1}{h_1h_2h_3}\begin{vmatrix}\uvec{u_1}h_1&\uvec{u_2}h_2&\uvec{u_3}h_3\\[1mm]\dfrac{\partial}{\partial u_1}&\dfrac{\partial}{\partial u_2}&\dfrac{\partial}{\partial u_3}\\[3mm]h_1A_1&h_2A_2&h_3A_3\end{vmatrix}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{مفهوم کرل}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    چرخش یک چرخ پره‌دار درون جریان آب با بردار سرعت \ELim{u}
+
+    \begin{itemize}
+    \tightlist
+    \item
+      حداکثر سرعت زاویه‌ای چرخ پره‌دار متناسب با اندازه کرل بردار سرعت است.
+    \item
+      محور چرخ با استفاده از قانون دست راست در جهت کرل قرار می‌گیرد.
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\ELfigure{m01-paddle-wheel}{}
+
+\end{ELunit}
+
+\ELnextnum{1-16}
+
+\begin{ELexample}{}
+
+کرل بردار زیر را محاسبه کنید
+\ELdisp{\vect{A}\ELbr =\uvec{\phi}\left(\frac{k}{r}\right)}
+
+\begin{ELsolution}
+
+\ELdisp{\nabla\times\vect{A}\ELbr =\frac1r\begin{vmatrix}\uvec{r}&\uvec{\phi}r&\uvec{z}\\[1mm]\dfrac{\partial}{\partial r}&\dfrac{\partial}{\partial\phi}&\dfrac{\partial}{\partial z}\\[3mm]0&k&0\end{vmatrix}\ELbr =0}
+
+\ELfigure{m01-ex16}{}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELhold
+
+\ELsection{قضایای مهم برداری}{قضایای مهم برداری}
+
+\begin{ELunit}
+
+\ELfigure{m01-vector-analysis-map-thm}{}
+
+\end{ELunit}
+
+\begin{ELtheorem}{قضیه دیورژانس}
+
+انتگرال حجمی دیورژانس یک میدان برداری با شار کل خروجی بردار از سطح در برگیرنده حجم برابر است.
+\ELdisp{\int_V\nabla\cdot\vect{A}\,dv\ELbr =\oint_S\vect{A}\cdot d\vect{s}}
+
+\end{ELtheorem}
+
+\begin{ELunit}
+
+\ELfigure{m01-divergence-theorem}{}
+
+\end{ELunit}
+
+\begin{ELtheorem}{قضیه استوکس}
+
+انتگرال سطحی کرل یک میدان برداری، روی یک سطح باز برابر انتگرال خطی بسته بردار روی مسیری است که سطح را در بر می‌گیرد.
+\ELdisp{\int_S(\nabla\times\vect{A})\cdot d\vect{s}\ELbr =\oint_C\vect{A}\cdot\dif\vect{\ell}}
+
+\end{ELtheorem}
+
+\begin{ELunit}
+
+\ELfigure{m01-stokes-theorem}{}
+
+\end{ELunit}
+
+\begin{ELtheorem}{قضیه هلم‌هولتز}
+
+یک میدان برداری تا حد یک ثابت افزودنی تعیین می‌شود اگر هم دیورژانس و هم کرل آن مشخص باشد.
+
+\end{ELtheorem}
+
+\ELnextnum{1-17}
+
+\begin{ELexample}{}
+
+اعتبار قضیه دیورژانس را در مورد ناحیه پوسته‌ای محصور به سطوح کروی \ELim{R=R_1} و \ELim{R=R_2} \ELim{(R_2>R_1)} به مرکز مبدأ مختصات برای میدان برداری زیر تحقیق نمایید.
+\ELdisp{\vect{F}\ELbr =\uvec{R}kR}
+
+\ELfigure{m01-ex17}{}
+
+\begin{ELsolution}
+
+\ELdisp{\int_V\nabla\cdot\vect{A}\,dv\ELbr =\oint_S\vect{A}\cdot d\vect{s}}
+
+\begin{itemize}
+\tightlist
+\item
+  برای سطح بیرونی
+\end{itemize}
+
+\ELdisp{R\ELbr =R_2,\qquad\ELbr  d\vect{s}\ELbr =\uvec{R}R_2^2\sin\theta\,d\theta\,d\phi}
+\ELdisp{\int_{\substack{\text{\lr{outer}}\\\text{\lr{surface}}}}\vect{F}\cdot d\vect{s}\ELbr =\int_0^{2\pi}\!\!\int_0^\pi(kR_2)R_2^2\sin\theta\,d\theta\,d\phi\ELbr =4\pi kR_2^3}
+
+\begin{itemize}
+\tightlist
+\item
+  برای سطح داخلی
+\end{itemize}
+
+\ELdisp{R\ELbr =R_1,\qquad\ELbr  d\vect{s}\ELbr =-\uvec{R}R_1^2\sin\theta\,d\theta\,d\phi}
+\ELdisp{\int_{\substack{\text{\lr{inner}}\\\text{\lr{surface}}}}\vect{F}\cdot d\vect{s}\ELbr =-\int_0^{2\pi}\!\!\int_0^\pi(kR_1)R_1^2\sin\theta\,d\theta\,d\phi\ELbr =-4\pi kR_1^3}
+
+\ELdisp{\oint_S\vect{F}\cdot d\vect{s}\ELbr =4\pi k(R_2^3-R_1^3)}
+\ELdisp{\nabla\cdot\vect{F}\ELbr =\frac{1}{R^2}\frac{\partial}{\partial R}(R^2F_R)\ELbr =\frac{1}{R^2}\frac{\partial}{\partial R}(kR^3)\ELbr =3k}
+\ELdisp{\int_V\nabla\cdot\vect{F}\,dv\ELbr =(\nabla\cdot\vect{F})V\ELbr =4\pi k(R_2^3-R_1^3)}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELnextnum{1-18}
+
+\begin{ELexample}{}
+
+اعتبار قضیه استوکس را روی یک چهارم قرص مدوری به شعاع ۳ در ربع اول برای میدان برداری زیر تحقیق نمایید.
+\ELdisp{\vect{F}\ELbr =\uvec{x}xy-\uvec{y}2x}
+
+\ELfigure{m01-ex18}{}
+
+\begin{ELsolution}
+
+\ELdisp{\int_S(\nabla\times\vect{A})\cdot d\vect{s}\ELbr =\oint_C\vect{A}\cdot\dif\vect{\ell}}
+\ELdisp{\nabla\times\vect{F}\ELbr =\begin{vmatrix}\uvec{x}&\uvec{y}&\uvec{z}\\[1mm]\dfrac{\partial}{\partial x}&\dfrac{\partial}{\partial y}&\dfrac{\partial}{\partial z}\\[3mm]xy&-2x&0\end{vmatrix}\ELbr =-\uvec{z}(2+x)}
+\ELdisp{\int_S(\nabla\times\vect{F})\cdot d\vect{s}\ELbr =\int_0^{\pi/2}\!\!\int_0^3-\uvec{z}(2+r\cos\phi)\cdot r\,dr\,d\phi\,\uvec{z}\ELbr =-9\left(1+\frac{\pi}{2}\right)}
+
+\begin{itemize}
+\tightlist
+\item
+  از \ELim{B} تا \ELim{O}
+\end{itemize}
+
+\ELdisp{x\ELbr =0,\ \text{\lr{and}}\ \vect{F}\cdot\dif\vect{\ell}\ELbr =\vect{F}\cdot(\uvec{y}\,dy)\ELbr =2x\,dy\ELbr =0}
+
+\begin{itemize}
+\tightlist
+\item
+  از \ELim{O} تا \ELim{A}
+\end{itemize}
+
+\ELdisp{y\ELbr =0,\ \text{\lr{and}}\ \vect{F}\cdot\dif\vect{\ell}\ELbr =\vect{F}\cdot(\uvec{x}\,dx)\ELbr =xy\,dx\ELbr =0}
+
+\ELdisp{\oint_{ABOA}\vect{F}\cdot\dif\vect{\ell}\ELbr =\int_A^B\vect{F}\cdot\dif\vect{\ell}\ELbr =-9\left(1+\frac{\pi}{2}\right)}
+
+(در مثال \ELnumc{1-11} بررسی شده بود)
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELhold
+
+\ELsection{اتحادهای مهم برداری}{اتحادهای مهم برداری}
+
+\begin{ELimportant}{اتحاد \lr{I}}
+
+کرل گرادیان هر کمیت عددی برابر با صفر است
+\ELdisp{\nabla\times(\nabla V)\equiv0}
+
+\end{ELimportant}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  یک میدان برداری بدون کرل را یک میدان \textbf{غیرگردشی} یا \textbf{ابقایی} گویند.
+\item
+  اگر یک کمیت برداری بدون کرل باشد، آنگاه می‌توان آن را به صورت گرادیان یک کمیت عددی بیان کرد.
+\end{itemize}
+
+\end{ELunit}
+
+\begin{ELimportant}{اتحاد \lr{II}}
+
+دیورژانس کرل هر میدان برداری برابر با صفر است.
+\ELdisp{\nabla\cdot(\nabla\times\vect{A})\equiv0}
+
+\end{ELimportant}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  یک میدان برداری بدون دیورژانس را یک میدان \textbf{سلونوئیدی} گویند.
+\item
+  اگر یک کمیت برداری بدون دیورژانس باشد، آنگاه می‌توان آن را به صورت کرل یک کمیت برداری بیان کرد.
+\end{itemize}
+
+\end{ELunit}

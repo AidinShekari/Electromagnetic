@@ -1,0 +1,52 @@
+% ============================================================
+%  Electromagnetics — Persian (RTL) preamble
+%  Compile with XeLaTeX.  \ELroot must point to template/
+% ============================================================
+\newif\ifELrtl \ELrtltrue
+\input{\ELroot/el-packages}
+\usepackage{xepersian}
+\settextfont[Path=\ELroot/fonts/, Extension=.ttf, AutoFakeBold=1.3, Scale=1.0]{Vazirmatn-Regular}
+\input{\ELroot/el-fonts}
+\defpersianfont\ELfaDisplay[Path=\ELroot/fonts/, Extension=.ttf]{Vazirmatn-Black}
+\input{\ELroot/el-math}
+\input{\ELroot/el-config}
+
+\linespread{1.32}
+
+% ---------- language strings ----------
+\def\ELlangCourse{\ELmetaCourseFa}
+\def\ELlangCourseOther{\lr{\ELmetaCourseEn}}
+\def\ELlangUni{\ELmetaUniFa}
+\def\ELlangUniOther{\lr{\ELmetaUniEn}}
+\def\ELlangChapter{فصل}
+\def\ELlangPart{بخش}
+\def\ELlangContents{فهرست مطالب}
+\def\ELlangChapterContents{مطالب این فصل}
+\def\ELlangFigure{شکل}
+\def\ELlangTable{جدول}
+\def\ELlangDefinition{تعریف}
+\def\ELlangTheorem{قضیه}
+\def\ELlangLemma{لم}
+\def\ELlangProposition{گزاره}
+\def\ELlangCorollary{نتیجه}
+\def\ELlangImportant{نتیجهٔ مهم}
+\def\ELlangExample{مثال}
+\def\ELlangExercise{تمرین}
+\def\ELlangRemark{نکته}
+\def\ELlangProof{اثبات}
+\def\ELlangSolution{حل}
+\def\ELlangNotes{جزوهٔ درسی}
+\def\ELlangInstructorLabel{استاد}
+\def\ELlangCompilerLabel{جمع‌آوری و تنظیم}
+\def\ELlangInstructor{\ELmetaInstructorFa}
+\def\ELlangCompiler{\ELmetaCompilerFa}
+\def\ELlangInstructorOther{\ifx\ELmetaInstructorEn\empty\else\lr{Instructor: \ELmetaInstructorEn}\fi}
+\def\ELlangCompilerOther{\lr{Compiled and edited by: \ELmetaCompilerEn}}
+
+\hypersetup{pdftitle={\ELmetaCourseFa\ --- \ELlangNotes},
+  pdfauthor={\ELmetaCompilerFa},
+  pdfsubject={\ELmetaCourseFa، \ELmetaUniFa},
+  pdfkeywords={الکترومغناطیس، جزوهٔ درسی، \ELmetaUniFa},
+  pdflang={fa}, pdfdisplaydoctitle=true}
+
+\input{\ELroot/el-style}

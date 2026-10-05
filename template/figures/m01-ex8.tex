@@ -1,0 +1,19 @@
+% Ch1_3, slide 5: the unit vector a_QP from Q(0,0,h) to P(r,phi,0)
+\begin{tikzpicture}[ELoblique,scale=1]
+  \def\r{1.7}\def\h{2.6}\def\p{75}
+  \coordinate (O) at (0,0,0); \coordinate (Q) at (0,0,\h); \coordinate (P) at ({\r*cos(\p)},{\r*sin(\p)},0);
+  \draw[ELax] (O)--(3.0,0,0) node[ELlab,anchor=north east]{$x$};
+  \draw[ELax] (O)--(0,3.4,0) node[ELlab,anchor=west]{$y$};
+  \draw[ELax] (O)--(0,0,3.5) node[ELlab,anchor=south]{$z$};
+  \draw[ELcurve] plot[domain=0:360,samples=90] ({\r*cos(\x)},{\r*sin(\x)},0);
+  \draw[ELcField,line width=0.6pt] (O)--(P);
+  \draw[ELthin,-{Stealth[length=4pt]}] (0.7,0,0) arc[start angle=0,end angle=\p,radius=0.7];
+  \node[ELlabs,anchor=north] at ({0.85*cos(\p/2)},{0.85*sin(\p/2)},0) {$\phi$};
+  \draw[ELcSource,line width=1.2pt] (Q)--(P);
+  \draw[ELvec2,line width=1.4pt] (Q)--($(Q)!0.25!(P)$) node[ELlabs,anchor=west,xshift=2pt]{$\uvec{QP}$};
+  \node[ELpt] at (Q){}; \node[ELpt] at (P){};
+  \node[ELlab,anchor=west] at (Q) {$Q(0,0,h)$};
+  \node[ELlab,anchor=north west] at (P) {$P(r,\phi,0)$};
+  \node[ELlab,anchor=east] at (0,0,\h/2) {$h$};
+  \node[ELlab,anchor=north east] at (O) {$O$};
+\end{tikzpicture}

@@ -1,0 +1,24 @@
+% Ch1_4, slide 11: ds = a_n ds.  A closed surface (a_n outward); an open surface and its rim
+% (a_n by the right-hand rule from the direction of travel on the rim)
+\begin{tikzpicture}[scale=1]
+  % closed surface
+  \begin{scope}
+    \fill[ELfillA] plot[smooth cycle,tension=0.8] coordinates{(0,0.2)(0.9,1.1)(2.6,1.2)(3.7,0.6)(3.4,-0.5)(1.9,-0.9)(0.5,-0.7)};
+    \draw[ELcField!80,line width=0.7pt] plot[smooth cycle,tension=0.8] coordinates{(0,0.2)(0.9,1.1)(2.6,1.2)(3.7,0.6)(3.4,-0.5)(1.9,-0.9)(0.5,-0.7)};
+    \draw[ELthin] (1.65,0.55) rectangle +(0.28,0.22); \draw[ELvec2] (1.79,0.66)--(1.79,1.65) node[ELlabs,anchor=south]{$\uvec{n}$};
+    \node[ELlabs,anchor=east] at (1.62,0.55) {$ds$};
+    \draw[ELthin,rotate around={-35:(2.8,-0.2)}] (2.8,-0.2) rectangle +(0.28,0.22);
+    \draw[ELvec2] (2.95,-0.15)--(3.75,-0.75) node[ELlabs,anchor=north west]{$\uvec{n}$};
+    \node[ELlabs,anchor=east] at (2.75,-0.15) {$ds$};
+    \draw[ELvec2] (0.5,-0.5)--(0.05,-1.2) node[ELlabs,anchor=north]{$\uvec{n}$};
+  \end{scope}
+  % open surface (a disk) with its rim
+  \begin{scope}[shift={(6.6,0)}]
+    \fill[ELfillA] (0,0) ellipse[x radius=1.6,y radius=0.55];
+    \draw[ELcField!80,line width=0.7pt] (0,0) ellipse[x radius=1.6,y radius=0.55];
+    \draw[ELcField,line width=0.9pt,-{Stealth[length=5pt]}] (-0.4,-0.53) arc[start angle=255,end angle=290,x radius=1.6,y radius=0.55];
+    \draw[ELcField,line width=0.9pt,-{Stealth[length=5pt]}] (0.4,0.53) arc[start angle=75,end angle=110,x radius=1.6,y radius=0.55];
+    \draw[ELvec2] (0,0)--(0,1.6) node[ELlabs,anchor=south]{$\uvec{n}$};
+    \node[ELlab,anchor=west] at (0.55,-0.1) {$S$};
+  \end{scope}
+\end{tikzpicture}

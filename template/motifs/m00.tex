@@ -1,0 +1,19 @@
+% ============================================================
+%  Default chapter motif (used until a chapter has its own motifs/mNN.tex):
+%  the field lines r = C sin^2(theta) and the equipotentials r^2 = K cos(theta) of a dipole.
+%  Drawing area: x in [0,21], y in [0,8.6] (cm), centred on \ELmotifcx; dark ground; colours from the palette.
+%  A chapter motif must show an object of that chapter of the instructor's notes.
+% ============================================================
+\begin{scope}[shift={(\ELmotifcx,4.4)},line cap=round]
+  \foreach \C in {1.2,2.0,3.1,4.6,6.8,10}{%
+    \draw[ELredD,opacity=0.55,line width=0.55pt] plot[domain=2:178,samples=120,smooth]
+      ({\C*sin(\x)^2*cos(\x)},{\C*sin(\x)^2*sin(\x)});
+    \draw[ELredD,opacity=0.55,line width=0.55pt] plot[domain=2:178,samples=120,smooth]
+      ({\C*sin(\x)^2*cos(\x)},{-\C*sin(\x)^2*sin(\x)});}
+  \foreach \K in {0.5,1.4,3,6,11}{%
+    \draw[ELblueD,opacity=0.45,line width=0.45pt] plot[domain=-89:89,samples=120,smooth]
+      ({sqrt(\K*cos(\x))*cos(\x)},{sqrt(\K*cos(\x))*sin(\x)});
+    \draw[ELblueD,opacity=0.45,line width=0.45pt] plot[domain=-89:89,samples=120,smooth]
+      ({-sqrt(\K*cos(\x))*cos(\x)},{sqrt(\K*cos(\x))*sin(\x)});}
+  \fill[ELredD] (0,0) circle (2.2pt);
+\end{scope}

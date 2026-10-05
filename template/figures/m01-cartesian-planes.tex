@@ -1,0 +1,27 @@
+% Ch1_2, slide 15: the point P(x1,y1,z1) at the intersection of the planes x = x1, y = y1,
+% z = z1, with the unit vectors a_x, a_y, a_z at P
+\begin{tikzpicture}[ELoblique,scale=1.05]
+  \def\xa{1.6}\def\ya{2.3}\def\za{1.7}
+  \draw[ELax] (0,0,0)--(3.6,0,0) node[ELlab,anchor=north east]{$x$};
+  \draw[ELax] (0,0,0)--(0,4.6,0) node[ELlab,anchor=west]{$y$};
+  \draw[ELax] (0,0,0)--(0,0,3.3) node[ELlab,anchor=south]{$z$};
+  % plane y = y1
+  \fill[ELfillB,opacity=0.55] (-0.4,\ya,0)--(3.0,\ya,0)--(3.0,\ya,2.6)--(-0.4,\ya,2.6)--cycle;
+  \draw[ELcField!70,line width=0.5pt] (-0.4,\ya,0)--(3.0,\ya,0)--(3.0,\ya,2.6)--(-0.4,\ya,2.6)--cycle;
+  % plane x = x1
+  \fill[ELfillA,opacity=0.6] (\xa,-0.2,0)--(\xa,4.0,0)--(\xa,4.0,2.6)--(\xa,-0.2,2.6)--cycle;
+  \draw[ELcField!70,line width=0.5pt] (\xa,-0.2,0)--(\xa,4.0,0)--(\xa,4.0,2.6)--(\xa,-0.2,2.6)--cycle;
+  % plane z = z1
+  \fill[ELfillA,opacity=0.55] (-0.4,-0.2,\za)--(3.0,-0.2,\za)--(3.0,4.0,\za)--(-0.4,4.0,\za)--cycle;
+  \draw[ELcField!70,line width=0.5pt] (-0.4,-0.2,\za)--(3.0,-0.2,\za)--(3.0,4.0,\za)--(-0.4,4.0,\za)--cycle;
+  % the point and its unit vectors
+  \node[ELpt] (P) at (\xa,\ya,\za) {};
+  \draw[ELvec2] (\xa,\ya,\za)--++(0.8,0,0) node[ELlab,anchor=north east]{$\uvec{x}$};
+  \draw[ELvec2] (\xa,\ya,\za)--++(0,0.75,0) node[ELlab,anchor=south west,xshift=-2pt]{$\uvec{y}$};
+  \draw[ELvec2] (\xa,\ya,\za)--++(0,0,0.75) node[ELlab,anchor=south]{$\uvec{z}$};
+  \node[ELlabg,anchor=north west] at (\xa,\ya+0.08,\za-0.08) {$P(x_1,y_1,z_1)$};
+  \node[ELlab,anchor=south west] at (0,0,0) {$O$};
+  \node[ELtag,anchor=south] at (-0.2,0.9,2.65) {\ELL{$z=z_1$ plane}{صفحه $z=z_1$}};
+  \node[ELtag,anchor=north] at (\xa,3.3,0) {\ELL{$x=x_1$ plane}{صفحه $x=x_1$}};
+  \node[ELtag,anchor=north west] at (2.6,\ya,0) {\ELL{$y=y_1$ plane}{صفحه $y=y_1$}};
+\end{tikzpicture}

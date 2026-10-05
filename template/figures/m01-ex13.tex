@@ -1,0 +1,10 @@
+% Ch1_4, slide 15: the circle C of radius a, travelled from phi = 2 pi to 0 (x downward, y right)
+\begin{tikzpicture}[x={(0,-1cm)},y={(1cm,0)},scale=1]
+  \def\a{1.4}
+  \draw[ELcurve] (0,0) circle[radius=\a];
+  \draw[ELax,line width=1.2pt] (0,0)--(2.2,0) node[ELlab,anchor=north]{$x$};
+  \draw[ELax,line width=1.2pt] (0,0)--(0,2.2) node[ELlab,anchor=west]{$y$};
+  \draw[ELdash] (0,0)--(135:\a) node[ELlab,anchor=south east,pos=0.6]{$a$};
+  \draw[ELcField,line width=1.15pt,-{Stealth[length=6pt]}] (75:\a) arc[start angle=75,end angle=60,radius=\a];
+  \draw[ELcField,line width=1.15pt,-{Stealth[length=6pt]}] (-105:\a) arc[start angle=-105,end angle=-120,radius=\a];
+\end{tikzpicture}

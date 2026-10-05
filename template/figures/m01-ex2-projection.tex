@@ -1,0 +1,15 @@
+% Ch1_2, slide 5 (solution): the projection of A on the direction of B, of length A cos(theta_AB)
+\begin{tikzpicture}[scale=1]
+  \def\ang{30}\def\lenA{3.2}
+  \pgfmathsetmacro{\p}{\lenA*cos(\ang)}
+  \draw[ELvec] (0,0)--(\lenA,0) node[ELlab,anchor=north east,yshift=-2pt]{$\vect{A}$};
+  \draw[ELvec] (0,0)--(\ang:2.0) node[ELlab,anchor=south east]{$\vect{B}$};
+  \draw[ELdash] (\lenA,0)--(\ang:\p);
+  \draw[ELthin] (0.8,0) arc (0:\ang:0.8);
+  \node[ELlab,anchor=west] at (15:0.85) {$\theta_{AB}$};
+  \begin{scope}[shift={(\ang+90:0.75)}]
+    \draw[ELdash,-{Stealth[length=5pt]}] (\ang:-0.4)--(\ang:\p+0.7);
+    \draw[ELthin,{Stealth[length=4.5pt]}-{Stealth[length=4.5pt]}] (0,0)--(\ang:\p);
+    \node[ELlab,anchor=south east,rotate=0] at (\ang:0.25) {$A\cos\theta_{AB}$};
+  \end{scope}
+\end{tikzpicture}

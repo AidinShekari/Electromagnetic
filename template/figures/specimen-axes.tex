@@ -1,0 +1,14 @@
+% Design specimen only (not course content): axes, a curve, vectors, a point, labels.
+\begin{tikzpicture}[scale=1]
+  \ELaxes{-0.4}{7.3}{-1.5}{1.8}{$z$}{$E_x$}
+  \draw[ELcurve,domain=0:6.2832,samples=120] plot (\x,{1.2*sin(\x r)});
+  \draw[ELcurve2,domain=0:6.2832,samples=120] plot (\x,{0.7*cos(\x r)});
+  \draw[ELvec] (1.5708,0)--(1.5708,1.2) node[ELlab,anchor=south west,xshift=1pt]{$\vect{E}$};
+  \draw[ELvec2] (3.1416,0)--(3.1416,-0.7) node[ELlab,anchor=north west,xshift=1pt]{$\vect{H}$};
+  \draw[ELdash] (4.7124,0)--(4.7124,-1.2);
+  \node[ELpt] at (4.7124,-1.2){};
+  \node[ELlab,anchor=north] at (4.7124,-1.25){$P$};
+  \draw[ELink!70,line width=0.5pt] (6.2832,0.06)--(6.2832,-0.06);
+  \node[ELlabs,anchor=north west] at (6.30,-0.06){$2\pi$};
+  \node[ELtag,anchor=west] at (5.0,1.45){\ELL{placeholder}{نمونه}};
+\end{tikzpicture}

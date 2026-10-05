@@ -1,0 +1,13 @@
+% Ch1_4, slides 7-8: the paths OP, OP1P and OP2P to P(1,1)
+\begin{tikzpicture}[scale=2.2]
+  \draw[ELax] (0,0)--(1.6,0) node[ELlab,anchor=west]{$x$};
+  \draw[ELax] (0,0)--(0,1.5) node[ELlab,anchor=south]{$y$};
+  \draw[ELvec] (0,0)--(0,1); \draw[ELvec] (0,1)--(1,1);
+  \draw[ELvec] (0,0)--(1,0); \draw[ELvec] (1,0)--(1,1);
+  \draw[ELvec2] (0,0)--(1,1);
+  \foreach \p in {(0,0),(0,1),(1,0),(1,1)}{\fill[ELink] \p circle (0.7pt);}
+  \node[ELlab,anchor=north east] at (0,0) {$O$};
+  \node[ELlab,anchor=east] at (0,1) {$P_1$};
+  \node[ELlab,anchor=north] at (1,0) {$P_2$};
+  \node[ELlab,anchor=west] at (1,1) {$P(1,1)$};
+\end{tikzpicture}

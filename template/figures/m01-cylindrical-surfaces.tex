@@ -1,0 +1,44 @@
+% Ch1_3, slide 2: P(r1,phi1,z1) at the intersection of the cylinder r = r1, the half-plane
+% phi = phi1 and the plane z = z1; the unit vectors a_r, a_phi, a_z at P, and a_r, a_phi at other
+% points of the cylinder (their directions change from point to point)
+\begin{tikzpicture}[ELoblique,scale=1.05]
+  \def\ra{1.7}\def\pa{40}\def\za{1.9}\def\H{2.6}
+  \draw[ELax] (0,0,0)--(3.6,0,0) node[ELlab,anchor=north east]{$x$};
+  \draw[ELax] (0,0,0)--(0,4.4,0) node[ELlab,anchor=west]{$y$};
+  % the cylinder
+  \fill[ELfillA] plot[domain=-62:118,samples=60] ({\ra*cos(\x)},{\ra*sin(\x)},0)
+     -- plot[domain=118:-62,samples=60] ({\ra*cos(\x)},{\ra*sin(\x)},\H) -- cycle;
+  \draw[ELcField!80,line width=0.6pt] plot[domain=0:360,samples=90] ({\ra*cos(\x)},{\ra*sin(\x)},\H);
+  \draw[ELcField!80,line width=0.6pt] plot[domain=-62:118,samples=60] ({\ra*cos(\x)},{\ra*sin(\x)},0);
+  \draw[ELcField!50,dashed,line width=0.5pt] plot[domain=118:298,samples=60] ({\ra*cos(\x)},{\ra*sin(\x)},0);
+  \draw[ELcField!80,line width=0.6pt] ({\ra*cos(-62)},{\ra*sin(-62)},0)--({\ra*cos(-62)},{\ra*sin(-62)},\H)
+     ({\ra*cos(118)},{\ra*sin(118)},0)--({\ra*cos(118)},{\ra*sin(118)},\H);
+  % the plane z = z1
+  \fill[ELfillB,opacity=0.45] (-1.2,-0.4,\za)--(3.0,-0.4,\za)--(3.0,4.0,\za)--(-1.2,4.0,\za)--cycle;
+  \draw[ELcField!60,line width=0.5pt] (-1.2,-0.4,\za)--(3.0,-0.4,\za)--(3.0,4.0,\za)--(-1.2,4.0,\za)--cycle;
+  % the half-plane phi = phi1
+  \fill[ELfillC,opacity=0.7] (0,0,0)--({3.3*cos(\pa)},{3.3*sin(\pa)},0)--({3.3*cos(\pa)},{3.3*sin(\pa)},\H+0.4)--(0,0,\H+0.4)--cycle;
+  \draw[ELcSource!60,line width=0.5pt] (0,0,0)--({3.3*cos(\pa)},{3.3*sin(\pa)},0)--({3.3*cos(\pa)},{3.3*sin(\pa)},\H+0.4)--(0,0,\H+0.4);
+  \draw[ELax] (0,0,0)--(0,0,3.6) node[ELlab,anchor=south]{$z$};
+  % phi1 and r1
+  \draw[ELthin] (0.8,0,0) arc[start angle=0,end angle=\pa,radius=0.8];
+  \node[ELlabs,anchor=north] at ({0.95*cos(\pa/2)},{0.95*sin(\pa/2)},0) {$\phi_1$};
+  \draw[ELthin] (0,0,\za)--({\ra*cos(\pa)},{\ra*sin(\pa)},\za) node[ELlabs,anchor=south,pos=0.5]{$r_1$};
+  % the point and its unit vectors
+  \coordinate (P) at ({\ra*cos(\pa)},{\ra*sin(\pa)},\za);
+  \draw[ELvec2] (P)--++({0.85*cos(\pa)},{0.85*sin(\pa)},0) node[ELlabs,anchor=north west]{$\uvec{r}$};
+  \draw[ELvec2] (P)--++({-0.85*sin(\pa)},{0.85*cos(\pa)},0) node[ELlabs,anchor=south west]{$\uvec{\phi}$};
+  \draw[ELvec2] (P)--++(0,0,0.8) node[ELlabs,anchor=south]{$\uvec{z}$};
+  \node[ELpt] at (P){};
+  \node[ELlabs,anchor=east,xshift=-3pt,fill=white,fill opacity=0.85,text opacity=1] at (P) {$P(r_1,\phi_1,z_1)$};
+  % a_r and a_phi at other points of the top rim
+  \foreach \a in {150,230}{
+    \coordinate (Q) at ({\ra*cos(\a)},{\ra*sin(\a)},\H);
+    \draw[ELvec2,line width=0.8pt] (Q)--++({0.6*cos(\a)},{0.6*sin(\a)},0);
+    \draw[ELvec2,line width=0.8pt] (Q)--++({-0.6*sin(\a)},{0.6*cos(\a)},0);}
+  \node[ELlabs,anchor=south] at ({\ra*cos(150)+0.6*cos(150)},{\ra*sin(150)+0.6*sin(150)},\H) {$\uvec{r}$};
+  \node[ELlabs,anchor=south east] at ({\ra*cos(150)-0.6*sin(150)},{\ra*sin(150)+0.6*cos(150)},\H) {$\uvec{\phi}$};
+  \node[ELtag,anchor=west] at (3.0,4.0,\za) {\ELL{$z=z_1$ plane}{صفحه $z=z_1$}};
+  \node[ELtag,anchor=east] at ({\ra*cos(118)},{\ra*sin(118)},1.0) {\ELL{$r=r_1$ cylinder}{استوانه $r=r_1$}};
+  \node[ELtag,anchor=north] at ({3.3*cos(\pa)},{3.3*sin(\pa)},0) {\ELL{$\phi=\phi_1$ plane}{نیم‌صفحه $\phi=\phi_1$}};
+\end{tikzpicture}

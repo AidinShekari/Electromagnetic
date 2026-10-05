@@ -1,0 +1,12 @@
+% Ch1_5, slide 16: a volume V bounded by the closed surface S, with outward normals n
+\begin{tikzpicture}[scale=1]
+  \fill[ELfillA] (0,0)--(0,1.1) to[out=60,in=180] (1.6,1.6)--(3.8,1.6) to[out=0,in=110] (4.3,1.0)--(4.3,-0.1) to[out=-80,in=0] (3.0,-0.6)--(0.6,-0.6) to[out=180,in=-90] (0,0);
+  \draw[ELcField!80,line width=0.7pt] (0,0)--(0,1.1) to[out=60,in=180] (1.6,1.6)--(3.8,1.6) to[out=0,in=110] (4.3,1.0)--(4.3,-0.1) to[out=-80,in=0] (3.0,-0.6)--(0.6,-0.6) to[out=180,in=-90] (0,0);
+  \draw[ELcField!60,line width=0.5pt] (0,1.1) to[out=-20,in=180] (1.5,0.8)--(3.4,0.8) to[out=0,in=-150] (4.3,1.0) (1.5,0.8)--(1.5,-0.55) (3.4,0.8)--(3.4,-0.5);
+  \node[ELlab] at (2.4,0.1) {$V$};
+  \node[ELlab,anchor=south west] at (4.0,1.6) {$S$};
+  \draw[ELvec2] (2.4,1.6)--(2.4,2.3) node[ELlabs,anchor=south]{$n$};
+  \draw[ELvec2] (2.4,-0.6)--(2.4,-1.3) node[ELlabs,anchor=north]{$n$};
+  \draw[ELvec2] (0,0.55)--(-0.7,0.55) node[ELlabs,anchor=east]{$n$};
+  \draw[ELvec2] (4.3,0.45)--(5.0,0.45) node[ELlabs,anchor=west]{$n$};
+\end{tikzpicture}

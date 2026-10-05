@@ -1,0 +1,33 @@
+% Ch1_3, slide 11: P(R1,theta1,phi1) at the intersection of the sphere R = R1, the cone
+% theta = theta1 and the half-plane phi = phi1, with the unit vectors a_R, a_theta, a_phi at P
+\begin{tikzpicture}[ELoblique,scale=1.1]
+  \def\Ra{1.8}\def\ta{42}\def\pa{50}
+  \draw[ELax] (0,0,0)--(3.2,0,0) node[ELlab,anchor=north east]{$x$};
+  \draw[ELax] (0,0,0)--(0,4.0,0) node[ELlab,anchor=west]{$y$};
+  % sphere: outline and equator
+  \fill[ELfillA,opacity=0.85] (0,0,0) circle[radius=\Ra cm];
+  \draw[ELcField!80,line width=0.6pt] (0,0,0) circle[radius=\Ra cm];
+  \draw[ELcField!60,line width=0.5pt] plot[domain=-30:150,samples=60] ({\Ra*cos(\x)},{\Ra*sin(\x)},0);
+  \draw[ELcField!40,dashed,line width=0.45pt] plot[domain=150:330,samples=60] ({\Ra*cos(\x)},{\Ra*sin(\x)},0);
+  % cone theta = theta1 (to the height 1.25 R1 cos theta1)
+  \pgfmathsetmacro{\hc}{2.3*cos(\ta)}\pgfmathsetmacro{\rc}{2.3*sin(\ta)}
+  \fill[ELfillC,opacity=0.75] (0,0,0)--({\rc*cos(-35)},{\rc*sin(-35)},\hc) -- plot[domain=-35:145,samples=60] ({\rc*cos(\x)},{\rc*sin(\x)},\hc) -- cycle;
+  \draw[ELcSource!70,line width=0.55pt] plot[domain=0:360,samples=90] ({\rc*cos(\x)},{\rc*sin(\x)},\hc);
+  \draw[ELcSource!70,line width=0.55pt] (0,0,0)--({\rc*cos(-35)},{\rc*sin(-35)},\hc) (0,0,0)--({\rc*cos(145)},{\rc*sin(145)},\hc);
+  % half-plane phi = phi1
+  \fill[ELfillB,opacity=0.55] (0,0,-1.2)--(0,0,2.8)--({2.8*cos(\pa)},{2.8*sin(\pa)},2.8)--({2.8*cos(\pa)},{2.8*sin(\pa)},-1.2)--cycle;
+  \draw[ELcField!55,line width=0.5pt] (0,0,-1.2)--({2.8*cos(\pa)},{2.8*sin(\pa)},-1.2)--({2.8*cos(\pa)},{2.8*sin(\pa)},2.8)--(0,0,2.8);
+  \draw[ELax] (0,0,0)--(0,0,3.4) node[ELlab,anchor=south]{$z$};
+  \draw[ELthin] plot[domain=0:\ta,samples=20] ({0.75*sin(\x)*cos(\pa)},{0.75*sin(\x)*sin(\pa)},{0.75*cos(\x)});
+  \node[ELlabs,anchor=south east] at ({0.9*sin(\ta/2)*cos(\pa)},{0.85*sin(\ta/2)*sin(\pa)},{0.85*cos(\ta/2)}) {$\theta_1$};
+  \draw[ELthin] (0.6,0,0) arc[start angle=0,end angle=\pa,radius=0.6];
+  \node[ELlabs,anchor=north] at ({0.75*cos(\pa/2)},{0.75*sin(\pa/2)},0) {$\phi_1$};
+  % the point
+  \coordinate (P) at ({\Ra*sin(\ta)*cos(\pa)},{\Ra*sin(\ta)*sin(\pa)},{\Ra*cos(\ta)});
+  \draw[ELthin] (0,0,0)--(P) node[ELlabs,anchor=south east,pos=0.4]{$R_1$};
+  \draw[ELvec2] (P)--++({0.7*sin(\ta)*cos(\pa)},{0.7*sin(\ta)*sin(\pa)},{0.7*cos(\ta)}) node[ELlabs,anchor=south west]{$\uvec{R}$};
+  \draw[ELvec2] (P)--++({0.7*cos(\ta)*cos(\pa)},{0.7*cos(\ta)*sin(\pa)},{-0.7*sin(\ta)}) node[ELlabs,anchor=north]{$\uvec{\theta}$};
+  \draw[ELvec2] (P)--++({-0.7*sin(\pa)},{0.7*cos(\pa)},0) node[ELlabs,anchor=west]{$\uvec{\phi}$};
+  \node[ELpt] at (P){};
+  \node[ELlab,anchor=north east] at (0,0,0) {$O$};
+\end{tikzpicture}

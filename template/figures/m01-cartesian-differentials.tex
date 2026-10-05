@@ -1,0 +1,29 @@
+% Ch1_2, slide 19: the differential length dl, the differential surfaces ds and the differential
+% volume dv = dx dy dz in Cartesian coordinates
+\begin{tikzpicture}[ELoblique,scale=1]
+  \coordinate (O) at (0,0,0);
+  \draw[ELax] (O)--(3.2,0,0) node[ELlab,anchor=north east]{$x$};
+  \draw[ELax] (O)--(0,7.4,0) node[ELlab,anchor=west]{$y$};
+  \draw[ELax] (O)--(0,0,4.6) node[ELlab,anchor=south]{$z$};
+  % dl and its components
+  \draw[ELdash] (1.0,0,0)--(1.0,1.3,0)--(0,1.3,0) (1.0,1.3,0)--(1.0,1.3,1.6) (0,0,1.6)--(1.0,0,1.6)--(1.0,1.3,1.6);
+  \draw[ELvec,line width=1.3pt] (O)--(1.0,1.3,1.6) node[ELlab,anchor=south west]{$\dif\vect{\ell}$};
+  \node[ELlabs,anchor=east] at (0,0,1.6) {$dz$}; \node[ELlabs,anchor=south] at (0,0.85,0) {$dy$};
+  \node[ELlabs,anchor=east] at (0.6,0,0) {$dx$};
+  % the element of volume
+  \begin{scope}[shift={(0,3.4,2.0)}]
+    \def\dx{1.6}\def\dy{1.7}\def\dz{1.5}
+    \fill[ELfillA] (\dx,0,0)--(\dx,\dy,0)--(\dx,\dy,\dz)--(\dx,0,\dz)--cycle;
+    \fill[ELfillB] (0,\dy,0)--(\dx,\dy,0)--(\dx,\dy,\dz)--(0,\dy,\dz)--cycle;
+    \fill[ELfillC] (0,0,\dz)--(\dx,0,\dz)--(\dx,\dy,\dz)--(0,\dy,\dz)--cycle;
+    \draw[ELcField!80,line width=0.6pt] (\dx,0,0)--(\dx,\dy,0)--(\dx,\dy,\dz)--(\dx,0,\dz)--cycle
+      (\dx,\dy,0)--(0,\dy,0)--(0,\dy,\dz)--(\dx,\dy,\dz) (0,\dy,\dz)--(0,0,\dz)--(\dx,0,\dz);
+    \draw[ELvec2] (\dx/2,\dy/2,\dz)--++(0,0,1.0) node[ELlab,anchor=south]{$d\vect{s}=\uvec{z}\,dx\,dy$};
+    \draw[ELvec2] (\dx,\dy/2,\dz/2)--++(1.2,0,0) node[ELlab,anchor=north east]{$d\vect{s}=\uvec{x}\,dy\,dz$};
+    \draw[ELvec2] (\dx/2,\dy,\dz/2)--++(0,1.2,0) node[ELlab,anchor=west]{$d\vect{s}=\uvec{y}\,dx\,dz$};
+    \node[ELlabs,anchor=south] at (0,\dy/2,\dz) {$dy$};
+    \node[ELlabs,anchor=south east] at (\dx/2,0,\dz) {$dx$};
+    \node[ELlabs,anchor=west] at (\dx,\dy,\dz/2) {$dz$};
+    \node[ELlabs,anchor=west] at (\dx,\dy+0.15,-0.25) {$dv=dx\,dy\,dz$};
+  \end{scope}
+\end{tikzpicture}

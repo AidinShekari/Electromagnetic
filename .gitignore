@@ -1,0 +1,28 @@
+# LaTeX build by-products (the PDFs and tools/ are kept)
+*.aux
+*.log
+*.toc
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.xdv
+.DS_Store
+__pycache__/
+*.bbl
+*.blg
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.run.xml
+*.bcf
+*.pdf_tex
+*.pyc
+
+# figure QA harness output
+specimen/figtest/*.pdf
+specimen/figtest/*.png
+specimen/figtest/*.txt
+specimen/figtest/figs-*.tex

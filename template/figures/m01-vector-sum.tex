@@ -1,0 +1,25 @@
+% Ch1_1, slide 9: two vectors; the parallelogram rule; the head-to-tail rule
+\begin{tikzpicture}[scale=1]
+  % the two vectors
+  \begin{scope}
+    \draw[ELvec] (0.6,0.2)--(1,1.9) node[ELlab,anchor=east]{$\vect{B}$};
+    \draw[ELvec] (0,-0.6)--(2.6,-0.25) node[ELlab,anchor=north,yshift=-2pt]{$\vect{A}$};
+  \end{scope}
+  % parallelogram rule
+  \begin{scope}[shift={(4.0,-0.6)}]
+    \draw[ELvec] (0,0)--(2.6,0.35) node[ELlab,anchor=north,pos=0.55,yshift=-1pt]{};
+    \node[ELlab,anchor=north] at (1.6,0.17) {$\vect{A}$};
+    \draw[ELvec] (0,0)--(0.4,1.7) node[ELlab,anchor=east,pos=0.6]{$\vect{B}$};
+    \draw[ELdash] (0.4,1.7)--(3.0,2.05)--(2.6,0.35);
+    \draw[ELvec2] (0,0)--(3.0,2.05) node[ELlab,anchor=south east,pos=0.62]{$\vect{C}$};
+    \node[ELtag,anchor=north] at (1.5,-0.45) {\ELL{parallelogram rule}{قاعده متوازی‌الاضلاع}};
+  \end{scope}
+  % head-to-tail rule
+  \begin{scope}[shift={(8.4,-0.6)}]
+    \draw[ELvec] (0,0)--(2.6,0.35);
+    \node[ELlab,anchor=north] at (1.4,0.15) {$\vect{A}$};
+    \draw[ELvec] (2.6,0.35)--(3.0,2.05) node[ELlab,anchor=west,pos=0.5]{$\vect{B}$};
+    \draw[ELvec2] (0,0)--(3.0,2.05) node[ELlab,anchor=south east,pos=0.6]{$\vect{C}$};
+    \node[ELtag,anchor=north] at (1.5,-0.45) {\ELL{head-to-tail rule}{قاعده ابتدا به انتها}};
+  \end{scope}
+\end{tikzpicture}

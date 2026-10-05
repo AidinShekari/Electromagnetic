@@ -1,0 +1,16 @@
+% Ch1_5, slide 7: flux lines of three vector fields (diverging from A toward B; radial; uniform)
+\begin{tikzpicture}[scale=1]
+  \tikzset{fl/.style={-{Stealth[length=4pt]},line width=0.6pt,ELcField}}
+  \begin{scope}
+    \foreach \y in {-0.45,-0.3,-0.15,0,0.15,0.3,0.45}{\draw[fl] (0,\y)--(0.75,\y);}
+    \node[ELlabs,anchor=east] at (0,0) {$A$};
+    \foreach \a in {-30,-18,-6,6,18,30}{\draw[fl] (1.1,{0.03*\a})--++(\a:1.0);}
+    \node[ELlabs,anchor=west] at (2.05,0) {$B$};
+  \end{scope}
+  \begin{scope}[shift={(4.6,0)}]
+    \foreach \a in {0,30,...,330}{\draw[fl] (\a:0.2)--(\a:0.8); \draw[fl] (\a:0.85)--(\a:1.4);}
+  \end{scope}
+  \begin{scope}[shift={(7.0,-0.6)}]
+    \foreach \y in {0,0.3,...,1.2}{\foreach \x in {0,0.65,1.3,1.95}{\draw[fl] (\x,\y)--++(0.5,0);}}
+  \end{scope}
+\end{tikzpicture}

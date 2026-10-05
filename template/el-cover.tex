@@ -1,0 +1,93 @@
+% ============================================================
+%  Electromagnetics — cover and title page
+%
+%  The cover: an upper panel in the Cheng blue (title, the other-language title, a dipole field and a
+%  plane wave with its E and H components) and a white lower field carrying the identity of
+%  the university (the official logo, never redrawn, aspect ratio kept) and the credits.
+%  Everything is placed from the leading edge of the edition: the right edge in Persian,
+%  the left edge in English.  The artwork itself is never mirrored.
+% ============================================================
+\newlength{\ELcovpanel}\setlength{\ELcovpanel}{16.8cm}
+% x of a point measured from the leading edge of the page
+\newcommand{\ELfromstart}[2]{([xshift=\ELsgn*#1,yshift=-#2]current page.north \ELstart)}
+
+% a plane wave: E along y (gold), H along the oblique third axis (blue), z to the right
+\newcommand{\ELcoverwave}{%
+  \begin{scope}[shift={([yshift=-\ELcovpanel+2.7cm]current page.north west)},line cap=round]
+    \draw[white!70,line width=0.5pt,-{Stealth[length=6pt]}] (0.9,0)--(20.2,0);
+    \foreach \x in {1.0,1.25,...,19.5}{\draw[ELredD,opacity=0.55,line width=0.35pt] (\x,0)--(\x,{1.25*sin(0.95*\x r)});}
+    \draw[ELredD,line width=1.4pt,domain=1.0:19.5,samples=300] plot (\x,{1.25*sin(0.95*\x r)});
+    \draw[white,line width=1.0pt,domain=1.0:19.5,samples=300]
+      plot ({\x-0.55*0.87*sin(0.95*\x r)},{-0.55*0.5*sin(0.95*\x r)});
+  \end{scope}}
+\ifELrtl\def\ELdipx{3.6cm}\else\def\ELdipx{17.4cm}\fi
+\newcommand{\ELcoverdipole}{%
+  \begin{scope}[shift={([xshift=\ELdipx,yshift=-4.3cm]current page.north west)},line cap=round]
+    % dipole axis vertical: the field lines open sideways and stay clear of the title
+    \foreach \C in {1.1,1.8,2.7,3.6,4.5}{%
+      \draw[white,opacity=0.42,line width=0.5pt] plot[domain=2:178,samples=120,smooth]
+        ({\C*sin(\x)^3},{\C*sin(\x)^2*cos(\x)});
+      \draw[white,opacity=0.42,line width=0.5pt] plot[domain=2:178,samples=120,smooth]
+        ({-\C*sin(\x)^3},{\C*sin(\x)^2*cos(\x)});}
+    \foreach \K in {0.5,1.3,2.6}{%
+      \draw[ELredD,opacity=0.75,line width=0.45pt] plot[domain=-89:89,samples=100,smooth]
+        ({sqrt(\K*cos(\x))*sin(\x)},{sqrt(\K*cos(\x))*cos(\x)});
+      \draw[ELredD,opacity=0.75,line width=0.45pt] plot[domain=-89:89,samples=100,smooth]
+        ({sqrt(\K*cos(\x))*sin(\x)},{-sqrt(\K*cos(\x))*cos(\x)});}
+    \fill[ELredD] (0,0) circle (1.8pt);
+  \end{scope}}
+
+\newcommand{\ELcoverpage}{%
+  \thispagestyle{ELempty}%
+  \begin{tikzpicture}[remember picture,overlay]
+    % the panel and its artwork
+    \fill[ELblue] (current page.north west) rectangle ([yshift=-\ELcovpanel]current page.north east);
+    \begin{scope}\clip (current page.north west) rectangle ([yshift=-\ELcovpanel]current page.north east);
+      \ELcoverdipole\ELcoverwave\end{scope}
+    \fill[ELcAccent] ([yshift=-\ELcovpanel]current page.north west) rectangle ([yshift=-\ELcovpanel-0.42cm]current page.north east);
+    % the label tab
+    \node[ELtabshape=ELcAccent,anchor=north \ELstart,font=\ELheadfont\bfseries\small] at \ELfromstart{2.4cm}{2.3cm}
+      {\ELprim{\ifELrtl\ELlangNotes\else\MakeUppercase{\ELlangNotes}\fi}};
+    % the title, the other-language title, the two-tone rule
+    \node[anchor=south \ELstart,inner sep=0pt,text=white,
+      font=\ifELrtl\ELfaDisplay\fontsize{50}{60}\else\ELheadfont\bfseries\fontsize{44}{52}\fi\selectfont]
+      (title) at \ELfromstart{2.4cm}{9.2cm} {\ELprimD{\ELlangCourse}};
+    \node[anchor=north \ELstart,inner sep=0pt,text=white!85!ELblue,font=\fontsize{19}{24}\selectfont]
+      (other) at ([yshift=-0.55cm]title.south \ELstart) {\ELlangCourseOther};
+    \fill[ELcAccent] ([yshift=-0.5cm]other.south \ELstart) rectangle ++(\ELsgn*2.4cm,1.4pt);
+    \fill[white!55!ELblue] ([yshift=-0.5cm,xshift=\ELsgn*2.4cm]other.south \ELstart) rectangle ++(\ELsgn*9cm,0.45pt);
+    % the university: official logo and name
+    \node[anchor=north \ELstart,inner sep=0pt] (logo) at \ELfromstart{2.4cm}{18.9cm}
+      {\includegraphics[height=4.1cm,keepaspectratio]{\ELroot/ferdowsi-logo.png}};
+    \node[anchor=north \ELstart,inner sep=0pt,align=\ELalign] (uni)
+      at ([xshift=\ELsgn*0.9cm,yshift=-0.55cm]logo.north \ELend)
+      {{\color{ELcHeading}\ifELrtl\ELfaDisplay\fontsize{17}{22}\else\ELheadfont\bfseries\fontsize{15}{20}\fi\selectfont\ELprim{\ELlangUni}}\\[2.5mm]
+       {\color{ELcMuted}\large\ELlangUniOther}};
+    % credits
+    \node[anchor=north \ELstart,inner sep=0pt,align=\ELalign]
+      at ([yshift=-1.3cm]uni.south \ELstart)
+      {{\color{ELcHeading}\Large\bfseries\ELprim{\ELlangInstructorLabel:\ \ELlangInstructor}}\\[3mm]
+       {\color{ELcNumber}\large\ELprim{\ELlangCompilerLabel:\ \ELlangCompiler}}};
+    % the foot of the page
+    \fill[ELnight] (current page.south west) rectangle ([yshift=0.9cm]current page.south east);
+    \fill[ELcAccent] ([yshift=0.9cm]current page.south west) rectangle ([yshift=0.9cm+1.2pt]current page.south east);
+    \node[anchor=\ELend,text=white!75,font=\footnotesize] at ([xshift=-\ELsgn*2.4cm,yshift=0.45cm]current page.south \ELend)
+      {\lr{\ELmetaURL}};
+  \end{tikzpicture}\clearpage}
+
+% ---------- title page ----------
+\newcommand{\ELtitlepage}{%
+  \thispagestyle{ELempty}\null\vspace{3.2cm}%
+  \begin{center}
+    {\color{ELcAccent}\rule{2.4cm}{1.4pt}}\par\vspace{1.0cm}
+    {\color{ELcHeading}\ifELrtl\ELfaDisplay\fontsize{34}{44}\else\ELheadfont\bfseries\fontsize{32}{40}\fi\selectfont\ELlangCourse\par}
+    \vspace{0.5cm}{\color{ELcMuted}\Large\ELlangCourseOther\par}
+    \vspace{0.6cm}{\color{ELcNumber}\large\ELlangNotes\par}
+    \vspace{3.2cm}
+    {\color{ELcHeading}\Large\bfseries\ELlangInstructorLabel:\ \ELlangInstructor\par}
+    \vspace{0.5cm}
+    {\color{ELcNumber}\large\ELlangCompilerLabel:\ \ELlangCompiler\par}
+    \vfill
+    \includegraphics[height=2.2cm,keepaspectratio]{\ELroot/ferdowsi-logo.png}\par\vspace{0.4cm}
+    {\color{ELcHeading}\ELlangUni\par}\vspace{1mm}{\color{ELcMuted}\small\ELlangUniOther\par}
+  \end{center}\clearpage}

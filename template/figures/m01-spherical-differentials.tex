@@ -1,0 +1,40 @@
+% Ch1_3, slide 14: the differential element in spherical coordinates (dR, R dtheta, R sin(theta) dphi)
+% and dv = R^2 sin(theta) dR dtheta dphi, on an octant of the sphere
+\begin{tikzpicture}[ELoblique,scale=1]
+  \def\S{4.2}
+  \coordinate (O) at (0,0,0);
+  \draw[ELax] (O)--(5.2,0,0) node[ELlab,anchor=north east]{$x$};
+  \draw[ELax] (O)--(0,5.6,0) node[ELlab,anchor=west]{$y$};
+  \draw[ELax] (O)--(0,0,5.4) node[ELlab,anchor=south]{$z$};
+  % octant: meridians and parallels
+  \foreach \p in {0,30,60,90}{\draw[ELcSource!65,line width=0.55pt] plot[domain=0:90,samples=40] ({\S*sin(\x)*cos(\p)},{\S*sin(\x)*sin(\p)},{\S*cos(\x)});}
+  \draw[ELcSource!65,line width=0.55pt] plot[domain=0:90,samples=40] ({\S*sin(90)*cos(\x)},{\S*sin(90)*sin(\x)},{\S*cos(90)});
+  \draw[ELcSource!65,line width=0.55pt] plot[domain=0:90,samples=40] ({\S*sin(50)*cos(\x)},{\S*sin(50)*sin(\x)},{\S*cos(50)});
+  \draw[ELthin] (O)--({\S*sin(90)*cos(30)},{\S*sin(90)*sin(30)},{\S*cos(90)}) (O)--({\S*sin(90)*cos(60)},{\S*sin(90)*sin(60)},{\S*cos(90)});
+  % the element between R..R+dR, theta..theta+dtheta, phi..phi+dphi
+  \def\ra{2.7}\def\rb{3.6}\def\ta{36}\def\tb{60}\def\pa{42}\def\pb{66}
+  \fill[ELfillA] plot[domain=\pa:\pb] ({\rb*sin(\ta)*cos(\x)},{\rb*sin(\ta)*sin(\x)},{\rb*cos(\ta)}) -- plot[domain=\ta:\tb] ({\rb*sin(\x)*cos(\pb)},{\rb*sin(\x)*sin(\pb)},{\rb*cos(\x)})
+     -- plot[domain=\pb:\pa] ({\rb*sin(\tb)*cos(\x)},{\rb*sin(\tb)*sin(\x)},{\rb*cos(\tb)}) -- plot[domain=\tb:\ta] ({\rb*sin(\x)*cos(\pa)},{\rb*sin(\x)*sin(\pa)},{\rb*cos(\x)}) -- cycle;
+  \draw[ELcField,line width=0.6pt] plot[domain=\pa:\pb] ({\rb*sin(\ta)*cos(\x)},{\rb*sin(\ta)*sin(\x)},{\rb*cos(\ta)}) -- plot[domain=\ta:\tb] ({\rb*sin(\x)*cos(\pb)},{\rb*sin(\x)*sin(\pb)},{\rb*cos(\x)})
+     -- plot[domain=\pb:\pa] ({\rb*sin(\tb)*cos(\x)},{\rb*sin(\tb)*sin(\x)},{\rb*cos(\tb)}) -- plot[domain=\tb:\ta] ({\rb*sin(\x)*cos(\pa)},{\rb*sin(\x)*sin(\pa)},{\rb*cos(\x)}) -- cycle;
+  \draw[ELcField,line width=0.6pt] ({\ra*sin(\ta)*cos(\pa)},{\ra*sin(\ta)*sin(\pa)},{\ra*cos(\ta)})--({\rb*sin(\ta)*cos(\pa)},{\rb*sin(\ta)*sin(\pa)},{\rb*cos(\ta)}) ({\ra*sin(\ta)*cos(\pb)},{\ra*sin(\ta)*sin(\pb)},{\ra*cos(\ta)})--({\rb*sin(\ta)*cos(\pb)},{\rb*sin(\ta)*sin(\pb)},{\rb*cos(\ta)})
+     plot[domain=\pa:\pb] ({\ra*sin(\ta)*cos(\x)},{\ra*sin(\ta)*sin(\x)},{\ra*cos(\ta)}) ({\ra*sin(\ta)*cos(\pa)},{\ra*sin(\ta)*sin(\pa)},{\ra*cos(\ta)})--({\ra*sin(\tb)*cos(\pa)},{\ra*sin(\tb)*sin(\pa)},{\ra*cos(\tb)})--({\rb*sin(\tb)*cos(\pa)},{\rb*sin(\tb)*sin(\pa)},{\rb*cos(\tb)});
+  \draw[ELthin] (O)--({\ra*sin(\ta)*cos(\pa)},{\ra*sin(\ta)*sin(\pa)},{\ra*cos(\ta)}) node[ELlabs,anchor=north west,pos=0.45]{$R$};
+  \draw[ELdash] (O)--({\ra*sin(\tb)*cos(\pa)},{\ra*sin(\tb)*sin(\pa)},{\ra*cos(\tb)});
+  % angles
+  \draw[ELthin] plot[domain=0:\ta,samples=20] ({1.5*sin(\x)*cos(\pa)},{1.5*sin(\x)*sin(\pa)},{1.5*cos(\x)});
+  \node[ELlabs,anchor=east] at ({1.6*sin(\ta/2)*cos(\pa)},{1.6*sin(\ta/2)*sin(\pa)},{1.6*cos(\ta/2)}) {$\theta$};
+  \draw[ELthin] plot[domain=\ta:\tb,samples=10] ({2.2*sin(\x)*cos(\pa)},{2.2*sin(\x)*sin(\pa)},{2.2*cos(\x)});
+  \node[ELlabs,anchor=east] at ({2.3*sin((\ta+\tb)/2)*cos(\pa)},{2.3*sin((\ta+\tb)/2)*sin(\pa)},{2.3*cos((\ta+\tb)/2)}) {$d\theta$};
+  \draw[ELthin] (0.9,0,0) arc[start angle=0,end angle=\pa,radius=0.9];
+  \node[ELlabs,anchor=north] at ({1.05*cos(\pa/2)},{1.05*sin(\pa/2)},0) {$\phi$};
+  \draw[ELdash] (O)--({1.9*sin(90)*cos(\pb)},{1.9*sin(90)*sin(\pb)},{1.9*cos(90)});
+  \draw[ELthin] ({1.6*cos(\pa)},{1.6*sin(\pa)},0) arc[start angle=\pa,end angle=\pb,radius=1.6];
+  \node[ELlabs,anchor=north] at ({1.75*cos((\pa+\pb)/2)},{1.75*sin((\pa+\pb)/2)},0) {$d\phi$};
+  % the edge labels
+  \node[ELlabs,anchor=east] at ({(\ra+\rb)/2*sin(\ta)*cos(\pa)},{(\ra+\rb)/2*sin(\ta)*sin(\pa)},{(\ra+\rb)/2*cos(\ta)}) {$dR$};
+  \node[ELlabs,anchor=west,xshift=2pt] at ({\rb*sin((\ta+\tb)/2)*cos(\pb)},{\rb*sin((\ta+\tb)/2)*sin(\pb)},{\rb*cos((\ta+\tb)/2)}) {$R\,d\theta$};
+  \draw[ELthin,-{Stealth[length=4pt]}] (0.4,3.4,3.9) node[ELlabs,anchor=south]{$R\sin\theta\,d\phi$} -- ({\rb*sin(\ta)*cos((\pa+\pb)/2)},{\rb*sin(\ta)*sin((\pa+\pb)/2)},{\rb*cos(\ta)});
+  \node[ELlabs,anchor=west,text=ELcSource] at (-0.6,4.3,3.0) {$dv=R^2\sin\theta\,dR\,d\theta\,d\phi$};
+  \draw[ELcSource!80,line width=0.5pt,-{Stealth[length=4pt]}] (-0.6,4.25,2.95)--({(\ra+\rb)/2*sin((\ta+\tb)/2)*cos(\pb)},{(\ra+\rb)/2*sin((\ta+\tb)/2)*sin(\pb)},{(\ra+\rb)/2*cos((\ta+\tb)/2)});
+\end{tikzpicture}

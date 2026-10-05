@@ -1,0 +1,19 @@
+% Ch1_3, slide 20: a point in spherical (R, theta, phi), cylindrical (r, phi, z) and Cartesian
+% (x, y, z) coordinates
+\begin{tikzpicture}[ELoblique,scale=1]
+  \coordinate (O) at (0,0,0); \coordinate (P) at (1.6,2.4,2.1); \coordinate (Pxy) at (1.6,2.4,0);
+  \draw[ELax] (O)--(3.4,0,0) node[ELlab,anchor=north east]{$x$};
+  \draw[ELax] (O)--(0,4.2,0) node[ELlab,anchor=west]{$y$};
+  \draw[ELax] (O)--(0,0,3.4) node[ELlab,anchor=south]{$z$};
+  \draw[ELdash] (P)--(Pxy) (1.6,0,0)--(Pxy)--(0,2.4,0) (P)--(0,0,2.1);
+  \draw[ELthin] (O)--(P) node[ELlab,anchor=south east,pos=0.55]{$R$};
+  \draw[ELthin] (O)--(Pxy) node[ELlab,anchor=north,pos=0.55]{$r$};
+  \node[ELlab,anchor=west] at (1.6,2.4,1.05) {$z$};
+  \node[ELlab,anchor=north west] at (1.6,1.2,0) {$x$};
+  \node[ELlab,anchor=north] at (0.8,2.4,0) {$y$};
+  \pgfmathsetmacro{\pp}{atan2(2.4,1.6)}\pgfmathsetmacro{\tt}{atan2(sqrt(1.6^2+2.4^2),2.1)}
+  \draw[ELthin] plot[domain=0:\tt,samples=20] ({0.75*sin(\x)*cos(\pp)},{0.75*sin(\x)*sin(\pp)},{0.75*cos(\x)});
+  \node[ELlab,anchor=south east] at (0,0,0.8) {$\theta$};
+  \draw[ELthin] (0.7,0,0) arc[start angle=0,end angle=\pp,radius=0.7];
+  \node[ELlab,anchor=north] at (0.85,0.3,0) {$\phi$};
+\end{tikzpicture}

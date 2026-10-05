@@ -1,0 +1,68 @@
+% ============================================================
+%  Electromagnetics — chapter openings and part pages
+%
+%  The opening page: a dark panel across the top of the page carrying the chapter's motif,
+%  the chapter number in large light figures at the leading edge of the panel, a gold label
+%  tab on the panel's lower edge; beneath the panel the title, the title in the other
+%  language, the two-tone rule and the list of the chapter's sections.
+% ============================================================
+\newlength{\ELpanelh}\setlength{\ELpanelh}{8.6cm}
+% A motif is drawn in the panel (x in [0,21], y in [0,8.6] cm) and is never mirrored.  Its main
+% object is centred on \ELmotifcx, which lies on the trailing side so that the chapter number at
+% the leading edge stays clear: x = 14.2 cm in English, 6.8 cm in Persian.
+\ifELrtl\def\ELmotifcx{6.8}\else\def\ELmotifcx{14.2}\fi
+% the motif of chapter #1: motifs/mNN.tex, or the default motif m00
+\newcommand{\ELmotif}[1]{\edef\ELmotiffile{\ELroot/motifs/m\ifnum#1<10 0\fi#1.tex}%
+  \IfFileExists{\ELmotiffile}{\input{\ELmotiffile}}{\input{\ELroot/motifs/m00.tex}}}
+% a cut-corner tab drawn at a node anchor
+\tikzset{ELtabshape/.style={inner xsep=7pt,inner ysep=3.2pt,text=white,
+  path picture={\fill[#1] \ELcutpath{path picture bounding box}{5pt};}}}
+
+% #1 key, #2 number, #3 title, #4 title in the other language.  The chapter contents follow
+% on the same page (\ELchapterend closes it); the text starts on the next page.
+\newcommand{\ELchapterpage}[4]{%
+  \clearpage\pdfbookmark[1]{\ELlangChapter~\ELbmnum{#2}: #3}{ELch@#1}\phantomsection\label{ELch:#1}%
+  \thispagestyle{plain}%
+  \begin{tikzpicture}[remember picture,overlay]
+    \coordinate (nw) at (current page.north west);
+    \fill[ELnight] (nw) rectangle ([yshift=-\ELpanelh]current page.north east);
+    \begin{scope}
+      \clip (nw) rectangle ([yshift=-\ELpanelh]current page.north east);
+      \begin{scope}[shift={([yshift=-\ELpanelh]nw)}]\ELmotif{#2}\end{scope}
+    \end{scope}
+    \fill[ELcAccent] ([yshift=-\ELpanelh]nw) rectangle ([yshift=-\ELpanelh-1.2pt]current page.north east);
+    % the number, at the leading edge of the text block
+    \node[anchor=south \ELstart,inner sep=0pt,text=white,
+      font=\ELheadfont\bfseries\fontsize{80}{80}\selectfont]
+      at ([xshift=\ELsgn*2.4cm,yshift=-\ELpanelh+0.75cm]current page.north \ELstart) {\ELnum{#2}};
+    % the label tab on the lower edge of the panel
+    \node[ELtabshape=ELcAccent,anchor=north \ELstart,font=\ELheadfont\bfseries\small]
+      at ([xshift=\ELsgn*2.4cm,yshift=-\ELpanelh]current page.north \ELstart)
+      {\ifELrtl\ELlangChapter\else\MakeUppercase{\ELlangChapter}\fi};
+  \end{tikzpicture}%
+  \vspace*{\dimexpr\ELpanelh-2.5cm+0.9cm\relax}%
+  \par\noindent{\ELheadfont\bfseries\fontsize{25}{31}\selectfont\color{ELcHeading}%
+    \hyphenpenalty=10000 \exhyphenpenalty=10000 \ifELrtl\else\raggedright\fi#3\par}
+  \if\relax\detokenize{#4}\relax\else\vspace{0.35em}{\large\color{ELcMuted}\ELother{#4}\par}\fi
+  \ELtworule{2.4cm}\vspace{0.4em}}
+\newcommand{\ELchapterend}{\clearpage}
+
+% ---------- part page (only when the course material is divided into parts) ----------
+\newcommand{\ELpartpage}[5]{% key, numeral, title, other title, chapter range
+  \clearpage\pdfbookmark[0]{\ELlangPart~#2: #3}{ELpart@#1}\phantomsection\label{ELpart:#1}%
+  \thispagestyle{ELempty}%
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[ELnight] ([yshift=-11cm]current page.north west) rectangle ([yshift=-18.7cm]current page.north east);
+    \begin{scope}\clip ([yshift=-11cm]current page.north west) rectangle ([yshift=-18.7cm]current page.north east);
+      \begin{scope}[shift={([yshift=-18.7cm]current page.north west)},yscale=0.84]\input{\ELroot/motifs/m00.tex}\end{scope}
+    \end{scope}
+    \node[ELtabshape=ELcAccent,anchor=south \ELstart,font=\ELheadfont\bfseries]
+      at ([xshift=\ELsgn*2.4cm,yshift=-11cm]current page.north \ELstart) {\ELlangPart~#2};
+    \node[anchor=north \ELstart,text=white,align=\ELalign,text width=14cm,
+      font=\ELheadfont\bfseries\fontsize{28}{34}\selectfont]
+      at ([xshift=\ELsgn*2.4cm,yshift=-12.3cm]current page.north \ELstart) {#3};
+    \node[anchor=north \ELstart,text=ELblueD,font=\large]
+      at ([xshift=\ELsgn*2.4cm,yshift=-14.6cm]current page.north \ELstart) {\ELother{#4}};
+    \node[anchor=north \ELstart,text=white!70,font=\small]
+      at ([xshift=\ELsgn*2.4cm,yshift=-15.6cm]current page.north \ELstart) {#5};
+  \end{tikzpicture}\clearpage}

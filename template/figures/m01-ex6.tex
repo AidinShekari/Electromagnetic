@@ -1,0 +1,17 @@
+% Ch1_2, slide 20: the vector from P1(1,3,2) to P2(3,-2,4)
+\begin{tikzpicture}[ELoblique,scale=0.8]
+  \coordinate (O) at (0,0,0);
+  \coordinate (P1) at (1,3,2); \coordinate (P2) at (3,-2,4);
+  \draw[ELax] (O)--(4.2,0,0) node[ELlab,anchor=north east]{$x$};
+  \draw[ELax] (0,-3.2,0)--(0,4.6,0) node[ELlab,anchor=west]{$y$};
+  \draw[ELax] (O)--(0,0,4.8) node[ELlab,anchor=south]{$z$};
+  \draw[ELdash] (P1)--(1,3,0)--(1,0,0) (1,3,0)--(0,3,0);
+  \draw[ELdash] (P2)--(3,-2,0)--(3,0,0) (3,-2,0)--(0,-2,0);
+  \draw[ELvec] (O)--(P1);
+  \draw[ELvec] (O)--(P2);
+  \draw[ELvec2,line width=1.3pt] (P1)--(P2);
+  \node[ELpt] at (P1){}; \node[ELpt] at (P2){};
+  \node[ELlab,anchor=west] at (P1) {$P_1(1,3,2)$};
+  \node[ELlab,anchor=south] at (P2) {$P_2(3,-2,4)$};
+  \node[ELlab,anchor=north west] at (O) {$O$};
+\end{tikzpicture}

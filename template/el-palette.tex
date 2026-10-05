@@ -1,0 +1,53 @@
+% ============================================================
+%  Electromagnetics — colour palette
+%
+%  Inspired by the cover of Cheng's "Field and Wave Electromagnetics": a strong electric blue as
+%  the dominant colour, a deep blue ground, and a clear red as the controlled accent.  The values
+%  are original.  Every colour has one semantic role, and no other file defines a colour
+%  (chapter files and figures use these names only).
+% ============================================================
+% --- base inks ---
+\definecolor{ELink}{HTML}{12203A}      % body text, mathematics
+\definecolor{ELnavy}{HTML}{0D2B5E}     % structure: headings, theorems, proofs
+\definecolor{ELnight}{HTML}{0A2150}    % the dark blue ground (cover, chapter panel)
+\definecolor{ELblue}{HTML}{1F5FB5}     % the Cheng blue: numbers, definitions; figures: the field
+\definecolor{ELsteel}{HTML}{2F6E95}    % worked examples (a quieter blue)
+\definecolor{ELred}{HTML}{C8202F}      % the accent: rules, tabs, markers, important results
+\definecolor{ELmaroon}{HTML}{8F1D2C}   % exercises; figures: sources, the second object
+\definecolor{ELslate}{HTML}{56677F}    % remarks, captions, running heads (muted text)
+% --- tints (backgrounds of the boxes) ---
+\definecolor{ELnavyT}{HTML}{EDF1F8}
+\definecolor{ELblueT}{HTML}{EAF1FB}
+\definecolor{ELsteelT}{HTML}{EAF2F7}
+\definecolor{ELredT}{HTML}{FCEEEF}
+\definecolor{ELmaroonT}{HTML}{F8EDEF}
+\definecolor{ELslateT}{HTML}{F2F4F7}
+% --- lines ---
+\definecolor{ELhair}{HTML}{C5D2E4}     % hairlines, table rules, leaders
+\definecolor{ELgrid}{HTML}{DAE2EE}     % figure grids
+% --- light variants for drawing on the dark ground ---
+\definecolor{ELblueD}{HTML}{6FA8EE}
+\definecolor{ELredD}{HTML}{F2575F}
+% --- figure fills (light tints used inside drawings) ---
+\definecolor{ELfillA}{HTML}{DCE8F7}    % a surface / a face in front
+\definecolor{ELfillB}{HTML}{BFD3EE}    % a face in shadow
+\definecolor{ELfillC}{HTML}{F9E3E5}    % a highlighted region
+
+% semantic aliases (what the style files use)
+\colorlet{ELcHeading}{ELnavy}
+\colorlet{ELcNumber}{ELblue}
+\colorlet{ELcAccent}{ELred}
+\colorlet{ELcMuted}{ELslate}
+\colorlet{ELcRule}{ELhair}
+\colorlet{ELcDefinition}{ELblue}       \colorlet{ELcDefinitionT}{ELblueT}
+\colorlet{ELcTheorem}{ELnavy}          \colorlet{ELcTheoremT}{ELnavyT}
+\colorlet{ELcImportant}{ELred}         \colorlet{ELcImportantT}{ELredT}
+\colorlet{ELcExample}{ELsteel}         \colorlet{ELcExampleT}{ELsteelT}
+\colorlet{ELcExercise}{ELmaroon}       \colorlet{ELcExerciseT}{ELmaroonT}
+\colorlet{ELcRemark}{ELslate}          \colorlet{ELcRemarkT}{ELslateT}
+\colorlet{ELcProof}{ELnavy}
+% figures
+\colorlet{ELcField}{ELblue}            % the field / the main object
+\colorlet{ELcSource}{ELred}            % sources, charges, the second object, the point of interest
+\colorlet{ELcThird}{ELsteel}           % a third object, a region
+\colorlet{ELcGuide}{ELslate}           % guides, dashed construction lines

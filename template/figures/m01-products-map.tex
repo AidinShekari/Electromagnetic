@@ -1,0 +1,15 @@
+% Ch1_2, slide 2: the products of vectors (with k A = a_A (kA) beside the first branch)
+\begin{tikzpicture}[x=\ELrsgn cm,y=1cm]
+  \node[ELtreeroot,text width=2.6cm] (root) at (5.9,0) {\ELL{Multiplication of vectors}{ضرب بردارها}};
+  \node[ELtreebox,text width=3.4cm] (m1) at (1.6,2.2) {\ELL{Multiplication of a vector by a scalar}{ضرب یک اسکالر در بردار}};
+  \node[ELtreeboxR,text width=3.4cm] (m2) at (1.6,0.6) {\ELL{Multiplication of two vectors}{ضرب دو بردار در یکدیگر}};
+  \node[ELtreebox,text width=3.4cm] (m3) at (1.6,-2.2) {\ELL{Product of three vectors}{ضرب سه بردار}};
+  \node[ELtreeboxR,text width=3.4cm] (d1) at (-2.7,1.3) {\ELL{Dot (scalar) product}{ضرب داخلی یا عددی}};
+  \node[ELtreeboxR,text width=3.4cm] (d2) at (-2.7,-0.1) {\ELL{Cross (vector) product}{ضرب خارجی یا برداری}};
+  \node[ELtreebox,text width=3.4cm] (t1) at (-2.7,-1.5) {\ELL{Scalar triple product}{ضرب سه‌گانه عددی}};
+  \node[ELtreebox,text width=3.4cm] (t2) at (-2.7,-2.9) {\ELL{Vector triple product}{ضرب سه‌گانه برداری}};
+  \node[ELlab,anchor=\ELstart,fill=ELredT,inner sep=3pt] at ([xshift=\ELsgn*0.25cm]m1.\ELend) {$k\vect{A}=\uvec{A}(kA)$};
+  \foreach \m in {m1,m2,m3}{\draw[ELtreelineG] (root.\ELend)--(\m.\ELstart);}
+  \draw[ELtreelineR] (m2.\ELend)--(d1.\ELstart) (m2.\ELend)--(d2.\ELstart);
+  \draw[ELtreeline] (m3.\ELend)--(t1.\ELstart) (m3.\ELend)--(t2.\ELstart);
+\end{tikzpicture}

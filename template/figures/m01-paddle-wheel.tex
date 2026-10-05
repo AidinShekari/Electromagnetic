@@ -1,0 +1,16 @@
+% Ch1_5, slide 13: a paddle wheel in a stream of velocity u; the direction of rotation and the
+% vector direction of the axis of rotation
+\begin{tikzpicture}[scale=1]
+  \foreach \y/\l in {2.9/5.0,2.4/3.6,1.95/2.4,1.55/1.6}{\draw[ELcField,line width=0.8pt,-{Stealth[length=5pt]}] (2.6,\y)..controls (1.3,\y+0.15)..({2.6-\l},\y-0.2);}
+  \node[ELlab,anchor=south] at (1.0,3.05) {$u$};
+  % the wheel: two crossed vanes on an axle, seen obliquely
+  \begin{scope}[shift={(1.2,0)}]
+    \draw[ELcField!80,line width=0.6pt,fill=ELfillA,fill opacity=0.6] (-0.3,-1.0)--(0.8,0.4)--(0.8,1.6)--(-0.3,0.2)--cycle;
+    \draw[ELcField!80,line width=0.6pt,fill=ELfillB,fill opacity=0.6] (-1.1,0.2)--(1.6,-0.2)--(1.6,0.9)--(-1.1,1.3)--cycle;
+    \draw[ELcGuide,dashed,line width=0.6pt] (0.25,0.3) ellipse[x radius=0.75,y radius=1.05];
+    \draw[ELcGuide,line width=0.6pt,-{Stealth[length=4pt]}] (1.0,0.3) arc[start angle=0,end angle=-40,x radius=0.75,y radius=1.05];
+    \draw[ELvec2,line width=1.4pt] (0.25,0.3)--(-2.2,-1.5);
+    \node[ELlabs,anchor=west,align=left] at (1.15,-0.35) {\ELL{direction of\\rotation}{جهت چرخش}};
+    \node[ELlabs,anchor=north,align=center] at (-1.6,-1.55) {\ELL{vector direction of\\axis of rotation}{جهت برداری محور چرخش}};
+  \end{scope}
+\end{tikzpicture}

@@ -1,0 +1,23 @@
+% The map of vector analysis (Ch1_1 slide 6, Ch1_2 slide 12, Ch1_4 slide 2, Ch1_5 slide 15).
+% \ELmapon = none | coord | calc | thm : the group the slide highlights.  A text hierarchy,
+% mirrored between the editions.
+\providecommand{\ELmapon}{none}
+\begin{tikzpicture}[x=\ELrsgn cm,y=1cm]
+  \def\ELon#1#2{\ifnum\strcmp{\ELmapon}{#1}=0 #2\fi}
+  \node[ELtreeroot,text width=2.6cm] (root) at (6.6,0) {\ELL{Vector analysis}{آنالیز برداری}};
+  \node[ELtreebox,text width=3.9cm] (alg) at (2.4,3.0) {\ELL{Vector algebra}{جبر برداری}};
+  \node[ELtreeboxR,text width=3.9cm,\ELon{coord}{ELtreeonR}] (crd) at (2.4,0.5) {\ELL{Orthogonal coordinate systems}{دستگاه‌های مختصات متعامد}};
+  \node[ELtreebox,text width=3.9cm,\ELon{calc}{ELtreeon}] (cal) at (2.4,-2.3) {\ELL{Vector calculus}{حساب برداری}};
+  \node[ELtreeboxR,text width=3.9cm,\ELon{thm}{ELtreeonR}] (thm) at (2.4,-3.55) {\ELL{Important vector theorems and identities}{قضایا و اتحادهای مهم برداری}};
+  \node[ELtreebox,text width=4.5cm] (a1) at (-2.6,3.6) {\ELL{Addition and subtraction of vectors}{جمع و تفریق بردارها}};
+  \node[ELtreebox,text width=4.5cm] (a2) at (-2.6,2.4) {\ELL{Multiplication of vectors}{ضرب بردارها}};
+  \node[ELtreeboxR,text width=4.5cm,\ELon{coord}{ELtreeonR}] (k1) at (-2.6,1.3) {\ELL{Cartesian coordinates}{مختصات کارتزین}};
+  \node[ELtreeboxR,text width=4.5cm,\ELon{coord}{ELtreeonR}] (k2) at (-2.6,0.1) {\ELL{Cylindrical coordinates}{مختصات استوانه‌ای}};
+  \node[ELtreeboxR,text width=4.5cm,\ELon{coord}{ELtreeonR}] (k3) at (-2.6,-1.1) {\ELL{Spherical coordinates}{مختصات کروی}};
+  \node[ELtreebox,text width=4.5cm,\ELon{calc}{ELtreeon}] (c1) at (-2.6,-2.3) {\ELL{Vector integration: line, surface and volume}{انتگرال‌گیری برداری -- خطی، سطحی و حجمی}};
+  \node[ELtreebox,text width=4.5cm,\ELon{calc}{ELtreeon}] (c2) at (-2.6,-3.65) {\ELL{Differential operations: gradient, divergence and curl}{عملیات مشتق‌گیری -- گرادیان، دیورژانس و کرل}};
+  \foreach \m in {alg,crd,cal,thm}{\draw[ELtreelineG] (root.\ELend)--(\m.\ELstart);}
+  \draw[ELtreeline] (alg.\ELend)--(a1.\ELstart) (alg.\ELend)--(a2.\ELstart);
+  \draw[ELtreelineR] (crd.\ELend)--(k1.\ELstart) (crd.\ELend)--(k2.\ELstart) (crd.\ELend)--(k3.\ELstart);
+  \draw[ELtreeline] (cal.\ELend)--(c1.\ELstart) (cal.\ELend)--(c2.\ELstart);
+\end{tikzpicture}

@@ -1,0 +1,165 @@
+% ============================================================
+%  Electromagnetics — text layout: spacing, displayed formulas, counters, headings,
+%  running heads, logical-block pagination
+%
+%  Spacing values are the collection standard (shared with Engineering Mathematics);
+%  the visual form of the headings and running heads is specific to this course.
+% ============================================================
+\color{ELink}
+% ---------- spacing standard ----------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em plus 0.15em}
+\setlist{itemsep=2pt,topsep=3pt,parsep=0pt}
+\setlength{\abovedisplayskip}{0.7em plus 0.2em}
+\setlength{\belowdisplayskip}{0.7em plus 0.2em}
+\setlength{\abovedisplayshortskip}{0.4em}
+\setlength{\belowdisplayshortskip}{0.4em}
+\allowdisplaybreaks[1]
+\relpenalty=9999 \binoppenalty=9999
+\emergencystretch=3em
+\clubpenalty=10000 \widowpenalty=10000
+% lists: a small field-arrow tip as the bullet, numbers in the number colour
+\newcommand{\ELbullet}{\lr{\tikz[baseline=-0.25ex,x=\ELsgn em]\fill[ELcAccent] (0,-0.2em)--(0.36,0)--(0,0.2em)--(0.08,0)--cycle;}}
+\setlist[itemize]{label=\ELbullet}
+\setlist[itemize,2]{label={\color{ELcMuted}\textendash}}
+\setlist[enumerate,1]{label={\color{ELcNumber}\ELheadfont\bfseries\arabic*.}}
+
+% ---------- displayed formulas ----------
+% A displayed formula is centred and always left to right.  The Markdown filter marks the
+% places where it may be broken (before a top-level =, \Rightarrow ..., after \qquad); lines
+% are filled greedily by their measured width and continuation lines are indented.
+\newtoks\ELdcur
+\newbox\ELdb \newbox\ELdvb
+\newcount\ELdn \newcount\ELdlines
+\newdimen\ELdlim
+\newcommand{\ELdline}[1]{\hbox{\ifELrtl\beginL\fi$\displaystyle#1$\ifELrtl\endL\fi}}
+\def\ELdflush{%
+  \setbox\ELdvb\vbox{\offinterlineskip\unvbox\ELdvb
+    \ifnum\ELdlines>0 \vskip0.55em\fi
+    \hbox{\ifnum\ELdlines>0 \hskip2em\fi\ELdline{\the\ELdcur}}}%
+  \advance\ELdlines1 \ELdcur={}\ELdn=0 }
+\long\def\ELdseg#1{%
+  \ifnum\ELdn>0
+    \setbox\ELdb\hbox{$\displaystyle\the\ELdcur #1$}%
+    \ifdim\wd\ELdb>\ELdlim \ELdflush \fi
+  \fi
+  \ELdcur=\expandafter{\the\ELdcur #1}\advance\ELdn1 }
+\long\def\ELdproc#1\ELbr#2\ELdend{%
+  \ELdseg{#1}%
+  \ifblank{#2}{}{\ELdproc#2\ELdend}}
+\let\ELbr\relax
+\newcommand{\ELdisp}[1]{\par\nopagebreak[4]\vspace{0.3em}%
+  \begingroup\ELdcur={}\ELdn=0 \ELdlines=0 \setbox\ELdvb\vbox{}%
+  \ELdlim=\dimexpr\linewidth-2em\relax
+  \ELdproc#1\ELbr\ELdend
+  \ifnum\ELdlines>0 \ELdflush \else
+    \setbox\ELdvb\hbox{\ELdline{\the\ELdcur}}\fi
+  \ifdim\wd\ELdvb>\linewidth\setbox\ELdvb\hbox{\resizebox{\linewidth}{!}{\box\ELdvb}}\fi
+  \noindent\hfil\box\ELdvb\hfil\par\endgroup\nopagebreak[2]\vspace{0.1em}}
+
+% ---------- counters ----------
+\newcounter{ELchap}
+\newcounter{ELitem}[ELchap]
+\newcounter{ELfig}[ELchap]
+\newcounter{ELtab}[ELchap]
+\renewcommand{\thesection}{\arabic{ELchap}.\arabic{section}}
+\renewcommand{\theHsection}{\arabic{ELchap}.\arabic{section}}
+\renewcommand{\theHELitem}{\arabic{ELchap}.\arabic{ELitem}}
+\renewcommand{\theHELfig}{\arabic{ELchap}.\arabic{ELfig}}
+\renewcommand{\theHELtab}{\arabic{ELchap}.\arabic{ELtab}}
+\makeatletter\renewcommand*{\toclevel@section}{2}\makeatother
+\newcommand{\ELitemnum}{\ELnumc{\arabic{ELchap}.\arabic{ELitem}}}
+\newcommand{\ELfignum}{\ELnumc{\arabic{ELchap}.\arabic{ELfig}}}
+\newcommand{\ELtabnum}{\ELnumc{\arabic{ELchap}.\arabic{ELtab}}}
+
+% ---------- headings ----------
+% Section: number in the field blue, title in navy, and beneath them a two-tone rule: a short
+% gold segment at the leading edge running into a hairline (a "field line leaving a source").
+\newcommand{\ELmodkey}{x}
+\newcommand{\ELtworule}[1]{% length of the gold segment
+  \par\nobreak\vspace{\dimexpr0.2em-\parskip\relax}\noindent\hbox to\linewidth{%
+    {\color{ELcAccent}\rule{#1}{1.2pt}}{\color{ELcRule}\leaders\hrule height 0.45pt\hfill}}\par\nobreak}
+\newcommand{\ELsectionreal}[2]{%
+  \par\Needspace{9\baselineskip}\vspace{1.3em}%
+  \refstepcounter{section}\label{ELsec:\ELmodkey:\arabic{section}}%
+  \addcontentsline{toc}{section}{\texorpdfstring{#1}{#2}}%
+  \noindent{\ELheadfont\bfseries\Large\color{ELcNumber}\ELnumc{\thesection}}\hspace{0.75em}%
+  {\ELheadfont\bfseries\Large\color{ELcHeading}\hyphenpenalty=10000 \exhyphenpenalty=10000 #1}%
+  \ELtworule{1.6cm}\vspace{0.6em}\nobreak}
+% Subsection: a gold arrow tip pointing along the reading direction
+\newcommand{\ELsubtip}{\lr{\tikz[baseline=-0.5ex,x=\ELsgn em]\fill[ELcAccent]
+  (0,-0.27em)--(0.55,0)--(0,0.27em)--(0.12,0)--cycle;}}
+\newcommand{\ELsubsectionreal}[2]{%
+  \par\Needspace{6\baselineskip}\vspace{0.9em}%
+  \noindent\ELsubtip\hspace{0.5em}%
+  {\ELheadfont\bfseries\large\color{ELcHeading}\hyphenpenalty=10000 \exhyphenpenalty=10000 #1}\par\nobreak
+  \vspace{0.25em}\nobreak}
+
+% ---------- logical blocks: never split a block that fits on a page ----------
+% A heading followed by a box (or a unit) is held back until that block knows how much room it
+% needs; heading and block then move together.  A block (a box, or a "unit": a paragraph with
+% its equations, a figure with its lead-in) is typeset once into a box to measure it.  If it
+% fits on a page it is kept whole, moving to the next page when it does not fit in what is left
+% of the current one.  A block longer than a page stays breakable.
+\newif\ifELhold
+\def\ELpending{}\newcount\ELpendn
+\newcommand{\ELhold}{\global\ELholdtrue}
+\newcommand{\ELqueue}[1]{\gappto\ELpending{#1}\global\advance\ELpendn by 1\relax}
+\newcommand{\ELsection}[2]{\ifELhold\ELqueue{\ELsectionreal{#1}{#2}}\else\ELsectionreal{#1}{#2}\fi}
+\newcommand{\ELsubsection}[2]{\ifELhold\ELqueue{\ELsubsectionreal{#1}{#2}}\else\ELsubsectionreal{#1}{#2}\fi}
+\newcommand{\ELflush}{\par\ifnum\ELpendn>0
+  \begingroup\global\ELholdfalse\ELpending\endgroup
+  \global\let\ELpending\empty\global\ELpendn=0 \fi\global\ELholdfalse}
+\newdimen\ELpendht
+\newdimen\ELboxht
+\newdimen\ELkeepmax
+\newcount\ELsvitem \newcount\ELsvfig \newcount\ELsvtab
+\newcommand{\ELsavecnt}{\ELsvitem=\value{ELitem}\relax\ELsvfig=\value{ELfig}\relax\ELsvtab=\value{ELtab}\relax}
+\newcommand{\ELrestorecnt}{\setcounter{ELitem}{\ELsvitem}\setcounter{ELfig}{\ELsvfig}\setcounter{ELtab}{\ELsvtab}}
+\newif\ifELmeasuring
+% #1 = width of the measured text, #2 = what is measured, #3 = extra height (padding)
+\newcommand{\ELmeasureraw}[3]{\ELsavecnt
+  \setbox0\vbox{\ELmeasuringtrue\hsize#1\linewidth\hsize\columnwidth\hsize\parindent0pt\relax
+    \setlength{\parskip}{0.45em}#2\par}%
+  \ELrestorecnt
+  \ELboxht=\dimexpr\ht0+\dp0+#3\relax}
+\newif\ifELnoplace
+\newcommand{\ELplace}{% decides the room, then places the held headings
+  \ifELnoplace\def\ELboxopt{unbreakable}\else
+  \ELkeepmax=\dimexpr\textheight-1.5\baselineskip\relax
+  \ELpendht=\dimexpr\ELpendn\baselineskip*3\relax
+  \ifdim\ELboxht<\ELkeepmax
+    \Needspace*{\dimexpr\ELboxht+\ELpendht+0.6\baselineskip\relax}\def\ELboxopt{unbreakable}%
+  \else\Needspace*{\dimexpr7\baselineskip+\ELpendht\relax}\def\ELboxopt{}\fi
+  \ELflush\fi}
+% a statement and the proof that follows it form one block when together they fit on a page
+\NewEnviron{ELjoin}{%
+  \ELnoplacetrue\ELmeasureraw{\linewidth}{\BODY}{0pt}\ELnoplacefalse
+  \ifdim\ELboxht<\dimexpr\textheight-1.5\baselineskip\relax
+    \ELplace\ELnoplacetrue\BODY\ELnoplacefalse
+  \else\ELplace\BODY\fi\par}
+% ordinary text that belongs together (generated by the filter)
+\NewEnviron{ELunit}{%
+  \ELmeasureraw{\linewidth}{\BODY}{0pt}%
+  \ELplace
+  \BODY\par}
+
+% ---------- running heads and folio ----------
+% head: chapter at the leading edge, course at the trailing edge, a hairline beneath;
+% folio: centred, between two short gold strokes
+\def\ELchaptitle{}\def\ELchapother{}
+\newcommand{\ELsetmodule}[3]{\gdef\ELmodkey{#1}\gdef\ELchaptitle{#2}\gdef\ELchapother{#3}%
+  \ifnum0#1>0 \setcounter{ELchap}{#1}\fi\setcounter{section}{0}}
+\newcommand{\ELheadchapter}{\ifnum\value{ELchap}>0 {\color{ELcNumber}\ELheadfont\bfseries
+  \ELlangChapter~\ELnum{\arabic{ELchap}}}\hspace{0.6em}{\color{ELcAccent}\textbar}\hspace{0.6em}\fi\ELchaptitle}
+\newcommand{\ELfolio}{{\color{ELcAccent}\rule[0.32em]{1.1em}{0.6pt}}\hspace{0.7em}%
+  {\ELheadfont\small\color{ELcHeading}\ELnum{\thepage}}\hspace{0.7em}{\color{ELcAccent}\rule[0.32em]{1.1em}{0.6pt}}}
+\pagestyle{fancy}
+\fancyhf{}
+% (the chapter at the leading edge: right in Persian, left in English)
+\fancyhead[L]{\small\color{ELcMuted}\ifELrtl\ELlangCourse\else\ELheadchapter\fi}
+\fancyhead[R]{\small\color{ELcMuted}\ifELrtl\ELheadchapter\else\ELlangCourse\fi}
+\renewcommand{\headrule}{\vspace{-3pt}{\color{ELcRule}\hrule height 0.45pt}}
+\fancyfoot[C]{\ELfolio}
+\fancypagestyle{plain}{\fancyhf{}\renewcommand{\headrule}{}\fancyfoot[C]{\ELfolio}}
+\fancypagestyle{ELempty}{\fancyhf{}\renewcommand{\headrule}{}}

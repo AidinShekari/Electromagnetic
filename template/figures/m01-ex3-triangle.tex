@@ -1,0 +1,19 @@
+% Ch1_2, slide 6 (statement): a triangle with sides A, B, C and the angle alpha between A and B
+\begin{tikzpicture}[scale=1]
+  \coordinate (P) at (0,0); \coordinate (Q) at (2.0,0); \coordinate (R) at (3.4,1.9);
+  \draw[ELcurve] (P)--(Q)--(R)--cycle;
+  \draw[ELthin] ($(Q)!0.35cm!(P)$) arc[start angle=180,end angle={atan2(1.9,1.4)},radius=0.35];
+  \node[ELlab,anchor=south] at ($(Q)+(-0.2,0.32)$) {$\alpha$};
+  % dimension lines
+  \draw[ELthin,{Stealth[length=4.5pt]}-{Stealth[length=4.5pt]}] (0,-0.45)--(2.0,-0.45);
+  \node[ELlabg] at (1.0,-0.45) {$A$};
+  \draw[ELthin] (P)--(0,-0.6) (Q)--(2.0,-0.6);
+  \begin{scope}[shift={($(0,0)!0.55cm!90:(R)$)}]
+    \draw[ELthin,{Stealth[length=4.5pt]}-{Stealth[length=4.5pt]}] (0,0)--(3.4,1.9);
+    \node[ELlabg] at (1.7,0.95) {$C$};
+  \end{scope}
+  \begin{scope}[shift={($(Q)!0.55cm!-90:(R)$)}]
+    \draw[ELthin,{Stealth[length=4.5pt]}-{Stealth[length=4.5pt]}] (0,0)--(1.4,1.9);
+    \node[ELlabg] at (0.7,0.95) {$B$};
+  \end{scope}
+\end{tikzpicture}

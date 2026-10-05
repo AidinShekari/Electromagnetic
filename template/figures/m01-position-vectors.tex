@@ -1,0 +1,22 @@
+% Ch1_2, slide 17: the position vectors R1, R2 of P1, P2 and the distance vector R12
+\begin{tikzpicture}[ELoblique,scale=1]
+  \coordinate (O) at (0,0,0);
+  \coordinate (P1) at (1.0,2.0,2.3); \coordinate (P2) at (2.6,3.2,2.9);
+  \draw[ELax] (O)--(3.8,0,0) node[ELlab,anchor=north east]{$x$};
+  \draw[ELax] (O)--(0,4.6,0) node[ELlab,anchor=west]{$y$};
+  \draw[ELax] (O)--(0,0,3.8) node[ELlab,anchor=south]{$z$};
+  \begin{scope}[ELcSource!70,dashed,line width=0.5pt]
+    \draw (P1)--(1.0,2.0,0)--(1.0,0,0) (1.0,2.0,0)--(0,2.0,0) (P1)--(0,0,2.3);
+    \draw (P2)--(2.6,3.2,0)--(2.6,0,0) (2.6,3.2,0)--(0,3.2,0) (P2)--(0,0,2.9);
+  \end{scope}
+  \draw[ELvec] (O)--(P1) node[ELlab,anchor=east,pos=0.55]{$\vect{R}_1$};
+  \draw[ELvec] (O)--(P2) node[ELlab,anchor=north west,pos=0.5]{$\vect{R}_2$};
+  \draw[ELvec2] (P1)--(P2) node[ELlab,anchor=north,pos=0.55,yshift=-1pt]{$\vect{R}_{12}$};
+  \node[ELpt] at (P1){}; \node[ELpt] at (P2){};
+  \node[ELlab,anchor=south,yshift=3pt] at (P1) {$P_1=(x_1,y_1,z_1)$};
+  \node[ELlab,anchor=west] at (P2) {$P_2=(x_2,y_2,z_2)$};
+  \node[ELlabs,anchor=east] at (0,0,2.3) {$z_1$}; \node[ELlabs,anchor=east] at (0,0,2.9) {$z_2$};
+  \node[ELlabs,anchor=south] at (0,2.0,0) {$y_1$}; \node[ELlabs,anchor=south] at (0,3.2,0) {$y_2$};
+  \node[ELlabs,anchor=east] at (1.0,0,0) {$x_1$}; \node[ELlabs,anchor=east] at (2.6,0,0) {$x_2$};
+  \node[ELlab,anchor=east] at (O) {$O$};
+\end{tikzpicture}

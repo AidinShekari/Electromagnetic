@@ -1,0 +1,22 @@
+% ============================================================
+%  Chapter 1 (vector analysis): the spherical coordinate system of the chapter: a wire sphere
+%  (meridians phi = const, parallels theta = const), the axes, the position vector R of a
+%  point and its unit vectors a_R, a_theta, a_phi.  Centred on \ELmotifcx, never mirrored.
+% ============================================================
+\begin{scope}[shift={(\ELmotifcx,3.9)},x={(-0.62cm,-0.52cm)},y={(1.25cm,0cm)},z={(0cm,1.25cm)},line cap=round]
+  \def\S{2.6}
+  \foreach \p in {0,30,...,150}{\draw[ELblueD,opacity=0.35,line width=0.45pt] plot[domain=0:360,samples=90]
+     ({\S*sin(\x)*cos(\p)},{\S*sin(\x)*sin(\p)},{\S*cos(\x)});}
+  \foreach \t in {30,60,90,120,150}{\draw[ELblueD,opacity=0.35,line width=0.45pt] plot[domain=0:360,samples=90]
+     ({\S*sin(\t)*cos(\x)},{\S*sin(\t)*sin(\x)},{\S*cos(\t)});}
+  \draw[white,opacity=0.6,line width=0.6pt,-{Stealth[length=5pt]}] (0,0,0)--(3.7,0,0);
+  \draw[white,opacity=0.6,line width=0.6pt,-{Stealth[length=5pt]}] (0,0,0)--(0,3.7,0);
+  \draw[white,opacity=0.6,line width=0.6pt,-{Stealth[length=5pt]}] (0,0,0)--(0,0,3.3);
+  \def\t{55}\def\p{40}
+  \coordinate (P) at ({\S*sin(\t)*cos(\p)},{\S*sin(\t)*sin(\p)},{\S*cos(\t)});
+  \draw[white,line width=0.9pt] (0,0,0)--(P);
+  \draw[ELredD,line width=1.4pt,-{Stealth[length=6pt]}] (P)--++({0.9*sin(\t)*cos(\p)},{0.9*sin(\t)*sin(\p)},{0.9*cos(\t)});
+  \draw[ELredD,line width=1.4pt,-{Stealth[length=6pt]}] (P)--++({0.9*cos(\t)*cos(\p)},{0.9*cos(\t)*sin(\p)},{-0.9*sin(\t)});
+  \draw[ELredD,line width=1.4pt,-{Stealth[length=6pt]}] (P)--++({-0.9*sin(\p)},{0.9*cos(\p)},0);
+  \fill[white] (P) circle (2pt);
+\end{scope}

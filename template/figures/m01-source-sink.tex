@@ -1,0 +1,13 @@
+% Ch1_5, slide 8: flux lines of D from the volume v_a (a source) to the volume v_b (a sink);
+% the volume v_c encloses both
+\begin{tikzpicture}[scale=1]
+  \coordinate (A) at (4.4,1.6); \coordinate (B) at (0.6,0);
+  \draw[ELdash,line width=0.7pt] (A) circle (0.45); \draw[ELdash,line width=0.7pt] (B) circle (0.45);
+  \node[ELlab] at (A) {$v_a$}; \node[ELlab] at (B) {$v_b$};
+  \foreach \b in {-30,-12,8,28}{\draw[ELfieldline] ($(A)+(\b+190:0.45)$) to[out=\b+190,in=-\b+10] ($(B)+(-\b+10:0.45)$);}
+  \draw[ELfieldline] ($(A)+(140:0.45)$) to[out=140,in=60] ($(B)+(60:0.45)$);
+  \draw[ELfieldline] ($(A)+(-120:0.45)$) to[out=-120,in=-60] ($(B)+(-60:0.45)$);
+  \node[ELlab,anchor=south] at (1.4,1.95) {$\vect{D}$};
+  \draw[ELcGuide,dashed,line width=0.7pt] plot[smooth cycle,tension=0.7] coordinates{(-0.25,-0.3)(0.3,-0.8)(2.4,-1.0)(4.6,0.4)(5.25,1.6)(4.8,2.25)(3.6,2.0)(1.8,1.5)(0.0,1.2)(-0.5,0.5)};
+  \node[ELlab,anchor=north west] at (3.6,-0.25) {$v_c$};
+\end{tikzpicture}

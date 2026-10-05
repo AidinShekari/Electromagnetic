@@ -1,0 +1,15 @@
+% Ch1_1, slide 11: vector subtraction, A - B = A + (-B)
+\begin{tikzpicture}[scale=1]
+  \begin{scope}
+    \draw[ELvec] (0.5,0.4)--(0.85,1.9) node[ELlab,anchor=east]{$\vect{B}$};
+    \draw[ELvec] (0.8,-0.6)--(3.5,-0.25) node[ELlab,anchor=north,yshift=-2pt,pos=0.7]{$\vect{A}$};
+  \end{scope}
+  \begin{scope}[shift={(6,0.6)}]
+    \coordinate (O) at (0,0);
+    \draw[ELvec] (O)--(0.55,2.3) node[ELlab,anchor=east]{$\vect{B}$};
+    \draw[ELvec] (O)--(3.1,0.42) node[ELlab,anchor=south,pos=0.82,yshift=1pt]{$\vect{A}$};
+    \draw[ELvec] (O)--(-0.55,-2.3) node[ELlab,anchor=east,pos=0.55]{$-\vect{B}$};
+    \draw[ELdash] (-0.55,-2.3)--(2.55,-1.88)--(3.1,0.42);
+    \draw[ELvec2] (O)--(2.55,-1.88) node[ELlab,anchor=north east,pos=0.62]{$\vect{A}-\vect{B}$};
+  \end{scope}
+\end{tikzpicture}

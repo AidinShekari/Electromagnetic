@@ -1,0 +1,23 @@
+% ============================================================
+%  Electromagnetics — Latin text fonts and the mathematics font (both editions)
+%  Times-style text (TeX Gyre Termes), Helvetica-style sans for the display type
+%  (TeX Gyre Heros), Times-style mathematics (TeX Gyre Termes Math).
+% ============================================================
+\ifELrtl
+  \setlatintextfont{texgyretermes}[Extension=.otf, UprightFont=*-regular, BoldFont=*-bold,
+    ItalicFont=*-italic, BoldItalicFont=*-bolditalic]
+  \setlatinsansfont{texgyreheros}[Extension=.otf, UprightFont=*-regular, BoldFont=*-bold,
+    ItalicFont=*-italic, BoldItalicFont=*-bolditalic]
+  \setlatinmonofont{lmmono10-regular}[Extension=.otf, Scale=0.9]
+\else
+  \setmainfont{texgyretermes}[Extension=.otf, UprightFont=*-regular, BoldFont=*-bold,
+    ItalicFont=*-italic, BoldItalicFont=*-bolditalic]
+  \setsansfont{texgyreheros}[Extension=.otf, UprightFont=*-regular, BoldFont=*-bold,
+    ItalicFont=*-italic, BoldItalicFont=*-bolditalic]
+  \setmonofont{lmmono10-regular}[Extension=.otf, Scale=0.9]
+\fi
+% The mathematics: variables italic (Latin and lower-case Greek; capital Greek upright, as in
+% Times textbooks), functions and operators upright.  xepersian re-binds \mathrm to the Persian
+% text font, so the upright and bold alphabets are pinned to the math font itself.
+\setmathfont{texgyretermes-math.otf}
+\AtBeginDocument{\let\mathrm\symup \let\mathbf\symbf \let\mathit\symit \let\mathsf\symsfup}

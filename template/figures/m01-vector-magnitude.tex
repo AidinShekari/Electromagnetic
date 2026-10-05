@@ -1,0 +1,9 @@
+% Ch1_1, slide 8: a vector, its magnitude and its direction
+\begin{tikzpicture}[scale=1]
+  \draw[ELvec,line width=1.6pt] (0,0)--(5,2.2) node[ELlab,anchor=north west,xshift=-6pt,yshift=-4pt]{$\vect{A}=\uvec{A}A$};
+  \begin{scope}[shift={(-0.36,0.82)}]
+    \draw[ELthin,{Stealth[length=5pt]}-{Stealth[length=5pt]}] (0,0)--(5,2.2);
+    \draw[ELthin] (0,0)--++(0.25,-0.57) (5,2.2)--++(0.25,-0.57);
+    \node[ELlab,anchor=south east,align=center] at (2.4,1.15) {\ELL{magnitude of the vector}{اندازه بردار}\\$\abs{\vect{A}}=A$};
+  \end{scope}
+\end{tikzpicture}

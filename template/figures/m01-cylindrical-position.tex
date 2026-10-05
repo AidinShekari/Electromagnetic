@@ -1,0 +1,15 @@
+% Ch1_3, slide 4: the position vector R = r a_r + z a_z of P
+\begin{tikzpicture}[ELoblique,scale=1]
+  \coordinate (O) at (0,0,0); \coordinate (P) at (1.6,2.4,1.7); \coordinate (Pxy) at (1.6,2.4,0);
+  \draw[ELax] (O)--(3.2,0,0) node[ELlab,anchor=north east]{$x$};
+  \draw[ELax] (O)--(0,4.2,0) node[ELlab,anchor=west]{$y$};
+  \draw[ELax] (O)--(0,0,3.2) node[ELlab,anchor=south]{$z$};
+  \draw[ELdash] (1.6,0,0)--(Pxy)--(0,2.4,0) (P)--(0,0,1.7);
+  \draw[ELdash] (P)--(Pxy) node[ELlab,anchor=west,pos=0.5,text=ELcSource]{$z$};
+  \draw[ELcField,line width=0.9pt] (O)--(Pxy) node[ELlab,anchor=north,pos=0.6,text=ELcSource]{$r$};
+  \draw[ELvec,line width=1.2pt] (O)--(P);
+  \node[ELpt] at (P){};
+  \node[ELlab,anchor=west] at (P) {$P(x,y,z)$};
+  \draw[ELthin,-{Stealth[length=4pt]}] (0.75,0,0) arc[start angle=0,end angle={atan2(2.4,1.6)},radius=0.75];
+  \node[ELlab,anchor=north east,text=ELcSource] at (0.75,0.25,0) {$\phi$};
+\end{tikzpicture}

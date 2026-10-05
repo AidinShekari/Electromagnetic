@@ -1,0 +1,14 @@
+% Ch1_2, slide 9: a triangle with vertices A, B, C, the opposite sides a, b, c
+\begin{tikzpicture}[scale=1]
+  \coordinate (B) at (0,0); \coordinate (A) at (2.6,1.25); \coordinate (C) at (4.6,-1.4);
+  \draw[ELcurve] (B)--(A)--(C)--cycle;
+  \pic[draw=ELink!70,line width=0.5pt,angle radius=0.38cm] {angle=C--B--A};
+  \pic[draw=ELink!70,line width=0.5pt,angle radius=0.38cm] {angle=B--A--C};
+  \pic[draw=ELink!70,line width=0.5pt,angle radius=0.42cm] {angle=A--C--B};
+  \node[ELlab,anchor=east] at ($(B)+(0.62,0.02)$) {$B$};
+  \node[ELlab,anchor=north] at ($(A)+(-0.02,-0.42)$) {$A$};
+  \node[ELlab,anchor=east] at ($(C)+(-0.5,0.32)$) {$C$};
+  \node[ELlab,anchor=south east] at ($(B)!0.5!(A)$) {$c$};
+  \node[ELlab,anchor=south west] at ($(A)!0.5!(C)$) {$b$};
+  \node[ELlab,anchor=north east] at ($(B)!0.5!(C)$) {$a$};
+\end{tikzpicture}

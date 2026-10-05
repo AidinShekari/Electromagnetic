@@ -1,0 +1,27 @@
+% ============================================================
+%  Electromagnetics — contents (book contents and the chapter list on each opening page)
+% ============================================================
+\newcommand{\ELtocleader}{\leaders\hbox{\kern1.6pt\textcolor{ELhair}{.}\kern1.6pt}\hfill}
+% the list of the sections of a chapter, on its opening page
+% (two columns, so that a long chapter keeps its list on the opening page)
+\newenvironment{ELminitoc}{%
+  \par\vspace{0.6em}{\ELheadfont\bfseries\color{ELcMuted}\ELlangChapterContents}\par\vspace{0.3em}%
+  \small\setlength{\columnsep}{1.4em}\begin{multicols}{2}\raggedcolumns}{\end{multicols}\par}
+\newcommand{\ELtocitem}[2]{% section number in the chapter, title
+  \par\noindent\hyperref[ELsec:\ELmodkey:#1]{\hbox to\linewidth{%
+    \hbox to 2.6em{{\ELheadfont\bfseries\color{ELcNumber}\ELnumc{\arabic{ELchap}.#1}}\hfil}%
+    #2\ELtocleader\hspace{0.4em}{\color{ELcMuted}\ELnum{\pageref{ELsec:\ELmodkey:#1}}}}}\par\vspace{0.15em}}
+% the book
+\newenvironment{ELbooktoc}{%
+  \pdfbookmark[1]{\ELlangContents}{ELtoc}\phantomsection
+  \par{\ELheadfont\bfseries\fontsize{26}{30}\selectfont\color{ELcHeading}\ELlangContents}\par
+  \ELtworule{2.4cm}\vspace{0.9em}\par}{\par}
+\newcommand{\ELtocpart}[2]{\par\Needspace{6\baselineskip}\vspace{1.1em}\noindent
+  {\ELheadfont\bfseries\large\color{ELcAccent}\ELlangPart~#1}\hspace{0.8em}{\ELheadfont\bfseries\large\color{ELcHeading}#2}\par\vspace{0.1em}}
+\newcommand{\ELtocchapter}[3]{% key, number, title
+  \par\Needspace{4\baselineskip}\vspace{0.7em}\noindent\hyperref[ELch:#1]{\hbox to\linewidth{%
+    \hbox to 2.2em{\ELheadfont\bfseries\color{ELcNumber}#2\hfil}%
+    {\ELheadfont\bfseries\color{ELcHeading}#3}\ELtocleader\hspace{0.4em}{\ELheadfont\bfseries\color{ELcHeading}\ELnum{\pageref{ELch:#1}}}}}\par}
+\newcommand{\ELtocitemk}[4]{% key, k, number, title
+  \par\noindent\hspace{2.2em}\hyperref[ELsec:#1:#2]{\hbox to\dimexpr\linewidth-2.2em\relax{\small
+    \hbox to 2.8em{\color{ELcMuted}\ELnumc{#3}\hfil}#4\ELtocleader\hspace{0.4em}{\color{ELcMuted}\ELnum{\pageref{ELsec:#1:#2}}}}}\par}

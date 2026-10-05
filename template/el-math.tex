@@ -1,0 +1,36 @@
+% ============================================================
+%  Electromagnetics — mathematical notation (both editions)
+%
+%  Write the notation of the instructor's notes through these macros, never by hand, so that
+%  a change of convention is made here once.  The defaults below are typographic only; set
+%  them to whatever the course material uses (bold upright vectors, a_x unit vectors, ...).
+% ============================================================
+\setoperatorfont\symup
+% vectors and unit vectors
+\newcommand{\ELvecfont}{\symbf}                       % a vector: bold upright (A, E, H, ...)
+\newcommand{\vect}[1]{\ELvecfont{#1}}
+\newcommand{\uvec}[1]{\ELvecfont{a}_{#1}}            % a unit vector written a_x, a_r, ...
+\newcommand{\uhat}[1]{\hat{\ELvecfont{#1}}}          % a unit vector written with a hat
+% vector operators
+\newcommand{\grad}{\nabla}
+\newcommand{\divg}{\nabla\cdot}
+\newcommand{\curl}{\nabla\times}
+\newcommand{\lapl}{\nabla^{2}}
+% calculus
+\newcommand{\dif}{\mathop{}\!d}                       % the d of a differential, spaced
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}  % partial derivative
+\newcommand{\od}[2]{\frac{d #1}{d #2}}                % ordinary derivative
+% complex quantities
+% (unicode-math sets \Re and \Im to the Fraktur symbols at the start of the document)
+\AtBeginDocument{\let\Re\relax \let\Im\relax
+  \DeclareMathOperator{\Re}{Re}\DeclareMathOperator{\Im}{Im}}
+\newcommand{\jj}{j}                                    % the imaginary unit of the phasors
+% delimiters
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+% symbols that the math font draws differently from Computer Modern
+\def\blacksquare{\mathord{\mdlgblksquare}}
+\def\square{\mathord{\mdlgwhtsquare}}
+% a check mark inside a formula (the filter writes \checkmark as \ELcheck)
+\usepackage{pifont}
+\newcommand{\ELcheck}{\mathord{\text{\ding{51}}}}

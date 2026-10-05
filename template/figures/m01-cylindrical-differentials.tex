@@ -1,0 +1,40 @@
+% Ch1_3, slide 6: the differential element in cylindrical coordinates: dl, the surfaces ds and
+% the volume dv = r dr dphi dz
+\begin{tikzpicture}[ELoblique,scale=1]
+  \def\ri{2.4}\def\ro{3.7}\def\pa{45}\def\pb{72}\def\za{1.9}\def\zb{3.6}
+  \coordinate (O) at (0,0,0);
+  \draw[ELax] (O)--(3.6,0,0) node[ELlab,anchor=north east]{$x$};
+  \draw[ELax] (O)--(0,6.6,0) node[ELlab,anchor=west]{$y$};
+  \draw[ELax] (O)--(0,0,5.2) node[ELlab,anchor=south]{$z$};
+  % footprint in the xy-plane
+  \draw[ELcField!80,line width=0.6pt] plot[domain=\pa:\pb] ({\ri*cos(\x)},{\ri*sin(\x)},0) -- plot[domain=\pb:\pa] ({\ro*cos(\x)},{\ro*sin(\x)},0) -- cycle;
+  \draw[ELdash] (O)--({\ri*cos(\pa)},{\ri*sin(\pa)},0) (O)--({\ri*cos(\pb)},{\ri*sin(\pb)},0);
+  \draw[ELthin] (0.7,0,0) arc[start angle=0,end angle=\pa,radius=0.7];
+  \node[ELlabs,anchor=north] at ({0.85*cos(\pa/2)},{0.85*sin(\pa/2)},0) {$\phi$};
+  \draw[ELthin] ({1.2*cos(\pa)},{1.2*sin(\pa)},0) arc[start angle=\pa,end angle=\pb,radius=1.2];
+  \node[ELlabs,anchor=north] at ({1.35*cos((\pa+\pb)/2)},{1.35*sin((\pa+\pb)/2)},0) {$d\phi$};
+  \node[ELlabs,anchor=north east] at ({(\ri+\ro)/2*cos(\pa)},{(\ri+\ro)/2*sin(\pa)},0) {$dr$};
+  \node[ELlabs,anchor=north west] at ({\ro*cos((\pa+\pb)/2)},{\ro*sin((\pa+\pb)/2)},0) {$r\,d\phi$};
+  \node[ELlabs,anchor=south east] at ({1.05*cos(\pa+8)},{1.05*sin(\pa+8)},0) {$r$};
+  % verticals
+  \foreach \rr/\pp in {\ri/\pa,\ro/\pa,\ro/\pb,\ri/\pb}{\draw[ELcSource!45,dashed,line width=0.45pt] ({\rr*cos(\pp)},{\rr*sin(\pp)},0)--({\rr*cos(\pp)},{\rr*sin(\pp)},\za);}
+  \draw[ELcSource!45,dashed,line width=0.45pt] (0,0,\za)--({\ri*cos(\pa)},{\ri*sin(\pa)},\za) (0,0,\zb)--({\ri*cos(\pb)},{\ri*sin(\pb)},\zb);
+  % the element
+  \fill[ELfillA] plot[domain=\pa:\pb] ({\ro*cos(\x)},{\ro*sin(\x)},\za) -- plot[domain=\pb:\pa] ({\ro*cos(\x)},{\ro*sin(\x)},\zb) -- cycle;
+  \fill[ELfillB] ({\ri*cos(\pb)},{\ri*sin(\pb)},\za)--({\ro*cos(\pb)},{\ro*sin(\pb)},\za)--({\ro*cos(\pb)},{\ro*sin(\pb)},\zb)--({\ri*cos(\pb)},{\ri*sin(\pb)},\zb)--cycle;
+  \fill[ELfillC] plot[domain=\pa:\pb] ({\ri*cos(\x)},{\ri*sin(\x)},\zb) -- plot[domain=\pb:\pa] ({\ro*cos(\x)},{\ro*sin(\x)},\zb) -- cycle;
+  \draw[ELcField!80,line width=0.6pt]
+    plot[domain=\pa:\pb] ({\ro*cos(\x)},{\ro*sin(\x)},\za) -- ({\ro*cos(\pb)},{\ro*sin(\pb)},\zb)
+    -- plot[domain=\pb:\pa] ({\ro*cos(\x)},{\ro*sin(\x)},\zb) -- cycle
+    plot[domain=\pa:\pb] ({\ri*cos(\x)},{\ri*sin(\x)},\zb) -- ({\ro*cos(\pb)},{\ro*sin(\pb)},\zb)
+    ({\ri*cos(\pa)},{\ri*sin(\pa)},\zb)--({\ro*cos(\pa)},{\ro*sin(\pa)},\zb)
+    ({\ro*cos(\pb)},{\ro*sin(\pb)},\za)--({\ri*cos(\pb)},{\ri*sin(\pb)},\za)--({\ri*cos(\pb)},{\ri*sin(\pb)},\zb);
+  \pgfmathsetmacro{\pm}{(\pa+\pb)/2}\pgfmathsetmacro{\rm}{(\ri+\ro)/2}\pgfmathsetmacro{\zm}{(\za+\zb)/2}
+  \draw[ELvec2] ({\rm*cos(\pm)},{\rm*sin(\pm)},\zb)--++(0,0,1.1) node[ELlabs,anchor=south]{$d\vect{s}=\uvec{z}\,r\,dr\,d\phi$};
+  \draw[ELvec2] ({\ro*cos(\pm)},{\ro*sin(\pm)},\zm)--++({1.8*cos(\pm)},{1.8*sin(\pm)},0) node[ELlabs,anchor=west]{$d\vect{s}=\uvec{r}\,r\,d\phi\,dz$};
+  \draw[ELvec2] ({\rm*cos(\pb)},{\rm*sin(\pb)},\zm)--++({-1.0*sin(\pb)},{1.0*cos(\pb)},0) node[ELlabs,anchor=south west]{$d\vect{s}=\uvec{\phi}\,dr\,dz$};
+  \node[ELlabs,anchor=east] at (0,0,\zm) {$dz$};
+  \node[ELlabs,anchor=south] at ({\rm*cos(\pb)},{\rm*sin(\pb)},\zb) {$dr$};
+  \node[ELlabs,anchor=north west] at ({\ro*cos(\pb)},{\ro*sin(\pb)},\za-0.55) {$dv=r\,dr\,d\phi\,dz$};
+  \node[ELlab,anchor=east] at (O) {$O$};
+\end{tikzpicture}

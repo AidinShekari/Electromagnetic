@@ -1,0 +1,23 @@
+% Ch1_2, slide 6 (solution): C = A + B; theta_AB is the exterior angle at the head of A
+\begin{tikzpicture}[scale=1]
+  \coordinate (P) at (0,0); \coordinate (Q) at (2.0,0); \coordinate (R) at (3.4,1.9);
+  \draw[ELvec] (P)--(Q) node[ELlab,anchor=north,pos=0.7]{$\vect{A}$};
+  \draw[ELvec] (Q)--(R) node[ELlab,anchor=west,pos=0.75,xshift=1pt]{$\vect{B}$};
+  \draw[ELvec2] (P)--(R) node[ELlab,anchor=north west,pos=0.45,yshift=1pt]{$\vect{C}$};
+  \draw[ELdash] (Q)--(2.9,0);
+  \pgfmathsetmacro{\bang}{atan2(1.9,1.4)}
+  \draw[ELthin] ($(Q)+(-0.35,0)$) arc[start angle=180,end angle=\bang,radius=0.35];
+  \node[ELlab,anchor=south] at ($(Q)+(-0.25,0.35)$) {$\alpha$};
+  \draw[ELthin] ($(Q)+(0.55,0)$) arc[start angle=0,end angle=\bang,radius=0.55];
+  \node[ELlab,anchor=west] at ($(Q)+(0.6,0.28)$) {$\theta_{AB}$};
+  \draw[ELthin,{Stealth[length=4.5pt]}-{Stealth[length=4.5pt]}] (0,-0.5)--(2.0,-0.5);
+  \node[ELlabg] at (1.0,-0.5) {$A$};
+  \begin{scope}[shift={($(0,0)!0.55cm!90:(R)$)}]
+    \draw[ELthin,{Stealth[length=4.5pt]}-{Stealth[length=4.5pt]}] (0,0)--(3.4,1.9);
+    \node[ELlabg] at (1.7,0.95) {$C$};
+  \end{scope}
+  \begin{scope}[shift={($(Q)!0.75cm!-90:(R)$)}]
+    \draw[ELthin,{Stealth[length=4.5pt]}-{Stealth[length=4.5pt]}] (0,0)--(1.4,1.9);
+    \node[ELlabg] at (0.7,0.95) {$B$};
+  \end{scope}
+\end{tikzpicture}

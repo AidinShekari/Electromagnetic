@@ -1,0 +1,56 @@
+% ============================================================
+%  Electromagnetics — environment icons
+%  Native TikZ on a 1 em square, one stroke weight, drawn in the colour passed by the caller.
+%  Icons that point (arrow, turnstile) are mirrored in the Persian edition so that they point
+%  along the reading direction; the others are symmetric or are mathematical symbols and are
+%  never mirrored.
+% ============================================================
+\expandafter\let\csname ELflip@arrow\endcsname\relax
+\expandafter\let\csname ELflip@turnstile\endcsname\relax
+\newcommand{\ELicon}[2]{% name, colour
+  \ifcsname ELflip@#1\endcsname\def\ELix{\ELsgn em}\else\def\ELix{1em}\fi
+  {\color{#2}\lr{\tikz[baseline=0.12em,x=\ELix,y=1em,line width=0.075em,line cap=round,line join=round]{%
+    \ifcsname ELflip@#1\endcsname\ifnum\ELsgn<0 \begin{scope}[shift={(-1,0)}]\fi\fi
+    \csname ELicon@#1\endcsname
+    \ifcsname ELflip@#1\endcsname\ifnum\ELsgn<0 \end{scope}\fi\fi}}}}
+% definition: "defined as" (equals sign under a delta)
+\expandafter\def\csname ELicon@defeq\endcsname{%
+  \draw (0.32,0.6)--(0.68,0.6)--(0.5,0.92)--cycle;
+  \draw (0.1,0.38)--(0.9,0.38) (0.1,0.12)--(0.9,0.12);}
+% theorem: nabla
+\expandafter\def\csname ELicon@nabla\endcsname{%
+  \fill[opacity=0.3] (0.06,0.9)--(0.94,0.9)--(0.5,0.06)--cycle;
+  \draw (0.06,0.9)--(0.94,0.9)--(0.5,0.06)--cycle;}
+% lemma: a dipole (two charges joined by a field line)
+\expandafter\def\csname ELicon@dipole\endcsname{%
+  \draw (0.24,0.42) .. controls (0.32,0.98) and (0.68,0.98) .. (0.76,0.42);
+  \fill (0.16,0.32) circle (0.13) (0.84,0.32) circle (0.13);}
+% proposition: a vector out of the page
+\expandafter\def\csname ELicon@odot\endcsname{%
+  \draw (0.5,0.5) circle (0.42); \fill (0.5,0.5) circle (0.12);}
+% corollary: an arrow leaving a point
+\expandafter\def\csname ELicon@arrow\endcsname{%
+  \fill (0.08,0.5) circle (0.09);
+  \draw (0.08,0.5)--(0.9,0.5);
+  \draw (0.6,0.78)--(0.92,0.5)--(0.6,0.22);}
+% important result: a spark
+\expandafter\def\csname ELicon@bolt\endcsname{%
+  \filldraw[line width=0.04em] (0.62,1.0)--(0.16,0.42)--(0.47,0.42)--(0.36,0.0)--(0.84,0.6)--(0.53,0.6)--cycle;}
+% example: a wave on its axis
+\expandafter\def\csname ELicon@wave\endcsname{%
+  \draw[opacity=0.55] (0.02,0.5)--(0.98,0.5);
+  \draw (0.04,0.5) .. controls (0.16,0.98) and (0.34,0.98) .. (0.5,0.5)
+                   .. controls (0.66,0.02) and (0.84,0.02) .. (0.96,0.5);}
+% exercise: a pen nib
+\expandafter\def\csname ELicon@nib\endcsname{%
+  \fill[opacity=0.25] (0.5,0.04)--(0.84,0.52)--(0.66,0.96)--(0.34,0.96)--(0.16,0.52)--cycle;
+  \draw (0.5,0.04)--(0.84,0.52)--(0.66,0.96)--(0.34,0.96)--(0.16,0.52)--cycle;
+  \draw (0.5,0.04)--(0.5,0.42); \fill (0.5,0.52) circle (0.08);}
+% remark: information
+\expandafter\def\csname ELicon@info\endcsname{%
+  \draw (0.5,0.5) circle (0.44);
+  \fill (0.5,0.73) circle (0.075);
+  \draw[line width=0.1em] (0.5,0.24)--(0.5,0.55);}
+% proof: a turnstile (what follows is derived)
+\expandafter\def\csname ELicon@turnstile\endcsname{%
+  \draw[line width=0.1em] (0.22,0.08)--(0.22,0.92) (0.22,0.5)--(0.88,0.5);}

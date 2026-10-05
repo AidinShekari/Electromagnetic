@@ -1,0 +1,55 @@
+% ============================================================
+%  Electromagnetics — English (LTR) preamble
+%  Compile with XeLaTeX.  \ELroot must point to template/
+% ============================================================
+\newif\ifELrtl \ELrtlfalse
+\input{\ELroot/el-packages}
+\usepackage{fontspec}
+\input{\ELroot/el-fonts}
+\newfontfamily\ELfarsi[Path=\ELroot/fonts/, Extension=.ttf, Script=Arabic, AutoFakeBold=1.3]{Vazirmatn-Regular}
+\newfontfamily\ELfaDisplay[Path=\ELroot/fonts/, Extension=.ttf, Script=Arabic]{Vazirmatn-Black}
+\usepackage{bidi}
+\input{\ELroot/el-math}
+\input{\ELroot/el-config}
+
+\linespread{1.08}
+% \rl{} for Persian snippets (Persian font + RTL)
+\newcommand{\rl}[1]{\RL{\ELfarsi #1}}
+
+% ---------- language strings ----------
+\def\ELlangCourse{\ELmetaCourseEn}
+\def\ELlangCourseOther{\rl{\ELmetaCourseFa}}
+\def\ELlangUni{\ELmetaUniEn}
+\def\ELlangUniOther{\rl{\ELmetaUniFa}}
+\def\ELlangChapter{Chapter}
+\def\ELlangPart{Part}
+\def\ELlangContents{Contents}
+\def\ELlangChapterContents{In this chapter}
+\def\ELlangFigure{Figure}
+\def\ELlangTable{Table}
+\def\ELlangDefinition{Definition}
+\def\ELlangTheorem{Theorem}
+\def\ELlangLemma{Lemma}
+\def\ELlangProposition{Proposition}
+\def\ELlangCorollary{Corollary}
+\def\ELlangImportant{Important result}
+\def\ELlangExample{Example}
+\def\ELlangExercise{Exercise}
+\def\ELlangRemark{Remark}
+\def\ELlangProof{Proof}
+\def\ELlangSolution{Solution}
+\def\ELlangNotes{Lecture Notes}
+\def\ELlangInstructorLabel{Instructor}
+\def\ELlangCompilerLabel{Compiled and edited by}
+\def\ELlangInstructor{\ifx\ELmetaInstructorEn\empty\rl{\ELmetaInstructorFa}\else\ELmetaInstructorEn\fi}
+\def\ELlangCompiler{\ELmetaCompilerEn}
+\def\ELlangInstructorOther{\rl{استاد: \ELmetaInstructorFa}}
+\def\ELlangCompilerOther{\rl{جمع‌آوری و تنظیم: \ELmetaCompilerFa}}
+
+\hypersetup{pdftitle={\ELmetaCourseEn\ --- \ELlangNotes},
+  pdfauthor={\ELmetaCompilerEn},
+  pdfsubject={\ELmetaCourseEn, \ELmetaUniEn},
+  pdfkeywords={Electromagnetics, lecture notes, \ELmetaUniEn},
+  pdflang={en}, pdfdisplaydoctitle=true}
+
+\input{\ELroot/el-style}

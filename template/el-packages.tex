@@ -1,0 +1,32 @@
+% ============================================================
+%  Electromagnetics — packages and the page standard of the collection
+%  (loaded before bidi / xepersian)
+%
+%  The page is the standard of the notes collection (identical to Engineering Mathematics):
+%  A4, 11 pt body, text block 16.2 cm x 24.7 cm, running head 15 pt high 0.9 cm above the text,
+%  folio 1.2 cm below it.  Only the visual design differs between the courses.
+% ============================================================
+\usepackage[a4paper,top=2.5cm,bottom=2.4cm,left=2.4cm,right=2.4cm,
+  headheight=15pt,headsep=0.9cm,footskip=1.2cm]{geometry}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{unicode-math}% before bidi/xepersian: loaded after them it breaks \\[len] in amsmath
+\usepackage{graphicx}
+\usepackage{calc}
+\usepackage[table]{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{enumitem}
+\usepackage{needspace}
+\usepackage{fancyhdr}
+\usepackage{etoolbox}
+\usepackage{environ}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows.meta,decorations.markings,decorations.pathreplacing,
+  patterns,positioning,intersections,through,angles,quotes,3d,perspective}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{fillbetween,groupplots}
+\usepackage{varwidth}
+\usepackage{multicol}
+\usepackage[most]{tcolorbox}
+\usepackage[hidelinks,bookmarksnumbered,unicode,pdfpagelabels]{hyperref}

@@ -1,0 +1,17 @@
+% Ch1_3, slide 13: the position vector R = R1 a_R of P = (R1, theta1, phi1)
+\begin{tikzpicture}[ELoblique,scale=1]
+  \coordinate (O) at (0,0,0); \coordinate (P) at (1.2,2.4,1.9); \coordinate (Pxy) at (1.2,2.4,0);
+  \draw[ELax] (O)--(3.2,0,0) node[ELlab,anchor=north east]{$x$};
+  \draw[ELax] (O)--(0,4.2,0) node[ELlab,anchor=west]{$y$};
+  \draw[ELax] (O)--(0,0,3.2) node[ELlab,anchor=south]{$z$};
+  \draw[ELdash] (P)--(Pxy) (1.2,0,0)--(Pxy)--(0,2.4,0);
+  \draw[ELcField,line width=0.6pt] (O)--(Pxy);
+  \draw[ELvec,line width=1.2pt] (O)--(P) node[ELlab,anchor=south east,pos=0.6]{$R_1$};
+  \node[ELpt] at (P){};
+  \node[ELlab,anchor=west] at (P) {$P=(R_1,\theta_1,\phi_1)$};
+  \pgfmathsetmacro{\pp}{atan2(2.4,1.2)}\pgfmathsetmacro{\tt}{atan2(sqrt(1.2^2+2.4^2),1.9)}
+  \draw[ELthin] plot[domain=0:\tt,samples=20] ({0.7*sin(\x)*cos(\pp)},{0.7*sin(\x)*sin(\pp)},{0.7*cos(\x)});
+  \node[ELlabs,anchor=south east] at (0,0,0.75) {$\theta_1$};
+  \draw[ELthin] (0.7,0,0) arc[start angle=0,end angle=\pp,radius=0.7];
+  \node[ELlabs,anchor=north] at (0.8,0.35,0) {$\phi_1$};
+\end{tikzpicture}
