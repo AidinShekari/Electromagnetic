@@ -1,0 +1,10 @@
+% ============================================================
+%  Chapter 6 (time-varying electromagnetic fields): Faraday's law: a time-varying magnetic flux through
+%  a loop (blue lines) and the electric field it induces around the loop (red).  Centred on \ELmotifcx.
+% ============================================================
+\begin{scope}[shift={(\ELmotifcx,4.3)},line cap=round]
+  \foreach \x/\o in {-2.4/0.4,-1.6/0.6,-0.8/0.8,0/0.9,0.8/0.8,1.6/0.6,2.4/0.4}{
+    \draw[ELblueD,opacity=\o,line width=0.8pt,-{Stealth[length=5pt]}] (\x,-3.6)--(\x,3.6);}
+  \foreach \r/\o in {2.0/0.9,3.0/0.6}{\draw[ELredD,opacity=\o,line width=1.1pt] (0,0) ellipse (\r cm and 0.32*\r cm);
+    \foreach \a in {-60,120}{\draw[ELredD,opacity=\o,line width=1.1pt,-{Stealth[length=6pt]}] (\a:\r cm and 0.32*\r cm) arc[start angle=\a,end angle=\a+10,x radius=\r,y radius=0.32*\r];}}
+\end{scope}

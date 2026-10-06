@@ -1,0 +1,286 @@
+\ELhold
+
+\ELsection{سرفصل‌ها}{سرفصل‌ها}
+
+\begin{ELunit}
+
+\ELfigure{m06-course-outline}{}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{مقدمه}{مقدمه}
+
+\Needspace{11\baselineskip}
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  روابط اصلی حاکم بر الکتریسیته و مغناطیس ساکن
+\end{itemize}
+
+\end{ELunit}
+
+\begin{ELltr}
+\begin{longtable}[c]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2308}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3846}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3846}}@{}}
+\toprule\noalign{}
+\ELtablehead \begin{minipage}[b]{\linewidth}\raggedright
+\lr{Fundamental Relations}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\lr{Electrostatic Model}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\lr{Magnetostatic Model}
+\end{minipage} \\\noalign{\vskip 4pt}
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\lr{Governing equations} & \ELim{\nabla\times\vect{E}=0}, \ELim{\nabla\cdot\vect{D}=\rho} & \ELim{\nabla\cdot\vect{B}=0}, \ELim{\nabla\times\vect{H}=\vect{J}} \\\noalign{\vskip 4pt}
+\lr{Constitutive relations (linear and isotropic media}) & \ELim{\vect{D}=\epsilon\vect{E}} & \ELim{\vect{H}=\dfrac1\mu\vect{B}} \\\noalign{\vskip 4pt}
+\end{longtable}\end{ELltr}
+
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  در حالت ساکن (نامتغیر با زمان)، بردارهای میدان الکتریکی و میدان‌های مغناطیسی جفت‌های جداگانه و مجزا از هم را تشکیل می‌دهند.
+\item
+  در ادامه خواهیم دید که در حالت متغیر با زمان، یک میدان مغناطیسی متغیر با زمان میدان الکتریکی بوجود می‌آورد و بالعکس
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{قانون القای فارادی}{قانون القای فارادی}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  در سال ۱۸۲۰ \textbf{هانس کریستین ارستد} نشان داد که سیم حامل جریان الکتریکی، باعث تغییر جهت عقربه قطب‌نما می‌شود.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    حرکت عقربه قطب‌نما ناشی از نیروی مغناطیسی ایجاد شده توسط میدان مغناطیسی حاصل از جریان الکتریکی بود.
+  \end{itemize}
+\item
+  پس از این کشف \textbf{مایکل فارادی} به صورت شهودی پی برد که میدان مغناطیسی نیز به طور مشابه باید دارای اثر الکتریکی باشد و جریانی در سیم ایجاد کند.
+\item
+  پس از حدود ۱۰ سال آزمایش، او موفق به کشفی شد که به قانون القای فارادی مشهور است.
+\end{itemize}
+
+\end{ELunit}
+
+\begin{ELdefinition}{قانون القای فارادی}
+
+اگر شار مغناطیسی عبوری از یک مدار بسته با گذشت زمان تغییر کند، در آن مدار نیروی محرکه الکتریکی القا می‌شود. این نیروی محرکه باعث عبور جریان خواهد شد.
+
+\end{ELdefinition}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  قطبیت نیروی محرکه الکتریکی و در نتیجه جهت جریان القایی را می‌توان توسط قانون لنز تعیین کرد.
+\end{itemize}
+
+\begin{ELdefinition}{قانون لنز}
+
+جریان القا شده در مدار همواره در جهتی است که با تغییر شار مغناطیسی تولید کننده آن جریان مخالفت کند.
+
+\end{ELdefinition}
+
+\end{ELjoin}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  بیان ریاضی قانون القای فارادی
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{v_{emf}\ELbr =-N\frac{d\Phi}{dt}\ELbr =-N\frac{d}{dt}\int_S\vect{B}\cdot d\vect{s}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  تعریف نیرو محرکه القا شده در مداری با مسیر بسته \ELim{C}
+\end{itemize}
+
+\ELdisp{v_{emf}\triangleq\oint_C\vect{E}\cdot\dif\vect{\ell}}
+
+\begin{itemize}
+\tightlist
+\item
+  با فرض ثابت بودن مدار
+\end{itemize}
+
+\ELdisp{v_{emf}\ELbr =\oint_C\vect{E}\cdot\dif\vect{\ell}\ELbr =-\int_S\frac{\partial\vect{B}}{\partial t}\cdot d\vect{s}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \int_S(\nabla\times\vect{E})\cdot d\vect{s}\ELbr =-\int_S\frac{\partial\vect{B}}{\partial t}\cdot d\vect{s}}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  در گام آخر از قضیه استوکس استفاده شده است.
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\nabla\times\vect{E}\ELbr =-\frac{\partial\vect{B}}{\partial t}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  در حالت متغیر با زمان، میدان الکتریکی ابقایی نیست \ELim{\ELto} \ELim{\nabla\times\vect{E}\neq0}
+\item
+  در حالت متغیر با زمان، پتانسیل اسکالر به صورت \ELim{V=-\int\vect{E}\cdot\dif\vect{\ell}} قابل تعریف نیست. زیرا اختلاف پتانسیل بین دو نقطه فرضی وابسته به مسیر انتگرالگیری شده و مقدار ثابتی نخواهد داشت.
+\item
+  در فرکانس‌های پایین \ELim{\ELto} \ELim{\nabla\times\vect{E}\simeq0} \ELim{\ELto} پتانسیل اسکالر قابل تعریف است (تئوری مدارهای فشرده)
+\end{itemize}
+
+\end{ELunit}
+
+\ELnextnum{6-1}
+
+\begin{ELexample}{}
+
+حلقه دایره‌ای با \ELim{N} دور سیم هادی در صفحه \ELim{xy} قرار دارد به گونه‌ای‌که مرکز آن در مبدأ میدان مغناطیسی توصیف شده به صورت زیر است
+
+\ELdisp{\vect{B}\ELbr =\uvec{z}B_0\cos\left(\frac{\pi r}{2b}\right)\sin(\omega t)}
+
+در رابطه فوق \ELim{b} شعاع حلقه و \ELim{\omega} فرکانس زاویه‌ای است. نیرو محرکه القا شده را بدست آورید.
+
+\begin{ELsolution}
+
+\ELdisp{\begin{aligned}\Phi=\int_S\vect{B}\cdot d\vect{s}&=\int_0^{2\pi}\!\!\int_0^b\left[B_0\cos\left(\frac{\pi r}{2b}\right)\sin(\omega t)\,\uvec{z}\right]\cdot\left(r\,dr\,d\phi\,\uvec{z}\right)\\&=\frac{8b^2}{\pi}\left(\frac\pi2-1\right)B_0\sin(\omega t)\end{aligned}}
+\ELdisp{v\ELbr =-N\frac{d\Phi}{dt}\ELbr =-\frac{8Nb^2}{\pi}\left(\frac\pi2-1\right)B_0\omega\cos(\omega t)}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELhold
+
+\ELsection{جریان جابجایی}{جریان جابجایی}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  قانون مداری آمپر برای میدان مغناطیسی ساکن
+\end{itemize}
+
+\ELdisp{\nabla\times\vect{H}\ELbr =\vect{J}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{جیمز کلارک ماکسول} از صحت این معادله اطمینان نداشت زیرا
+\end{itemize}
+
+\ELdisp{\nabla\cdot(\nabla\times\vect{H})\ELbr =0\ELbr =\nabla\cdot\vect{J}}
+
+\begin{itemize}
+\tightlist
+\item
+  که با معادله پیوستگی سازگار نیست
+\end{itemize}
+
+\ELdisp{\nabla\cdot\vect{J}\ELbr =-\frac{\partial\rho}{\partial t}}
+
+\begin{itemize}
+\tightlist
+\item
+  ماکسول برای رفع این ناسازگاری رابطه فوق را به صورت زیر اصلاح کرد
+\end{itemize}
+
+\ELdisp{\nabla\cdot(\nabla\times\vect{H})\ELbr =0\ELbr =\nabla\cdot\vect{J}+\frac{\partial\rho}{\partial t}\quad\ELbr \xrightarrow{\ \nabla\cdot\vect{D}=\rho\ }\quad\ELbr \nabla\cdot(\nabla\times\vect{H})\ELbr =\nabla\cdot\left(\vect{J}+\frac{\partial\vect{D}}{\partial t}\right)}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{\nabla\times\vect{H}\ELbr =\vect{J}+\frac{\partial\vect{D}}{\partial t}}
+
+\end{ELimportant}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  به سادگی می‌توان نشان داد که \ELim{\partial\vect{D}/\partial t} دارای بعد چگالی جریان است. به این پارامتر \textbf{چگالی جریان جابجایی} گویند.
+\item
+  شکل اصلاح شده قانون مداری آمپر بیان می‌کند که یک میدان الکتریکی متغیر با زمان، یک میدان مغناطیسی به وجود می‌آورد حتی اگر جریانی نیز وجود نداشته باشد.
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{معادلات ماکسول}{معادلات ماکسول}
+
+\Needspace{15\baselineskip}
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  معادلات حاکم بر میدان‌های الکتریکی و مغناطیسی در حالت متغیر با زمان یا \textbf{معادلات ماکسول}
+\end{itemize}
+
+\end{ELunit}
+
+\begin{ELltr}
+\begin{longtable}[c]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\ELtablehead \begin{minipage}[b]{\linewidth}\raggedright
+\lr{Differential Form}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\lr{Integral Form}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\lr{Significance}
+\end{minipage} \\\noalign{\vskip 4pt}
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\ELim{\nabla\times\vect{E}=-\dfrac{\partial\vect{B}}{\partial t}} & \ELim{\oint_C\vect{E}\cdot\dif\vect{\ell}=-\dfrac{d\Phi}{dt}} & \lr{Faraday’s law} \\\noalign{\vskip 4pt}
+\ELim{\nabla\times\vect{H}=\vect{J}+\dfrac{\partial\vect{D}}{\partial t}} & \ELim{\oint_C\vect{H}\cdot\dif\vect{\ell}=I+\int_S\dfrac{\partial\vect{D}}{\partial t}\cdot d\vect{s}} & \lr{Ampère’s circuital law} \\\noalign{\vskip 4pt}
+\ELim{\nabla\cdot\vect{D}=\rho} & \ELim{\oint_S\vect{D}\cdot d\vect{s}=Q} & \lr{Gauss’s law} \\\noalign{\vskip 4pt}
+\ELim{\nabla\cdot\vect{B}=0} & \ELim{\oint_S\vect{B}\cdot d\vect{s}=0} & \lr{No isolated magnetic charge} \\\noalign{\vskip 4pt}
+\end{longtable}\end{ELltr}
+

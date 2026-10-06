@@ -1,0 +1,18 @@
+% Ch5_6, slide 12 (example 5-13): a long straight wire and a triangular loop in its plane; the right
+% angle at the distance d from the wire, the base b, the angle 60 degrees; the strip of width dr at r
+\begin{tikzpicture}[scale=1]
+  \def\d{1.0}\def\b{1.6}
+  \draw[ELink,line width=1.6pt] (0,-1.2)--(0,3.6);
+  \draw[ELcSource,line width=1.0pt,-{Stealth[length=5pt]}] (0.15,2.4)--(0.15,3.0) node[ELlabs,anchor=west,pos=0.5]{$I_2$};
+  \fill[ELcField!25] (2.0,0) rectangle (2.18,{(\d+\b-2.18)*1.7321});
+  \draw[ELcField,line width=1.1pt] (\d,0)--(\d+\b,0)--(\d,{\b*1.7321})--cycle;
+  \draw[ELcField,line width=0.5pt] (2.0,0)--(2.0,{(\d+\b-2.0)*1.7321}) (2.18,0)--(2.18,{(\d+\b-2.18)*1.7321});
+  \node[ELlabs,anchor=east] at (2.0,0.3) {$z$};
+  \draw[ELthin] ({\d+\b-0.35},0) arc[start angle=180,end angle=120,radius=0.35];
+  \node[ELlabs,anchor=west] at ({\d+\b-0.05},0.32) {$60^\circ$};
+  \draw[ELthin] (0,-0.15)--(0,-1.15) (\d,-0.1)--(\d,-0.4) (\d+\b,-0.1)--(\d+\b,-1.15) (2.0,-0.1)--(2.0,-0.75) (2.18,-0.1)--(2.18,-0.75);
+  \draw[ELthin,{Stealth[length=3pt]}-{Stealth[length=3pt]}] (0,-0.3)--(\d,-0.3) node[ELlabs,anchor=north,pos=0.5]{$d$};
+  \draw[ELthin,{Stealth[length=3pt]}-{Stealth[length=3pt]}] (0,-0.65)--(2.0,-0.65) node[ELlabs,anchor=north,pos=0.4]{$r$};
+  \node[ELlabs,anchor=west] at (2.2,-0.6) {$dr$};
+  \draw[ELthin,{Stealth[length=3pt]}-{Stealth[length=3pt]}] (0,-1.05)--(\d+\b,-1.05) node[ELlabs,anchor=north,pos=0.5]{$d+b$};
+\end{tikzpicture}

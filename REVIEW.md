@@ -21,6 +21,10 @@ The slides remain the source of truth. Each entry names the slide (file and page
 | Ch2_7 pp. 8, 10, 12, 16, 19 | «محاسبه اختلاف پتانسیل بین صفحات هادی» also for the cylindrical and spherical capacitors | kept in Persian; the English edition says "between the conductors" for those | the wording of the parallel-plate case carried over |
 | Ch5_3 p. 12 (example 5-8) | $\mathbf J_m=\mathbf M\times\mathbf a_n=\mathbf a_\phi M_0$ for the side wall | $\mathbf J_{ms}$ | the line is the surface current density, as the text above it says and as $\mathbf J_{ms}$ is used on p. 13 |
 | Ch5_4 p. 13 (example 5-9, part c) | $\mu_0(2\pi r_o-\ell_a)+\mu\ell_a$ in the denominator of $\mathbf H_g$ | $\ell_g$ | the air gap is $\ell_g$ everywhere else (parts a and b, Ch5_5 p. 2) |
+| Ch5_6 p. 7 | $L=\Lambda/l$ | $L=\Lambda/I$ | the inductance is the flux linkage per unit current (the same slide assumes the current $I$; Ch5_6 p. 5) |
+| Ch5_7 p. 11 (example 5-15) | $L'=\mu_0n^2I^2$ (H/m) | $L'=\mu_0n^2S$ | follows from $\tfrac12\mu_0n^2I^2S=\tfrac12LI^2$ on the same line, and agrees with example 5-12 |
+| Ch5_8 p. 8 | $\mathbf T=\mathbf m\times\mathbf B_{11}=\mathbf m\times(\mathbf B_{11}+\mathbf B_\perp)$ | $\mathbf B_\parallel$ | the subscript is the parallel sign $\parallel$ used everywhere else on the slide |
+| Ch6 p. 10 (example 6-1) | $v=-N\,d\varphi/dt$ | $d\Phi/dt$ | the flux is $\Phi$ on the line above |
 
 ## Presentation (no change to the content)
 
@@ -43,6 +47,9 @@ The slides remain the source of truth. Each entry names the slide (file and page
 | Ch5_3 p. 10 (magnetization) | the side-by-side comparison of $\mathbf M$ and $\mathbf P$ is written as pairs of formulas; the hand-drawn dielectric is redrawn as a slab of dipoles |
 | Ch5_4 p. 8 (hysteresis loop) | the $B$–$H$ curves are model functions that show the shape; the slide gives no values |
 | Ch5_4 pp. 11–12, Ch5_5 p. 2 (toroid with an air gap) | the photograph-like core is redrawn in TikZ seen from above, with the same labels ($r_0$, $\ell_g$, $I_0$, leakage flux, the surface $S$) |
+| Ch5_6 p. 9 (example 5-11) | the perspective drawing of the toroidal coil is shown by its cross-section with all the dimensions of the slide ($a$, $b$, $h$, $r$, $dr$) |
+| Ch5_6 p. 4, Ch5_7 p. 4 | the flux is written $\Phi$ throughout (the slides use $\varphi$ on some lines) |
+| Ch5_8 p. 7 | the two explanations printed under the drawings are given as text after the figure |
 
 ## Statements kept as written but worth a second look
 

@@ -577,3 +577,356 @@ $$H_{1t}-H_{2t}=J_{sn}\qquad(\mathrm{A/m})$$
 ::: {.important}
 $$\uvec{n2}\times(\vect{H}_1-\vect{H}_2)=\vect{J}_s\qquad(\mathrm{A/m})$$
 :::
+
+## اندوکتانس و سلف‌ها
+
+```{.figure #m05-map-induct caption=""}
+```
+
+- سلف چه المانی است و مفهوم اندوکتانس چیست؟
+- نحوه محاسبه اندوکتانس ساختارهای مختلف به چه صورتی است؟
+
+```{.figure #m05-two-loops caption=""}
+```
+
+- دو حلقه بسته را در نظر می‌گیریم. اگر جریان $I_1$ در $C_1$ برقرار شود، میدان مغناطیسی $\vect{B}_1$ تولید خواهد شد. قدری از شار مغناطیسی ناشی از $\vect{B}_1$ با $C_2$ پیوند خواهد داشت. این شار متقابل عبارتست از
+
+$$\Phi_{12}=\int_{S_2}\vect{B}_1\cdot d\vect{s}_2\qquad(\mathrm{Wb})$$
+
+- در حالتی که $C_2$ دارای $N_2$ دور باشد، پیوند شار برابر است با
+
+$$\Lambda_{12}=N_2\Phi_{12}\qquad(\mathrm{Wb})$$
+
+- از قانون بیوساوار می‌دانیم که $\vect{B}_1$ و درنتیجه $\Phi_{12}$ متناسب با $I_1$ است. بنابراین
+
+$$\Lambda_{12}=L_{12}I_1\qquad(\mathrm{Wb})\quad\Longrightarrow\quad\boxed{L_{12}=\frac{\Lambda_{12}}{I_1}\qquad(\mathrm{H})}$$
+
+- ثابت تناسب $L_{12}$ **اندوکتانس متقابل** بین حلقه‌های $C_1$ و $C_2$ نامیده می‌شود و واحد آن هانری $(\mathrm{H})$ است. اندوکتانس متقابل بین دو مدار، پیوند شار مغناطیسی یک مدار در واحد جریان مدار دیگر است.
+- کل پیوند شار با $C_1$ ناشی از $I_1$ برابر است با
+
+$$\Lambda_{11}=N_1\Phi_{11}\quad\Longrightarrow\quad\boxed{L_{11}=\frac{\Lambda_{11}}{I_1}}$$
+
+- **اندوکتانس خودی** یک حلقه، پیوند شار مغناطیسی حلقه در واحد جریان خود حلقه است.
+- اندوکتانس خودی یک مدار و اندوکتانس متقابل بین دو مدار، به شکل هندسی و نفوذپذیری محیط بستگی دارند. در یک محیط خطی، اندوکتانس خودی و متقابل به جریان مدار وابسته نیستند.
+- یک هادی که به صورت مناسبی برای فراهم آوردن مقدار معینی اندوکتانس خودی شکل داده شده باشد را سلف می‌نامیم.
+- مانند یک خازن که می‌تواند انرژی الکتریکی را ذخیره کند، سلف می‌تواند انرژی مغناطیسی را در خود حفظ کند.
+- مراحل تعیین **اندوکتانس خودی** یک سلف به ترتیب زیر است
+    - تعیین دستگاه مختصات مناسب
+    - فرض جریان $I$ در سیم
+    - محاسبه $\vect{B}$ از روی $I$
+    - یافتن پیوند شار با هریک از دورها
+
+$$\Phi=\int_S\vect{B}\cdot d\vect{s}$$
+
+- $S$: سطحی که روی آن $\vect{B}$ وجود داشته و با جریان مفروض پیوند دارد
+    - محاسبه پیوند شار
+    - محاسبه $L$
+
+$$L=\Lambda/I$$
+
+- مراحل تعیین **اندوکتانس متقابل** بین دو مدار به ترتیب زیر است
+    - تعیین دستگاه مختصات مناسب
+    - فرض جریان $I_1$ در سیم
+    - محاسبه $\vect{B}_1$ از روی $I_1$
+    - یافتن شار متقابل
+
+$$\Phi_{12}=\int_{S_2}\vect{B}_1\cdot d\vect{s}_2$$
+
+- محاسبه پیوند شار
+
+$$\Lambda_{12}=N_2\Phi_{12}$$
+
+- محاسبه $L_{12}$
+
+$$L_{12}=\frac{\Lambda_{12}}{I_1}\qquad(\mathrm{H})$$
+
+- می‌توان نشان داد
+
+::: {.important}
+$$L_{12}=L_{21}$$
+:::
+
+::: {.example number="5-11"}
+فرض کنید $N$ دور سیم به طور فشرده روی یک قاب چنبره‌ای با سطح مقطع مستطیلی مطابق شکل زیر پیچیده شده باشد. با فرض اینکه نفوذپذیری محیط $\mu_0$ است، اندوکتانس خودی سیم پیچ چنبره‌ای را پیدا کنید.
+
+```{.figure #m05-ex11 caption=""}
+```
+
+::: {.solution}
+- انتخاب دستگاه مختصات استوانه‌ای
+- فرض جریان $I$ در سیم پیچ
+- محاسبه $\vect{B}$ با استفاده از قانون مداری آمپر
+
+$$\vect{B}=\uvec{\phi}B_\phi,\qquad\dif\vect{\ell}=\uvec{\phi}r\,d\phi$$
+$$\oint_C\vect{B}\cdot\dif\vect{\ell}=\int_0^{2\pi}B_\phi r\,d\phi=2\pi rB_\phi$$
+$$2\pi rB_\phi=\mu_0NI\quad\Longrightarrow\quad B_\phi=\frac{\mu_0NI}{2\pi r}$$
+
+- محاسبه $\Phi$ و $\Lambda$
+
+$$\begin{aligned}\Phi=\int_S\vect{B}\cdot d\vect{s}&=\int_S\left(\uvec{\phi}\frac{\mu_0NI}{2\pi r}\right)\cdot(\uvec{\phi}h\,dr)\\&=\frac{\mu_0NIh}{2\pi}\int_a^b\frac{dr}{r}=\frac{\mu_0NIh}{2\pi}\ln\frac ba\end{aligned}\quad\Longrightarrow\quad\Lambda=\frac{\mu_0N^2Ih}{2\pi}\ln\frac ba$$
+
+- محاسبه $L$
+
+$$L=\frac\Lambda I=\frac{\mu_0N^2h}{2\pi}\ln\frac ba$$
+:::
+:::
+
+::: {.example number="5-12"}
+اندوکتانس در واحد طول یک سیم لوله بسیار بلند با هسته هوایی و دارای $n$ دور در واحد طول را پیدا کنید.
+
+::: {.solution}
+$$B=\mu_0nI$$
+$$\Phi=BS=\mu_0nSI$$
+$$\Lambda'=n\Phi=\mu_0n^2SI$$
+$$L'=\mu_0n^2S\qquad(\mathrm{H/m})$$
+:::
+:::
+
+::: {.example number="5-13"}
+اندوکتانس متقابل بین یک حلقه هادی مثلثی و یک سیم مستقیم بسیار بلند را بدست آورید.
+
+```{.figure #m05-ex13 caption=""}
+```
+
+::: {.solution}
+- فرض جریان $I_2$ در سیم بلند و یافتن $\vect{B}$ ناشی از آن
+
+$$\vect{B}_2=\uvec{\phi}\frac{\mu_0I_2}{2\pi r}$$
+
+- یافتن پیوند شار
+
+$$\begin{aligned}\Lambda_{21}&=\int_{S_1}\vect{B}_2\cdot d\vect{s}_1\\&=\int_d^{d+b}\int_0^{[(d+b)-r]\tan60^\circ}\frac{\mu_0I_2}{2\pi r}\,dz\,dr\end{aligned}$$
+$$\begin{aligned}\Lambda_{21}&=-\frac{\sqrt3\mu_0I_2}{2\pi}\int_d^{d+b}\frac1r\left[r-(d+b)\right]dr\\&=\frac{\sqrt3\mu_0I_2}{2\pi}\left[(d+b)\ln\left(1+\frac bd\right)-b\right]\end{aligned}$$
+
+::: {.important}
+$$L_{21}=\frac{\Lambda_{21}}{I_2}=\frac{\sqrt3\mu_0}{2\pi}\left[(d+b)\ln\left(1+\frac bd\right)-b\right]\qquad(\mathrm{H})$$
+:::
+:::
+:::
+
+## انرژی و نیروهای مغناطیس ساکن
+
+```{.figure #m05-map-energy caption=""}
+```
+
+### انرژی مغناطیسی
+
+- برای در جای خود قرار دادن دسته‌ای از بارها، به انجام کار نیاز بوده و این کار به صورت **انرژی الکتریکی** ذخیره می‌شود.
+- به طور مشابه انتظار داریم که به هنگام ایجاد جریان در حلقه‌های هادی نیز لازم باشد کاری انجام و این کار به صورت **انرژی مغناطیسی** ذخیره شود.
+- حلقه بسته‌ای را با اندوکتانس خودی $L_1$ و جریان اولیه $i_1=0$ در نظر بگیرید.
+    - یک مولد به این حلقه وصل می‌شود و جریان $i_1$ را از صفر به $I_1$ افزایش می‌دهد.
+    - در این فرآیند یک شار مغناطیسی متغیر از حلقه عبور خواهد کرد. بنابراین مطابق با قانون القای فارادی یک نیروی محرکه الکتریکی در حلقه القا می‌شود
+
+$$v_1=\frac{d\Phi_1}{dt}=L_1\frac{di_1}{dt}$$
+
+- مطابق با قانون لنز این نیروی محرکه الکتریکی با تغییرات شار و جریان مخالفت می‌کند. بنابراین برای غلبه بر آن باید کار انجام شود. این کار به صورت انرژی مغناطیسی ذخیره می‌شود
+
+$$W_1=\int v_1i_1\,dt=L_1\int_0^{I_1}i_1\,di_1=\frac12L_1I_1^2$$
+
+- اکنون دو حلقه بسته را در نظر بگیرید که حامل جریان‌های $i_1$ و $i_2$ هستند. مقدار اولیه جریان‌ها صفر بوده و به ترتیب تا $I_1$ و $I_2$ افزایش می‌یابند.
+    - برای یافتن مقدار کار لازم (یا انرژی مغناطیسی ذخیره شده) ابتدا فرض می‌شود که $i_2=0$ و $i_1$ را از صفر به $I_1$ افزایش می‌دهیم. این افزایش به کار $W_1$ نیاز دارد.
+    - حال $i_1$ را در مقدار $I_1$ ثابت نگه داشته و $i_2$ را از صفر تا $I_2$ افزایش می‌دهیم. دو کار باید انجام شود.
+        - کار $W_{22}$ برای افزایش $i_2$ از صفر به $I_2$
+
+$$W_{22}=\frac12L_2I_2^2$$
+
+- به دلیل تزویج متقابل بخشی از شار مغناطیسی ناشی از $i_2$ با حلقه اول پیوند می‌خورد. بنابراین مطابق با قانون القای فارادی یک نیروی محرکه الکتریکی در حلقه اول القا می‌شود.
+
+$$v_{21}=\frac{d\Phi_{21}}{dt}=L_{21}\frac{di_2}{dt}$$
+
+- مطابق با قانون لنز این نیروی محرکه با تغییر در جریان حلقه اول، با تغییرات شار پیوندی با حلقه اول مخالفت می‌کند. بنابراین برای غلبه بر آن باید کار انجام داد
+
+$$W_{21}=\int v_{21}I_1\,dt=L_{21}I_1\int_0^{I_2}di_2=L_{21}I_1I_2$$
+
+- کل کار انجام شده یا کل انرژی مغناطیسی ذخیره شده برابر است با
+
+$$\begin{aligned}W_2&=\frac12L_1I_1^2+L_{21}I_1I_2+\frac12L_2I_2^2\\&=\frac12\sum_{j=1}^2\sum_{k=1}^2L_{jk}I_jI_k\end{aligned}$$
+
+- در حالت کلی برای $N$ حلقه جریان داریم
+
+$$W_m=\frac12\sum_{j=1}^N\sum_{k=1}^NL_{jk}I_jI_k\qquad(\mathrm{J})$$
+
+- شار پیوندی با $k$امین حلقه
+
+$$\Phi_k=\sum_{j=1}^NL_{jk}I_j$$
+
+::: {.important}
+$$W_m=\frac12\sum_{k=1}^NI_k\Phi_k\qquad(\mathrm{J})$$
+:::
+
+- می‌توان نشان داد که انرژی مغناطیسی ذخیره شده برای توزیع پیوسته جریان در یک حجم به صورت زیر است.
+
+::: {.important}
+$$W_m=\frac12\int_{V'}\vect{A}\cdot\vect{J}\,dv'\qquad(\mathrm{J})$$
+:::
+
+- $V'$: محیط دارای $\vect{J}$ که می‌تواند به کل فضا گسترش یابد
+- می‌توان نشان داد که انرژی مغناطیسی ذخیره شده برحسب کمیت‌های میدان به صورت زیر است
+
+::: {.important}
+$$W_m=\frac12\int_{V'}\vect{H}\cdot\vect{B}\,dv'\qquad(\mathrm{J})$$
+$$W_m=\frac12\int_{V'}\frac{B^2}{\mu}\,dv'\qquad(\mathrm{J})$$
+$$W_m=\frac12\int_{V'}\mu H^2\,dv'\qquad(\mathrm{J})$$
+:::
+
+- $V'$: کل فضا
+
+::: {.remark}
+اغلب تعیین اندوکتانس خودی از روی انرژی مغناطیسی ذخیره شده بر حسب $\vect{H}$ یا $\vect{B}$ آسانتر از استفاده از پیوند شار است
+
+$$W_m=\frac12\sum_{j=1}^N\sum_{k=1}^NL_{jk}I_jI_k$$
+
+- برای یک سلف حامل جریان $I$ و اندوکتانس $L$
+
+$$W_m=\frac12LI^2$$
+$$L=\frac{2W_m}{I^2}\qquad(\mathrm{H})$$
+:::
+
+::: {.example number="5-14"}
+با استفاده از انرژی مغناطیسی ذخیره شده، اندوکتانس یک خط انتقال هم محور هوائی که دارای هادی داخلی توپر به شعاع $a$ و هادی خارجی بسیار نازک به شعاع داخلی $b$ است را در واحد طول تعیین کنید.
+
+::: {.solution}
+- انرژی ذخیره شده در واحد طول هادی داخلی
+
+$$B_{\phi1}=\frac{\mu_0Ir}{2\pi a^2}\quad\Longrightarrow\quad\begin{aligned}W'_{m1}&=\frac{1}{2\mu_0}\int_0^a\!\!\int_0^{2\pi}B_{\phi1}^2\,r\,dr\,d\phi\\&=\frac{\mu_0I^2}{4\pi a^4}\int_0^ar^3\,dr=\frac{\mu_0I^2}{16\pi}\qquad(\mathrm{J/m})\end{aligned}$$
+
+- انرژی ذخیره شده در واحد طول در ناحیه بین دو هادی
+
+$$B_{\phi2}=\frac{\mu_0I}{2\pi r}\quad\Longrightarrow\quad\begin{aligned}W'_{m2}&=\frac{1}{2\mu_0}\int_a^b\!\!\int_0^{2\pi}B_{\phi2}^2\,r\,dr\,d\phi\\&=\frac{\mu_0I^2}{4\pi}\int_a^b\frac1r\,dr=\frac{\mu_0I^2}{4\pi}\ln\frac ba\qquad(\mathrm{J/m})\end{aligned}$$
+
+- بنابراین
+
+$$\begin{aligned}L'&=\frac{2}{I^2}\left(W'_{m1}+W'_{m2}\right)\\&=\frac{\mu_0}{8\pi}+\frac{\mu_0}{2\pi}\ln\frac ba\qquad(\mathrm{H/m})\end{aligned}$$
+:::
+:::
+
+::: {.example number="5-15"}
+برای یک سیملوله بسیار بلند با سطح مقطع $S$ و $n$ دور در واحد طول و هسته هوایی، اندوکتانس در واحد طول را بدست آورید.
+
+::: {.solution}
+$$B=\mu_0nI\quad\Longrightarrow\quad W_m=\frac12\int_{V'}\frac{B^2}{\mu}\,dv'=\frac{1}{2\mu_0}\int\mu_0^2n^2I^2\,dv$$
+$$=\frac12\mu_0n^2I^2S=\frac12LI^2\quad\Rightarrow\quad L'=\mu_0n^2S\qquad\mathrm{H/m}$$
+:::
+:::
+
+### نیروها و گشتاورهای مغناطیسی
+
+- وقتی بار $q$ با سرعت $\vect{u}$ در میدان مغناطیسی با چگالی شار $\vect{B}$ حرکت می‌کند، نیروی مغناطیسی $\vect{F}_m$ بر آن وارد می‌شود.
+
+$$\vect{F}_m=q\vect{u}\times\vect{B}\qquad(\mathrm{N})$$
+
+- مباحث مورد بررسی
+    - اثر هال $(\text{Hall Effect})$
+    - نیرو و گشتاور در هادی‌های حامل جریان
+
+### اثر هال
+
+- ماده‌ای هادی با سطح مقطع مستطیلی به ابعاد $d\times b$ در میدان مغناطیسی یکنواخت $\vect{B}=\uvec{z}B_0$ را در نظر بگیرید. جریان مستقیم یکنواختی در جهت $y$ عبور می‌کند.
+
+```{.figure #m05-hall caption=""}
+```
+
+$$\vect{J}=\uvec{y}J_0=Nq\vect{u}$$
+
+- حامل‌های بار الکترون‌ها هستند و $q$ منفی است
+
+$$\vect{u}=-\uvec{y}u_0$$
+
+- نیروی مغناطیسی مایل است الکترون‌ها را در جهت $+x$ حرکت دهد و یک میدان الکتریکی عرضی بوجود آورد. این فرآیند ادامه خواهد یافت تا میدان عرضی برای متوقف کردن رانش الکترون‌ها کافی باشد.
+- در حالت دائمی نیروی خالص وارد بر حامل‌های بار صفر است.
+
+$$\vect{E}_h+\vect{u}\times\vect{B}=0\quad\Longrightarrow\quad\vect{E}_h=-\vect{u}\times\vect{B}\quad\Longrightarrow\quad\begin{aligned}\vect{E}_h&=-(-\uvec{y}u_0)\times\uvec{z}B_0\\&=\uvec{x}u_0B_0\end{aligned}$$
+
+- $\vect{E}_h$: میدان هال
+- ولتاژ هال
+
+$$V_h=-\int_0^dE_h\,dx=u_0B_0d$$
+
+- ضریب هال
+
+$$E_x/J_yB_z=1/Nq$$
+
+- این پدیده را **اثر هال** گویند.
+- از اثر هال برای اندازه گیری میدان مغناطیسی استفاده می‌شود.
+
+### نیروها و گشتاورها در هادی‌های حامل جریان
+
+- نیروی مغناطیسی وارد بر جز دیفرانسیلی یک مدار بسته به مسیر $C$، سطح مقطع $S$ و حامل جریان $I$ در میدان مغناطیسی به چگالی $\vect{B}$
+
+```{.figure #m05-force-element caption=""}
+```
+
+$$d\vect{F}_m=q\vect{u}\times\vect{B}$$
+$$\begin{aligned}d\vect{F}_m&=-NeS\lvert d\ell\rvert\vect{u}\times\vect{B}\\&=+NeS\lvert\vect{u}\rvert\,\dif\vect{\ell}\times\vect{B}\end{aligned}$$
+
+- $N$: تعداد الکترون‌ها در واحد حجم و $e$: مقدار بار الکترون
+- جهت $\dif\vect{\ell}$ خلاف جهت $\vect{u}$ است و $NeS\lvert\vect{u}\rvert=I$
+
+::: {.important}
+$$d\vect{F}_m=I\,\dif\vect{\ell}\times\vect{B}\qquad(\mathrm{N})$$
+:::
+
+- نیروی مغناطیسی وارد بر یک مدار بسته به مسیر $C$، سطح مقطع $S$ و حامل جریان $I$ در میدان مغناطیسی به چگالی $\vect{B}$
+
+::: {.important}
+$$\vect{F}_m=I\oint_C\dif\vect{\ell}\times\vect{B}\qquad(\mathrm{N})$$
+:::
+
+- $\dif\vect{\ell}$: در جهت جریان
+
+::: {.example number="5-16"}
+نیروی وارد بر واحد طول بین دو سیم هادی موازی بسیار بلند حامل جریان‌های هم جهت $I_1$ و $I_2$ مطابق شکل زیر را تعیین کنید.
+
+```{.figure #m05-ex16 caption=""}
+```
+
+::: {.solution}
+$$\vect{F}'_{12}=I_2\oint_{C_2}\dif\vect{\ell}_2\times\vect{B}_{12}=I_2\int_0^1dz\,\uvec{z}\times\left(-\uvec{x}\frac{\mu_0I_1}{2\pi d}\right)$$
+
+::: {.important title="نیروی جاذبه"}
+$$\vect{F}'_{12}=-\uvec{y}\frac{\mu_0I_1I_2}{2\pi d}\qquad(\mathrm{N/m})$$
+:::
+:::
+:::
+
+- حلقه مدوری به شعاع $b$ و حامل جریان $I$ در میدان مغناطیسی یکنواختی با چگالی شار $\vect{B}$ در نظر می‌گیریم
+
+$$\vect{B}=\vect{B}_\perp+\vect{B}_\parallel$$
+
+```{.figure #m05-loop-fields caption=""}
+```
+
+- $\vect{B}_\perp$ هیچ نیروی خالصی برای حرکت حلقه ایجاد نمی‌کند و صرفاً تمایل به گسترش حلقه (یا اگر جریان برعکس شود) تمایل به انقباض حلقه دارد.
+- اگرچه نیروی خالص وارد بر حلقه ناشی از $\vect{B}_\parallel$ صفر است، گشتاوری وجود دارد که سعی می‌کند حلقه را حول محور $x$ چنان بچرخاند که میدان مغناطیسی ناشی از $I$ و میدان خارجی $\vect{B}_\parallel$ هم امتداد شوند.
+
+$$\begin{aligned}d\vect{T}&=\uvec{x}(dF)2b\sin\phi\\&=\uvec{x}(I\,d\ell\,B_\parallel\sin\phi)2b\sin\phi\\&=\uvec{x}2Ib^2B_\parallel\sin^2\phi\,d\phi\end{aligned}$$
+$$\begin{aligned}\vect{T}=\int d\vect{T}&=\uvec{x}2Ib^2B_\parallel\int_0^\pi\sin^2\phi\,d\phi\\&=\uvec{x}I(\pi b^2)B_\parallel\end{aligned}$$
+$$\vect{m}=\uvec{n}I(\pi b^2)=\uvec{n}IS$$
+$$\vect{T}=\vect{m}\times\vect{B}_\parallel=\vect{m}\times(\vect{B}_\parallel+\vect{B}_\perp)$$
+
+::: {.important}
+$$\vect{T}=\vect{m}\times\vect{B}\qquad(\mathrm{N\cdot m})$$
+:::
+
+- می‌توان نشان داد که رابطه فوق برای حلقه مسطح با هر شکل دلخواهی، مادامی که در یک میدان مغناطیسی یکنواخت قرار دارد، معتبر است
+
+::: {.example number="5-17"}
+یک حلقه مستطیل شکل در صفحه $xy$ با اضلاع $b_1$ و $b_2$ جریان $I$ را حمل می‌کند و در میدان مغناطیسی یکنواخت $\vect{B}=\uvec{x}B_x+\uvec{y}B_y+\uvec{z}B_z$ قرار دارد. نیرو و گشتاور وارد بر حلقه را تعیین کنید.
+
+```{.figure #m05-ex17-perp caption=""}
+```
+
+::: {.solution}
+$$\vect{B}_\perp=\uvec{z}B_z,\qquad\vect{B}_\parallel=\uvec{x}B_x+\uvec{y}B_y$$
+
+- مولفه عمود بر صفحه، نیروی $Ib_1B_z$ را به اضلاع (۱) و (۳) و نیروی $Ib_2B_z$ را به اضلاع (۲) و (۴) به سمت مرکز وارد می‌کند. $\ELto$ گشتاوری تولید نمی‌شود.
+- نیروهای وارد بر حلقه توسط مولفه موازی با صفحه
+
+```{.figure #m05-ex17-par caption=""}
+```
+
+$$\begin{aligned}\vect{F}_1&=Ib_1\uvec{x}\times(\uvec{x}B_x+\uvec{y}B_y)\\&=\uvec{z}Ib_1B_y=-\vect{F}_3\end{aligned}$$
+$$\begin{aligned}\vect{F}_2&=Ib_2(-\uvec{y})\times(\uvec{x}B_x+\uvec{y}B_y)\\&=\uvec{z}Ib_2B_x=-\vect{F}_4\end{aligned}$$
+$$\left.\begin{aligned}&\vect{T}_{13}=\uvec{x}Ib_1b_2B_y\\&\vect{T}_{24}=-\uvec{y}Ib_1b_2B_x\end{aligned}\right\}\quad\begin{aligned}&\vect{T}=\vect{T}_{13}+\vect{T}_{24}=Ib_1b_2(\uvec{x}B_y-\uvec{y}B_x)\qquad(\mathrm{N\cdot m})\\&\vect{T}=\vect{m}\times(\uvec{x}B_x+\uvec{y}B_y)=\vect{m}\times\vect{B}\end{aligned}$$
+:::
+:::

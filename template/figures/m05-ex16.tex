@@ -1,0 +1,16 @@
+% Ch5_8, slide 6 (example 5-16): two long parallel wires along z at the distance d, carrying I1 and I2
+% in the same direction; the forces F'21 and F'12 per unit length and the field B12 at the second wire
+\begin{tikzpicture}[scale=1]
+  \draw[ELink,line width=1.5pt] (0,-1.9)--(0,2.2) (2.0,-1.9)--(2.0,2.2);
+  \draw[ELdash] (1.0,-1.9)--(1.0,2.2); \draw[ELax] (1.0,2.0)--(1.0,2.5) node[ELlab,anchor=south]{$z$};
+  \draw[ELdash] (-1.0,0)--(3.2,0); \draw[ELax] (3.0,0)--(3.6,0) node[ELlab,anchor=west]{$y$};
+  \draw[ELdash] (1.0,0)--(0.1,-0.75); \draw[ELax] (0.1,-0.75)--(-0.4,-1.15) node[ELlab,anchor=north east]{$x$};
+  \node[ELlabs,anchor=north west] at (1.0,0) {$O$};
+  \draw[ELcSource,line width=1.0pt,-{Stealth[length=5pt]}] (0,1.4)--(0,1.9) node[ELlabs,anchor=east]{$I_1$};
+  \draw[ELcSource,line width=1.0pt,-{Stealth[length=5pt]}] (2.0,1.4)--(2.0,1.9) node[ELlabs,anchor=west]{$I_2$};
+  \draw[ELvec,line width=1.0pt] (0.05,1.0)--(0.75,1.0); \node[ELlabs,anchor=north] at (0.4,0.95) {$\vect{F}'_{21}$};
+  \draw[ELvec,line width=1.0pt] (1.95,1.0)--(1.25,1.0); \node[ELlabs,anchor=north] at (1.6,0.95) {$\vect{F}'_{12}$};
+  \draw[ELvec3,line width=1.0pt] (2.0,1.0)--(2.55,1.35) node[ELlabs,anchor=west]{$\vect{B}_{12}$};
+  \draw[ELthin] (0,-1.3)--(0,-1.75) (2.0,-1.3)--(2.0,-1.75);
+  \draw[ELthin,{Stealth[length=3pt]}-{Stealth[length=3pt]}] (0,-1.6)--(2.0,-1.6) node[ELlabs,anchor=north,pos=0.5]{$d$};
+\end{tikzpicture}

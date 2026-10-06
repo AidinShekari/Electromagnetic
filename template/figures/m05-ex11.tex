@@ -1,0 +1,16 @@
+% Ch5_6, slide 9 (example 5-11): the cross-section of the toroidal frame of rectangular cross-section
+% (inner radius a, outer radius b, height h) with N turns; the strip of width dr at the radius r
+\begin{tikzpicture}[scale=1]
+  \def\a{1.6}\def\b{2.8}\def\h{1.1}
+  \foreach \s in {1,-1}{\fill[ELfillB] (\s*\a,0) rectangle (\s*\b,\h); \draw[ELcField,line width=0.9pt] (\s*\a,0) rectangle (\s*\b,\h);}
+  \fill[ELcSource!40] (-2.15,0) rectangle (-1.95,\h); \draw[ELcSource,line width=0.6pt] (-2.15,0) rectangle (-1.95,\h);
+  \draw[ELdash] (0,-0.9)--(0,\h+0.8);
+  \draw[ELthin] (\b,\h+0.1)--(\b,\h+0.75) (\a,-0.1)--(\a,-0.85) (-2.15,-0.1)--(-2.15,-0.55) (-1.95,-0.1)--(-1.95,-0.55);
+  \draw[ELthin,{Stealth[length=3pt]}-{Stealth[length=3pt]}] (0,\h+0.6)--(\b,\h+0.6) node[ELlabs,anchor=south,pos=0.5]{$b$};
+  \draw[ELthin,{Stealth[length=3pt]}-{Stealth[length=3pt]}] (0,-0.7)--(\a,-0.7) node[ELlabs,anchor=north,pos=0.5]{$a$};
+  \draw[ELthin,{Stealth[length=3pt]}-{Stealth[length=3pt]}] (-1.95,-0.45)--(0,-0.45) node[ELlabs,anchor=north,pos=0.5]{$r$};
+  \draw[ELthin,-{Stealth[length=3pt]}] (-2.6,-0.45)--(-2.15,-0.45); \draw[ELthin,-{Stealth[length=3pt]}] (-1.5,-0.45)--(-1.95,-0.45);
+  \node[ELlabs,anchor=east] at (-2.6,-0.45) {$dr$};
+  \draw[ELthin] (\b+0.1,0)--(\b+0.6,0) (\b+0.1,\h)--(\b+0.6,\h);
+  \draw[ELthin,{Stealth[length=3pt]}-{Stealth[length=3pt]}] (\b+0.45,0)--(\b+0.45,\h) node[ELlabs,anchor=west,pos=0.5]{$h$};
+\end{tikzpicture}

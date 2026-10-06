@@ -1,0 +1,25 @@
+% Ch5_8, slide 7: a circular loop of radius b carrying I in a uniform field: (left) the component B_perp
+% normal to the loop (into the page) gives radial forces and no net force; (right) the component B_par in
+% the plane of the loop gives a torque T about the x-axis
+\begin{tikzpicture}[scale=0.85]
+  \foreach \x in {-1.8,-0.6,0.6,1.8}{\foreach \y in {-1.8,-0.6,0.6,1.8}{\node[text=ELslate,font=\scriptsize] at (\x,\y) {$\times$};}}
+  \node[ELlabs,anchor=west] at (0.85,2.15) {$\vect{B}_\perp$};
+  \draw[ELcField,line width=1.2pt] (0,0) circle (1.25);
+  \draw[ELcField,line width=1.2pt,-{Stealth[length=6pt]}] (100:1.25) arc[start angle=100,end angle=70,radius=1.25];
+  \node[ELlabs,anchor=south west] at (75:1.3) {$I$};
+  \foreach \t in {0,45,...,315}{\draw[ELvec2,line width=0.8pt] (\t:1.3)--(\t:1.95);}
+  \begin{scope}[xshift=5.2cm]
+    \foreach \x in {-1.7,-0.55,0.55,1.7}{\draw[ELthin,-{Stealth[length=5pt]}] (\x,-2.1)--(\x,2.2);}
+    \node[ELlabs,anchor=west] at (0.6,2.15) {$\vect{B}_\parallel$};
+    \draw[ELcField,line width=1.2pt] (0,0) circle (1.25);
+    \fill[ELink] (0,0) circle (1.2pt); \node[ELlabs,anchor=east] at (0,0) {$O$};
+    \draw[ELdash] (0,0)--(2.3,0); \draw[ELax] (2.3,0)--(2.7,0) node[ELlab,anchor=west]{$x$};
+    \draw[ELthin] (0,0)--(60:1.25) (0,0)--(-60:1.25);
+    \node[ELlabs,anchor=south east] at (60:0.7) {$b$}; \node[ELlabs,anchor=north east] at (-60:0.7) {$b$};
+    \node[ELlabs] at (30:0.42) {$\phi$}; \node[ELlabs] at (-30:0.42) {$\phi$};
+    \ELoutof[ELcSource]{(60:1.25)} \ELinto[ELcSource]{(-60:1.25)}
+    \node[ELlabs,anchor=south west] at (60:1.3) {$d\ell_1$}; \node[ELlabs,anchor=north west] at (-60:1.3) {$d\ell_2$};
+    \draw[ELcSource,line width=0.8pt,-{Stealth[length=4pt]}] (2.05,0.25) arc[start angle=90,end angle=-200,x radius=0.12,y radius=0.25];
+    \node[ELlabs,anchor=north west] at (2.1,-0.15) {$\vect{T}$};
+  \end{scope}
+\end{tikzpicture}

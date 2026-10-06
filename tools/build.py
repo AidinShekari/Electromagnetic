@@ -81,7 +81,15 @@ def postprocess(tex: str) -> str:
         if not re.search("[\u0600-\u06FF]", body):
             body = "\\begin{ELltr}\n" + body + "\\end{ELltr}\n"
         return f"\\Needspace{{{need}\\baselineskip}}\n" + body
-    return re.sub(r"\\begin\{longtable\}.*?\\end\{longtable\}", keep, tex, flags=re.S)
+    tex = re.sub(r"\\begin\{longtable\}.*?\\end\{longtable\}", keep, tex, flags=re.S)
+
+    # a short lead-in unit right before a table stays with it: the space test moves above the lead-in
+    def lead(m):
+        if len(m.group(1)) > 700:
+            return m.group(0)
+        return f"\\Needspace{{{int(m.group(2)) + 3}\\baselineskip}}\n" + m.group(1)
+    return re.sub(r"(\\begin\{ELunit\}(?:(?!\\begin\{ELunit\}).)*?\\end\{ELunit\}\n\n)"
+                  r"\\Needspace\{(\d+)\\baselineskip\}\n", lead, tex, flags=re.S)
 
 
 def section_list(body: str):

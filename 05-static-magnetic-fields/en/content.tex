@@ -847,6 +847,7 @@ Determine the magnetic flux density on the axis of a magnetized cylinder. The cy
 
 \end{ELjoin}
 
+\Needspace{22\baselineskip}
 \begin{ELunit}
 
 \ELdisp{\mu_r\ELbr =1+\chi_m\ELbr =\frac{\mu}{\mu_0}}
@@ -861,7 +862,6 @@ Determine the magnetic flux density on the axis of a magnetized cylinder. The cy
 
 \end{ELunit}
 
-\Needspace{19\baselineskip}
 \begin{ELltr}
 \begin{longtable}[c]{cc}
 \toprule\noalign{}
@@ -1079,6 +1079,7 @@ Assume that \ELim{N} turns of wire are wound around a toroidal core of a magneti
 
 \end{ELjoin}
 
+\Needspace{15\baselineskip}
 \begin{ELunit}
 
 \begin{itemize}
@@ -1094,7 +1095,6 @@ Assume that \ELim{N} turns of wire are wound around a toroidal core of a magneti
 
 \end{ELunit}
 
-\Needspace{12\baselineskip}
 \begin{ELltr}
 \begin{longtable}[c]{ll}
 \toprule\noalign{}
@@ -1247,3 +1247,729 @@ Consider the magnetic circuit shown below. Steady currents \ELim{I_1} and \ELim{
 \ELdisp{\uvec{n2}\times(\vect{H}_1-\vect{H}_2)\ELbr =\vect{J}_s\qquad\ELbr (\mathrm{A/m})}
 
 \end{ELimportant}
+
+\ELhold
+
+\ELsection{Inductances and Inductors}{Inductances and Inductors}
+
+\begin{ELunit}
+
+\ELfigure{m05-map-induct}{}
+
+\begin{itemize}
+\tightlist
+\item
+  What kind of element is an inductor, and what is inductance?
+\item
+  How is the inductance of different structures calculated?
+\end{itemize}
+
+\ELfigure{m05-two-loops}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Consider two closed loops. If a current \ELim{I_1} flows in \ELim{C_1}, a magnetic field \ELim{\vect{B}_1} is produced. Some of the magnetic flux due to \ELim{\vect{B}_1} links \ELim{C_2}. This mutual flux is
+\end{itemize}
+
+\ELdisp{\Phi_{12}\ELbr =\int_{S_2}\vect{B}_1\cdot d\vect{s}_2\qquad\ELbr (\mathrm{Wb})}
+
+\begin{itemize}
+\tightlist
+\item
+  If \ELim{C_2} has \ELim{N_2} turns, the flux linkage is
+\end{itemize}
+
+\ELdisp{\Lambda_{12}\ELbr =N_2\Phi_{12}\qquad\ELbr (\mathrm{Wb})}
+
+\begin{itemize}
+\tightlist
+\item
+  From the Biot--Savart law, \ELim{\vect{B}_1}, and hence \ELim{\Phi_{12}}, is proportional to \ELim{I_1}. Therefore
+\end{itemize}
+
+\ELdisp{\Lambda_{12}\ELbr =L_{12}I_1\qquad\ELbr (\mathrm{Wb})\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \boxed{L_{12}=\frac{\Lambda_{12}}{I_1}\qquad(\mathrm{H})}}
+
+\begin{itemize}
+\tightlist
+\item
+  The proportionality constant \ELim{L_{12}} is called the \textbf{mutual inductance} between the loops \ELim{C_1} and \ELim{C_2}; its unit is the henry \ELim{(\mathrm{H})}. The mutual inductance between two circuits is the magnetic flux linkage with one circuit per unit current in the other.
+\item
+  The total flux linkage with \ELim{C_1} caused by \ELim{I_1} is
+\end{itemize}
+
+\ELdisp{\Lambda_{11}\ELbr =N_1\Phi_{11}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \boxed{L_{11}=\frac{\Lambda_{11}}{I_1}}}
+
+\begin{itemize}
+\tightlist
+\item
+  The \textbf{self-inductance} of a loop is the magnetic flux linkage of the loop per unit current in the loop itself.
+\item
+  The self-inductance of a circuit and the mutual inductance between two circuits depend on the geometrical shape and on the permeability of the medium. In a linear medium the self- and mutual inductances do not depend on the currents.
+\item
+  A conductor shaped suitably to provide a certain amount of self-inductance is called an inductor.
+\item
+  Just as a capacitor can store electric energy, an inductor can store magnetic energy.
+\item
+  The steps for determining the \textbf{self-inductance} of an inductor are
+
+  \begin{itemize}
+  \tightlist
+  \item
+    choose a suitable coordinate system,
+  \item
+    assume a current \ELim{I} in the wire,
+  \item
+    find \ELim{\vect{B}} from \ELim{I},
+  \item
+    find the flux linking each turn
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{\Phi\ELbr =\int_S\vect{B}\cdot d\vect{s}}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{S}: the surface over which \ELim{\vect{B}} exists and which links the assumed current
+
+  \begin{itemize}
+  \tightlist
+  \item
+    find the flux linkage,
+  \item
+    find \ELim{L}
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{L\ELbr =\Lambda/I}
+
+\begin{itemize}
+\tightlist
+\item
+  The steps for determining the \textbf{mutual inductance} between two circuits are
+
+  \begin{itemize}
+  \tightlist
+  \item
+    choose a suitable coordinate system,
+  \item
+    assume a current \ELim{I_1} in the wire,
+  \item
+    find \ELim{\vect{B}_1} from \ELim{I_1},
+  \item
+    find the mutual flux
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{\Phi_{12}\ELbr =\int_{S_2}\vect{B}_1\cdot d\vect{s}_2}
+
+\begin{itemize}
+\tightlist
+\item
+  find the flux linkage
+\end{itemize}
+
+\ELdisp{\Lambda_{12}\ELbr =N_2\Phi_{12}}
+
+\begin{itemize}
+\tightlist
+\item
+  find \ELim{L_{12}}
+\end{itemize}
+
+\ELdisp{L_{12}\ELbr =\frac{\Lambda_{12}}{I_1}\qquad\ELbr (\mathrm{H})}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  It can be shown that
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{L_{12}\ELbr =L_{21}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\ELnextnum{5-11}
+
+\begin{ELexample}{}
+
+Assume that \ELim{N} turns of wire are tightly wound on a toroidal frame of rectangular cross-section, as shown below. Assuming that the permeability of the medium is \ELim{\mu_0}, find the self-inductance of the toroidal coil.
+
+\ELfigure{m05-ex11}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  Choose cylindrical coordinates.
+\item
+  Assume a current \ELim{I} in the coil.
+\item
+  Find \ELim{\vect{B}} with Ampère's circuital law
+\end{itemize}
+
+\ELdisp{\vect{B}\ELbr =\uvec{\phi}B_\phi,\qquad\ELbr \dif\vect{\ell}\ELbr =\uvec{\phi}r\,d\phi}
+\ELdisp{\oint_C\vect{B}\cdot\dif\vect{\ell}\ELbr =\int_0^{2\pi}B_\phi r\,d\phi\ELbr =2\pi rB_\phi}
+\ELdisp{2\pi rB_\phi\ELbr =\mu_0NI\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  B_\phi\ELbr =\frac{\mu_0NI}{2\pi r}}
+
+\begin{itemize}
+\tightlist
+\item
+  Find \ELim{\Phi} and \ELim{\Lambda}
+\end{itemize}
+
+\ELdisp{\begin{aligned}\Phi=\int_S\vect{B}\cdot d\vect{s}&=\int_S\left(\uvec{\phi}\frac{\mu_0NI}{2\pi r}\right)\cdot(\uvec{\phi}h\,dr)\\&=\frac{\mu_0NIh}{2\pi}\int_a^b\frac{dr}{r}=\frac{\mu_0NIh}{2\pi}\ln\frac ba\end{aligned}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \Lambda\ELbr =\frac{\mu_0N^2Ih}{2\pi}\ln\frac ba}
+
+\begin{itemize}
+\tightlist
+\item
+  Find \ELim{L}
+\end{itemize}
+
+\ELdisp{L\ELbr =\frac\Lambda I\ELbr =\frac{\mu_0N^2h}{2\pi}\ln\frac ba}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELnextnum{5-12}
+
+\begin{ELexample}{}
+
+Find the inductance per unit length of a very long solenoid with an air core and \ELim{n} turns per unit length.
+
+\begin{ELsolution}
+
+\ELdisp{B\ELbr =\mu_0nI}
+\ELdisp{\Phi\ELbr =BS\ELbr =\mu_0nSI}
+\ELdisp{\Lambda'\ELbr =n\Phi\ELbr =\mu_0n^2SI}
+\ELdisp{L'\ELbr =\mu_0n^2S\qquad\ELbr (\mathrm{H/m})}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELnextnum{5-13}
+
+\begin{ELexample}{}
+
+Find the mutual inductance between a triangular conducting loop and a very long straight wire.
+
+\ELfigure{m05-ex13}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  Assume a current \ELim{I_2} in the long wire and find the \ELim{\vect{B}} it produces
+\end{itemize}
+
+\ELdisp{\vect{B}_2\ELbr =\uvec{\phi}\frac{\mu_0I_2}{2\pi r}}
+
+\begin{itemize}
+\tightlist
+\item
+  Find the flux linkage
+\end{itemize}
+
+\ELdisp{\begin{aligned}\Lambda_{21}&=\int_{S_1}\vect{B}_2\cdot d\vect{s}_1\\&=\int_d^{d+b}\int_0^{[(d+b)-r]\tan60^\circ}\frac{\mu_0I_2}{2\pi r}\,dz\,dr\end{aligned}}
+\ELdisp{\begin{aligned}\Lambda_{21}&=-\frac{\sqrt3\mu_0I_2}{2\pi}\int_d^{d+b}\frac1r\left[r-(d+b)\right]dr\\&=\frac{\sqrt3\mu_0I_2}{2\pi}\left[(d+b)\ln\left(1+\frac bd\right)-b\right]\end{aligned}}
+
+\begin{ELimportant}{}
+
+\ELdisp{L_{21}\ELbr =\frac{\Lambda_{21}}{I_2}\ELbr =\frac{\sqrt3\mu_0}{2\pi}\left[(d+b)\ln\left(1+\frac bd\right)-b\right]\qquad\ELbr (\mathrm{H})}
+
+\end{ELimportant}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELhold
+
+\ELsection{Magnetic Energy and Forces}{Magnetic Energy and Forces}
+
+\begin{ELunit}
+
+\ELfigure{m05-map-energy}{}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsubsection{Magnetic Energy}{Magnetic Energy}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  Work is required to assemble a group of charges in place, and this work is stored as \textbf{electric energy}.
+\item
+  In the same way we expect that work must be done to establish currents in conducting loops, and that this work is stored as \textbf{magnetic energy}.
+\item
+  Consider a closed loop with self-inductance \ELim{L_1} and initial current \ELim{i_1=0}.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    A generator is connected to the loop and increases the current \ELim{i_1} from zero to \ELim{I_1}.
+  \item
+    In this process a changing magnetic flux passes through the loop. So by Faraday's law of induction an electromotive force is induced in the loop
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{v_1\ELbr =\frac{d\Phi_1}{dt}\ELbr =L_1\frac{di_1}{dt}}
+
+\begin{itemize}
+\tightlist
+\item
+  By Lenz's law this electromotive force opposes the change of flux and current. Work must therefore be done to overcome it. This work is stored as magnetic energy
+\end{itemize}
+
+\ELdisp{W_1\ELbr =\int v_1i_1\,dt\ELbr =L_1\int_0^{I_1}i_1\,di_1\ELbr =\frac12L_1I_1^2}
+
+\begin{itemize}
+\tightlist
+\item
+  Now consider two closed loops carrying the currents \ELim{i_1} and \ELim{i_2}. The initial currents are zero, and they are increased to \ELim{I_1} and \ELim{I_2} respectively.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    To find the work required (or the magnetic energy stored), first keep \ELim{i_2=0} and increase \ELim{i_1} from zero to \ELim{I_1}. This requires the work \ELim{W_1}.
+  \item
+    Then keep \ELim{i_1} at \ELim{I_1} and increase \ELim{i_2} from zero to \ELim{I_2}. Two kinds of work must be done.
+
+    \begin{itemize}
+    \tightlist
+    \item
+      the work \ELim{W_{22}} to increase \ELim{i_2} from zero to \ELim{I_2}
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{W_{22}\ELbr =\frac12L_2I_2^2}
+
+\begin{itemize}
+\tightlist
+\item
+  Because of the mutual coupling, part of the magnetic flux due to \ELim{i_2} links the first loop. So by Faraday's law of induction an electromotive force is induced in the first loop.
+\end{itemize}
+
+\ELdisp{v_{21}\ELbr =\frac{d\Phi_{21}}{dt}\ELbr =L_{21}\frac{di_2}{dt}}
+
+\begin{itemize}
+\tightlist
+\item
+  By Lenz's law this electromotive force opposes the change of the flux linking the first loop, through a change in the current of the first loop. Work must therefore be done to overcome it
+\end{itemize}
+
+\ELdisp{W_{21}\ELbr =\int v_{21}I_1\,dt\ELbr =L_{21}I_1\int_0^{I_2}di_2\ELbr =L_{21}I_1I_2}
+
+\begin{itemize}
+\tightlist
+\item
+  The total work done, or the total magnetic energy stored, is
+\end{itemize}
+
+\ELdisp{\begin{aligned}W_2&=\frac12L_1I_1^2+L_{21}I_1I_2+\frac12L_2I_2^2\\&=\frac12\sum_{j=1}^2\sum_{k=1}^2L_{jk}I_jI_k\end{aligned}}
+
+\begin{itemize}
+\tightlist
+\item
+  In general, for \ELim{N} current loops
+\end{itemize}
+
+\ELdisp{W_m\ELbr =\frac12\sum_{j=1}^N\sum_{k=1}^NL_{jk}I_jI_k\qquad\ELbr (\mathrm{J})}
+
+\begin{itemize}
+\tightlist
+\item
+  The flux linking the \ELim{k}th loop
+\end{itemize}
+
+\ELdisp{\Phi_k\ELbr =\sum_{j=1}^NL_{jk}I_j}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{W_m\ELbr =\frac12\sum_{k=1}^NI_k\Phi_k\qquad\ELbr (\mathrm{J})}
+
+\end{ELimportant}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  It can be shown that the magnetic energy stored by a continuous current distribution in a volume is
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{W_m\ELbr =\frac12\int_{V'}\vect{A}\cdot\vect{J}\,dv'\qquad\ELbr (\mathrm{J})}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{V'}: the region containing \ELim{\vect{J}}, which may extend over all space
+\item
+  It can be shown that the stored magnetic energy in terms of the field quantities is
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{W_m\ELbr =\frac12\int_{V'}\vect{H}\cdot\vect{B}\,dv'\qquad\ELbr (\mathrm{J})}
+\ELdisp{W_m\ELbr =\frac12\int_{V'}\frac{B^2}{\mu}\,dv'\qquad\ELbr (\mathrm{J})}
+\ELdisp{W_m\ELbr =\frac12\int_{V'}\mu H^2\,dv'\qquad\ELbr (\mathrm{J})}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{V'}: all space
+\end{itemize}
+
+\begin{ELremark}{}
+
+It is often easier to determine the self-inductance from the stored magnetic energy in terms of \ELim{\vect{H}} or \ELim{\vect{B}} than from the flux linkage
+
+\ELdisp{W_m\ELbr =\frac12\sum_{j=1}^N\sum_{k=1}^NL_{jk}I_jI_k}
+
+\begin{itemize}
+\tightlist
+\item
+  For an inductor carrying a current \ELim{I}, with inductance \ELim{L}
+\end{itemize}
+
+\ELdisp{W_m\ELbr =\frac12LI^2}
+\ELdisp{L\ELbr =\frac{2W_m}{I^2}\qquad\ELbr (\mathrm{H})}
+
+\end{ELremark}
+
+\end{ELjoin}
+
+\ELnextnum{5-14}
+
+\begin{ELexample}{}
+
+Using the stored magnetic energy, determine the inductance per unit length of an air coaxial transmission line with a solid inner conductor of radius \ELim{a} and a very thin outer conductor of inner radius \ELim{b}.
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  The energy stored per unit length in the inner conductor
+\end{itemize}
+
+\ELdisp{B_{\phi1}\ELbr =\frac{\mu_0Ir}{2\pi a^2}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \begin{aligned}W'_{m1}&=\frac{1}{2\mu_0}\int_0^a\!\!\int_0^{2\pi}B_{\phi1}^2\,r\,dr\,d\phi\\&=\frac{\mu_0I^2}{4\pi a^4}\int_0^ar^3\,dr=\frac{\mu_0I^2}{16\pi}\qquad(\mathrm{J/m})\end{aligned}}
+
+\begin{itemize}
+\tightlist
+\item
+  The energy stored per unit length in the region between the two conductors
+\end{itemize}
+
+\ELdisp{B_{\phi2}\ELbr =\frac{\mu_0I}{2\pi r}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \begin{aligned}W'_{m2}&=\frac{1}{2\mu_0}\int_a^b\!\!\int_0^{2\pi}B_{\phi2}^2\,r\,dr\,d\phi\\&=\frac{\mu_0I^2}{4\pi}\int_a^b\frac1r\,dr=\frac{\mu_0I^2}{4\pi}\ln\frac ba\qquad(\mathrm{J/m})\end{aligned}}
+
+\begin{itemize}
+\tightlist
+\item
+  Therefore
+\end{itemize}
+
+\ELdisp{\begin{aligned}L'&=\frac{2}{I^2}\left(W'_{m1}+W'_{m2}\right)\\&=\frac{\mu_0}{8\pi}+\frac{\mu_0}{2\pi}\ln\frac ba\qquad(\mathrm{H/m})\end{aligned}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELnextnum{5-15}
+
+\begin{ELexample}{}
+
+For a very long solenoid with cross-section \ELim{S}, \ELim{n} turns per unit length and an air core, find the inductance per unit length.
+
+\begin{ELsolution}
+
+\ELdisp{B\ELbr =\mu_0nI\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  W_m\ELbr =\frac12\int_{V'}\frac{B^2}{\mu}\,dv'\ELbr =\frac{1}{2\mu_0}\int\mu_0^2n^2I^2\,dv}
+\ELdisp{=\frac12\mu_0n^2I^2S\ELbr =\frac12LI^2\quad\ELbr \ELbr \Rightarrow\quad\ELbr  L'\ELbr =\mu_0n^2S\qquad\ELbr \mathrm{H/m}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELhold
+
+\ELsubsection{Magnetic Forces and Torques}{Magnetic Forces and Torques}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  When a charge \ELim{q} moves with velocity \ELim{\vect{u}} in a magnetic field of flux density \ELim{\vect{B}}, a magnetic force \ELim{\vect{F}_m} acts on it.
+\end{itemize}
+
+\ELdisp{\vect{F}_m\ELbr =q\vect{u}\times\vect{B}\qquad\ELbr (\mathrm{N})}
+
+\begin{itemize}
+\tightlist
+\item
+  Topics
+
+  \begin{itemize}
+  \tightlist
+  \item
+    the Hall effect,
+  \item
+    forces and torques on current-carrying conductors.
+  \end{itemize}
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsubsection{The Hall Effect}{The Hall Effect}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  Consider a conducting material of rectangular cross-section \ELim{d\times b} in a uniform magnetic field \ELim{\vect{B}=\uvec{z}B_0}. A uniform direct current flows in the \ELim{y} direction.
+\end{itemize}
+
+\ELfigure{m05-hall}{}
+
+\ELdisp{\vect{J}\ELbr =\uvec{y}J_0\ELbr =Nq\vect{u}}
+
+\begin{itemize}
+\tightlist
+\item
+  The charge carriers are electrons, and \ELim{q} is negative
+\end{itemize}
+
+\ELdisp{\vect{u}\ELbr =-\uvec{y}u_0}
+
+\begin{itemize}
+\tightlist
+\item
+  The magnetic force tends to move the electrons in the \ELim{+x} direction and creates a transverse electric field. The process continues until the transverse field is strong enough to stop the drift of the electrons.
+\item
+  In the steady state the net force on the charge carriers is zero.
+\end{itemize}
+
+\ELdisp{\vect{E}_h+\vect{u}\times\vect{B}\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \vect{E}_h\ELbr =-\vect{u}\times\vect{B}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \begin{aligned}\vect{E}_h&=-(-\uvec{y}u_0)\times\uvec{z}B_0\\&=\uvec{x}u_0B_0\end{aligned}}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{\vect{E}_h}: the Hall field
+\item
+  The Hall voltage
+\end{itemize}
+
+\ELdisp{V_h\ELbr =-\int_0^dE_h\,dx\ELbr =u_0B_0d}
+
+\begin{itemize}
+\tightlist
+\item
+  The Hall coefficient
+\end{itemize}
+
+\ELdisp{E_x/J_yB_z\ELbr =1/Nq}
+
+\begin{itemize}
+\tightlist
+\item
+  This phenomenon is called the \textbf{Hall effect}.
+\item
+  The Hall effect is used to measure magnetic fields.
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsubsection{Forces and Torques on Current-Carrying Conductors}{Forces and Torques on Current-Carrying Conductors}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  The magnetic force on a differential element of a closed circuit with contour \ELim{C}, cross-section \ELim{S} and current \ELim{I}, in a magnetic field of flux density \ELim{\vect{B}}
+\end{itemize}
+
+\ELfigure{m05-force-element}{}
+
+\ELdisp{d\vect{F}_m\ELbr =q\vect{u}\times\vect{B}}
+\ELdisp{\begin{aligned}d\vect{F}_m&=-NeS\lvert d\ell\rvert\vect{u}\times\vect{B}\\&=+NeS\lvert\vect{u}\rvert\,\dif\vect{\ell}\times\vect{B}\end{aligned}}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{N}: the number of electrons per unit volume, and \ELim{e}: the charge of an electron
+\item
+  \ELim{\dif\vect{\ell}} is opposite to \ELim{\vect{u}}, and \ELim{NeS\lvert\vect{u}\rvert=I}
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{d\vect{F}_m\ELbr =I\,\dif\vect{\ell}\times\vect{B}\qquad\ELbr (\mathrm{N})}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  The magnetic force on a closed circuit with contour \ELim{C}, cross-section \ELim{S} and current \ELim{I}, in a magnetic field of flux density \ELim{\vect{B}}
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\vect{F}_m\ELbr =I\oint_C\dif\vect{\ell}\times\vect{B}\qquad\ELbr (\mathrm{N})}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{\dif\vect{\ell}}: in the direction of the current
+\end{itemize}
+
+\ELnextnum{5-16}
+
+\begin{ELexample}{}
+
+Determine the force per unit length between two very long parallel conducting wires carrying the currents \ELim{I_1} and \ELim{I_2} in the same direction, as shown below.
+
+\ELfigure{m05-ex16}{}
+
+\begin{ELsolution}
+
+\ELdisp{\vect{F}'_{12}\ELbr =I_2\oint_{C_2}\dif\vect{\ell}_2\times\vect{B}_{12}\ELbr =I_2\int_0^1dz\,\uvec{z}\times\left(-\uvec{x}\frac{\mu_0I_1}{2\pi d}\right)}
+
+\begin{ELimportant}{An attractive force}
+
+\ELdisp{\vect{F}'_{12}\ELbr =-\uvec{y}\frac{\mu_0I_1I_2}{2\pi d}\qquad\ELbr (\mathrm{N/m})}
+
+\end{ELimportant}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  Consider a circular loop of radius \ELim{b} carrying a current \ELim{I} in a uniform magnetic field of flux density \ELim{\vect{B}}
+\end{itemize}
+
+\ELdisp{\vect{B}\ELbr =\vect{B}_\perp+\vect{B}_\parallel}
+
+\ELfigure{m05-loop-fields}{}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{\vect{B}_\perp} produces no net force to move the loop; it only tends to expand the loop (or, if the current is reversed, to contract it).
+\item
+  Although the net force on the loop due to \ELim{\vect{B}_\parallel} is zero, there is a torque that tends to rotate the loop about the \ELim{x}-axis so as to align the magnetic field produced by \ELim{I} with the external field \ELim{\vect{B}_\parallel}.
+\end{itemize}
+
+\ELdisp{\begin{aligned}d\vect{T}&=\uvec{x}(dF)2b\sin\phi\\&=\uvec{x}(I\,d\ell\,B_\parallel\sin\phi)2b\sin\phi\\&=\uvec{x}2Ib^2B_\parallel\sin^2\phi\,d\phi\end{aligned}}
+\ELdisp{\begin{aligned}\vect{T}=\int d\vect{T}&=\uvec{x}2Ib^2B_\parallel\int_0^\pi\sin^2\phi\,d\phi\\&=\uvec{x}I(\pi b^2)B_\parallel\end{aligned}}
+\ELdisp{\vect{m}\ELbr =\uvec{n}I(\pi b^2)\ELbr =\uvec{n}IS}
+\ELdisp{\vect{T}\ELbr =\vect{m}\times\vect{B}_\parallel\ELbr =\vect{m}\times(\vect{B}_\parallel+\vect{B}_\perp)}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{\vect{T}\ELbr =\vect{m}\times\vect{B}\qquad\ELbr (\mathrm{N\cdot m})}
+
+\end{ELimportant}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  It can be shown that this relation holds for a planar loop of any shape, as long as it lies in a uniform magnetic field
+\end{itemize}
+
+\ELnextnum{5-17}
+
+\begin{ELexample}{}
+
+A rectangular loop in the \ELim{xy}-plane with sides \ELim{b_1} and \ELim{b_2} carries a current \ELim{I} and lies in the uniform magnetic field \ELim{\vect{B}=\uvec{x}B_x+\uvec{y}B_y+\uvec{z}B_z}. Determine the force and the torque on the loop.
+
+\ELfigure{m05-ex17-perp}{}
+
+\begin{ELsolution}
+
+\ELdisp{\vect{B}_\perp\ELbr =\uvec{z}B_z,\qquad\ELbr \vect{B}_\parallel\ELbr =\uvec{x}B_x+\uvec{y}B_y}
+
+\begin{itemize}
+\tightlist
+\item
+  The normal component exerts the forces \ELim{Ib_1B_z} on the sides (1) and (3) and \ELim{Ib_2B_z} on the sides (2) and (4), toward the centre. \ELim{\ELto} No torque is produced.
+\item
+  The forces on the loop due to the component parallel to the plane
+\end{itemize}
+
+\ELfigure{m05-ex17-par}{}
+
+\ELdisp{\begin{aligned}\vect{F}_1&=Ib_1\uvec{x}\times(\uvec{x}B_x+\uvec{y}B_y)\\&=\uvec{z}Ib_1B_y=-\vect{F}_3\end{aligned}}
+\ELdisp{\begin{aligned}\vect{F}_2&=Ib_2(-\uvec{y})\times(\uvec{x}B_x+\uvec{y}B_y)\\&=\uvec{z}Ib_2B_x=-\vect{F}_4\end{aligned}}
+\ELdisp{\left.\begin{aligned}&\vect{T}_{13}=\uvec{x}Ib_1b_2B_y\\&\vect{T}_{24}=-\uvec{y}Ib_1b_2B_x\end{aligned}\right\}\quad\ELbr \begin{aligned}&\vect{T}=\vect{T}_{13}+\vect{T}_{24}=Ib_1b_2(\uvec{x}B_y-\uvec{y}B_x)\qquad(\mathrm{N\cdot m})\\&\vect{T}=\vect{m}\times(\uvec{x}B_x+\uvec{y}B_y)=\vect{m}\times\vect{B}\end{aligned}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\end{ELjoin}

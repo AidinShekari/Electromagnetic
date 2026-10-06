@@ -1,0 +1,286 @@
+\ELhold
+
+\ELsection{Course Outline}{Course Outline}
+
+\begin{ELunit}
+
+\ELfigure{m06-course-outline}{}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{Introduction}{Introduction}
+
+\Needspace{11\baselineskip}
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  The fundamental relations of electrostatics and magnetostatics
+\end{itemize}
+
+\end{ELunit}
+
+\begin{ELltr}
+\begin{longtable}[c]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2308}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3846}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3846}}@{}}
+\toprule\noalign{}
+\ELtablehead \begin{minipage}[b]{\linewidth}\raggedright
+Fundamental Relations
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Electrostatic Model
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Magnetostatic Model
+\end{minipage} \\\noalign{\vskip 4pt}
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Governing equations & \ELim{\nabla\times\vect{E}=0}, \ELim{\nabla\cdot\vect{D}=\rho} & \ELim{\nabla\cdot\vect{B}=0}, \ELim{\nabla\times\vect{H}=\vect{J}} \\\noalign{\vskip 4pt}
+Constitutive relations (linear and isotropic media) & \ELim{\vect{D}=\epsilon\vect{E}} & \ELim{\vect{H}=\dfrac1\mu\vect{B}} \\\noalign{\vskip 4pt}
+\end{longtable}\end{ELltr}
+
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  In the static (time-invariant) case, the electric field vectors and the magnetic field vectors form separate, independent pairs.
+\item
+  We shall see that in the time-varying case a time-varying magnetic field produces an electric field, and vice versa
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{Faraday's Law of Electromagnetic Induction}{Faraday’s Law of Electromagnetic Induction}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  In 1820 \textbf{Hans Christian Ørsted} showed that a wire carrying an electric current deflects a compass needle.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The motion of the compass needle was caused by the magnetic force of the magnetic field produced by the electric current.
+  \end{itemize}
+\item
+  After this discovery \textbf{Michael Faraday} reasoned that a magnetic field should, in the same way, have an electric effect and produce a current in a wire.
+\item
+  After about ten years of experiments he made the discovery known as Faraday's law of electromagnetic induction.
+\end{itemize}
+
+\end{ELunit}
+
+\begin{ELdefinition}{Faraday's law of electromagnetic induction}
+
+If the magnetic flux through a closed circuit changes with time, an electromotive force is induced in the circuit. This electromotive force drives a current.
+
+\end{ELdefinition}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  The polarity of the electromotive force, and hence the direction of the induced current, can be found from Lenz's law.
+\end{itemize}
+
+\begin{ELdefinition}{Lenz's law}
+
+The current induced in a circuit always flows in the direction that opposes the change of the magnetic flux producing it.
+
+\end{ELdefinition}
+
+\end{ELjoin}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  The mathematical statement of Faraday's law of electromagnetic induction
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{v_{emf}\ELbr =-N\frac{d\Phi}{dt}\ELbr =-N\frac{d}{dt}\int_S\vect{B}\cdot d\vect{s}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  The definition of the electromotive force induced in a circuit with the closed contour \ELim{C}
+\end{itemize}
+
+\ELdisp{v_{emf}\triangleq\oint_C\vect{E}\cdot\dif\vect{\ell}}
+
+\begin{itemize}
+\tightlist
+\item
+  For a stationary circuit
+\end{itemize}
+
+\ELdisp{v_{emf}\ELbr =\oint_C\vect{E}\cdot\dif\vect{\ell}\ELbr =-\int_S\frac{\partial\vect{B}}{\partial t}\cdot d\vect{s}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \int_S(\nabla\times\vect{E})\cdot d\vect{s}\ELbr =-\int_S\frac{\partial\vect{B}}{\partial t}\cdot d\vect{s}}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  The last step uses Stokes's theorem.
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\nabla\times\vect{E}\ELbr =-\frac{\partial\vect{B}}{\partial t}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  In the time-varying case the electric field is not conservative \ELim{\ELto} \ELim{\nabla\times\vect{E}\neq0}
+\item
+  In the time-varying case the scalar potential cannot be defined as \ELim{V=-\int\vect{E}\cdot\dif\vect{\ell}}, because the potential difference between two points would depend on the path of integration and would not have a fixed value.
+\item
+  At low frequencies \ELim{\ELto} \ELim{\nabla\times\vect{E}\simeq0} \ELim{\ELto} the scalar potential can be defined (lumped-circuit theory)
+\end{itemize}
+
+\end{ELunit}
+
+\ELnextnum{6-1}
+
+\begin{ELexample}{}
+
+A circular loop of \ELim{N} turns of conducting wire lies in the \ELim{xy}-plane with its centre at the origin, in a magnetic field given by
+
+\ELdisp{\vect{B}\ELbr =\uvec{z}B_0\cos\left(\frac{\pi r}{2b}\right)\sin(\omega t)}
+
+Here \ELim{b} is the radius of the loop and \ELim{\omega} the angular frequency. Find the induced electromotive force.
+
+\begin{ELsolution}
+
+\ELdisp{\begin{aligned}\Phi=\int_S\vect{B}\cdot d\vect{s}&=\int_0^{2\pi}\!\!\int_0^b\left[B_0\cos\left(\frac{\pi r}{2b}\right)\sin(\omega t)\,\uvec{z}\right]\cdot\left(r\,dr\,d\phi\,\uvec{z}\right)\\&=\frac{8b^2}{\pi}\left(\frac\pi2-1\right)B_0\sin(\omega t)\end{aligned}}
+\ELdisp{v\ELbr =-N\frac{d\Phi}{dt}\ELbr =-\frac{8Nb^2}{\pi}\left(\frac\pi2-1\right)B_0\omega\cos(\omega t)}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELhold
+
+\ELsection{Displacement Current}{Displacement Current}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  Ampère's circuital law for the static magnetic field
+\end{itemize}
+
+\ELdisp{\nabla\times\vect{H}\ELbr =\vect{J}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{James Clerk Maxwell} doubted this equation, because
+\end{itemize}
+
+\ELdisp{\nabla\cdot(\nabla\times\vect{H})\ELbr =0\ELbr =\nabla\cdot\vect{J}}
+
+\begin{itemize}
+\tightlist
+\item
+  which is not consistent with the equation of continuity
+\end{itemize}
+
+\ELdisp{\nabla\cdot\vect{J}\ELbr =-\frac{\partial\rho}{\partial t}}
+
+\begin{itemize}
+\tightlist
+\item
+  To remove this inconsistency Maxwell modified the relation as follows
+\end{itemize}
+
+\ELdisp{\nabla\cdot(\nabla\times\vect{H})\ELbr =0\ELbr =\nabla\cdot\vect{J}+\frac{\partial\rho}{\partial t}\quad\ELbr \xrightarrow{\ \nabla\cdot\vect{D}=\rho\ }\quad\ELbr \nabla\cdot(\nabla\times\vect{H})\ELbr =\nabla\cdot\left(\vect{J}+\frac{\partial\vect{D}}{\partial t}\right)}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{\nabla\times\vect{H}\ELbr =\vect{J}+\frac{\partial\vect{D}}{\partial t}}
+
+\end{ELimportant}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  It can easily be shown that \ELim{\partial\vect{D}/\partial t} has the dimension of a current density. It is called the \textbf{displacement current density}.
+\item
+  The modified form of Ampère's circuital law states that a time-varying electric field produces a magnetic field even when there is no current.
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{Maxwell's Equations}{Maxwell’s Equations}
+
+\Needspace{15\baselineskip}
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  The equations governing time-varying electric and magnetic fields, or \textbf{Maxwell's equations}
+\end{itemize}
+
+\end{ELunit}
+
+\begin{ELltr}
+\begin{longtable}[c]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\ELtablehead \begin{minipage}[b]{\linewidth}\raggedright
+Differential Form
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Integral Form
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Significance
+\end{minipage} \\\noalign{\vskip 4pt}
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\ELim{\nabla\times\vect{E}=-\dfrac{\partial\vect{B}}{\partial t}} & \ELim{\oint_C\vect{E}\cdot\dif\vect{\ell}=-\dfrac{d\Phi}{dt}} & Faraday's law \\\noalign{\vskip 4pt}
+\ELim{\nabla\times\vect{H}=\vect{J}+\dfrac{\partial\vect{D}}{\partial t}} & \ELim{\oint_C\vect{H}\cdot\dif\vect{\ell}=I+\int_S\dfrac{\partial\vect{D}}{\partial t}\cdot d\vect{s}} & Ampère's circuital law \\\noalign{\vskip 4pt}
+\ELim{\nabla\cdot\vect{D}=\rho} & \ELim{\oint_S\vect{D}\cdot d\vect{s}=Q} & Gauss's law \\\noalign{\vskip 4pt}
+\ELim{\nabla\cdot\vect{B}=0} & \ELim{\oint_S\vect{B}\cdot d\vect{s}=0} & No isolated magnetic charge \\\noalign{\vskip 4pt}
+\end{longtable}\end{ELltr}
+

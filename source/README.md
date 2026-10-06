@@ -29,6 +29,10 @@ values and the figures.
 | `Ch5_3.pdf` | Part 3: the magnetic dipole (example 5-7), magnetization and equivalent current densities (example 5-8) | 13 |
 | `Ch5_4.pdf` | Part 4: magnetic field intensity, relative permeability, magnetic materials, magnetic circuits (example 5-9) | 13 |
 | `Ch5_5.pdf` | Part 5: magnetic circuits (example 5-10), boundary conditions for magnetostatic fields | 9 |
+| `Ch5_6.pdf` | Part 6: inductances and inductors (examples 5-11 to 5-13) | 13 |
+| `Ch5_7.pdf` | Part 7: magnetic energy (examples 5-14, 5-15) | 11 |
+| `Ch5_8.pdf` | Part 8: magnetic forces and torques: the Hall effect, forces and torques on current-carrying conductors (examples 5-16, 5-17) | 10 |
+| `Ch6.pdf` | Chapter 6: outline, introduction, Faraday's law of electromagnetic induction (example 6-1), displacement current, Maxwell's equations | 13 |
 
 The book currently contains only the material in these files. Each later chapter goes in its own
 folder `NN-slug/{fa,en}/moduleNN-slug.md`, transcribed from its slides in order and in the same

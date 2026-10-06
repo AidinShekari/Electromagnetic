@@ -1,0 +1,13 @@
+% Ch5_6, slide 4: two closed loops C1 (surface S1, current I1) and C2 (surface S2); part of the flux of
+% B1 produced by I1 links C2
+\begin{tikzpicture}[scale=1]
+  \fill[ELfillB] (0,0) ellipse (1.0 and 0.75); \draw[ELcField,line width=1.0pt] (0,0) ellipse (1.0 and 0.75);
+  \fill[ELfillA] (3.0,0.6) ellipse (0.95 and 0.7); \draw[ELcSource,line width=1.0pt] (3.0,0.6) ellipse (0.95 and 0.7);
+  \foreach \y in {-0.45,-0.05,0.35}{\draw[ELthin,-{Stealth[length=5pt]}] (-1.6,\y-0.35)--(4.4,\y+0.95);}
+  \foreach \y in {-1.1,0.95}{\draw[ELthin,-{Stealth[length=5pt]}] (-1.4,\y-0.3)--(1.2,\y+0.25) .. controls (1.7,\y+0.35) .. (2.0,\y+0.7);}
+  \draw[ELcField,line width=0.9pt,-{Stealth[length=5pt]}] (-0.7,-0.53) arc[start angle=225,end angle=270,x radius=1.0,y radius=0.75];
+  \node[ELlabs,anchor=north east] at (-0.7,-0.55) {$I_1$};
+  \node[ELlabs] at (-0.45,0.25) {$S_1$}; \node[ELlabs] at (3.35,0.85) {$S_2$};
+  \node[ELlabs,anchor=north] at (0.35,-0.78) {$C_1$}; \node[ELlabs,anchor=north west] at (3.6,0.1) {$C_2$};
+  \node[ELlabs,anchor=south] at (4.3,1.25) {$\vect{B}_1$};
+\end{tikzpicture}

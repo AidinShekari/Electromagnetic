@@ -1,0 +1,17 @@
+% Ch5_8, slide 9 (example 5-17): a rectangular loop with sides b1 and b2 in the xy-plane carrying I in
+% the field component B_perp = a_z B_z (out of the page); the sides (1)-(4)
+\begin{tikzpicture}[scale=0.9]
+  \foreach \x in {-1.6,0,1.6}{\foreach \y in {-2.2,-1.1,0,1.1,2.2}{\ELoutof[ELslate]{(\x,\y)}}}
+  \draw[ELcField,line width=1.3pt] (-1.9,-0.85)--(1.9,-0.85)--(1.9,0.85)--(-1.9,0.85)--cycle;
+  \draw[ELcField,line width=1.3pt,-{Stealth[length=6pt]}] (-0.3,0.85)--(0.25,0.85); \node[ELlabs,anchor=south] at (0.25,0.9) {$I$};
+  \draw[ELcField,line width=1.3pt,-{Stealth[length=6pt]}] (1.9,0.3)--(1.9,-0.25);
+  \draw[ELcField,line width=1.3pt,-{Stealth[length=6pt]}] (0.3,-0.85)--(-0.25,-0.85);
+  \draw[ELcField,line width=1.3pt,-{Stealth[length=6pt]}] (-1.9,-0.3)--(-1.9,0.25);
+  \node[ELlabs,anchor=north] at (-0.8,0.82) {$(1)$}; \node[ELlabs,anchor=east] at (1.87,0.45) {$(2)$};
+  \node[ELlabs,anchor=south] at (0.8,-0.82) {$(3)$}; \node[ELlabs,anchor=west] at (-1.87,-0.45) {$(4)$};
+  \draw[ELdash] (0,-0.85)--(0,0.85); \draw[ELax] (0,0)--(0,2.7) node[ELlab,anchor=south]{$y$};
+  \draw[ELax] (0,0)--(2.7,0) node[ELlab,anchor=west]{$x$};
+  \node[ELlabs,anchor=south west] at (1.7,2.3) {$\vect{B}_\perp$};
+  \draw[ELthin,{Stealth[length=3pt]}-{Stealth[length=3pt]}] (-1.9,-2.7)--(1.9,-2.7) node[ELlabs,anchor=north,pos=0.5]{$b_1$};
+  \draw[ELthin,{Stealth[length=3pt]}-{Stealth[length=3pt]}] (-2.4,-0.85)--(-2.4,0.85) node[ELlabs,anchor=east,pos=0.5]{$b_2$};
+\end{tikzpicture}

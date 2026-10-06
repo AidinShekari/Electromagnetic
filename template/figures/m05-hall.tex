@@ -1,0 +1,25 @@
+% Ch5_8, slide 3: the Hall effect: a conducting bar of cross-section d x b with the current density
+% J = a_y J0 in the uniform field B = a_z B0; the transverse field E_h, the force direction u x B, the
+% Hall voltage V_h across the bar
+\begin{tikzpicture}[ELoblique,scale=1]
+  \def\d{2.0}\def\L{4.4}\def\t{0.6}
+  \fill[ELfillB] (\d,0,0)--(\d,\L,0)--(\d,\L,\t)--(\d,0,\t)--cycle;
+  \fill[ELfillA] (0,0,\t)--(\d,0,\t)--(\d,\L,\t)--(0,\L,\t)--cycle;
+  \fill[ELfillB!80] (0,\L,0)--(\d,\L,0)--(\d,\L,\t)--(0,\L,\t)--cycle;
+  \draw[ELcField,line width=0.8pt] (\d,0,0)--(\d,\L,0)--(\d,\L,\t)--(\d,0,\t)--cycle (0,0,\t)--(0,\L,\t)--(\d,\L,\t) (0,\L,\t)--(0,\L,0)--(\d,\L,0);
+  \draw[ELcField,line width=0.8pt,dashed] (0,0,\t)--(0,0,0)--(\d,0,0) (0,0,0)--(0,\L,0);
+  \draw[ELvec,line width=1.0pt] (1.0,-1.6,0.3)--(1.0,0,0.3); \node[ELlabs,anchor=east] at (1.0,-1.6,0.3) {$\vect{J}=\uvec{y}J_0$};
+  \draw[ELvec,line width=1.0pt] (1.0,\L,0.3)--(1.0,\L+1.5,0.3);
+  \draw[ELvec,line width=1.0pt] (\d,-0.6,-0.9)--(\d,-0.6,0.0); \node[ELlabs,anchor=north] at (\d,-0.6,-0.9) {$\vect{B}=\uvec{z}B_0$};
+  \draw[ELvec,line width=1.0pt] (0,\L-0.4,\t+0.2)--(0,\L-0.4,\t+1.2) node[ELlabs,anchor=south]{$\vect{B}=\uvec{z}B_0$};
+  \draw[ELvec2,line width=1.0pt] (0.3,2.9,\t)--(1.7,2.9,\t); \node[ELlabs,anchor=north west] at (1.7,2.95,\t) {$\vect{E}_h$};
+  \draw[ELvec2,line width=1.0pt] (1.7,1.3,\t)--(0.3,1.3,\t); \node[ELlabs,anchor=south] at (0.3,1.3,\t) {$\vect{u}\times\vect{B}$};
+  \draw[ELink,line width=0.6pt] (0,3.4,\t)--(0,3.4,\t+0.7)--(0,\L+0.9,\t+0.7); \draw[ELink,line width=0.6pt,fill=white] (0,\L+0.9,\t+0.7) circle (1.6pt);
+  \draw[ELink,line width=0.6pt] (\d,3.4,0.3)--(\d,\L+0.9,0.3); \draw[ELink,line width=0.6pt,fill=white] (\d,\L+0.9,0.3) circle (1.6pt);
+  \node[ELlabs,anchor=west] at (0,\L+0.95,\t+0.7) {$+$}; \node[ELlabs,anchor=west] at (\d,\L+0.95,0.3) {$-$};
+  \node[ELlabs,anchor=west] at (\d,\L+1.25,0.75) {$V_h$};
+  \draw[ELthin,{Stealth[length=3pt]}-{Stealth[length=3pt]}] (0,-0.25,0)--(\d,-0.25,0); \node[ELlabs,anchor=north east] at (1.0,-0.25,0) {$d$};
+  \draw[ELax] (\d+0.6,\L+0.6,-1.6)--(\d+0.6,\L+0.6,-1.0) node[ELlabs,anchor=south]{$z$};
+  \draw[ELax] (\d+0.6,\L+0.6,-1.6)--(\d+0.6,\L+1.2,-1.6) node[ELlabs,anchor=west]{$y$};
+  \draw[ELax] (\d+0.6,\L+0.6,-1.6)--(\d+1.3,\L+0.6,-1.6) node[ELlabs,anchor=north]{$x$};
+\end{tikzpicture}
