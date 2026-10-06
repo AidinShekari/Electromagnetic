@@ -1,0 +1,12 @@
+% Ch3_3, slide 16: a coaxial cable: inner conductor of radius a at V0, grounded outer conductor of radius b
+\begin{tikzpicture}[scale=1]
+  \def\a{0.55}\def\b{1.55}
+  \fill[pattern=north east lines,pattern color=ELink!50,even odd rule] (0,0) circle (\b+0.12) (0,0) circle (\b);
+  \draw[ELink,line width=0.7pt] (0,0) circle (\b+0.12) (0,0) circle (\b);
+  \fill[pattern=north east lines,pattern color=ELink!50] (0,0) circle (\a); \draw[ELink,line width=0.7pt] (0,0) circle (\a);
+  \fill[ELink] (0,0) circle (1.2pt);
+  \draw[ELthin] (0,0)--(160:\a) node[ELlabs,anchor=south,pos=0.6,fill=white,inner sep=0.5pt]{$a$};
+  \draw[ELthin] (0,0)--(35:\b) node[ELlabs,anchor=south east,pos=0.7]{$b$};
+  \node[ELlabs,anchor=north] at (0,-\a-0.05) {$V_0$};
+  \draw[ELink,line width=0.7pt] (-50:\b+0.12)--++(0.45,-0.45); \draw[ELink,line width=0.9pt] ($(-50:\b+0.12)+(0.2,-0.45)$)--++(0.5,0) ($(-50:\b+0.12)+(0.28,-0.57)$)--++(0.34,0) ($(-50:\b+0.12)+(0.36,-0.69)$)--++(0.18,0);
+\end{tikzpicture}

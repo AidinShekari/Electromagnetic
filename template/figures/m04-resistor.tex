@@ -1,0 +1,19 @@
+% Ch4_1, slide 10: a homogeneous conductor of conductivity sigma, length l and uniform cross-section S
+% between terminals 1 (+) and 2 (-); J and E along it; the voltage V12
+\begin{tikzpicture}[scale=1]
+  \def\L{4.6}
+  \fill[ELfillB] (0,0) rectangle (\L,1.1);
+  \fill[ELfillA] (0,0.55) ellipse[x radius=0.22,y radius=0.55];
+  \draw[ELcField!80,line width=0.6pt] (0,0) -- (\L,0) (0,1.1)--(\L,1.1) (0,0.55) ellipse[x radius=0.22,y radius=0.55];
+  \draw[ELcField!50,dashed,line width=0.5pt] (\L,0) arc[start angle=-90,end angle=90,x radius=0.22,y radius=0.55];
+  \draw[ELcField!80,line width=0.6pt] (\L,1.1) arc[start angle=90,end angle=270,x radius=0.22,y radius=0.55];
+  \draw[ELvec,line width=1pt] (1.0,0.35)--(2.0,0.35) node[ELlabs,anchor=west]{$\vect{J}$};
+  \draw[ELvec2,line width=1pt] (2.7,0.75)--(3.7,0.75) node[ELlabs,anchor=west]{$\vect{E}$};
+  \node[ELlabs,anchor=south] at (2.3,1.1) {$\sigma$};
+  \draw[ELthin] (0,1.2)--(0,1.65) (\L,1.2)--(\L,1.65);
+  \draw[ELthin,{Stealth[length=3.5pt]}-{Stealth[length=3.5pt]}] (0,1.5)--(\L,1.5) node[ELlabs,anchor=south,pos=0.5]{$\ell$};
+  \node[ELlabs,anchor=east] at (-0.25,0.2) {$1$}; \node[ELlabs,anchor=west] at (\L+0.25,0.2) {$2$};
+  \draw[ELthin] (0,-0.1)--(0,-0.65) (\L,-0.1)--(\L,-0.65);
+  \draw[ELthin,{Stealth[length=3.5pt]}-{Stealth[length=3.5pt]}] (0,-0.45)--(\L,-0.45) node[ELlabs,anchor=center,fill=white,pos=0.5]{$V_{12}$};
+  \node[ELlabs,anchor=north] at (0,-0.65) {$+$}; \node[ELlabs,anchor=north] at (\L,-0.65) {$-$};
+\end{tikzpicture}

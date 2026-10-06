@@ -1,0 +1,13 @@
+% ============================================================
+%  Chapter 3 (solution of electrostatic problems): the method of images: a charge Q above a grounded
+%  plane (solid line) and its image -Q below it, with the field lines of the pair (solid above the
+%  plane, dashed below).  Centred on \ELmotifcx, never mirrored.
+% ============================================================
+\begin{scope}[shift={(\ELmotifcx,4.3)},line cap=round]
+  \foreach \s in {1,-1}{\foreach \w in {0.5,1.0,1.7,2.6,3.8}{
+    \draw[ELredD,opacity=0.8,line width=0.6pt] (0,1.6) .. controls (\s*\w*0.7,1.6+\w*0.45) and (\s*\w*1.25,0.9) .. (\s*\w*1.2,0);
+    \draw[ELblueD,opacity=0.55,dashed,line width=0.5pt] (0,-1.6) .. controls (\s*\w*0.7,-1.6-\w*0.45) and (\s*\w*1.25,-0.9) .. (\s*\w*1.2,0);}}
+  \draw[ELredD,opacity=0.8,line width=0.6pt] (0,1.6)--(0,0); \draw[ELblueD,opacity=0.55,dashed,line width=0.5pt] (0,-1.6)--(0,0);
+  \draw[white,line width=1.6pt] (-5.0,0)--(5.0,0);
+  \fill[ELredD] (0,1.6) circle (0.15); \fill[ELblueD] (0,-1.6) circle (0.15);
+\end{scope}

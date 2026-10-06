@@ -1,0 +1,905 @@
+\ELhold
+
+\ELsection{سرفصل‌ها}{سرفصل‌ها}
+
+\begin{ELunit}
+
+\ELfigure{m03-course-outline}{}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{حل مسائل الکتریسیته ساکن}{حل مسائل الکتریسیته ساکن}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  مسائل الکتریسیته ساکن مسائلی هستند که با تأثیرات بارهای الکتریکی در حال سکون سروکار دارند. حل این نوع مسائل معمولاً شامل تعیین پتانسیل الکتریکی، شدت میدان الکتریکی و یا توزیع بار الکتریکی است.
+\item
+  در صورتیکه توزیع بار الکتریکی داده شده باشد، با استفاده از روابط فصل قبل هم پتانسیل و هم میدان الکتریکی قابل محاسبه خواهد بود.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    در بسیاری از مسائل عملی توزیع دقیق بار در تمام نقاط معلوم نیست و یافتن پتانسیل و میدان الکتریکی مستقیماً با استفاده از فرمول‌های فصل قبل امکانپذیر نمی‌باشد. \ELim{\ELto} امکان استفاده از روش تصاویر در دسته ای خاص از مسائل
+  \item
+    در نوع دیگری از مسائل، پتانسیل تمام اجسام هادی معلوم است و می‌خواهیم پتانسیل و شدت میدان الکتریکی در فضای پیرامون و نیز توزیع بارهای سطحی را روی مرزهای هادی پیدا کنیم. \ELim{\ELto} حل مسائل مقدار مرزی
+  \end{itemize}
+\end{itemize}
+
+\ELfigure{m03-map}{}
+
+\begin{itemize}
+\tightlist
+\item
+  فرم معادلات پواسون و لاپلاس که بر پتانسیل الکتریکی حاکم هستند چگونه است و هرکدام در چه حالتی کاربرد دارند؟
+\item
+  چگونه می توان با حل معادلات پواسون و لاپلاس، پتانسیل الکتریکی و شدت میدان الکتریکی را بدست آورد؟
+\item
+  آیا جواب معادله پواسون که شرایط مرزی مشخصی را برآورده می کند یکتاست؟
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{معادلات پواسون و لاپلاس}{معادلات پواسون و لاپلاس}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  دو معادله اصلی حاکم بر الکتریسیته ساکن در کلیه محیط‌ها
+\end{itemize}
+
+\ELdisp{\nabla\cdot\vect{D}\ELbr =\rho\qquad\ELbr \qquad\ELbr  \nabla\times\vect{E}\ELbr =0}
+
+\begin{itemize}
+\tightlist
+\item
+  از طرفی داریم
+\end{itemize}
+
+\ELdisp{\vect{E}\ELbr =-\nabla V}
+\ELdisp{\vect{D}\ELbr =\epsilon\vect{E}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \nabla\cdot\epsilon\vect{E}\ELbr =\rho\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \nabla\cdot(\epsilon\nabla V)\ELbr =-\rho}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  اگر محیط همگن باشد (\ELim{\epsilon} ثابت باشد)
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\nabla^2V\ELbr =-\frac{\rho}{\epsilon}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\item
+  \ELim{\rho}: چگالی بار آزاد
+\item
+  در معادله فوق که به \textbf{معادله پواسون} معروف است، از عملگر \textbf{لاپلاسین} (دیورژانسِ گرادیان) استفاده شده است.
+\item
+  لاپلاسین یک کمیت عددی در دستگاه‌های مختصات مختلف
+
+  \begin{itemize}
+  \tightlist
+  \item
+    کارتزین
+    \ELdisp{\nabla^2V\ELbr =\frac{\partial^2V}{\partial x^2}+\frac{\partial^2V}{\partial y^2}+\frac{\partial^2V}{\partial z^2}}
+  \item
+    استوانه ای
+    \ELdisp{\nabla^2V\ELbr =\frac1r\frac{\partial}{\partial r}\left(r\frac{\partial V}{\partial r}\right)+\frac{1}{r^2}\frac{\partial^2V}{\partial\phi^2}+\frac{\partial^2V}{\partial z^2}}
+  \item
+    کروی
+    \ELdisp{\nabla^2V\ELbr =\frac{1}{R^2}\frac{\partial}{\partial R}\left(R^2\frac{\partial V}{\partial R}\right)+\frac{1}{R^2\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial V}{\partial\theta}\right)+\frac{1}{R^2\sin^2\theta}\frac{\partial^2V}{\partial\phi^2}}
+  \end{itemize}
+\item
+  حل معادله پواسون در فضای سه بعدی و با شرایط مرزی مشخص معمولاً کار ساده‌ای نیست.
+\item
+  در نقاطی از یک محیط ساده که بار آزادی وجود ندارد
+\end{itemize}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{\nabla^2V\ELbr =0}
+
+\end{ELimportant}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  معادله فوق \textbf{معادله لاپلاس} نامیده می‌شود.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    این معادله حاکم بر مسائلی است که شامل مجموعه‌ای از هادی‌ها باشد که در پتانسیل‌های مختلف نگه داشته شوند.
+  \item
+    وقتی با استفاده از این معادله \ELim{V} بدست آمد، \ELim{\vect{E}} و توزیع بار روی سطوح هادی نیز به سادگی بدست خواهند آمد
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{\vect{E}\ELbr =-\nabla V\qquad\ELbr \qquad\ELbr  \rho_s\ELbr =-\epsilon E_n}
+
+\end{ELunit}
+
+\ELnextnum{3-1}
+
+\begin{ELexample}{}
+
+دو صفحه خازن صفحه ای موازی، به فاصله \ELim{d} از یکدیگر قرار دارند و مطابق شکل زیر در پتانسیل های \ELim{0} و \ELim{V_0} نگه داشته می شوند. با چشم پوشی از میدان های حاشیه ای مطلوبست
+
+\begin{itemize}
+\tightlist
+\item
+  الف. پتانسیل در تمام نقاط بین صفحات
+\item
+  ب. چگالی های بار سطحی روی صفحات
+\end{itemize}
+
+\ELfigure{m03-ex1}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  الف. استفاده از معادله لاپلاس
+\end{itemize}
+
+\ELdisp{\nabla^2V\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \frac{d^2V}{dy^2}\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \frac{dV}{dy}\ELbr =C_1\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  V\ELbr =C_1y+C_2}
+
+\begin{itemize}
+\tightlist
+\item
+  شرایط مرزی:
+\end{itemize}
+
+\ELdisp{\left.\begin{aligned}&\text{\lr{At }}y=0,\quad V=0\\&\text{\lr{At }}y=d,\quad V=V_0\end{aligned}\right\}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  V\ELbr =\frac{V_0}{d}y}
+
+\begin{itemize}
+\tightlist
+\item
+  ب.
+\end{itemize}
+
+\ELdisp{\vect{E}\ELbr =-\nabla V\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \vect{E}\ELbr =-\uvec{y}\frac{dV}{dy}\ELbr =-\uvec{y}\frac{V_0}{d}}
+\ELdisp{E_n\ELbr =\uvec{n}\cdot\vect{E}\ELbr =\frac{\rho_s}{\epsilon}}
+
+\begin{itemize}
+\tightlist
+\item
+  برای صفحه پایینی
+\end{itemize}
+
+\ELdisp{\uvec{n}\ELbr =\uvec{y},\qquad\ELbr  E_{n\ell}\ELbr =-\frac{V_0}{d},\qquad\ELbr  \rho_{s\ell}\ELbr =-\frac{\epsilon V_0}{d}}
+
+\begin{itemize}
+\tightlist
+\item
+  برای صفحه بالایی
+\end{itemize}
+
+\ELdisp{\uvec{n}\ELbr =-\uvec{y},\qquad\ELbr  E_{nu}\ELbr =\frac{V_0}{d},\qquad\ELbr  \rho_{su}\ELbr =\frac{\epsilon V_0}{d}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELnextnum{3-2}
+
+\begin{ELexample}{}
+
+با حل معادله پواسون و لاپلاس نسبت به \ELim{V}، میدان \ELim{\vect{E}} را درون و بیرون یک ابر الکترونی کروی با چگالی بار حجمی یکنواخت \ELim{\rho=-\rho_0} در \ELim{0\leq R\leq b} و \ELim{\rho=0} در \ELim{R>b} تعیین کنید.
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  درون ابر الکترونی \ELim{\ELto} استفاده از معادله پواسون
+\end{itemize}
+
+\ELdisp{\nabla^2V\ELbr =-\frac\rho\epsilon\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \frac{1}{R^2}\frac{d}{dR}\left(R^2\frac{dV_i}{dR}\right)\ELbr =\frac{\rho_0}{\epsilon_0}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \frac{d}{dR}\left(R^2\frac{dV_i}{dR}\right)\ELbr =\frac{\rho_0}{\epsilon_0}R^2\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  R^2\frac{dV_i}{dR}\ELbr =\frac{\rho_0}{3\epsilon_0}R^3+C_1}
+\ELdisp{\frac{dV_i}{dR}\ELbr =\frac{\rho_0}{3\epsilon_0}R+\frac{C_1}{R^2}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \vect{E}_i\ELbr =-\nabla V_i\ELbr =-\uvec{R}\left(\frac{dV_i}{dR}\right)}
+
+\begin{itemize}
+\tightlist
+\item
+  با توجه به اینکه میدان در \ELim{R=0} نمی تواند بی نهایت باشد
+\end{itemize}
+
+\ELdisp{C_1\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \vect{E}_i\ELbr =-\uvec{R}\frac{\rho_0}{3\epsilon_0}R,\qquad\ELbr  0\leq R\leq b}
+
+\begin{itemize}
+\tightlist
+\item
+  بیرون ابر الکترونی \ELim{\ELto} استفاده از معادله لاپلاس
+\end{itemize}
+
+\ELdisp{\nabla^2V\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \frac{1}{R^2}\frac{\partial}{\partial R}\left(R^2\frac{dV_o}{dR}\right)\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \frac{dV_o}{dR}\ELbr =\frac{C_2}{R^2}}
+\ELdisp{\vect{E}_o\ELbr =-\nabla V_o\ELbr =-\uvec{R}\frac{dV_o}{dR}\ELbr =-\uvec{R}\frac{C_2}{R^2}}
+
+\begin{itemize}
+\tightlist
+\item
+  با توجه به پیوستگی محیط، میدان های \ELim{\vect{E}_i} و \ELim{\vect{E}_o} در \ELim{R=b} با هم برابرند
+\end{itemize}
+
+\ELdisp{\frac{C_2}{b^2}\ELbr =\frac{\rho_0}{3\epsilon_0}b\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  C_2\ELbr =\frac{\rho_0b^3}{3\epsilon_0}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \vect{E}_o\ELbr =-\uvec{R}\frac{\rho_0b^3}{3\epsilon_0R^2},\qquad\ELbr  R\geq b}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELhold
+
+\ELsection{قضیه یکتایی}{قضیه یکتایی}
+
+\begin{ELunit}
+
+\ELfigure{m03-map-unique}{}
+
+\begin{itemize}
+\tightlist
+\item
+  یک جواب معادله پواسون (و در حالت خاص معادله لاپلاس) که شرایط مرزی مفروضی را برآورده می‌کند، جواب یکتای معادله مذکور خواهد بود.
+\item
+  نتیجه این قضیه آن است که یک جواب هر مسئله الکتریسیته ساکن که در شرایط مرزی صدق کند، بدون توجه به روش بدست آوردن آن جواب، تنها جواب ممکن است.
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{روش تصاویر}{روش تصاویر}
+
+\begin{ELunit}
+
+\ELfigure{m03-map-images}{}
+
+\begin{itemize}
+\item
+  روش تصاویر چیست و چگونه می توان از این روش برای حل دسته ای خاص از مسائل الکتریسیته ساکن استفاده کرد؟
+\item
+  در دسته‌ای از مسائل الکترومغناطیس، حل معادله لاپلاس به همراه برقراری شرایط مرزی بسیار مشکل است. اما در این مسائل می‌توان شرایط مرزی را به کمک \textbf{بارهای تصویر} ارضا کرد.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    به این روش که عبارتست از جایگزینی سطوح مرزی با بارهای تصویرِ معادل \textbf{روش تصویر} گویند.
+  \end{itemize}
+\item
+  به عنوان مثال مسئله زیر را در نظر می‌گیریم. می‌خواهیم پتانسیل را در تمام نقط \ELim{y>0} بدست آوریم.
+\end{itemize}
+
+\ELfigure{m03-image-problem}{}
+
+\begin{itemize}
+\tightlist
+\item
+  از قانون گوس نمی‌توان برای محاسبه میدان و سپس پتانسیل استفاده کرد زیرا تعیین سطح گوسی ممکن نیست.
+\item
+  به صورت مستقیم نیز نمی توان پتانسیل را محاسبه کرد زیرا حضور بار مثبت \ELim{Q} باعث القای بارهای منفی روی سطح هادی می‌شود و چگالی بار سطحی \ELim{\rho_s} را نتیجه می‌دهد. داریم
+\end{itemize}
+
+\ELdisp{V(x,y,z)\ELbr =\frac{Q}{4\pi\epsilon_0\sqrt{x^2+(y-d)^2+z^2}}+\frac{1}{4\pi\epsilon_0}\int_S\frac{\rho_s}{R_1}\,ds}
+
+\begin{itemize}
+\tightlist
+\item
+  مشکل اینجاست که ابتدا باید \ELim{\rho_s} را بدست آوریم و حتی در صورت بدست آوردن \ELim{\rho_s} محاسبه انتگرال سطحی مشکل خواهد بود.
+\item
+  حل معادله لاپلاس برای دستیابی به جواب نیز غیرممکن یا بسیار مشکل است. در واقع جواب معادله لاپلاس باید شرایط زیر را برآورده کند
+\end{itemize}
+
+\ELdisp{V(x,0,z)\ELbr =0}
+\ELdisp{V\to\frac{Q}{4\pi\epsilon_0R},\ \text{\lr{as}}\ R\to0}
+
+\begin{itemize}
+\tightlist
+\item
+  در فواصل بسیار دور از بار \ELim{Q}، پتانسیل باید صفر باشد
+\end{itemize}
+
+\ELdisp{V(x,y,z)\ELbr =V(-x,y,z)}
+\ELdisp{V(x,y,z)\ELbr =V(x,y,-z)}
+
+\begin{itemize}
+\tightlist
+\item
+  می توان چنین مسئله ای را به سادگی با استفاده از روش تصاویر حل کرد.
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsubsection{بار نقطه ای و صفحه هادی}{بار نقطه ای و صفحه هادی}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  صفحه هادی را برمی‌داریم و آن را با بار نقطه‌ای تصویر \ELim{-Q} در \ELim{y=-d} جایگزین می‌کنیم
+\end{itemize}
+
+\ELfigure{m03-image-plane}{}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{V(x,y,z)\ELbr =\frac{Q}{4\pi\epsilon_0}\left(\frac{1}{R_+}-\frac{1}{R_-}\right)}
+\ELdisp{R_+\ELbr =\left[x^2+(y-d)^2+z^2\right]^{1/2},\qquad\ELbr  R_-\ELbr =\left[x^2+(y+d)^2+z^2\right]^{1/2}}
+
+\end{ELimportant}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  به سادگی می‌توان نشان داد که این جواب در معادله لاپلاس صدق کرده و شرایط مرزی را ارضا می‌کند. بنابراین این جواب یک جواب مسئله بوده و مطابق با قضیه یکتایی تنها جواب آن نیز می‌باشد.
+\item
+  با بدست آوردن پتانسیل، محاسبه میدان و توزیع بار سطحی روی هادی آسان خواهد بود.
+\end{itemize}
+
+\end{ELunit}
+
+\begin{ELremark}{}
+
+نکته‌ای که باید توجه شود این است که این روش نمی‌تواند برای محاسبه پتانسیل در نواحی \ELim{y<0} بکار رود.
+
+\end{ELremark}
+
+\ELhold
+
+\ELsubsection{بار خطی و استوانه هادی موازی}{بار خطی و استوانه هادی موازی}
+
+\begin{ELunit}
+
+\ELfigure{m03-line-cylinder}{}
+
+\begin{itemize}
+\tightlist
+\item
+  هدف یافتن پتانسیل در خارج استوانه هادی است.
+\item
+  تصویر باید یک بار خطی موازی در درون استوانه باشد تا سطح استوانه در \ELim{r=a} را یک سطح هم‌پتانسیل کند. هدف یافتن \ELim{d_i} و \ELim{\rho_i} است.
+\item
+  فرض می‌کنیم
+\end{itemize}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{\rho_i\ELbr =-\rho_\ell}
+
+\end{ELimportant}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  پتانسیل در فاصله \ELim{r} ناشی از بار خطی به چگالی \ELim{\rho_\ell} با فرض مرجع در \ELim{r_0} برابر است با
+\end{itemize}
+
+\ELdisp{V\ELbr =-\int_{r_0}^{r}E_r\,dr\ELbr =-\frac{\rho_\ell}{2\pi\epsilon_0}\int_{r_0}^{r}\frac1r\,dr\ELbr =\frac{\rho_\ell}{2\pi\epsilon_0}\ln\frac{r_0}{r}}
+
+\begin{itemize}
+\tightlist
+\item
+  پتانسیل در نقطه \ELim{M} روی سطح استوانه برابر است با
+\end{itemize}
+
+\ELdisp{\begin{aligned}V_M&=\frac{\rho_\ell}{2\pi\epsilon_0}\ln\frac{r_0}{r}-\frac{\rho_\ell}{2\pi\epsilon_0}\ln\frac{r_0}{r_i}\\&=\frac{\rho_\ell}{2\pi\epsilon_0}\ln\frac{r_i}{r}\end{aligned}}
+
+\begin{itemize}
+\tightlist
+\item
+  بنابراین سطوح هم‌پتانسیل به صورت زیر مشخص می‌شوند
+\end{itemize}
+
+\ELdisp{\frac{r_i}{r}\ELbr =\text{\lr{Constant}}}
+
+\ELfigure{m03-similar-triangles}{}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  اگر شرط \ELim{\dfrac{d_i}{a}=\dfrac ad} برقرار باشد، از تشابه بین دو مثلث \ELim{OMP_i} و \ELim{OPM} همواره نسبت \ELim{\dfrac{r_i}{r}} ثابت خواهد بود. بنابراین
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{d_i\ELbr =\frac{a^2}{d}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  به این ترتیب بار خطی \ELim{-\rho_\ell} می‌تواند جایگزین سطح استوانه‌ای هادی شود و پتانسیل و میدان الکتریکی را هر نقطه خارج استوانه بدست آورد.
+\end{itemize}
+
+\begin{ELremark}{}
+
+نکته‌ای که باید توجه شود این است که این روش نمی‌تواند برای محاسبه پتانسیل در نواحی درون استوانه هادی بکار رود.
+
+\end{ELremark}
+
+\end{ELjoin}
+
+\ELnextnum{3-3}
+
+\begin{ELexample}{}
+
+ظرفیت در واحد طول بین دو سیم هادی دایروی موازی بسیار بلند به شعاع \ELim{a} و فاصله \ELim{D} را بدست آورید.
+
+\ELfigure{m03-ex3}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  بارهای \ELim{+Q} و \ELim{-Q} را به ترتیب روی هادی های ۱ و ۲ قرار می دهیم.
+\item
+  با استفاده از روش تصاویر می توان سطوح هم پتانسیل سیم ها را با دو بارخطی \ELim{+\rho_\ell} و \ELim{-\rho_\ell} جایگزین کرد.
+\end{itemize}
+
+\ELdisp{V_2\ELbr =\frac{\rho_\ell}{2\pi\epsilon_0}\ln\frac ad}
+\ELdisp{V_1\ELbr =-\frac{\rho_\ell}{2\pi\epsilon_0}\ln\frac ad}
+\ELdisp{C\ELbr =\frac{\rho_\ell}{V_1-V_2}\ELbr =\frac{\pi\epsilon_0}{\ln(d/a)}}
+\ELdisp{d\ELbr =D-d_i\ELbr =D-\frac{a^2}{d}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  d\ELbr =\tfrac12\left(D+\sqrt{D^2-4a^2}\right)}
+\ELdisp{C\ELbr =\frac{\pi\epsilon_0}{\ln\left[(D/2a)+\sqrt{(D/2a)^2-1}\right]}\qquad\ELbr (\mathrm{F/m})}
+
+\begin{ELimportant}{}
+
+\ELdisp{C\ELbr =\frac{\pi\epsilon_0}{\cosh^{-1}(D/2a)}\qquad\ELbr (\mathrm{F/m})}
+
+\end{ELimportant}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELhold
+
+\ELsection{مسائل مقدار مرزی}{مسائل مقدار مرزی}
+
+\begin{ELunit}
+
+\ELfigure{m03-map-bvp}{}
+
+\begin{itemize}
+\tightlist
+\item
+  روش تصاویر در حل مسائلی که شامل بار آزاد در نزدیکی مرزهای هادی با شکل هندسی ساده هستند، کاربرد دارد.
+\item
+  اگر مسئله شامل دسته‌ای از هادی‌های نگه داشته شده در پتانسیل مشخص و بدون بار آزاد مجزا باشد، با روش تصاویر قابل حل نخواهد بود و نیاز به حل معادله لاپلاس است.
+\item
+  معادله لاپلاس، یک معادله دیفرانسیل جزئی است. مسائلی را که از معادلات دیفرانسیل جزئی با شرایط مرزی مشخص پیروی می‌کنند، \textbf{مسائل مقدار مرزی} گویند.
+\item
+  مسائل مقدار مرزی در توابع پتانسیل به دسته تقسیم می‌شوند
+
+  \begin{itemize}
+  \tightlist
+  \item
+    مسائل دیریشله: مقدار پتانسیل در تمام نقاط مرزها مشخص شده است.
+  \item
+    مسائل نویمن: مشتق عمودی پتانسیل در تمام مرزها مشخص است.
+  \item
+    مسائل مقدار مرزی ترکیبی: پتانسل در بعضی از نقاط مرزها و مشتق عمودی پتانسیل در بقیه نقاط مشخص شده است.
+  \end{itemize}
+\item
+  نحوه حل مسائل مقدار مرزی در حوزه الکتریسیته ساکن در دستگاه های مختصات مختلف و برای دستیابی به توزیع پتانسیل چگونه است؟
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsubsection{مختصات کارتزین}{مختصات کارتزین}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  معادله لاپلاس در مختصات کارتزین
+\end{itemize}
+
+\ELdisp{\frac{\partial^2V}{\partial x^2}+\frac{\partial^2V}{\partial y^2}+\frac{\partial^2V}{\partial z^2}\ELbr =0}
+
+\begin{itemize}
+\tightlist
+\item
+  با استفاده از روش جداسازی متغیرها
+\end{itemize}
+
+\ELdisp{V(x,y,z)\ELbr =X(x)Y(y)Z(z)}
+\ELdisp{Y(y)Z(z)\frac{d^2X(x)}{dx^2}+X(x)Z(z)\frac{d^2Y(y)}{dy^2}+X(x)Y(y)\frac{d^2Z(z)}{dz^2}\ELbr =0}
+\ELdisp{\underbrace{\frac{1}{X(x)}\frac{d^2X(x)}{dx^2}}_{-k_x^2}+\underbrace{\frac{1}{Y(y)}\frac{d^2Y(y)}{dy^2}}_{-k_y^2}+\underbrace{\frac{1}{Z(z)}\frac{d^2Z(z)}{dz^2}}_{-k_z^2}\ELbr =0}
+\ELdisp{k_x^2+k_y^2+k_z^2\ELbr =0}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{\frac{d^2X(x)}{dx^2}+k_x^2X(x)\ELbr =0\qquad\ELbr  \frac{d^2Y(y)}{dy^2}+k_y^2Y(y)\ELbr =0\qquad\ELbr  \frac{d^2Z(z)}{dz^2}+k_z^2Z(z)\ELbr =0}
+
+\end{ELimportant}
+
+\textbf{\lr{Possible Solutions of $X''(x)+k_x^2X(x)=0$}}
+
+\Needspace{10\baselineskip}
+\begin{ELltr}
+\begin{longtable}[c]{llll}
+\toprule\noalign{}
+\ELtablehead \ELim{k_x^2} & \ELim{k_x} & \ELim{X(x)} & \lr{Exponential forms of} \ELim{X(x)} \\\noalign{\vskip 4pt}
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\ELim{0} & \ELim{0} & \ELim{A_0x+B_0} & \\\noalign{\vskip 4pt}
+\ELim{+} & \ELim{k} & \ELim{A_1\sin kx+B_1\cos kx} & \ELim{C_1e^{jkx}+D_1e^{-jkx}} \\\noalign{\vskip 4pt}
+\ELim{-} & \ELim{jk} & \ELim{A_2\sinh kx+B_2\cosh kx} & \ELim{C_2e^{kx}+D_2e^{-kx}} \\\noalign{\vskip 4pt}
+\end{longtable}\end{ELltr}
+
+
+\ELnextnum{3-4}
+
+\begin{ELexample}{}
+
+دو صفحه هادی موازی زمین شده نیمه بینهایت به فاصله \ELim{d} از هم قرار دارند. صفحه سوم عمود بر این دو صفحه و جدا از آن ها در پتانسیل \ELim{V_0} نگه داشته می شود. توزیع پتانسیل را در ناحیه احاطه شده توسط این صفحات تعیین کنید.
+
+\ELfigure{m03-ex4}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  شرایط مرزی
+\end{itemize}
+
+\ELdisp{\text{\lr{(1)}}\ \ V(x,y,z)\ELbr =V(x,y)\qquad\ELbr \text{\lr{(2)}}\ \ V(0,y)\ELbr =V_0\qquad\ELbr \text{\lr{(3)}}\ \ V(\infty,y)\ELbr =0\qquad\ELbr \text{\lr{(4)}}\ \ V(x,0)\ELbr =0\qquad\ELbr \text{\lr{(5)}}\ \ V(x,b)\ELbr =0}
+
+\ELdisp{\text{\lr{(1)}}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \frac{\partial V}{\partial z}\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  Z(z)\ELbr =B_0}
+\ELdisp{\left.\begin{aligned}k_z^2&=-\frac{1}{Z(z)}\frac{d^2Z(z)}{dz^2}=0\\k_x^2+k_y^2+k_z^2&=0\end{aligned}\right\}\quad\ELbr  k_y^2\ELbr =-k_x^2\ELbr =k^2\qquad\ELbr (k\ \text{\lr{real}})}
+\ELdisp{k_x\ELbr =jk\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  X(x)\ELbr =C_2e^{kx}+D_2e^{-kx}\quad\ELbr \overset{(3)}{\Longrightarrow}\quad\ELbr  X(x)\ELbr =D_2e^{-kx}}
+\ELdisp{k_y\ELbr =k\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  Y(y)\ELbr =A_1\sin ky+B_1\cos ky\quad\ELbr \overset{(4)}{\Longrightarrow}\quad\ELbr  Y(y)\ELbr =A_1\sin ky}
+\ELdisp{\begin{aligned}V_n(x,y)&=(B_0D_2A_1)e^{-kx}\sin ky\\&=C_ne^{-kx}\sin ky\end{aligned}}
+\ELdisp{\overset{(5)}{\Longrightarrow}\quad\ELbr  V_n(x,b)\ELbr =C_ne^{-kx}\sin kb\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \sin kb\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  kb\ELbr =n\pi}
+\ELdisp{k\ELbr =\frac{n\pi}{b},\qquad\ELbr  n\ELbr =1,2,3,\ldots}
+\ELdisp{V_n(x,y)\ELbr =C_ne^{-n\pi x/b}\sin\frac{n\pi}{b}y}
+
+\begin{itemize}
+\tightlist
+\item
+  رابطه فوق در معادله لاپلاس صدق می کند اما به تنهایی نمی تواند شرط مرزی دوم در \ELim{x=0} را برای همه \ELim{y} ها از \ELim{0} تا \ELim{b} ارضا کند.
+\item
+  از آنجا که معادله لاپلاس یک معادله دیفرانسیل جزیی خطی است، ترکیب \ELim{V_n} هایی به فرم فوق و به ازای مقادیر مختلف \ELim{n} نیز یک پاسخ خواهد بود.
+\end{itemize}
+
+\ELdisp{V(x,y)\ELbr =\sum_{n=1}^{\infty}V_n(x,y)}
+
+\ELdisp{\overset{(2)}{\Longrightarrow}\quad\ELbr \begin{aligned}V(0,y)&=\sum_{n=1}^{\infty}V_n(0,y)=\sum_{n=1}^{\infty}C_n\sin\frac{n\pi}{b}y\\&=V_0,\qquad 0<y<b\end{aligned}}
+
+\begin{itemize}
+\tightlist
+\item
+  رابطه فوق بسط سری فوریه یک تابع متناوب و فرد است که در بازه \ELim{0<y<b} مقدار آن \ELim{V_0} می باشد.
+\end{itemize}
+
+\ELfigure{m03-ex4-square}{}
+
+\begin{ELremark}{یادآوری}
+
+\ELdisp{f(t)\ELbr =a_0+\sum_{n=1}^{\infty}\left[a_n\cos\left(\frac{2n\pi}{T}t\right)+b_n\sin\left(\frac{2n\pi}{T}t\right)\right]}
+\ELdisp{b_n\ELbr =\frac2T\int_{-T/2}^{T/2}f(t)\sin\left(\frac{2n\pi}{T}t\right)dt\qquad\ELbr  a_n\ELbr =\frac2T\int_{-T/2}^{T/2}f(t)\cos\left(\frac{2n\pi}{T}t\right)dt\qquad\ELbr  a_0\ELbr =\frac1T\int_{-T/2}^{T/2}f(t)\,dt}
+
+\end{ELremark}
+
+\ELdisp{\begin{aligned}C_n&=\frac{2}{2b}\left[\int_0^bV_0\sin\left(\frac{2n\pi}{2b}y\right)dy+\int_b^{2b}-V_0\sin\left(\frac{2n\pi}{2b}y\right)dy\right]\\&=\frac{V_0}{n\pi}(-2\cos n\pi+2)=\begin{cases}\dfrac{4V_0}{n\pi}&\text{\lr{if }}n\text{\lr{ is odd}}\\\noalign{\vskip 2mm}0&\text{\lr{if }}n\text{\lr{ is even}}\end{cases}\end{aligned}}
+
+\begin{ELimportant}{}
+
+\ELdisp{\begin{aligned}V(x,y)&=\sum_{n=1}^{\infty}C_ne^{-n\pi x/b}\sin\frac{n\pi}{b}y\\&=\frac{4V_0}{\pi}\sum_{n=\text{\lr{odd}}}^{\infty}\frac1ne^{-n\pi x/b}\sin\frac{n\pi}{b}y,\end{aligned}}
+\ELdisp{n\ELbr =1,3,5,\ldots,\qquad\ELbr  x>0\quad\ELbr \text{\lr{and}}\quad\ELbr  0<y<b}
+
+\end{ELimportant}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELhold
+
+\ELsubsection{مختصات استوانه ای}{مختصات استوانه ای}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  معادله لاپلاس در مختصات استوانه ای
+\end{itemize}
+
+\ELdisp{\frac1r\frac{\partial}{\partial r}\left(r\frac{\partial V}{\partial r}\right)+\frac{1}{r^2}\frac{\partial^2V}{\partial\phi^2}+\frac{\partial^2V}{\partial z^2}\ELbr =0}
+
+\begin{itemize}
+\tightlist
+\item
+  با فرض بزرگ بودن بعد طولی در مقایسه با شعاع، در هندسه استوانه ای، پتانسیل مستقل از \ELim{z} است.
+\end{itemize}
+
+\ELdisp{\frac1r\frac{\partial}{\partial r}\left(r\frac{\partial V}{\partial r}\right)+\frac{1}{r^2}\frac{\partial^2V}{\partial\phi^2}\ELbr =0}
+
+\begin{itemize}
+\tightlist
+\item
+  با استفاده از روش جداسازی متغیرها
+\end{itemize}
+
+\ELdisp{V(r,\phi)\ELbr =R(r)\Phi(\phi)}
+\ELdisp{\underbrace{\frac{r}{R(r)}\frac{d}{dr}\left[r\frac{dR(r)}{dr}\right]}_{k^2}+\underbrace{\frac{1}{\Phi(\phi)}\frac{d^2\Phi(\phi)}{d\phi^2}}_{-k^2}\ELbr =0}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  معادله دیفرانسیل برحسب \ELim{\phi}
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\frac{d^2\Phi(\phi)}{d\phi^2}+k^2\Phi(\phi)\ELbr =0}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{وقتی \ELim{k\neq0}}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    در شکل‌بندی‌های استوانه‌ای مدور، توابع پتانسیل و در نتیجه \ELim{\Phi(\phi)} نسبت به \ELim{\phi} متناوب بوده و توابع هذلولوی بکار نمی‌روند.
+
+    \begin{itemize}
+    \tightlist
+    \item
+      اگر دامنه \ELim{\phi} محدود نشده باشد، \ELim{k} باید عدد صحیح باشد (\ELim{k=n})
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{\Phi(\phi)\ELbr =A_\phi\sin n\phi+B_\phi\cos n\phi}
+
+\begin{itemize}
+\tightlist
+\item
+  معادله دیفرانسیل برحسب \ELim{r} (معادله اویلر)
+\end{itemize}
+
+\ELdisp{r^2\frac{d^2R(r)}{dr^2}+r\frac{dR(r)}{dr}-n^2R(r)\ELbr =0}
+\ELdisp{R(r)\ELbr =A_rr^n+B_rr^{-n}}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{V_n(r,\phi)\ELbr =r^n(A_n\sin n\phi+B_n\cos n\phi)+r^{-n}(A'_n\sin n\phi+B'_n\cos n\phi),\qquad\ELbr  n\neq0}
+
+\end{ELimportant}
+
+\begin{ELunit}
+
+\begin{itemize}
+\item
+  هنگامیکه ناحیه مورد نظر شامل \ELim{r=0} باشد، جملات شامل \ELim{r^{-n}} و هنگامیکه ناحیه مورد نظر شامل بی‌نهایت باشد، جملات شامل \ELim{r^n} نمی‌توانند وجود داشته باشند.
+\item
+  \textbf{وقتی \ELim{k=0}}
+\end{itemize}
+
+\ELdisp{\frac{d^2\Phi(\phi)}{d\phi^2}\ELbr =0}
+\ELdisp{\Phi(\phi)\ELbr =A_0\phi+B_0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \Phi(\phi)\ELbr =B_0}
+
+\begin{itemize}
+\tightlist
+\item
+  اگر هیچ تغییرات پیرامونی وجود نداشته باشد
+\end{itemize}
+
+\ELdisp{\frac{d}{dr}\left[r\frac{dR(r)}{dr}\right]\ELbr =0}
+\ELdisp{R(r)\ELbr =C_0\ln r+D_0}
+
+\end{ELunit}
+
+\ELnextnum{3-5}
+
+\begin{ELexample}{}
+
+یک کابل هم محور بسیار بلند را در نظر بگیرید. شعاع هادی داخلی \ELim{a} و در پتانسیل \ELim{V_0} نگه داشته شده است. هادی خارجی دارای شعاع \ELim{b} بوده و زمین شده است. توزیع پتانسیل در فضای بین دو هادی را بدست آورید.
+
+\ELfigure{m03-ex5}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  با توجه به بلند بودن کابل، وابستگی به \ELim{z} وجود ندارد.
+\item
+  با توجه به تقارن، وابستگی به \ELim{\phi} وجود ندارد (\ELim{k=0}).
+\end{itemize}
+
+\ELdisp{V(r)\ELbr =C_1\ln r+C_2}
+\ELdisp{V(b)\ELbr =0,\qquad\ELbr  V(a)\ELbr =V_0}
+\ELdisp{C_1\ELbr =-\frac{V_0}{\ln(b/a)},\qquad\ELbr  C_2\ELbr =\frac{V_0\ln b}{\ln(b/a)}\qquad\ELbr \ELbr \Longrightarrow\qquad\ELbr  V(r)\ELbr =\frac{V_0}{\ln(b/a)}\ln\left(\frac br\right)}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELnextnum{3-6}
+
+\begin{ELexample}{}
+
+دو صفحه هادی نیمه بینهایت مطابق شکل زیر در پتانسیل های \ELim{V_0} و صفر نگه داشته شده اند. با فرض اینکه طول این صفحات در امتداد محور \ELim{z} بسیار بلند باشد، توزیع پتانسیل را در کل فضا بدست آورید.
+
+\ELfigure{m03-ex6}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  با توجه به بلند بودن صفحات، وابستگی به \ELim{z} وجود ندارد.
+\item
+  وابستگی به \ELim{r} وجود ندارد (\ELim{k=0}).
+\end{itemize}
+
+\ELdisp{\Phi(\phi)\ELbr =A_0\phi+B_0}
+\ELdisp{V(\phi)\ELbr =\begin{cases}0&\phi=0,2\pi\\V_0&\phi=\alpha\end{cases}}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{0\leq\phi\leq\alpha}
+\end{itemize}
+
+\ELdisp{V(\phi)\ELbr =\frac{V_0}{\alpha}\phi}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{\alpha\leq\phi\leq2\pi}
+\end{itemize}
+
+\ELdisp{V(\phi)\ELbr =\frac{V_0}{2\pi-\alpha}(2\pi-\phi)}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELnextnum{3-7}
+
+\begin{ELexample}{}
+
+یک لوله هادی استوانه ای نازک بسیار بلند به شعاع \ELim{b} به دو بخش تقسیم شده است. نیمه بالایی در پتانسیل \ELim{V_0} و نیمه پایینی در پتانسیل \ELim{-V_0} نگه داشته شده است. توزیع پتانسیل درون و بیرون لوله را بدست آورید.
+
+\ELfigure{m03-ex7}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  با توجه به بلند بودن لوله وابستگی به \ELim{z} وجود ندارد.
+\end{itemize}
+
+\ELdisp{V_n(r,\phi)\ELbr =r^n(A_n\sin n\phi+B_n\cos n\phi)+r^{-n}(A'_n\sin n\phi+B'_n\cos n\phi)}
+\ELdisp{V(b,\phi)\ELbr =\begin{cases}V_0&\text{\lr{for }}0<\phi<\pi\\-V_0&\text{\lr{for }}\pi<\phi<2\pi\end{cases}}
+
+\begin{itemize}
+\tightlist
+\item
+  درون لوله (\ELim{r<b})
+
+  \begin{itemize}
+  \tightlist
+  \item
+    با توجه به اینکه ناحیه مورد نظر شامل \ELim{r=0} است، جملات شامل \ELim{r^{-n}} نمی‌توانند وجود داشته باشند.
+  \item
+    با توجه به اینکه \ELim{V(r,\phi)} یک تابع فرد از \ELim{\phi} است، بنابراین
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{V_n(r,\phi)\ELbr =A_nr^n\sin n\phi}
+
+\begin{itemize}
+\tightlist
+\item
+  عبارت فوق به تنهایی نمی تواند شرایط مرزی را برآورده کند. بنابراین
+\end{itemize}
+
+\ELdisp{\begin{aligned}V(r,\phi)&=\sum_{n=1}^{\infty}V_n(r,\phi)\\&=\sum_{n=1}^{\infty}A_nr^n\sin n\phi\end{aligned}}
+\ELdisp{\sum_{n=1}^{\infty}A_nb^n\sin n\phi\ELbr =\begin{cases}V_0&\text{\lr{for }}0<\phi<\pi\\-V_0&\text{\lr{for }}\pi<\phi<2\pi\end{cases}}
+
+\begin{itemize}
+\tightlist
+\item
+  رابطه فوق بسط سری فوریه یک تابع متناوب و فرد است که در بازه \ELim{0<\phi<\pi} مقدار آن \ELim{V_0} و در بازه \ELim{\pi<\phi<2\pi} مقدار آن \ELim{-V_0} می باشد.
+\end{itemize}
+
+\ELdisp{A_n\ELbr =\begin{cases}\dfrac{4V_0}{n\pi b^n}&\text{\lr{if }}n\text{\lr{ is odd}}\\\noalign{\vskip 2mm}0&\text{\lr{if }}n\text{\lr{ is even}}\end{cases}\qquad\ELbr \qquad\ELbr  V(r,\phi)\ELbr =\frac{4V_0}{\pi}\sum_{n=\text{\lr{odd}}}^{\infty}\frac1n\left(\frac rb\right)^n\sin n\phi,\qquad\ELbr  r<b}
+
+\begin{itemize}
+\tightlist
+\item
+  بیرون لوله (\ELim{r>b})
+
+  \begin{itemize}
+  \tightlist
+  \item
+    با توجه به اینکه ناحیه مورد نظر شامل \ELim{r\to\infty} است، جملات شامل \ELim{r^n} نمی‌توانند وجود داشته باشند.
+  \item
+    \ELim{V(r,\phi)} یک تابع فرد از \ELim{\phi} است.
+  \item
+    یک عبارت به تنهایی نمی تواند شرایط مرزی را برآورده کند. بنابراین
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{\begin{aligned}V(r,\phi)&=\sum_{n=1}^{\infty}V_n(r,\phi)\\&=\sum_{n=1}^{\infty}B'_nr^{-n}\sin n\phi\end{aligned}\qquad\ELbr \begin{aligned}V(b,\phi)&=\sum_{n=1}^{\infty}B'_nb^{-n}\sin n\phi\\&=\begin{cases}V_0&\text{\lr{for }}0<\phi<\pi\\-V_0&\text{\lr{for }}\pi<\phi<2\pi\end{cases}\end{aligned}}
+\ELdisp{B'_n\ELbr =\begin{cases}\dfrac{4V_0b^n}{n\pi}&\text{\lr{if }}n\text{\lr{ is odd}}\\\noalign{\vskip 2mm}0&\text{\lr{if }}n\text{\lr{ is even}}\end{cases}}
+
+\begin{ELimportant}{}
+
+\ELdisp{V(r,\phi)\ELbr =\frac{4V_0}{\pi}\sum_{n=\text{\lr{odd}}}^{\infty}\frac1n\left(\frac br\right)^n\sin n\phi,\qquad\ELbr  r>b}
+
+\end{ELimportant}
+
+\end{ELsolution}
+
+\end{ELexample}

@@ -1,0 +1,743 @@
+\ELhold
+
+\ELsection{Course Outline}{Course Outline}
+
+\begin{ELunit}
+
+\ELfigure{m04-course-outline}{}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{Steady Electric Currents}{Steady Electric Currents}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  In the previous chapters we dealt with electrostatic problems due to electric charges at rest.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    In this chapter we turn to moving electric charges, which produce electric current.
+  \end{itemize}
+\item
+  Electric currents due to the motion of free charges are divided into three kinds
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Conduction currents:} produced in conductors and semiconductors by the drift motion of electrons or holes.
+  \item
+    \textbf{Electrolytic currents:} due to the motion of positive and negative ions
+  \item
+    \textbf{Convection currents:} due to the motion of electrons or ions in vacuum
+  \end{itemize}
+\item
+  In this chapter we concentrate on conduction currents, which are governed by Ohm's law.
+\end{itemize}
+
+\ELfigure{m04-map}{}
+
+\begin{itemize}
+\tightlist
+\item
+  What is the concept of the \textbf{volume current density}, and what is the relation for the \textbf{convection current density}?
+\item
+  What is the relation for the \textbf{conduction current density}?
+\item
+  What is the point form of \textbf{Ohm's law}?
+\item
+  What is the \textbf{equation of continuity}, and how is \textbf{Kirchhoff's current law} derived from it?
+\item
+  What is \textbf{Joule's law}, which gives the power dissipated by a current flowing in a conducting body?
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{Current Density and Ohm's Law}{Current Density and Ohm’s Law}
+
+\begin{ELunit}
+
+\ELfigure{m04-current-element}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Consider the steady motion of charge carriers, each with charge \ELim{q}, moving with velocity \ELim{\vect{u}} across a small surface element \ELim{\Delta s}
+\item
+  If \ELim{N} is the number of charge carriers per unit volume, the charge passing through the surface \ELim{\Delta s} in the time \ELim{\Delta t} is
+\end{itemize}
+
+\ELdisp{\Delta Q\ELbr =Nq\vect{u}\cdot\uvec{n}\,\Delta s\,\Delta t\qquad\ELbr (\mathrm{C})}
+
+\begin{itemize}
+\tightlist
+\item
+  Since current is the time rate of change of charge, we have
+\end{itemize}
+
+\ELdisp{\Delta I\ELbr =\frac{\Delta Q}{\Delta t}\ELbr =Nq\vect{u}\cdot\uvec{n}\,\Delta s\ELbr =Nq\vect{u}\cdot\Delta\vect{s}\qquad\ELbr (\mathrm{A})}
+
+\begin{itemize}
+\tightlist
+\item
+  We define the volume current density, in amperes per square metre, as follows
+\end{itemize}
+
+\ELdisp{\vect{J}\ELbr =Nq\vect{u}\qquad\ELbr (\mathrm{A/m^2})}
+
+\end{ELunit}
+
+\begin{ELimportant}{Convection current density}
+
+\ELdisp{\vect{J}\ELbr =\rho\vect{u}\qquad\ELbr (\mathrm{A/m^2})}
+
+\end{ELimportant}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  Therefore
+\end{itemize}
+
+\ELdisp{\Delta I\ELbr =\vect{J}\cdot\Delta\vect{s}}
+
+\begin{itemize}
+\tightlist
+\item
+  Thus the total current flowing through an arbitrary surface \ELim{S} is
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{I\ELbr =\int_S\vect{J}\cdot d\vect{s}\qquad\ELbr (\mathrm{A})}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  Conduction currents are the result of the drift motion of charge carriers under the influence of an applied electric field.
+\item
+  For most conducting materials the average drift velocity is directly proportional to the electric field intensity.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    For metallic conductors we have
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{\vect{u}\ELbr =-\mu_e\vect{E}\qquad\ELbr (\mathrm{m/s})}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{\mu_e}: electron mobility, in \ELim{\mathrm{m^2/V\cdot s}}
+\end{itemize}
+
+\ELdisp{\vect{J}\ELbr =-\rho_e\mu_e\vect{E}}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{\rho_e=-Ne}: the volume charge density of the drifting electrons, a negative quantity
+\end{itemize}
+
+\begin{ELimportant}{Point form of Ohm's law}
+
+\ELdisp{\vect{J}\ELbr =\sigma\vect{E}\qquad\ELbr (\mathrm{A/m^2})}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\item
+  \ELim{\sigma=-\rho_e\mu_e}: a fundamental parameter of the medium, called the conductivity
+\item
+  The unit of conductivity is \ELim{\mathrm{A/V\cdot m}}, or siemens per metre. The reciprocal of conductivity is called resistivity, in \ELim{\Omega\cdot\mathrm{m}}.
+\item
+  Obtaining the relation between the voltage and the current of a piece of homogeneous material of conductivity \ELim{\sigma}, length \ELim{\ell} and uniform cross-section \ELim{S} from the point form of Ohm's law
+\end{itemize}
+
+\ELfigure{m04-resistor}{}
+
+\ELdisp{\left.\begin{aligned}V_{12}=E\ell\quad&\Longrightarrow\quad E=\frac{V_{12}}{\ell}\\I=\int_S\vect{J}\cdot d\vect{s}=JS\quad&\Longrightarrow\quad J=\frac IS\end{aligned}\right\}\quad\ELbr \frac IS\ELbr =\sigma\frac{V_{12}}{\ell}}
+\ELdisp{V_{12}\ELbr =\left(\frac{\ell}{\sigma S}\right)I\ELbr =RI}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{R\ELbr =\frac{\ell}{\sigma S}\qquad\ELbr (\Omega)}
+\ELdisp{G\ELbr =\frac1R\ELbr =\sigma\frac S\ell\qquad\ELbr (\mathrm{S})}
+
+\end{ELimportant}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{G}: conductance, the reciprocal of resistance, in mhos or siemens
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{Equation of Continuity and Kirchhoff's Current Law}{Equation of Continuity and Kirchhoff’s Current Law}
+
+\begin{ELunit}
+
+\ELfigure{m04-map-continuity}{}
+
+\begin{itemize}
+\tightlist
+\item
+  The principle of conservation of charge is one of the fundamental postulates of physics.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Electric charge can be neither created nor destroyed.
+  \end{itemize}
+\item
+  Consider an arbitrary volume \ELim{V} bounded by the surface \ELim{S}, containing a net charge \ELim{Q}. If a net current \ELim{I} flows out of the region through the surface, the charge in the volume must decrease at a rate equal to the current. Conversely, if a net current flows into the region through the surface, the charge in the volume must increase at a rate equal to the current.
+\item
+  The current leaving the region is the total outward flux of the current density vector through the surface \ELim{S}
+\end{itemize}
+
+\ELdisp{I\ELbr =\oint_S\vect{J}\cdot d\vect{s}\ELbr =-\frac{dQ}{dt}\ELbr =-\frac{d}{dt}\int_V\rho\,dv}
+\ELdisp{\int_V\nabla\cdot\vect{J}\,dv\ELbr =-\int_V\frac{\partial\rho}{\partial t}\,dv}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  Since the above equation must hold regardless of the choice of \ELim{V}
+\end{itemize}
+
+\begin{ELimportant}{Equation of continuity}
+
+\ELdisp{\nabla\cdot\vect{J}\ELbr =-\frac{\partial\rho}{\partial t}\qquad\ELbr (\mathrm{A/m^3})}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  If there are no time variations
+\end{itemize}
+
+\ELdisp{\nabla\cdot\vect{J}\ELbr =0}
+
+\begin{ELimportant}{Kirchhoff's current law}
+
+\ELdisp{\oint_S\vect{J}\cdot d\vect{s}\ELbr =0}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  We said earlier that charges placed inside a conductor move to its surface, so that at equilibrium \ELim{\rho=0} inside the conductor. We now want to prove this statement
+\end{itemize}
+
+\ELdisp{\left.\begin{aligned}\sigma\nabla\cdot\vect{E}&=-\frac{\partial\rho}{\partial t}\\\nabla\cdot\vect{E}&=\rho/\epsilon\end{aligned}\right\}\quad\ELbr \frac{\partial\rho}{\partial t}+\frac\sigma\epsilon\rho\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \rho\ELbr =\rho_0e^{-(\sigma/\epsilon)t}\qquad\ELbr (\mathrm{C/m^3})}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{\rho_0}: initial charge density
+\item
+  The above equation states that the charge density at a given point decreases exponentially with time.
+\item
+  The initial density decays to \ELim{1/e}, or \ELim{36.8\%}, of its value in a time equal to \ELim{\tau=\epsilon/\sigma}.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    For a good conductor such as copper, \ELim{\tau=1.52\times10^{-19}\,\mathrm{s}}.
+  \item
+    For a good insulator this time may be hours or days.
+  \end{itemize}
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{Power Dissipation and Joule's Law}{Power Dissipation and Joule’s Law}
+
+\begin{ELunit}
+
+\ELfigure{m04-map-joule}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Under the influence of an electric field, the free electrons in a conductor move and collide with the atoms of the crystal lattice. Energy is thus transferred from the electric field to the vibrating atoms.
+\item
+  The work done by the electric field in moving a charge \ELim{q} through the distance \ELim{\Delta\ell} is
+\end{itemize}
+
+\ELdisp{\Delta W\ELbr =\vect{F}\cdot\Delta\vect{\ell}\ELbr =q\vect{E}\cdot\Delta\vect{\ell}}
+
+\begin{itemize}
+\tightlist
+\item
+  This work corresponds to the power
+\end{itemize}
+
+\ELdisp{p\ELbr =\lim_{\Delta t\to0}\frac{\Delta w}{\Delta t}\ELbr =q\vect{E}\cdot\vect{u}}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{\vect{u}}: the velocity of the charge carriers
+\end{itemize}
+
+\ELdisp{dp\ELbr =\rho\,dv\,\vect{E}\cdot\vect{u}}
+\ELdisp{dP\ELbr =\vect{E}\cdot\vect{J}\,dv}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  For a given volume \ELim{V} the total power converted into heat is
+\end{itemize}
+
+\begin{ELimportant}{Joule's law}
+
+\ELdisp{P\ELbr =\int_V\vect{E}\cdot\vect{J}\,dv\qquad\ELbr (\mathrm{W})}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  In a conductor of constant cross-section we have
+\end{itemize}
+
+\ELdisp{P\ELbr =\int_LE\,d\ell\int_SJ\,ds\ELbr =VI}
+
+\begin{ELimportant}{}
+
+\ELdisp{P\ELbr =I^2R\qquad\ELbr (\mathrm{W})}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  which is the familiar relation for ohmic power and gives the heat dissipated in the resistance \ELim{R}.
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{Boundary Conditions for Current Density}{Boundary Conditions for Current Density}
+
+\begin{ELunit}
+
+\ELfigure{m04-map-boundary}{}
+
+\begin{itemize}
+\tightlist
+\item
+  When a current crosses the interface between two media of different conductivities obliquely, the current density vector changes in both direction and magnitude.
+\item
+  The governing equations for the steady current density are
+\end{itemize}
+
+\end{ELunit}
+
+\textbf{Governing Equations for Steady Current Density}
+
+\Needspace{8\baselineskip}
+\begin{ELltr}
+\begin{longtable}[c]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\ELtablehead \begin{minipage}[b]{\linewidth}\raggedright
+Differential Form
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Integral Form
+\end{minipage} \\\noalign{\vskip 4pt}
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\ELim{\nabla\cdot\vect{J}=0} & \ELim{\oint_S\vect{J}\cdot d\vect{s}=0} \\\noalign{\vskip 4pt}
+\ELim{\nabla\times\left(\dfrac{\vect{J}}{\sigma}\right)=0} & \ELim{\oint_C\dfrac1\sigma\vect{J}\cdot\dif\vect{\ell}=0} \\\noalign{\vskip 4pt}
+\end{longtable}\end{ELltr}
+
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  The boundary conditions are as follows
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\nabla\cdot\vect{J}\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  J_{1n}\ELbr =J_{2n}\qquad\ELbr (\mathrm{A/m^2})}
+\ELdisp{\nabla\times(\vect{J}/\sigma)\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \frac{J_{1t}}{J_{2t}}\ELbr =\frac{\sigma_1}{\sigma_2}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  When a steady current crosses the boundary between two different lossy dielectrics
+\end{itemize}
+
+\ELdisp{J_{1n}\ELbr =J_{2n}\to\sigma_1E_{1n}\ELbr =\sigma_2E_{2n}}
+\ELdisp{D_{1n}-D_{2n}\ELbr =\rho_s\to\epsilon_1E_{1n}-\epsilon_2E_{2n}\ELbr =\rho_s}
+\ELdisp{\rho_s\ELbr =\left(\epsilon_1\frac{\sigma_2}{\sigma_1}-\epsilon_2\right)E_{2n}\ELbr =\left(\epsilon_1-\epsilon_2\frac{\sigma_1}{\sigma_2}\right)E_{1n}}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{E_{1n}=\uvec{n2}\cdot\vect{E}_1} and \ELim{E_{2n}=\uvec{n2}\cdot\vect{E}_2}
+\item
+  If medium 2 is a much better conductor than medium 1
+\end{itemize}
+
+\ELdisp{\rho_s\ELbr =\epsilon_1E_{1n}\ELbr =D_{1n}}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  which is the boundary condition of a conductor.
+\end{itemize}
+
+\ELnextnum{4-1}
+
+\begin{ELexample}{}
+
+A potential difference \ELim{\mathcal{V}} is applied to a parallel-plate capacitor of area \ELim{S}. The space between the conducting plates is filled with two lossy dielectric materials of thicknesses \ELim{d_1} and \ELim{d_2}, permittivities \ELim{\epsilon_1} and \ELim{\epsilon_2}, and conductivities \ELim{\sigma_1} and \ELim{\sigma_2}. Find
+
+\begin{itemize}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\alph{enumi})}
+  \tightlist
+  \item
+    the electric field intensity in the two media
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\alph{enumi})}
+  \setcounter{enumi}{1}
+  \tightlist
+  \item
+    the current density in the two media
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\alph{enumi})}
+  \setcounter{enumi}{2}
+  \tightlist
+  \item
+    the surface charge densities on the conducting plates and at the interface of the two dielectrics
+  \end{enumerate}
+\end{itemize}
+
+\ELfigure{m04-ex1}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\alph{enumi})}
+  \tightlist
+  \item
+  \end{enumerate}
+\end{itemize}
+
+\ELdisp{J_1\ELbr =J_2\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \begin{aligned}\mathcal{V}&=E_1d_1+E_2d_2\\\sigma_1E_1&=\sigma_2E_2\end{aligned}}
+\ELdisp{E_1\ELbr =\frac{\sigma_2\mathcal{V}}{\sigma_2d_1+\sigma_1d_2}\qquad\ELbr  E_2\ELbr =\frac{\sigma_1\mathcal{V}}{\sigma_2d_1+\sigma_1d_2}}
+
+\begin{itemize}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\alph{enumi})}
+  \setcounter{enumi}{1}
+  \tightlist
+  \item
+  \end{enumerate}
+\end{itemize}
+
+\ELdisp{J_1\ELbr =J_2\ELbr =\sigma_1E_1\ELbr =\sigma_2E_2\ELbr =\frac{\sigma_1\sigma_2\mathcal{V}}{\sigma_2d_1+\sigma_1d_2}}
+
+\begin{itemize}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\alph{enumi})}
+  \setcounter{enumi}{2}
+  \tightlist
+  \item
+  \end{enumerate}
+\end{itemize}
+
+\ELdisp{\uvec{n}\cdot\vect{E}_1\ELbr =\frac{\rho_{s1}}{\epsilon_1}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \rho_{s1}\ELbr =\epsilon_1E_1\ELbr =\frac{\epsilon_1\sigma_2\mathcal{V}}{\sigma_2d_1+\sigma_1d_2}}
+\ELdisp{\uvec{n}\cdot\vect{E}_2\ELbr =\frac{\rho_{s2}}{\epsilon_2}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \rho_{s2}\ELbr =-\epsilon_2E_2\ELbr =-\frac{\epsilon_2\sigma_1\mathcal{V}}{\sigma_2d_1+\sigma_1d_2}}
+\ELdisp{\rho_{si}\ELbr =\left(\epsilon_1-\epsilon_2\frac{\sigma_1}{\sigma_2}\right)E_{1n}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \begin{aligned}\rho_{si}&=\left(\epsilon_2\frac{\sigma_1}{\sigma_2}-\epsilon_1\right)\frac{\sigma_2\mathcal{V}}{\sigma_2d_1+\sigma_1d_2}\\&=\frac{(\epsilon_2\sigma_1-\epsilon_1\sigma_2)\mathcal{V}}{\sigma_2d_1+\sigma_1d_2}\qquad(\mathrm{C/m^2})\end{aligned}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\end{ELjoin}
+
+\ELhold
+
+\ELsection{Resistance Calculations}{Resistance Calculations}
+
+\begin{ELunit}
+
+\ELfigure{m04-map-resistance}{}
+
+\begin{itemize}
+\item
+  How is the \textbf{leakage resistance} of capacitive structures computed?
+\item
+  How is the resistance of various structures computed?
+\item
+  The capacitance between two conductors separated by a dielectric medium is
+\end{itemize}
+
+\ELdisp{C\ELbr =\frac QV\ELbr =\frac{\oint_S\vect{D}\cdot d\vect{s}}{-\int_L\vect{E}\cdot\dif\vect{\ell}}\ELbr =\frac{\oint_S\epsilon\vect{E}\cdot d\vect{s}}{-\int_L\vect{E}\cdot\dif\vect{\ell}}}
+
+\begin{itemize}
+\tightlist
+\item
+  The surface integral is taken over a surface enclosing the positive conductor, and the line integral from the negative conductor to the positive conductor.
+\item
+  If the dielectric medium is lossy, a current flows from the positive to the negative conductor. The resistance between the conductors (the leakage resistance) is
+\end{itemize}
+
+\ELdisp{R\ELbr =\frac VI\ELbr =\frac{-\int_L\vect{E}\cdot\dif\vect{\ell}}{\oint_S\vect{J}\cdot d\vect{s}}\ELbr =\frac{-\int_L\vect{E}\cdot\dif\vect{\ell}}{\oint_S\sigma\vect{E}\cdot d\vect{s}}}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  If the permittivity and the conductivity have the same space dependence (\ELim{\epsilon(x,y,z)=k\sigma(x,y,z)}), or if the dielectric medium is homogeneous (\ELim{\epsilon} and \ELim{\sigma} independent of the space coordinates)
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{RC\ELbr =\frac CG\ELbr =\frac\epsilon\sigma}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\ELnextnum{4-2}
+
+\begin{ELexample}{}
+
+Find the leakage resistance per unit length
+
+\begin{itemize}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\alph{enumi})}
+  \tightlist
+  \item
+    between the inner and outer conductors of a coaxial cable with inner-conductor radius \ELim{a}, outer-conductor radius \ELim{b} and a dielectric of conductivity \ELim{\sigma}
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\alph{enumi})}
+  \setcounter{enumi}{1}
+  \tightlist
+  \item
+    of a two-wire transmission line consisting of two wires of radius \ELim{a} separated by \ELim{D}, in a medium of conductivity \ELim{\sigma}
+  \end{enumerate}
+\end{itemize}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\alph{enumi})}
+  \tightlist
+  \item
+    The capacitance per unit length of a coaxial cable
+  \end{enumerate}
+\end{itemize}
+
+\ELdisp{C_1\ELbr =\frac{2\pi\epsilon}{\ln(b/a)}\qquad\ELbr (\mathrm{F/m})}
+
+\begin{itemize}
+\tightlist
+\item
+  The leakage resistance per unit length
+\end{itemize}
+
+\ELdisp{R_1\ELbr =\frac\epsilon\sigma\left(\frac{1}{C_1}\right)\ELbr =\frac{1}{2\pi\sigma}\ln\left(\frac ba\right)\qquad\ELbr (\Omega\cdot\mathrm{m})}
+
+\begin{itemize}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\alph{enumi})}
+  \setcounter{enumi}{1}
+  \tightlist
+  \item
+    The capacitance per unit length of a two-wire transmission line
+  \end{enumerate}
+\end{itemize}
+
+\ELdisp{C'_1\ELbr =\frac{\pi\epsilon}{\cosh^{-1}\left(\dfrac{D}{2a}\right)}\qquad\ELbr (\mathrm{F/m})}
+
+\begin{itemize}
+\tightlist
+\item
+  The leakage resistance per unit length
+\end{itemize}
+
+\ELdisp{\begin{aligned}R'_1&=\frac\epsilon\sigma\left(\frac{1}{C'_1}\right)=\frac{1}{\pi\sigma}\cosh^{-1}\left(\frac{D}{2a}\right)\\&=\frac{1}{\pi\sigma}\ln\left[\frac{D}{2a}+\sqrt{\left(\frac{D}{2a}\right)^2-1}\right]\qquad(\Omega\cdot\mathrm{m})\end{aligned}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  In certain situations electrostatic and steady-current problems are not exactly analogous.
+\item
+  \textbf{First method} for computing the resistance of a piece of conducting material between two surfaces or terminals
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Choosing an appropriate coordinate system
+  \item
+    Applying a potential difference \ELim{V_0} between the two terminals
+  \item
+    Finding the electric field intensity (if the material is homogeneous, by solving Laplace's equation for the electric potential and then computing the electric field intensity)
+  \item
+    Finding the total current
+    \ELdisp{I\ELbr =\int_S\vect{J}\cdot d\vect{s}\ELbr =\int_S\sigma\vect{E}\cdot d\vect{s}}
+  \item
+    \ELim{S}: the cross-section through which the current flows
+  \item
+    The resistance is \ELim{V_0/I}
+  \end{itemize}
+\item
+  \textbf{Second method} for computing the resistance of a piece of conducting material between two surfaces or terminals (when \ELim{J} can easily be determined from \ELim{I})
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Choosing an appropriate coordinate system
+  \item
+    Passing a current \ELim{I} between the two terminals
+  \item
+    Finding \ELim{J} from \ELim{I}
+  \item
+    Computing the electric field intensity \ELim{\vect{E}=\vect{J}/\sigma} and the potential difference \ELim{V_0}
+    \ELdisp{V_0\ELbr =-\int\vect{E}\cdot\dif\vect{\ell}}
+
+    \begin{itemize}
+    \tightlist
+    \item
+      The integration is carried out from the terminal at the lower potential to the terminal at the higher potential.
+    \end{itemize}
+  \item
+    The resistance is \ELim{V_0/I}
+  \end{itemize}
+\end{itemize}
+
+\end{ELunit}
+
+\ELnextnum{4-3}
+
+\begin{ELexample}{}
+
+Consider a conducting material of uniform thickness \ELim{h} and conductivity \ELim{\sigma} in the shape shown in the figure below. Find the resistance between its two end faces.
+
+\ELfigure{m04-ex3}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  Choosing cylindrical coordinates
+\end{itemize}
+
+\ELdisp{V\ELbr =0\quad\ELbr \text{at}\quad\ELbr \phi\ELbr =0,\qquad\ELbr  V\ELbr =V_0\quad\ELbr \text{at}\quad\ELbr \phi\ELbr =\pi/2}
+\ELdisp{\frac{d^2V}{d\phi^2}\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  V\ELbr =c_1\phi+c_2\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  V\ELbr =\frac{2V_0}{\pi}\phi}
+\ELdisp{\begin{aligned}\vect{J}=\sigma\vect{E}&=-\sigma\nabla V\\&=-\uvec{\phi}\sigma\frac{\partial V}{r\,\partial\phi}=-\uvec{\phi}\frac{2\sigma V_0}{\pi r}\end{aligned}}
+\ELdisp{\begin{aligned}I=\int_S\vect{J}\cdot d\vect{s}&=\int_0^h\!\!\int_a^b\left(-\uvec{\phi}\frac{2\sigma V_0}{\pi r}\right)\cdot\left(-\uvec{\phi}\,dr\,dz\right)\\&=\frac{2\sigma hV_0}{\pi}\ln\frac ba\end{aligned}}
+\ELdisp{R\ELbr =\frac{V_0}{I}\ELbr =\frac{\pi}{2\sigma h\ln(b/a)}}
+
+\end{ELsolution}
+
+\end{ELexample}

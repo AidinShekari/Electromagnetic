@@ -1,0 +1,16 @@
+% Ch3_3, slide 7: two grounded semi-infinite plates (y = 0 and y = b, V = 0) and a third plate at x = 0
+% held at V = V0
+\begin{tikzpicture}[scale=1]
+  \def\b{1.6}\def\L{5.2}
+  \fill[pattern=north east lines,pattern color=ELink!60] (0.15,\b) rectangle (\L,\b+0.12) (0.15,-0.12) rectangle (\L,0);
+  \draw[ELink,line width=0.6pt] (0.15,\b) rectangle (\L,\b+0.12) (0.15,-0.12) rectangle (\L,0);
+  \draw[ELink,line width=1.6pt] (0,0.05)--(0,\b-0.05);
+  \draw[ELax] (0,-0.12)--(\L+0.8,-0.12) node[ELlab,anchor=west]{$x$};
+  \draw[ELax] (0,-0.12)--(0,\b+0.8) node[ELlab,anchor=south]{$y$};
+  \node[ELlabs,anchor=north east] at (0,-0.12) {$O$};
+  \node[ELlabs,anchor=east] at (-0.05,\b/2) {$V=V_0$};
+  \node[ELlabs,anchor=south] at (2.4,\b+0.12) {$V=0$}; \node[ELlabs,anchor=north] at (2.4,-0.14) {$V=0$};
+  \draw[ELthin,-{Stealth[length=4pt]}] (\L-0.6,\b+0.35)--(\L+0.3,\b+0.35) node[ELlabs,anchor=west]{$\infty$};
+  \draw[ELthin,-{Stealth[length=4pt]}] (\L-0.6,-0.4)--(\L+0.3,-0.4) node[ELlabs,anchor=west]{$\infty$};
+  \draw[ELthin,{Stealth[length=3.5pt]}-{Stealth[length=3.5pt]}] (\L-0.25,0)--(\L-0.25,\b) node[ELlabs,anchor=east,pos=0.5]{$b$};
+\end{tikzpicture}

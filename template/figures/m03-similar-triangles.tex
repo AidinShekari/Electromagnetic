@@ -1,0 +1,26 @@
+% Ch3_2, slide 10: the similar triangles OMP (sides a, r, d) and OP_iM (sides d_i, r_i, a)
+\begin{tikzpicture}[scale=1]
+  \def\a{1.4}\def\d{4.6}
+  \pgfmathsetmacro{\di}{\a*\a/\d}
+  \coordinate (O) at (0,0); \coordinate (P) at (\d,0); \coordinate (M) at (65:\a);
+  \draw[ELcField,line width=1pt] (O)--(M)--(P)--cycle;
+  \node[ELlabs,anchor=east] at ($(O)!0.5!(M)$) {$a$}; \node[ELlabs,anchor=south west] at ($(M)!0.5!(P)$) {$r$};
+  \node[ELlabs,anchor=north] at ($(O)!0.5!(P)$) {$d$};
+  \node[ELlab,anchor=east] at (O) {$O$}; \node[ELlab,anchor=south] at (M) {$M$}; \node[ELlab,anchor=west] at (P) {$P$};
+  \pic[draw=ELink!70,line width=0.5pt,angle radius=0.35cm] {angle=P--O--M};
+  \begin{scope}[shift={(6.2,0)},scale=1.6]
+    \coordinate (O2) at (0,0); \coordinate (Pi) at (\di,0); \coordinate (M2) at (65:\a);
+    \coordinate (P2) at ({\a/1.6*0+0},0);
+    \path (O2)--(M2);
+  \end{scope}
+  \begin{scope}[shift={(6.0,0)}]
+    \pgfmathsetmacro{\k}{\a/\d}
+    % triangle O P_i M, rotated so that OM lies along the base (similar to OPM)
+    \coordinate (O2) at (0,0); \coordinate (M2) at (\a*2.2,0); \coordinate (Pi) at ({65}:{\di*2.2});
+    \draw[ELcSource,line width=1pt] (O2)--(Pi)--(M2)--cycle;
+    \node[ELlabs,anchor=east] at ($(O2)!0.5!(Pi)$) {$d_i$}; \node[ELlabs,anchor=south west] at ($(Pi)!0.5!(M2)$) {$r_i$};
+    \node[ELlabs,anchor=north] at ($(O2)!0.5!(M2)$) {$a$};
+    \node[ELlab,anchor=east] at (O2) {$O$}; \node[ELlab,anchor=south] at (Pi) {$P_i$}; \node[ELlab,anchor=west] at (M2) {$M$};
+    \pic[draw=ELink!70,line width=0.5pt,angle radius=0.3cm] {angle=M2--O2--Pi};
+  \end{scope}
+\end{tikzpicture}

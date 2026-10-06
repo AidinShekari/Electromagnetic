@@ -1,61 +1,65 @@
-# Electromagnetics — Lecture Notes / جزوهٔ الکترومغناطیس
+<div align="center">
 
-Typeset lecture notes of the course *Electromagnetics* (الکترومغناطیس), Ferdowsi University of
-Mashhad, in Persian (RTL) and English (LTR).
+<img src="template/ferdowsi-logo-white.png" width="130" alt="Ferdowsi University of Mashhad">
 
-- **Instructor / استاد:** سیدمحمد سعید ماجدی
-- **Compiled and edited by / جمع‌آوری و تنظیم:** Aidin Shekari / آیدین شکاری
+# الکترومغناطیس
+### Electromagnetics
 
-The instructor's notes are the only source of the academic content. The typeset notes follow
-their order, notation, values, figures and wording. Nothing is added from textbooks. Every
-deliberate difference from the source (an unambiguous typo, for example) is listed in
-[REVIEW.md](REVIEW.md).
+دانشگاه فردوسی مشهد · Ferdowsi University of Mashhad
 
-## Status
+استاد · Instructor: سیدمحمد سعید ماجدی
 
-| Part | State |
-|---|---|
-| Design system, both editions (`template/`) | done |
-| Build pipeline (`tools/`) | done |
-| Design specimen, both editions (`specimen/`) | done (QA only, not course content) |
-| Chapter 1, Vector Analysis (slides `Ch1_1` to `Ch1_5`), both editions | done |
-| Chapter 2, Static Electric Fields (slides `Ch2_1` to `Ch2_8`), both editions | done |
-| Later chapters | waiting for the instructor's slides |
+گردآوری شده توسط [آیدین شکاری](https://shekari.me) · Compiled by [Aidin Shekari](https://shekari.me)
 
-## Complete book / کتاب کامل
-- [English](00-full-notes/en/Electromagnetics-en.pdf)
-- [فارسی](00-full-notes/fa/Electromagnetics-fa.pdf)
+</div>
 
-## Chapters
-| # | Chapter | فصل | PDF |
-|---|---|---|---|
-| 01 | Vector Analysis | آنالیز برداری | [EN](01-vector-analysis/en/module01-vector-analysis.pdf) · [FA](01-vector-analysis/fa/module01-vector-analysis.pdf) |
-| 02 | Static Electric Fields | میدان‌های الکتریکی ساکن | [EN](02-static-electric-fields/en/module02-static-electric-fields.pdf) · [FA](02-static-electric-fields/fa/module02-static-electric-fields.pdf) |
+---
 
-The book contains only the chapters whose slides have been provided ([source/](source/README.md)).
+## 📘 جزوه کامل · Complete Notes
 
-## Design specimen
-- [English](specimen/en/specimen-en.pdf)
-- [فارسی](specimen/fa/specimen-fa.pdf)
+| | فارسی | English |
+|---|---|---|
+| جزوه کامل (همه فصل‌ها) · Full notes | [Electromagnetics-fa.pdf](00-full-notes/fa/Electromagnetics-fa.pdf) | [Electromagnetics-en.pdf](00-full-notes/en/Electromagnetics-en.pdf) |
 
-The specimen shows the cover, title page, contents, a chapter opening and every block type.
-Its text is placeholder text for checking the layout.
+## 📑 فصل‌ها · Chapters
 
-## Build / ساخت
-Needs `pandoc` ≥ 3 and XeLaTeX with `latexmk`, TeX Gyre Termes, Heros and Termes Math
-(`fonts-texgyre`, `fonts-texgyre-math` on Debian/Ubuntu).
+| # | فصل | Chapter | PDF (fa) | PDF (en) |
+|---|---|---|---|---|
+| 1 | آنالیز برداری | Vector Analysis | [PDF](01-vector-analysis/fa/module01-vector-analysis.pdf) | [PDF](01-vector-analysis/en/module01-vector-analysis.pdf) |
+| 2 | میدان‌های الکتریکی ساکن | Static Electric Fields | [PDF](02-static-electric-fields/fa/module02-static-electric-fields.pdf) | [PDF](02-static-electric-fields/en/module02-static-electric-fields.pdf) |
+| 3 | حل مسائل الکتریسیته ساکن | Solution of Electrostatic Problems | [PDF](03-electrostatic-problems/fa/module03-electrostatic-problems.pdf) | [PDF](03-electrostatic-problems/en/module03-electrostatic-problems.pdf) |
+| 4 | جریان‌های الکتریکی دائم | Steady Electric Currents | [PDF](04-steady-electric-currents/fa/module04-steady-electric-currents.pdf) | [PDF](04-steady-electric-currents/en/module04-steady-electric-currents.pdf) |
 
-```bash
-python3 tools/build.py                 # chapters and the complete book, both languages
-python3 tools/build.py --chapter 05    # one chapter, both languages
-python3 tools/build.py --only fa       # one language
-python3 tools/build.py --specimen      # the design specimen
-python3 tools/genfigs.py               # regenerate the computed figures
-python3 tools/contact.py book.pdf out/  # contact sheets of a PDF for visual QA (needs Pillow)
+The notes contain only the chapters whose slides have been provided ([source/](source/README.md)).
+The instructor's slides are the only source of the content; every deliberate difference is
+listed in [REVIEW.md](REVIEW.md). The design system is described in [DESIGN.md](DESIGN.md).
+
+## 🗂 ساختار پوشه‌ها · Repository layout
+
+```
+Electromagnetic/
+├── 00-full-notes/
+│   ├── fa/   Electromagnetics-fa.tex + .pdf   جزوه کامل فارسی (با فهرست مطالب)
+│   └── en/   Electromagnetics-en.tex + .pdf   complete English notes
+├── 01-vector-analysis/
+│   ├── fa/   module01-vector-analysis.md · .tex · content.tex · .pdf
+│   └── en/   module01-vector-analysis.md · .tex · content.tex · .pdf
+├── …                                          (one folder per chapter, 01 … 04)
+├── source/                                    اسلایدهای استاد · the instructor's slides
+├── specimen/                                  design specimen (layout check only)
+├── template/                                  قالب لتک، لوگوی دانشگاه، فونت Vazirmatn، شکل‌ها
+└── tools/                                     build script, Markdown → LaTeX filter, figure generator
 ```
 
-Layout: `NN-slug/{fa,en}/moduleNN-slug.md` (source) → `.tex` → `.pdf`. The complete book goes to
-`00-full-notes/{fa,en}/Electromagnetics-{fa,en}.pdf`. `template/` holds the shared style layer,
-the fonts (Vazirmatn, OFL), the university logo, the figures (native TikZ/PGFPlots) and the
-chapter-opening motifs. `tools/` holds the build script and the Markdown → LaTeX filter. The
-design system and the authoring conventions are described in [DESIGN.md](DESIGN.md).
+هر فایل `.tex` داخل پوشه‌ی خودش با XeLaTeX کامپایل می‌شود ·
+Every `.tex` compiles with XeLaTeX from inside its own folder
+(fonts: *Vazirmatn* bundled in `template/fonts/`, *TeX Gyre Termes*, *Heros* and *Termes Math*).
+
+To regenerate everything from the Markdown sources (needs `pandoc` ≥ 3 and `latexmk`):
+
+```bash
+python3 tools/build.py                 # all chapters and the complete notes, both languages
+python3 tools/build.py --chapter 03    # one chapter, both languages
+python3 tools/build.py --only fa       # one language
+python3 tools/genfigs.py               # regenerate the computed figures
+```

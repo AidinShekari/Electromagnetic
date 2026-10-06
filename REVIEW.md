@@ -35,6 +35,8 @@ The slides remain the source of truth. Each entry names the slide (file and page
 | Ch2_4 p. 11 (example 2-8) | the field lines and equipotentials of the dipole are computed from the two charges ($\pm q$ at $z=\pm d/2$) by `tools/genfigs.py`; they follow the slide's sketch |
 | Ch2_5 p. 9 (example 2-12) | the graphs of $E_R$ and $V$ are drawn with $R_i=1$, $R_o=1.6$ and $Q/4\pi\epsilon_0=1$ to show the shapes; the slide gives no values |
 | Ch2 figures with a hand-drawn molecule picture (Ch2_5 p. 10) | redrawn in TikZ with the same elements: the atom in the field, the equivalent dipole, the polarized slab with its surface charges |
+| Ch3_2 p. 7 (method of images) | the field lines of $Q$ and its image $-Q$ are computed from the two charges by `tools/genfigs.py`; they follow the slide's sketch |
+| Ch3_3 (table of the solutions of $X''+k_x^2X=0$) | the table is set left to right in both editions, as on the slide |
 
 ## Statements kept as written but worth a second look
 

@@ -1,0 +1,927 @@
+\ELhold
+
+\ELsection{Course Outline}{Course Outline}
+
+\begin{ELunit}
+
+\ELfigure{m03-course-outline}{}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{Solution of Electrostatic Problems}{Solution of Electrostatic Problems}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  Electrostatic problems are problems that deal with the effects of electric charges at rest. Solving such problems usually involves determining the electric potential, the electric field intensity or the electric charge distribution.
+\item
+  If the charge distribution is given, both the potential and the electric field can be computed with the relations of the previous chapter.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    In many practical problems the exact charge distribution is not known everywhere, and finding the potential and the electric field directly with the formulas of the previous chapter is not possible. \ELim{\ELto} the method of images can be used for a particular class of problems
+  \item
+    In another kind of problem the potentials of all conducting bodies are known, and we want to find the potential and the electric field intensity in the surrounding space as well as the surface charge distributions on the conducting boundaries. \ELim{\ELto} solving boundary-value problems
+  \end{itemize}
+\end{itemize}
+
+\ELfigure{m03-map}{}
+
+\begin{itemize}
+\tightlist
+\item
+  What is the form of Poisson's and Laplace's equations that govern the electric potential, and when is each of them used?
+\item
+  How can the electric potential and the electric field intensity be obtained by solving Poisson's and Laplace's equations?
+\item
+  Is a solution of Poisson's equation that satisfies given boundary conditions unique?
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{Poisson's and Laplace's Equations}{Poisson’s and Laplace’s Equations}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  The two fundamental equations of electrostatics in all media
+\end{itemize}
+
+\ELdisp{\nabla\cdot\vect{D}\ELbr =\rho\qquad\ELbr \qquad\ELbr  \nabla\times\vect{E}\ELbr =0}
+
+\begin{itemize}
+\tightlist
+\item
+  On the other hand we have
+\end{itemize}
+
+\ELdisp{\vect{E}\ELbr =-\nabla V}
+\ELdisp{\vect{D}\ELbr =\epsilon\vect{E}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \nabla\cdot\epsilon\vect{E}\ELbr =\rho\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \nabla\cdot(\epsilon\nabla V)\ELbr =-\rho}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  If the medium is homogeneous (\ELim{\epsilon} constant)
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\nabla^2V\ELbr =-\frac{\rho}{\epsilon}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\item
+  \ELim{\rho}: free charge density
+\item
+  In the above equation, known as \textbf{Poisson's equation}, the \textbf{Laplacian} operator (the divergence of the gradient) is used.
+\item
+  The Laplacian of a scalar quantity in the different coordinate systems
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Cartesian
+    \ELdisp{\nabla^2V\ELbr =\frac{\partial^2V}{\partial x^2}+\frac{\partial^2V}{\partial y^2}+\frac{\partial^2V}{\partial z^2}}
+  \item
+    Cylindrical
+    \ELdisp{\nabla^2V\ELbr =\frac1r\frac{\partial}{\partial r}\left(r\frac{\partial V}{\partial r}\right)+\frac{1}{r^2}\frac{\partial^2V}{\partial\phi^2}+\frac{\partial^2V}{\partial z^2}}
+  \item
+    Spherical
+    \ELdisp{\nabla^2V\ELbr =\frac{1}{R^2}\frac{\partial}{\partial R}\left(R^2\frac{\partial V}{\partial R}\right)+\frac{1}{R^2\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial V}{\partial\theta}\right)+\frac{1}{R^2\sin^2\theta}\frac{\partial^2V}{\partial\phi^2}}
+  \end{itemize}
+\item
+  Solving Poisson's equation in three-dimensional space with given boundary conditions is usually not a simple task.
+\item
+  At points of a simple medium where there is no free charge
+\end{itemize}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{\nabla^2V\ELbr =0}
+
+\end{ELimportant}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  The above equation is called \textbf{Laplace's equation}.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    This equation governs problems involving a set of conductors held at different potentials.
+  \item
+    Once \ELim{V} has been found from this equation, \ELim{\vect{E}} and the charge distribution on the conducting surfaces are easily obtained
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{\vect{E}\ELbr =-\nabla V\qquad\ELbr \qquad\ELbr  \rho_s\ELbr =-\epsilon E_n}
+
+\ELnextnum{3-1}
+
+\begin{ELexample}{}
+
+The two plates of a parallel-plate capacitor are separated by the distance \ELim{d} and held at the potentials \ELim{0} and \ELim{V_0} as shown in the figure below. Neglecting the fringing fields, find
+
+\begin{itemize}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\alph{enumi})}
+  \tightlist
+  \item
+    the potential at all points between the plates
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\alph{enumi})}
+  \setcounter{enumi}{1}
+  \tightlist
+  \item
+    the surface charge densities on the plates
+  \end{enumerate}
+\end{itemize}
+
+\ELfigure{m03-ex1}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\alph{enumi})}
+  \tightlist
+  \item
+    Using Laplace's equation
+  \end{enumerate}
+\end{itemize}
+
+\ELdisp{\nabla^2V\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \frac{d^2V}{dy^2}\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \frac{dV}{dy}\ELbr =C_1\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  V\ELbr =C_1y+C_2}
+
+\begin{itemize}
+\tightlist
+\item
+  Boundary conditions:
+\end{itemize}
+
+\ELdisp{\left.\begin{aligned}&\text{At }y=0,\quad V=0\\&\text{At }y=d,\quad V=V_0\end{aligned}\right\}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  V\ELbr =\frac{V_0}{d}y}
+
+\begin{itemize}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\alph{enumi})}
+  \setcounter{enumi}{1}
+  \tightlist
+  \item
+  \end{enumerate}
+\end{itemize}
+
+\ELdisp{\vect{E}\ELbr =-\nabla V\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \vect{E}\ELbr =-\uvec{y}\frac{dV}{dy}\ELbr =-\uvec{y}\frac{V_0}{d}}
+\ELdisp{E_n\ELbr =\uvec{n}\cdot\vect{E}\ELbr =\frac{\rho_s}{\epsilon}}
+
+\begin{itemize}
+\tightlist
+\item
+  For the lower plate
+\end{itemize}
+
+\ELdisp{\uvec{n}\ELbr =\uvec{y},\qquad\ELbr  E_{n\ell}\ELbr =-\frac{V_0}{d},\qquad\ELbr  \rho_{s\ell}\ELbr =-\frac{\epsilon V_0}{d}}
+
+\begin{itemize}
+\tightlist
+\item
+  For the upper plate
+\end{itemize}
+
+\ELdisp{\uvec{n}\ELbr =-\uvec{y},\qquad\ELbr  E_{nu}\ELbr =\frac{V_0}{d},\qquad\ELbr  \rho_{su}\ELbr =\frac{\epsilon V_0}{d}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\end{ELjoin}
+
+\ELnextnum{3-2}
+
+\begin{ELexample}{}
+
+Solving Poisson's and Laplace's equations for \ELim{V}, determine the field \ELim{\vect{E}} inside and outside a spherical electron cloud with uniform volume charge density \ELim{\rho=-\rho_0} for \ELim{0\leq R\leq b} and \ELim{\rho=0} for \ELim{R>b}.
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  Inside the electron cloud \ELim{\ELto} using Poisson's equation
+\end{itemize}
+
+\ELdisp{\nabla^2V\ELbr =-\frac\rho\epsilon\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \frac{1}{R^2}\frac{d}{dR}\left(R^2\frac{dV_i}{dR}\right)\ELbr =\frac{\rho_0}{\epsilon_0}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \frac{d}{dR}\left(R^2\frac{dV_i}{dR}\right)\ELbr =\frac{\rho_0}{\epsilon_0}R^2\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  R^2\frac{dV_i}{dR}\ELbr =\frac{\rho_0}{3\epsilon_0}R^3+C_1}
+\ELdisp{\frac{dV_i}{dR}\ELbr =\frac{\rho_0}{3\epsilon_0}R+\frac{C_1}{R^2}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \vect{E}_i\ELbr =-\nabla V_i\ELbr =-\uvec{R}\left(\frac{dV_i}{dR}\right)}
+
+\begin{itemize}
+\tightlist
+\item
+  Since the field at \ELim{R=0} cannot be infinite
+\end{itemize}
+
+\ELdisp{C_1\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \vect{E}_i\ELbr =-\uvec{R}\frac{\rho_0}{3\epsilon_0}R,\qquad\ELbr  0\leq R\leq b}
+
+\begin{itemize}
+\tightlist
+\item
+  Outside the electron cloud \ELim{\ELto} using Laplace's equation
+\end{itemize}
+
+\ELdisp{\nabla^2V\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \frac{1}{R^2}\frac{\partial}{\partial R}\left(R^2\frac{dV_o}{dR}\right)\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \frac{dV_o}{dR}\ELbr =\frac{C_2}{R^2}}
+\ELdisp{\vect{E}_o\ELbr =-\nabla V_o\ELbr =-\uvec{R}\frac{dV_o}{dR}\ELbr =-\uvec{R}\frac{C_2}{R^2}}
+
+\begin{itemize}
+\tightlist
+\item
+  Because the medium is continuous, the fields \ELim{\vect{E}_i} and \ELim{\vect{E}_o} are equal at \ELim{R=b}
+\end{itemize}
+
+\ELdisp{\frac{C_2}{b^2}\ELbr =\frac{\rho_0}{3\epsilon_0}b\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  C_2\ELbr =\frac{\rho_0b^3}{3\epsilon_0}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \vect{E}_o\ELbr =-\uvec{R}\frac{\rho_0b^3}{3\epsilon_0R^2},\qquad\ELbr  R\geq b}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELhold
+
+\ELsection{Uniqueness Theorem}{Uniqueness Theorem}
+
+\begin{ELunit}
+
+\ELfigure{m03-map-unique}{}
+
+\begin{itemize}
+\tightlist
+\item
+  A solution of Poisson's equation (and, as a special case, of Laplace's equation) that satisfies the given boundary conditions is the unique solution of that equation.
+\item
+  The consequence of this theorem is that a solution of any electrostatic problem that satisfies the boundary conditions is the only possible solution, regardless of the method by which it was obtained.
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{Method of Images}{Method of Images}
+
+\begin{ELunit}
+
+\ELfigure{m03-map-images}{}
+
+\begin{itemize}
+\item
+  What is the method of images, and how can it be used to solve a particular class of electrostatic problems?
+\item
+  In a class of electromagnetic problems, solving Laplace's equation while satisfying the boundary conditions is very difficult. In these problems, however, the boundary conditions can be satisfied with the help of \textbf{image charges}.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    This method, which consists of replacing the boundary surfaces by equivalent image charges, is called the \textbf{method of images}.
+  \end{itemize}
+\item
+  As an example consider the following problem. We want to find the potential at all points \ELim{y>0}.
+\end{itemize}
+
+\ELfigure{m03-image-problem}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Gauss's law cannot be used to compute the field and then the potential, because a Gaussian surface cannot be determined.
+\item
+  Nor can the potential be computed directly, because the presence of the positive charge \ELim{Q} induces negative charges on the surface of the conductor, giving a surface charge density \ELim{\rho_s}. We have
+\end{itemize}
+
+\ELdisp{V(x,y,z)\ELbr =\frac{Q}{4\pi\epsilon_0\sqrt{x^2+(y-d)^2+z^2}}+\frac{1}{4\pi\epsilon_0}\int_S\frac{\rho_s}{R_1}\,ds}
+
+\begin{itemize}
+\tightlist
+\item
+  The difficulty is that \ELim{\rho_s} must be found first, and even when \ELim{\rho_s} is known the surface integral is difficult to evaluate.
+\item
+  Solving Laplace's equation to obtain the solution is also impossible or very difficult. In fact the solution of Laplace's equation must satisfy the following conditions
+\end{itemize}
+
+\ELdisp{V(x,0,z)\ELbr =0}
+\ELdisp{V\to\frac{Q}{4\pi\epsilon_0R},\ \text{as}\ R\to0}
+
+\begin{itemize}
+\tightlist
+\item
+  At points very far from the charge \ELim{Q} the potential must be zero
+\end{itemize}
+
+\ELdisp{V(x,y,z)\ELbr =V(-x,y,z)}
+\ELdisp{V(x,y,z)\ELbr =V(x,y,-z)}
+
+\begin{itemize}
+\tightlist
+\item
+  Such a problem can be solved easily with the method of images.
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsubsection{Point Charge and Conducting Plane}{Point Charge and Conducting Plane}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  We remove the conducting plane and replace it by an image point charge \ELim{-Q} at \ELim{y=-d}
+\end{itemize}
+
+\ELfigure{m03-image-plane}{}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{V(x,y,z)\ELbr =\frac{Q}{4\pi\epsilon_0}\left(\frac{1}{R_+}-\frac{1}{R_-}\right)}
+\ELdisp{R_+\ELbr =\left[x^2+(y-d)^2+z^2\right]^{1/2},\qquad\ELbr  R_-\ELbr =\left[x^2+(y+d)^2+z^2\right]^{1/2}}
+
+\end{ELimportant}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  It can easily be shown that this solution satisfies Laplace's equation and the boundary conditions. Therefore it is a solution of the problem and, by the uniqueness theorem, also its only solution.
+\item
+  Once the potential is known, computing the field and the surface charge distribution on the conductor is easy.
+\end{itemize}
+
+\end{ELunit}
+
+\begin{ELremark}{}
+
+Note that this method cannot be used to compute the potential in the region \ELim{y<0}.
+
+\end{ELremark}
+
+\ELhold
+
+\ELsubsection{Line Charge and Parallel Conducting Cylinder}{Line Charge and Parallel Conducting Cylinder}
+
+\begin{ELunit}
+
+\ELfigure{m03-line-cylinder}{}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  The aim is to find the potential outside the conducting cylinder.
+\item
+  The image must be a parallel line charge inside the cylinder that makes the cylinder surface \ELim{r=a} an equipotential surface. The aim is to find \ELim{d_i} and \ELim{\rho_i}.
+\item
+  We assume
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\rho_i\ELbr =-\rho_\ell}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  The potential at the distance \ELim{r} from a line charge of density \ELim{\rho_\ell}, with the reference at \ELim{r_0}, is
+\end{itemize}
+
+\ELdisp{V\ELbr =-\int_{r_0}^{r}E_r\,dr\ELbr =-\frac{\rho_\ell}{2\pi\epsilon_0}\int_{r_0}^{r}\frac1r\,dr\ELbr =\frac{\rho_\ell}{2\pi\epsilon_0}\ln\frac{r_0}{r}}
+
+\begin{itemize}
+\tightlist
+\item
+  The potential at the point \ELim{M} on the surface of the cylinder is
+\end{itemize}
+
+\ELdisp{\begin{aligned}V_M&=\frac{\rho_\ell}{2\pi\epsilon_0}\ln\frac{r_0}{r}-\frac{\rho_\ell}{2\pi\epsilon_0}\ln\frac{r_0}{r_i}\\&=\frac{\rho_\ell}{2\pi\epsilon_0}\ln\frac{r_i}{r}\end{aligned}}
+
+\begin{itemize}
+\tightlist
+\item
+  Therefore the equipotential surfaces are specified by
+\end{itemize}
+
+\ELdisp{\frac{r_i}{r}\ELbr =\text{Constant}}
+
+\ELfigure{m03-similar-triangles}{}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  If the condition \ELim{\dfrac{d_i}{a}=\dfrac ad} holds, then by the similarity of the two triangles \ELim{OMP_i} and \ELim{OPM} the ratio \ELim{\dfrac{r_i}{r}} is always constant. Therefore
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{d_i\ELbr =\frac{a^2}{d}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  Thus the line charge \ELim{-\rho_\ell} can replace the conducting cylindrical surface, and the potential and the electric field at any point outside the cylinder can be found.
+\end{itemize}
+
+\begin{ELremark}{}
+
+Note that this method cannot be used to compute the potential in the region inside the conducting cylinder.
+
+\end{ELremark}
+
+\end{ELjoin}
+
+\ELnextnum{3-3}
+
+\begin{ELexample}{}
+
+Find the capacitance per unit length between two very long parallel circular conducting wires of radius \ELim{a} separated by \ELim{D}.
+
+\ELfigure{m03-ex3}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  We place the charges \ELim{+Q} and \ELim{-Q} on conductors 1 and 2 respectively.
+\item
+  With the method of images, the equipotential surfaces of the wires can be replaced by two line charges \ELim{+\rho_\ell} and \ELim{-\rho_\ell}.
+\end{itemize}
+
+\ELdisp{V_2\ELbr =\frac{\rho_\ell}{2\pi\epsilon_0}\ln\frac ad}
+\ELdisp{V_1\ELbr =-\frac{\rho_\ell}{2\pi\epsilon_0}\ln\frac ad}
+\ELdisp{C\ELbr =\frac{\rho_\ell}{V_1-V_2}\ELbr =\frac{\pi\epsilon_0}{\ln(d/a)}}
+\ELdisp{d\ELbr =D-d_i\ELbr =D-\frac{a^2}{d}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  d\ELbr =\tfrac12\left(D+\sqrt{D^2-4a^2}\right)}
+\ELdisp{C\ELbr =\frac{\pi\epsilon_0}{\ln\left[(D/2a)+\sqrt{(D/2a)^2-1}\right]}\qquad\ELbr (\mathrm{F/m})}
+
+\begin{ELimportant}{}
+
+\ELdisp{C\ELbr =\frac{\pi\epsilon_0}{\cosh^{-1}(D/2a)}\qquad\ELbr (\mathrm{F/m})}
+
+\end{ELimportant}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELhold
+
+\ELsection{Boundary-Value Problems}{Boundary-Value Problems}
+
+\begin{ELunit}
+
+\ELfigure{m03-map-bvp}{}
+
+\begin{itemize}
+\tightlist
+\item
+  The method of images applies to problems involving free charges near conducting boundaries of simple geometry.
+\item
+  If the problem involves a set of conductors held at given potentials, with no isolated free charges, it cannot be solved by the method of images, and Laplace's equation must be solved.
+\item
+  Laplace's equation is a partial differential equation. Problems governed by partial differential equations with given boundary conditions are called \textbf{boundary-value problems}.
+\item
+  Boundary-value problems for potential functions are divided into classes
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Dirichlet problems: the value of the potential is specified at all points of the boundaries.
+  \item
+    Neumann problems: the normal derivative of the potential is specified on all boundaries.
+  \item
+    Mixed boundary-value problems: the potential is specified on some of the boundaries and the normal derivative of the potential on the rest.
+  \end{itemize}
+\item
+  How are electrostatic boundary-value problems solved in the different coordinate systems to obtain the potential distribution?
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsubsection{Cartesian Coordinates}{Cartesian Coordinates}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  Laplace's equation in Cartesian coordinates
+\end{itemize}
+
+\ELdisp{\frac{\partial^2V}{\partial x^2}+\frac{\partial^2V}{\partial y^2}+\frac{\partial^2V}{\partial z^2}\ELbr =0}
+
+\begin{itemize}
+\tightlist
+\item
+  Using the method of separation of variables
+\end{itemize}
+
+\ELdisp{V(x,y,z)\ELbr =X(x)Y(y)Z(z)}
+\ELdisp{Y(y)Z(z)\frac{d^2X(x)}{dx^2}+X(x)Z(z)\frac{d^2Y(y)}{dy^2}+X(x)Y(y)\frac{d^2Z(z)}{dz^2}\ELbr =0}
+\ELdisp{\underbrace{\frac{1}{X(x)}\frac{d^2X(x)}{dx^2}}_{-k_x^2}+\underbrace{\frac{1}{Y(y)}\frac{d^2Y(y)}{dy^2}}_{-k_y^2}+\underbrace{\frac{1}{Z(z)}\frac{d^2Z(z)}{dz^2}}_{-k_z^2}\ELbr =0}
+\ELdisp{k_x^2+k_y^2+k_z^2\ELbr =0}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{\frac{d^2X(x)}{dx^2}+k_x^2X(x)\ELbr =0\qquad\ELbr  \frac{d^2Y(y)}{dy^2}+k_y^2Y(y)\ELbr =0\qquad\ELbr  \frac{d^2Z(z)}{dz^2}+k_z^2Z(z)\ELbr =0}
+
+\end{ELimportant}
+
+\textbf{Possible Solutions of \ELim{X''(x)+k_x^2X(x)=0}}
+
+\Needspace{10\baselineskip}
+\begin{ELltr}
+\begin{longtable}[c]{llll}
+\toprule\noalign{}
+\ELtablehead \ELim{k_x^2} & \ELim{k_x} & \ELim{X(x)} & Exponential forms of \ELim{X(x)} \\\noalign{\vskip 4pt}
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\ELim{0} & \ELim{0} & \ELim{A_0x+B_0} & \\\noalign{\vskip 4pt}
+\ELim{+} & \ELim{k} & \ELim{A_1\sin kx+B_1\cos kx} & \ELim{C_1e^{jkx}+D_1e^{-jkx}} \\\noalign{\vskip 4pt}
+\ELim{-} & \ELim{jk} & \ELim{A_2\sinh kx+B_2\cosh kx} & \ELim{C_2e^{kx}+D_2e^{-kx}} \\\noalign{\vskip 4pt}
+\end{longtable}\end{ELltr}
+
+
+\ELnextnum{3-4}
+
+\begin{ELexample}{}
+
+Two grounded, semi-infinite, parallel conducting plates are separated by the distance \ELim{d}. A third plate, perpendicular to both and insulated from them, is held at the potential \ELim{V_0}. Determine the potential distribution in the region enclosed by the plates.
+
+\ELfigure{m03-ex4}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  Boundary conditions
+\end{itemize}
+
+\ELdisp{\text{(1)}\ \ V(x,y,z)\ELbr =V(x,y)\qquad\ELbr \text{(2)}\ \ V(0,y)\ELbr =V_0\qquad\ELbr \text{(3)}\ \ V(\infty,y)\ELbr =0\qquad\ELbr \text{(4)}\ \ V(x,0)\ELbr =0\qquad\ELbr \text{(5)}\ \ V(x,b)\ELbr =0}
+
+\ELdisp{\text{(1)}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \frac{\partial V}{\partial z}\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  Z(z)\ELbr =B_0}
+\ELdisp{\left.\begin{aligned}k_z^2&=-\frac{1}{Z(z)}\frac{d^2Z(z)}{dz^2}=0\\k_x^2+k_y^2+k_z^2&=0\end{aligned}\right\}\quad\ELbr  k_y^2\ELbr =-k_x^2\ELbr =k^2\qquad\ELbr (k\ \text{real})}
+\ELdisp{k_x\ELbr =jk\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  X(x)\ELbr =C_2e^{kx}+D_2e^{-kx}\quad\ELbr \overset{(3)}{\Longrightarrow}\quad\ELbr  X(x)\ELbr =D_2e^{-kx}}
+\ELdisp{k_y\ELbr =k\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  Y(y)\ELbr =A_1\sin ky+B_1\cos ky\quad\ELbr \overset{(4)}{\Longrightarrow}\quad\ELbr  Y(y)\ELbr =A_1\sin ky}
+\ELdisp{\begin{aligned}V_n(x,y)&=(B_0D_2A_1)e^{-kx}\sin ky\\&=C_ne^{-kx}\sin ky\end{aligned}}
+\ELdisp{\overset{(5)}{\Longrightarrow}\quad\ELbr  V_n(x,b)\ELbr =C_ne^{-kx}\sin kb\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \sin kb\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  kb\ELbr =n\pi}
+\ELdisp{k\ELbr =\frac{n\pi}{b},\qquad\ELbr  n\ELbr =1,2,3,\ldots}
+\ELdisp{V_n(x,y)\ELbr =C_ne^{-n\pi x/b}\sin\frac{n\pi}{b}y}
+
+\begin{itemize}
+\tightlist
+\item
+  The above relation satisfies Laplace's equation but by itself cannot satisfy the second boundary condition at \ELim{x=0} for all \ELim{y} from \ELim{0} to \ELim{b}.
+\item
+  Since Laplace's equation is a linear partial differential equation, a combination of \ELim{V_n} of the above form for different values of \ELim{n} is also a solution.
+\end{itemize}
+
+\ELdisp{V(x,y)\ELbr =\sum_{n=1}^{\infty}V_n(x,y)}
+
+\ELdisp{\overset{(2)}{\Longrightarrow}\quad\ELbr \begin{aligned}V(0,y)&=\sum_{n=1}^{\infty}V_n(0,y)=\sum_{n=1}^{\infty}C_n\sin\frac{n\pi}{b}y\\&=V_0,\qquad 0<y<b\end{aligned}}
+
+\begin{itemize}
+\tightlist
+\item
+  The above relation is the Fourier series expansion of a periodic odd function whose value on the interval \ELim{0<y<b} is \ELim{V_0}.
+\end{itemize}
+
+\ELfigure{m03-ex4-square}{}
+
+\begin{ELremark}{Reminder}
+
+\ELdisp{f(t)\ELbr =a_0+\sum_{n=1}^{\infty}\left[a_n\cos\left(\frac{2n\pi}{T}t\right)+b_n\sin\left(\frac{2n\pi}{T}t\right)\right]}
+\ELdisp{b_n\ELbr =\frac2T\int_{-T/2}^{T/2}f(t)\sin\left(\frac{2n\pi}{T}t\right)dt\qquad\ELbr  a_n\ELbr =\frac2T\int_{-T/2}^{T/2}f(t)\cos\left(\frac{2n\pi}{T}t\right)dt\qquad\ELbr  a_0\ELbr =\frac1T\int_{-T/2}^{T/2}f(t)\,dt}
+
+\end{ELremark}
+
+\ELdisp{\begin{aligned}C_n&=\frac{2}{2b}\left[\int_0^bV_0\sin\left(\frac{2n\pi}{2b}y\right)dy+\int_b^{2b}-V_0\sin\left(\frac{2n\pi}{2b}y\right)dy\right]\\&=\frac{V_0}{n\pi}(-2\cos n\pi+2)=\begin{cases}\dfrac{4V_0}{n\pi}&\text{if }n\text{ is odd}\\\noalign{\vskip 2mm}0&\text{if }n\text{ is even}\end{cases}\end{aligned}}
+
+\begin{ELimportant}{}
+
+\ELdisp{\begin{aligned}V(x,y)&=\sum_{n=1}^{\infty}C_ne^{-n\pi x/b}\sin\frac{n\pi}{b}y\\&=\frac{4V_0}{\pi}\sum_{n=\text{odd}}^{\infty}\frac1ne^{-n\pi x/b}\sin\frac{n\pi}{b}y,\end{aligned}}
+\ELdisp{n\ELbr =1,3,5,\ldots,\qquad\ELbr  x>0\quad\ELbr \text{and}\quad\ELbr  0<y<b}
+
+\end{ELimportant}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELhold
+
+\ELsubsection{Cylindrical Coordinates}{Cylindrical Coordinates}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  Laplace's equation in cylindrical coordinates
+\end{itemize}
+
+\ELdisp{\frac1r\frac{\partial}{\partial r}\left(r\frac{\partial V}{\partial r}\right)+\frac{1}{r^2}\frac{\partial^2V}{\partial\phi^2}+\frac{\partial^2V}{\partial z^2}\ELbr =0}
+
+\begin{itemize}
+\tightlist
+\item
+  Assuming the length is large compared with the radius, in cylindrical geometry the potential is independent of \ELim{z}.
+\end{itemize}
+
+\ELdisp{\frac1r\frac{\partial}{\partial r}\left(r\frac{\partial V}{\partial r}\right)+\frac{1}{r^2}\frac{\partial^2V}{\partial\phi^2}\ELbr =0}
+
+\begin{itemize}
+\tightlist
+\item
+  Using the method of separation of variables
+\end{itemize}
+
+\ELdisp{V(r,\phi)\ELbr =R(r)\Phi(\phi)}
+\ELdisp{\underbrace{\frac{r}{R(r)}\frac{d}{dr}\left[r\frac{dR(r)}{dr}\right]}_{k^2}+\underbrace{\frac{1}{\Phi(\phi)}\frac{d^2\Phi(\phi)}{d\phi^2}}_{-k^2}\ELbr =0}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  The differential equation in \ELim{\phi}
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\frac{d^2\Phi(\phi)}{d\phi^2}+k^2\Phi(\phi)\ELbr =0}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{When \ELim{k\neq0}}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    In circular cylindrical configurations the potential functions, and hence \ELim{\Phi(\phi)}, are periodic in \ELim{\phi}, and the hyperbolic functions are not used.
+
+    \begin{itemize}
+    \tightlist
+    \item
+      If the range of \ELim{\phi} is not restricted, \ELim{k} must be an integer (\ELim{k=n})
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{\Phi(\phi)\ELbr =A_\phi\sin n\phi+B_\phi\cos n\phi}
+
+\begin{itemize}
+\tightlist
+\item
+  The differential equation in \ELim{r} (Euler's equation)
+\end{itemize}
+
+\ELdisp{r^2\frac{d^2R(r)}{dr^2}+r\frac{dR(r)}{dr}-n^2R(r)\ELbr =0}
+\ELdisp{R(r)\ELbr =A_rr^n+B_rr^{-n}}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{V_n(r,\phi)\ELbr =r^n(A_n\sin n\phi+B_n\cos n\phi)+r^{-n}(A'_n\sin n\phi+B'_n\cos n\phi),\qquad\ELbr  n\neq0}
+
+\end{ELimportant}
+
+\begin{ELunit}
+
+\begin{itemize}
+\item
+  When the region of interest includes \ELim{r=0}, the terms containing \ELim{r^{-n}} cannot exist, and when the region of interest includes infinity, the terms containing \ELim{r^n} cannot exist.
+\item
+  \textbf{When \ELim{k=0}}
+\end{itemize}
+
+\ELdisp{\frac{d^2\Phi(\phi)}{d\phi^2}\ELbr =0}
+\ELdisp{\Phi(\phi)\ELbr =A_0\phi+B_0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \Phi(\phi)\ELbr =B_0}
+
+\begin{itemize}
+\tightlist
+\item
+  If there is no circumferential variation
+\end{itemize}
+
+\ELdisp{\frac{d}{dr}\left[r\frac{dR(r)}{dr}\right]\ELbr =0}
+\ELdisp{R(r)\ELbr =C_0\ln r+D_0}
+
+\end{ELunit}
+
+\ELnextnum{3-5}
+
+\begin{ELexample}{}
+
+Consider a very long coaxial cable. The inner conductor has radius \ELim{a} and is held at the potential \ELim{V_0}. The outer conductor has radius \ELim{b} and is grounded. Find the potential distribution in the space between the two conductors.
+
+\ELfigure{m03-ex5}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  Since the cable is long, there is no dependence on \ELim{z}.
+\item
+  By symmetry, there is no dependence on \ELim{\phi} (\ELim{k=0}).
+\end{itemize}
+
+\ELdisp{V(r)\ELbr =C_1\ln r+C_2}
+\ELdisp{V(b)\ELbr =0,\qquad\ELbr  V(a)\ELbr =V_0}
+\ELdisp{C_1\ELbr =-\frac{V_0}{\ln(b/a)},\qquad\ELbr  C_2\ELbr =\frac{V_0\ln b}{\ln(b/a)}\qquad\ELbr \ELbr \Longrightarrow\qquad\ELbr  V(r)\ELbr =\frac{V_0}{\ln(b/a)}\ln\left(\frac br\right)}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELnextnum{3-6}
+
+\begin{ELexample}{}
+
+Two semi-infinite conducting plates are held at the potentials \ELim{V_0} and zero as shown in the figure below. Assuming that the plates are very long along the \ELim{z}-axis, find the potential distribution in all space.
+
+\ELfigure{m03-ex6}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  Since the plates are long, there is no dependence on \ELim{z}.
+\item
+  There is no dependence on \ELim{r} (\ELim{k=0}).
+\end{itemize}
+
+\ELdisp{\Phi(\phi)\ELbr =A_0\phi+B_0}
+\ELdisp{V(\phi)\ELbr =\begin{cases}0&\phi=0,2\pi\\V_0&\phi=\alpha\end{cases}}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{0\leq\phi\leq\alpha}
+\end{itemize}
+
+\ELdisp{V(\phi)\ELbr =\frac{V_0}{\alpha}\phi}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{\alpha\leq\phi\leq2\pi}
+\end{itemize}
+
+\ELdisp{V(\phi)\ELbr =\frac{V_0}{2\pi-\alpha}(2\pi-\phi)}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELnextnum{3-7}
+
+\begin{ELexample}{}
+
+A very long, thin conducting cylindrical tube of radius \ELim{b} is split into two parts. The upper half is held at the potential \ELim{V_0} and the lower half at the potential \ELim{-V_0}. Find the potential distribution inside and outside the tube.
+
+\ELfigure{m03-ex7}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  Since the tube is long, there is no dependence on \ELim{z}.
+\end{itemize}
+
+\ELdisp{V_n(r,\phi)\ELbr =r^n(A_n\sin n\phi+B_n\cos n\phi)+r^{-n}(A'_n\sin n\phi+B'_n\cos n\phi)}
+\ELdisp{V(b,\phi)\ELbr =\begin{cases}V_0&\text{for }0<\phi<\pi\\-V_0&\text{for }\pi<\phi<2\pi\end{cases}}
+
+\begin{itemize}
+\tightlist
+\item
+  Inside the tube (\ELim{r<b})
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Since the region of interest includes \ELim{r=0}, the terms containing \ELim{r^{-n}} cannot exist.
+  \item
+    Since \ELim{V(r,\phi)} is an odd function of \ELim{\phi}, therefore
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{V_n(r,\phi)\ELbr =A_nr^n\sin n\phi}
+
+\begin{itemize}
+\tightlist
+\item
+  The above term alone cannot satisfy the boundary conditions. Therefore
+\end{itemize}
+
+\ELdisp{\begin{aligned}V(r,\phi)&=\sum_{n=1}^{\infty}V_n(r,\phi)\\&=\sum_{n=1}^{\infty}A_nr^n\sin n\phi\end{aligned}}
+\ELdisp{\sum_{n=1}^{\infty}A_nb^n\sin n\phi\ELbr =\begin{cases}V_0&\text{for }0<\phi<\pi\\-V_0&\text{for }\pi<\phi<2\pi\end{cases}}
+
+\begin{itemize}
+\tightlist
+\item
+  The above relation is the Fourier series expansion of a periodic odd function whose value is \ELim{V_0} on the interval \ELim{0<\phi<\pi} and \ELim{-V_0} on the interval \ELim{\pi<\phi<2\pi}.
+\end{itemize}
+
+\ELdisp{A_n\ELbr =\begin{cases}\dfrac{4V_0}{n\pi b^n}&\text{if }n\text{ is odd}\\\noalign{\vskip 2mm}0&\text{if }n\text{ is even}\end{cases}\qquad\ELbr \qquad\ELbr  V(r,\phi)\ELbr =\frac{4V_0}{\pi}\sum_{n=\text{odd}}^{\infty}\frac1n\left(\frac rb\right)^n\sin n\phi,\qquad\ELbr  r<b}
+
+\begin{itemize}
+\tightlist
+\item
+  Outside the tube (\ELim{r>b})
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Since the region of interest includes \ELim{r\to\infty}, the terms containing \ELim{r^n} cannot exist.
+  \item
+    \ELim{V(r,\phi)} is an odd function of \ELim{\phi}.
+  \item
+    A single term cannot satisfy the boundary conditions. Therefore
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{\begin{aligned}V(r,\phi)&=\sum_{n=1}^{\infty}V_n(r,\phi)\\&=\sum_{n=1}^{\infty}B'_nr^{-n}\sin n\phi\end{aligned}\qquad\ELbr \begin{aligned}V(b,\phi)&=\sum_{n=1}^{\infty}B'_nb^{-n}\sin n\phi\\&=\begin{cases}V_0&\text{for }0<\phi<\pi\\-V_0&\text{for }\pi<\phi<2\pi\end{cases}\end{aligned}}
+\ELdisp{B'_n\ELbr =\begin{cases}\dfrac{4V_0b^n}{n\pi}&\text{if }n\text{ is odd}\\\noalign{\vskip 2mm}0&\text{if }n\text{ is even}\end{cases}}
+
+\begin{ELimportant}{}
+
+\ELdisp{V(r,\phi)\ELbr =\frac{4V_0}{\pi}\sum_{n=\text{odd}}^{\infty}\frac1n\left(\frac br\right)^n\sin n\phi,\qquad\ELbr  r>b}
+
+\end{ELimportant}
+
+\end{ELsolution}
+
+\end{ELexample}

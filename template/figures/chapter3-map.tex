@@ -1,0 +1,12 @@
+% The map of chapter 3 (Ch3_1 slide 5, Ch3_1 slide 14, Ch3_2 slide 2, Ch3_3 slide 2). \ELmapon = none | poisson | unique | images | bvp: the highlighted item.
+% A text hierarchy, mirrored between the editions.
+\providecommand{\ELmapon}{none}
+\begin{tikzpicture}[x=\ELrsgn cm,y=1cm]
+  \def\ELon#1#2{\ifnum\strcmp{\ELmapon}{#1}=0 #2\fi}
+  \node[ELtreeroot,text width=3.4cm] (root) at (4.6,0) {\ELL{Solution of electrostatic problems}{حل مسائل الکتریسیته ساکن}};
+  \node[ELtreebox,text width=6.2cm,minimum height=0.85cm,\ELon{poisson}{ELtreeon}] (poisson) at (-1.2,1.72) {\ELL{Poisson's and Laplace's equations}{معادلات پواسون و لاپلاس}};
+  \node[ELtreeboxR,text width=6.2cm,minimum height=0.85cm,\ELon{unique}{ELtreeonR}] (unique) at (-1.2,0.57) {\ELL{Uniqueness theorem}{قضیه یکتایی}};
+  \node[ELtreebox,text width=6.2cm,minimum height=0.85cm,\ELon{images}{ELtreeon}] (images) at (-1.2,-0.57) {\ELL{Method of images}{روش تصاویر}};
+  \node[ELtreeboxR,text width=6.2cm,minimum height=0.85cm,\ELon{bvp}{ELtreeonR}] (bvp) at (-1.2,-1.72) {\ELL{Boundary-value problems}{مسائل مقدار مرزی}};
+  \foreach \m in {poisson,unique,images,bvp}{\draw[ELtreelineG] (root.\ELend)--(\m.\ELstart);}
+\end{tikzpicture}

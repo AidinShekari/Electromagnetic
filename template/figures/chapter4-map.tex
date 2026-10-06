@@ -1,0 +1,13 @@
+% The map of chapter 4 (Ch4_1 slides 5, 11, 15; Ch4_2 slides 2, 8). \ELmapon = none | ohm | cont | joule | bc | res: the highlighted item.
+% A text hierarchy, mirrored between the editions.
+\providecommand{\ELmapon}{none}
+\begin{tikzpicture}[x=\ELrsgn cm,y=1cm]
+  \def\ELon#1#2{\ifnum\strcmp{\ELmapon}{#1}=0 #2\fi}
+  \node[ELtreeroot,text width=3.4cm] (root) at (4.6,0) {\ELL{Steady electric currents}{جریان‌های الکتریکی دائم}};
+  \node[ELtreebox,text width=6.2cm,minimum height=0.85cm,\ELon{ohm}{ELtreeon}] (ohm) at (-1.2,2.30) {\ELL{Current density and Ohm's law}{مفهوم چگالی جریان و استخراج قانون اهم}};
+  \node[ELtreeboxR,text width=6.2cm,minimum height=0.85cm,\ELon{cont}{ELtreeonR}] (cont) at (-1.2,1.15) {\ELL{Equation of continuity and Kirchhoff's current law}{معادله پیوستگی و استخراج قانون جریان کرشهف}};
+  \node[ELtreebox,text width=6.2cm,minimum height=0.85cm,\ELon{joule}{ELtreeon}] (joule) at (-1.2,0.00) {\ELL{Power dissipation and Joule's law}{اتلاف توان و قانون ژول}};
+  \node[ELtreeboxR,text width=6.2cm,minimum height=0.85cm,\ELon{bc}{ELtreeonR}] (bc) at (-1.2,-1.15) {\ELL{Boundary conditions for current density}{بررسی شرایط مرزی چگالی جریان}};
+  \node[ELtreebox,text width=6.2cm,minimum height=0.85cm,\ELon{res}{ELtreeon}] (res) at (-1.2,-2.30) {\ELL{Resistance calculations}{محاسبه مقاومت}};
+  \foreach \m in {ohm,cont,joule,bc,res}{\draw[ELtreelineG] (root.\ELend)--(\m.\ELstart);}
+\end{tikzpicture}

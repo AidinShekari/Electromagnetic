@@ -1,0 +1,18 @@
+% Ch4_2, slide 16: a quarter-annulus conductor (radii a, b; thickness h) in the first quadrant; its
+% cross-section (b - a by h) beside it
+\begin{tikzpicture}[scale=1]
+  \def\a{1.6}\def\b{2.5}
+  \fill[ELfillB] (\a,0) arc[start angle=0,end angle=90,radius=\a]--(0,\b) arc[start angle=90,end angle=0,radius=\b]--cycle;
+  \draw[ELink,line width=0.8pt] (\a,0) arc[start angle=0,end angle=90,radius=\a]--(0,\b) arc[start angle=90,end angle=0,radius=\b]--cycle;
+  \draw[ELax] (0,0)--(3.3,0) node[ELlab,anchor=west]{$x$};
+  \draw[ELax] (0,0)--(0,3.1) node[ELlab,anchor=south]{$y$};
+  \node[ELlab,anchor=north east] at (0,0) {$O$};
+  \draw[ELthin] (0,0)--(25:\b) node[ELlabs,anchor=south east,pos=0.85]{$b$};
+  \draw[ELthin] (0,0)--(12:\a) node[ELlabs,anchor=north,pos=0.75]{$a$};
+  \draw[ELthin,-{Stealth[length=4pt]}] (3.0,0.15)--(3.0,0.7) node[ELlabs,anchor=south]{$\phi$};
+  \begin{scope}[shift={(-1.6,2.0)}]
+    \fill[pattern=north east lines,pattern color=ELink!60] (0,0) rectangle (0.5,0.9); \draw[ELink,line width=0.6pt] (0,0) rectangle (0.5,0.9);
+    \draw[ELthin,{Stealth[length=3pt]}-{Stealth[length=3pt]}] (0,-0.2)--(0.5,-0.2) node[ELlabs,anchor=north,pos=0.5]{$h$};
+    \draw[ELthin,{Stealth[length=3pt]}-{Stealth[length=3pt]}] (-0.2,0)--(-0.2,0.9) node[ELlabs,anchor=east,pos=0.5]{$b-a$};
+  \end{scope}
+\end{tikzpicture}

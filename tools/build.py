@@ -77,6 +77,9 @@ def postprocess(tex: str) -> str:
         rows = t.count("\\\\\n")
         need = min(int(rows * 1.8) + 3, 22)
         body = t.replace("\\\\\n", "\\\\\\noalign{\\vskip 4pt}\n")
+        # a table without Persian text (a mathematical table) always runs left to right
+        if not re.search("[\u0600-\u06FF]", body):
+            body = "\\begin{ELltr}\n" + body + "\\end{ELltr}\n"
         return f"\\Needspace{{{need}\\baselineskip}}\n" + body
     return re.sub(r"\\begin\{longtable\}.*?\\end\{longtable\}", keep, tex, flags=re.S)
 

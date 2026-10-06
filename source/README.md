@@ -19,6 +19,11 @@ values and the figures.
 | `Ch2_6.pdf` | Part 6: electric flux density, dielectric constant, dielectric strength, boundary conditions (examples 2-13 to 2-15) | 18 |
 | `Ch2_7.pdf` | Part 7: capacitance and capacitors (examples 2-16 to 2-20) | 19 |
 | `Ch2_8.pdf` | Part 8: electrostatic energy (examples 2-21 to 2-24) | 12 |
+| `Ch3_1.pdf` | Chapter 3, part 1: outline, Poisson's and Laplace's equations (examples 3-1, 3-2), uniqueness theorem | 15 |
+| `Ch3_2.pdf` | Part 2: method of images: point charge and conducting plane, line charge and parallel conducting cylinder (example 3-3) | 13 |
+| `Ch3_3.pdf` | Part 3: boundary-value problems in Cartesian and cylindrical coordinates (examples 3-4 to 3-7) | 22 |
+| `Ch4_1.pdf` | Chapter 4, part 1: outline, current density and Ohm's law, equation of continuity, Joule's law | 17 |
+| `Ch4_2.pdf` | Part 2: boundary conditions for current density, resistance calculations (examples 4-1 to 4-3) | 17 |
 
 The book currently contains only the material in these files. Each later chapter goes in its own
 folder `NN-slug/{fa,en}/moduleNN-slug.md`, transcribed from its slides in order and in the same

@@ -1,0 +1,10 @@
+% Ch3_3, slides 10 and 12: V(0,y) extended as an odd periodic square wave of period 2b
+\begin{tikzpicture}[scale=1]
+  \def\b{1.2}\def\v{0.9}
+  \draw[ELax] (-2.6,0)--(3.6,0) node[ELlab,anchor=west]{$y$};
+  \draw[ELax] (0,-1.4)--(0,1.6) node[ELlab,anchor=south]{$V(0,y)$};
+  \draw[ELcurve] (-2.4,\v)--(-\b,\v)--(-\b,-\v)--(0,-\v)--(0,\v)--(\b,\v)--(\b,-\v)--(2*\b,-\v)--(2*\b,\v)--(3.4,\v);
+  \node[ELlabs,anchor=north east] at (-\b,0) {$-b$}; \node[ELlabs,anchor=north east] at (0.25,0) {$0$};
+  \node[ELlabs,anchor=north west] at (\b,0) {$b$}; \node[ELlabs,anchor=north west] at (2*\b,0) {$2b$};
+  \node[ELlabs,anchor=south east] at (0,\v) {$V_0$}; \node[ELlabs,anchor=north west] at (0,-\v) {$-V_0$};
+\end{tikzpicture}

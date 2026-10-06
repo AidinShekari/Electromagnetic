@@ -1,0 +1,15 @@
+% Ch3_1, slide 10: a parallel-plate capacitor (spacing d) held at 0 (y = 0) and V0 (y = d) by a source
+\begin{tikzpicture}[scale=1]
+  \def\L{4.2}\def\d{1.3}
+  \fill[ELfillB] (0,0) rectangle (\L,\d);
+  \fill[ELink] (0,\d) rectangle (\L,\d+0.1) (0,-0.1) rectangle (\L,0);
+  \foreach \x in {0.4,1.0,...,4.0}{\draw[ELvec,line width=0.8pt] (\x,\d-0.05)--(\x,0.08);
+    \node[font=\scriptsize,text=ELcSource] at (\x+0.25,\d-0.13) {$+$}; \node[font=\scriptsize,text=ELcField] at (\x+0.25,0.13) {$-$};}
+  \node[ELlab,anchor=west,fill=ELfillB,inner sep=1pt] at (\L-0.4,0.65) {$\vect{E}$};
+  \draw[ELax] (2.5,-0.1)--(2.5,2.1) node[ELlab,anchor=south]{$y$};
+  \node[ELlabs,anchor=north east] at (2.5,-0.1) {$0$}; \node[ELlabs,anchor=south west,inner sep=1pt] at (2.5,\d+0.1) {$d$};
+  \draw[ELink,line width=0.7pt] (0,\d+0.05)--(-1.2,\d+0.05)--(-1.2,0.85) (-1.2,0.4)--(-1.2,-0.05)--(0,-0.05);
+  \draw[ELink,line width=1.2pt] (-1.45,0.85)--(-0.95,0.85) (-1.35,0.72)--(-1.05,0.72) (-1.45,0.59)--(-0.95,0.59) (-1.35,0.46)--(-1.05,0.46);
+  \node[ELlabs,anchor=east] at (-1.5,0.66) {$V_0$};
+  \node[ELlabs,anchor=south east] at (-1.45,0.8) {$+$}; \node[ELlabs,anchor=north east] at (-1.45,0.5) {$-$};
+\end{tikzpicture}

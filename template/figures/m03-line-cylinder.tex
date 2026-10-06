@@ -1,0 +1,21 @@
+% Ch3_2, slides 8-10: a conducting cylinder of radius a (centre O) and a parallel line charge rho_l at
+% P (distance d); the image line charge rho_i at P_i (distance d_i from O); a point M on the surface
+\begin{tikzpicture}[scale=1]
+  \def\a{1.4}\def\d{4.6}
+  \pgfmathsetmacro{\di}{\a*\a/\d}
+  \draw[ELdash,line width=0.7pt] (0,0) circle (\a);
+  \coordinate (O) at (0,0); \coordinate (P) at (\d,0); \coordinate (Pi) at (\di,0); \coordinate (M) at (65:\a);
+  \draw[ELink,line width=0.6pt] (O)--(P);
+  \draw[ELink,line width=0.6pt] (O)--(M) node[ELlabs,anchor=east,pos=0.55]{$a$};
+  \draw[ELink,line width=0.6pt] (Pi)--(M) node[ELlabs,anchor=west,pos=0.45]{$r_i$};
+  \draw[ELink,line width=0.6pt] (M)--(P) node[ELlabs,anchor=south,pos=0.5]{$r$};
+  \fill[ELink] (O) circle (1.6pt) (M) circle (1.4pt);
+  \fill[ELcField] (Pi) circle (2.2pt); \fill[ELcSource] (P) circle (2.4pt);
+  \node[ELlab,anchor=east] at (O) {$O$}; \node[ELlab,anchor=south] at (M) {$M$};
+  \node[ELlabs,anchor=north] at ($(Pi)+(0.12,-0.05)$) {$P_i\,(\rho_i)$};
+  \node[ELlabs,anchor=west] at (P) {$P\,(\rho_\ell)$};
+  \draw[ELthin] (0,-0.25)--(0,-1.15) (\di,-0.5)--(\di,-0.75) (\d,-0.25)--(\d,-1.15);
+  \draw[ELthin,{Stealth[length=3.5pt]}-{Stealth[length=3.5pt]}] (0,-0.62)--(\di,-0.62);
+  \node[ELlabs,anchor=north] at (\di/2,-0.66) {$d_i$};
+  \draw[ELthin,{Stealth[length=3.5pt]}-{Stealth[length=3.5pt]}] (0,-1.0)--(\d,-1.0) node[ELlabs,anchor=center,fill=white,pos=0.5]{$d$};
+\end{tikzpicture}

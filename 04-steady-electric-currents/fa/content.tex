@@ -1,0 +1,697 @@
+\ELhold
+
+\ELsection{سرفصل‌ها}{سرفصل‌ها}
+
+\begin{ELunit}
+
+\ELfigure{m04-course-outline}{}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{جریان‌های الکتریکی دائم}{جریان‌های الکتریکی دائم}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  در فصل‌های قبل با مسائل الکتریسیته ساکن ناشی از بارهای الکتریکی ساکن سروکار داشتیم.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    اکنون در این فصل به بارهای متحرک الکتریکی که جریان الکتریکی را ایجاد می‌کنند می‌پردازیم.
+  \end{itemize}
+\item
+  جریان‌های الکتریکی ناشی از حرکت بارهای آزاد به سه دسته تقسیم می‌شوند
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{جریان‌های هدایتی:} در هادی‌ها و نیمه‌هادی‌ها توسط حرکت رانشی الکترون‌ها یا حفره‌ها بوجود می‌آیند.
+  \item
+    \textbf{جریان‌های الکترولیتی:} ناشی از حرکت یون‌های مثبت و منفی
+  \item
+    \textbf{جریان‌های انتقالی:} ناشی از حرکت الکترون‌ها یا یون‌ها در خلاء
+  \end{itemize}
+\item
+  در این فصل توجه خود را به جریان‌های هدایتی که قانون اهم بر آن‌ها حاکم است متمرکز می‌کنیم.
+\end{itemize}
+
+\ELfigure{m04-map}{}
+
+\begin{itemize}
+\tightlist
+\item
+  مفهوم \textbf{چگالی حجمی جریان} چیست و رابطه \textbf{چگالی جریان انتقالی} چگونه است؟
+\item
+  رابطه \textbf{چگالی جریان هدایتی} چگونه است؟
+\item
+  شکل نقطه ای \textbf{قانون اهم} چگونه است؟
+\item
+  \textbf{معادله پیوستگی} چیست و چگونه از روی آن \textbf{قانون جریان کرشهف} استخراج می شود؟
+\item
+  رابطه \textbf{قانون ژول} که نشان دهنده میزان اتلاف توان بر اثر عبور جریان از یک جسم هادی است، چگونه است؟
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{مفهوم چگالی جریان و استخراج قانون اهم}{مفهوم چگالی جریان و استخراج قانون اهم}
+
+\begin{ELunit}
+
+\ELfigure{m04-current-element}{}
+
+\begin{itemize}
+\tightlist
+\item
+  حرکت دائمی تعدادی حامل بار، هر یک با بار \ELim{q} گذرنده از جز کوچک سطحیِ \ELim{\Delta s} با سرعت \ELim{\vect{u}} را در نظر بگیرید
+\item
+  اگر \ELim{N} تعداد حامل‌های بار در واحد حجم باشد، آنگاه مقدار بار گذرنده از سطح \ELim{\Delta s} در مدت زمان \ELim{\Delta t} برابر است با
+\end{itemize}
+
+\ELdisp{\Delta Q\ELbr =Nq\vect{u}\cdot\uvec{n}\,\Delta s\,\Delta t\qquad\ELbr (\mathrm{C})}
+
+\begin{itemize}
+\tightlist
+\item
+  چون جریان نرخ زمانی تغییر بار است داریم
+\end{itemize}
+
+\ELdisp{\Delta I\ELbr =\frac{\Delta Q}{\Delta t}\ELbr =Nq\vect{u}\cdot\uvec{n}\,\Delta s\ELbr =Nq\vect{u}\cdot\Delta\vect{s}\qquad\ELbr (\mathrm{A})}
+
+\begin{itemize}
+\tightlist
+\item
+  چگالی جریان حجمی با واحد آمپر بر متر مربع را به صورت زیر تعریف می‌کنیم
+\end{itemize}
+
+\ELdisp{\vect{J}\ELbr =Nq\vect{u}\qquad\ELbr (\mathrm{A/m^2})}
+
+\end{ELunit}
+
+\begin{ELimportant}{چگالی جریان انتقالی}
+
+\ELdisp{\vect{J}\ELbr =\rho\vect{u}\qquad\ELbr (\mathrm{A/m^2})}
+
+\end{ELimportant}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  بنابراین
+\end{itemize}
+
+\ELdisp{\Delta I\ELbr =\vect{J}\cdot\Delta\vect{s}}
+
+\begin{itemize}
+\tightlist
+\item
+  به این ترتیب کل جریان گذرنده از سطح دلخواه \ELim{S} برابر است با
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{I\ELbr =\int_S\vect{J}\cdot d\vect{s}\qquad\ELbr (\mathrm{A})}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  جریان‌های هدایتی نتیجه حرکت رانشی حامل‌های بار تحت تأثیر یک میدان الکتریکی اعمال شده می‌باشند.
+\item
+  در مورد اکثر مواد هادی سرعت رانش متوسط، مستقیماً با شدت میدان الکتریکی متناسب است.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    در مورد هادی‌های فلزی داریم
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{\vect{u}\ELbr =-\mu_e\vect{E}\qquad\ELbr (\mathrm{m/s})}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{\mu_e}: ضریب تحرک الکترونی با واحد \ELim{\mathrm{m^2/V\cdot s}}
+\end{itemize}
+
+\ELdisp{\vect{J}\ELbr =-\rho_e\mu_e\vect{E}}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{\rho_e=-Ne}: چگالی حجمی بار الکترون‌های رانشی بوده و یک کمیت منفی است
+\end{itemize}
+
+\begin{ELimportant}{شکل نقطه ای قانون اهم}
+
+\ELdisp{\vect{J}\ELbr =\sigma\vect{E}\qquad\ELbr (\mathrm{A/m^2})}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\item
+  \ELim{\sigma=-\rho_e\mu_e}: یک پارامتر اساسی محیط بوده و رسانندگی نام دارد
+\item
+  واحد رسانندگی \ELim{\mathrm{A/V\cdot m}} یا زیمنس بر متر است. عکس رسانندگی را ضریب مقاومت می‌نامند و واحد آن \ELim{\Omega\cdot\mathrm{m}} است.
+\item
+  بدست آوردن رابطه بین ولتاژ و جریان یک قطعه از ماده‌ای همگن با رسانندگی \ELim{\sigma}، طول \ELim{\ell} و سطح مقطع یکنواخت \ELim{S} با استفاده از شکل نقطه‌ای قانون اهم
+\end{itemize}
+
+\ELfigure{m04-resistor}{}
+
+\ELdisp{\left.\begin{aligned}V_{12}=E\ell\quad&\Longrightarrow\quad E=\frac{V_{12}}{\ell}\\I=\int_S\vect{J}\cdot d\vect{s}=JS\quad&\Longrightarrow\quad J=\frac IS\end{aligned}\right\}\quad\ELbr \frac IS\ELbr =\sigma\frac{V_{12}}{\ell}}
+\ELdisp{V_{12}\ELbr =\left(\frac{\ell}{\sigma S}\right)I\ELbr =RI}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{R\ELbr =\frac{\ell}{\sigma S}\qquad\ELbr (\Omega)}
+\ELdisp{G\ELbr =\frac1R\ELbr =\sigma\frac S\ell\qquad\ELbr (\mathrm{S})}
+
+\end{ELimportant}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{G}: رسانایی یا عکس مقاومت با واحد مهو یا زیمنس
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{معادله پیوستگی و استخراج قانون جریان کرشهف}{معادله پیوستگی و استخراج قانون جریان کرشهف}
+
+\begin{ELunit}
+
+\ELfigure{m04-map-continuity}{}
+
+\begin{itemize}
+\tightlist
+\item
+  اصل بقای بار یکی از اصول موضوعی اساسی فیزیک است.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    بار الکتریکی نمی‌تواند تولید یا نابود شود.
+  \end{itemize}
+\item
+  حجم دلخواه \ELim{V} را که با سطح \ELim{S} احاطه شده است در نظر بگیرید. بار خالص \ELim{Q} درون این ناحیه وجود دارد. اگر جریان خالص \ELim{I} از سطح به سمت بیرون ناحیه عبور کند، بار درون حجم باید با نرخی برابر با جریان کاهش یابد. برعکس اگر جریان خالصی از سطح به سمت درون ناحیه عبور کند، بار درون حجم باید با نرخی برابر با جریان افزایش یابد.
+\item
+  جریان خارج شونده از ناحیه، کل شار خروجی بردار چگالی جریان از سطح \ELim{S} است
+\end{itemize}
+
+\ELdisp{I\ELbr =\oint_S\vect{J}\cdot d\vect{s}\ELbr =-\frac{dQ}{dt}\ELbr =-\frac{d}{dt}\int_V\rho\,dv}
+\ELdisp{\int_V\nabla\cdot\vect{J}\,dv\ELbr =-\int_V\frac{\partial\rho}{\partial t}\,dv}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  چون معادله فوق باید مستقل از انتخاب \ELim{V} باشد
+\end{itemize}
+
+\begin{ELimportant}{معادله پیوستگی}
+
+\ELdisp{\nabla\cdot\vect{J}\ELbr =-\frac{\partial\rho}{\partial t}\qquad\ELbr (\mathrm{A/m^3})}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  اگر تغییرات زمانی نداشته باشیم
+\end{itemize}
+
+\ELdisp{\nabla\cdot\vect{J}\ELbr =0}
+
+\begin{ELimportant}{قانون جریان کرشهف}
+
+\ELdisp{\oint_S\vect{J}\cdot d\vect{s}\ELbr =0}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  پیش از این گفته بودیم که بارهای قرار داده شده درون یک هادی به سطح آن حرکت کرده به گونه‌ایکه در حالت تعادل درون هادی \ELim{\rho=0} است. اکنون می‌خواهیم این بیان را ثابت کنیم
+\end{itemize}
+
+\ELdisp{\left.\begin{aligned}\sigma\nabla\cdot\vect{E}&=-\frac{\partial\rho}{\partial t}\\\nabla\cdot\vect{E}&=\rho/\epsilon\end{aligned}\right\}\quad\ELbr \frac{\partial\rho}{\partial t}+\frac\sigma\epsilon\rho\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \rho\ELbr =\rho_0e^{-(\sigma/\epsilon)t}\qquad\ELbr (\mathrm{C/m^3})}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{\rho_0}: چگالی بار اولیه
+\item
+  معادله فوق بیان می‌کند که چگالی بار در یک نقطه خاص به صورت نمایی با زمان کاهش می‌یابد.
+\item
+  چگالی اولیه در زمانی برابر با \ELim{\tau=\epsilon/\sigma} به \ELim{1/e} یا \ELim{36.8\%} مقدار خود کاهش می‌یابد.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    در یک هادی خوب مانند مس \ELim{\tau=1.52\times10^{-19}\,\mathrm{s}} است.
+  \item
+    برای یک عایق خوب این زمان ممکن است ساعت‌ها یا روزها به طول انجامد.
+  \end{itemize}
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{اتلاف توان و قانون ژول}{اتلاف توان و قانون ژول}
+
+\begin{ELunit}
+
+\ELfigure{m04-map-joule}{}
+
+\begin{itemize}
+\tightlist
+\item
+  تحت تأثیر یک میدان الکتریکی، الکترون‌های آزاد در هادی حرکت کرده و با اتم‌های موجود در شبکه کریستالی برخورد می‌کنند. بنابراین انرژی از میدان الکتریکی به اتم‌های تحت ارتعاش منتقل می‌گردد.
+\item
+  کار انجام شده توسط میدان الکتریکی در حرکت بار \ELim{q} تا فاصله \ELim{\Delta\ell} برابر است با
+\end{itemize}
+
+\ELdisp{\Delta W\ELbr =\vect{F}\cdot\Delta\vect{\ell}\ELbr =q\vect{E}\cdot\Delta\vect{\ell}}
+
+\begin{itemize}
+\tightlist
+\item
+  این کار متناظر با توان زیر است
+\end{itemize}
+
+\ELdisp{p\ELbr =\lim_{\Delta t\to0}\frac{\Delta w}{\Delta t}\ELbr =q\vect{E}\cdot\vect{u}}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{\vect{u}}: سرعت حرکت حامل های بار
+\end{itemize}
+
+\ELdisp{dp\ELbr =\rho\,dv\,\vect{E}\cdot\vect{u}}
+\ELdisp{dP\ELbr =\vect{E}\cdot\vect{J}\,dv}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  به ازای حجم مشخص \ELim{V} کل توان تبدیل شده به حرارت برابر است با
+\end{itemize}
+
+\begin{ELimportant}{قانون ژول}
+
+\ELdisp{P\ELbr =\int_V\vect{E}\cdot\vect{J}\,dv\qquad\ELbr (\mathrm{W})}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  در یک هادی با سطح مقطع ثابت داریم
+\end{itemize}
+
+\ELdisp{P\ELbr =\int_LE\,d\ell\int_SJ\,ds\ELbr =VI}
+
+\begin{ELimportant}{}
+
+\ELdisp{P\ELbr =I^2R\qquad\ELbr (\mathrm{W})}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  که همان رابطه آشنای توان اهمی است و حرارت تلف شده در مقاومت \ELim{R} را نشان می‌دهد.
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{بررسی شرایط مرزی چگالی جریان}{بررسی شرایط مرزی چگالی جریان}
+
+\begin{ELunit}
+
+\ELfigure{m04-map-boundary}{}
+
+\begin{itemize}
+\tightlist
+\item
+  هنگامیکه جریان به طور مایل از فصل مشترک بین دو محیط با رسانندگی‌های متفاوت عبور می‌کند، بردار چگالی جریان هم در جهت و هم در اندازه تغییر می‌کند.
+\item
+  معادلات حاکم بر چگالی جریان دائم عبارتند از
+\end{itemize}
+
+\end{ELunit}
+
+\textbf{\lr{Governing Equations for Steady Current Density}}
+
+\Needspace{8\baselineskip}
+\begin{ELltr}
+\begin{longtable}[c]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\ELtablehead \begin{minipage}[b]{\linewidth}\raggedright
+\lr{Differential Form}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\lr{Integral Form}
+\end{minipage} \\\noalign{\vskip 4pt}
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\ELim{\nabla\cdot\vect{J}=0} & \ELim{\oint_S\vect{J}\cdot d\vect{s}=0} \\\noalign{\vskip 4pt}
+\ELim{\nabla\times\left(\dfrac{\vect{J}}{\sigma}\right)=0} & \ELim{\oint_C\dfrac1\sigma\vect{J}\cdot\dif\vect{\ell}=0} \\\noalign{\vskip 4pt}
+\end{longtable}\end{ELltr}
+
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  شرایط مرزی به صورت زیرند
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\nabla\cdot\vect{J}\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  J_{1n}\ELbr =J_{2n}\qquad\ELbr (\mathrm{A/m^2})}
+\ELdisp{\nabla\times(\vect{J}/\sigma)\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \frac{J_{1t}}{J_{2t}}\ELbr =\frac{\sigma_1}{\sigma_2}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  هنگامیکه جریان دائمی از مرز دو دی‌الکتریک متفاوت با اتلاف عبور می‌کند
+\end{itemize}
+
+\ELdisp{J_{1n}\ELbr =J_{2n}\to\sigma_1E_{1n}\ELbr =\sigma_2E_{2n}}
+\ELdisp{D_{1n}-D_{2n}\ELbr =\rho_s\to\epsilon_1E_{1n}-\epsilon_2E_{2n}\ELbr =\rho_s}
+\ELdisp{\rho_s\ELbr =\left(\epsilon_1\frac{\sigma_2}{\sigma_1}-\epsilon_2\right)E_{2n}\ELbr =\left(\epsilon_1-\epsilon_2\frac{\sigma_1}{\sigma_2}\right)E_{1n}}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{E_{1n}=\uvec{n2}\cdot\vect{E}_1} و \ELim{E_{2n}=\uvec{n2}\cdot\vect{E}_2}
+\item
+  اگر محیط ۲ نسبت به محیط ۱ هادی به مراتب بهتری باشد
+\end{itemize}
+
+\ELdisp{\rho_s\ELbr =\epsilon_1E_{1n}\ELbr =D_{1n}}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  که همان رابطه شرط مرزی هادی است.
+\end{itemize}
+
+\ELnextnum{4-1}
+
+\begin{ELexample}{}
+
+اختلاف پتانسیل \ELim{\mathcal{V}} به یک خازن صفحه ای موازی با مساحت \ELim{S} اعمال شده است. فضای بین صفحات هادی با دو ماده دی الکتریک تلفاتی به ضخامت های \ELim{d_1} و \ELim{d_2}، گذردهی های \ELim{\epsilon_1} و \ELim{\epsilon_2} و رسانایی های \ELim{\sigma_1} و \ELim{\sigma_2} پر شده است. مطلوبست
+
+\begin{itemize}
+\tightlist
+\item
+  الف. شدت میدان الکتریکی در دو محیط
+\item
+  ب. چگالی جریان در دو محیط
+\item
+  ج. چگالی بار سطحی روی صفحات هادی و در مرز دو دی الکتریک
+\end{itemize}
+
+\ELfigure{m04-ex1}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  الف.
+\end{itemize}
+
+\ELdisp{J_1\ELbr =J_2\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \begin{aligned}\mathcal{V}&=E_1d_1+E_2d_2\\\sigma_1E_1&=\sigma_2E_2\end{aligned}}
+\ELdisp{E_1\ELbr =\frac{\sigma_2\mathcal{V}}{\sigma_2d_1+\sigma_1d_2}\qquad\ELbr  E_2\ELbr =\frac{\sigma_1\mathcal{V}}{\sigma_2d_1+\sigma_1d_2}}
+
+\begin{itemize}
+\tightlist
+\item
+  ب.
+\end{itemize}
+
+\ELdisp{J_1\ELbr =J_2\ELbr =\sigma_1E_1\ELbr =\sigma_2E_2\ELbr =\frac{\sigma_1\sigma_2\mathcal{V}}{\sigma_2d_1+\sigma_1d_2}}
+
+\begin{itemize}
+\tightlist
+\item
+  ج.
+\end{itemize}
+
+\ELdisp{\uvec{n}\cdot\vect{E}_1\ELbr =\frac{\rho_{s1}}{\epsilon_1}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \rho_{s1}\ELbr =\epsilon_1E_1\ELbr =\frac{\epsilon_1\sigma_2\mathcal{V}}{\sigma_2d_1+\sigma_1d_2}}
+\ELdisp{\uvec{n}\cdot\vect{E}_2\ELbr =\frac{\rho_{s2}}{\epsilon_2}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \rho_{s2}\ELbr =-\epsilon_2E_2\ELbr =-\frac{\epsilon_2\sigma_1\mathcal{V}}{\sigma_2d_1+\sigma_1d_2}}
+\ELdisp{\rho_{si}\ELbr =\left(\epsilon_1-\epsilon_2\frac{\sigma_1}{\sigma_2}\right)E_{1n}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \begin{aligned}\rho_{si}&=\left(\epsilon_2\frac{\sigma_1}{\sigma_2}-\epsilon_1\right)\frac{\sigma_2\mathcal{V}}{\sigma_2d_1+\sigma_1d_2}\\&=\frac{(\epsilon_2\sigma_1-\epsilon_1\sigma_2)\mathcal{V}}{\sigma_2d_1+\sigma_1d_2}\qquad(\mathrm{C/m^2})\end{aligned}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\end{ELjoin}
+
+\ELhold
+
+\ELsection{محاسبه مقاومت}{محاسبه مقاومت}
+
+\begin{ELunit}
+
+\ELfigure{m04-map-resistance}{}
+
+\begin{itemize}
+\item
+  نحوه محاسبه مقدار \textbf{مقاومت نشتی} در ساختارهای خازنی چگونه است؟
+\item
+  نحوه محاسبه مقدار مقاومت ساختارهای مختلف چگونه است؟
+\item
+  ظرفیت بین دو هادی که توسط یک محیط دی‌الکتریک از هم جدا شده‌اند برابر است با
+\end{itemize}
+
+\ELdisp{C\ELbr =\frac QV\ELbr =\frac{\oint_S\vect{D}\cdot d\vect{s}}{-\int_L\vect{E}\cdot\dif\vect{\ell}}\ELbr =\frac{\oint_S\epsilon\vect{E}\cdot d\vect{s}}{-\int_L\vect{E}\cdot\dif\vect{\ell}}}
+
+\begin{itemize}
+\tightlist
+\item
+  انتگرال سطحی روی سطح در برگیرنده هادی مثبت و انتگرال خطی از هادی منفی تا هادی مثبت انجام می‌گیرد.
+\item
+  اگر محیط دی‌الکتریک با اتلاف باشد، جریانی از هادی مثبت به هادی منفی عبور خواهد کرد. مقاومت بین هادی‌ها (مقاومت نشتی) برابر است با
+\end{itemize}
+
+\ELdisp{R\ELbr =\frac VI\ELbr =\frac{-\int_L\vect{E}\cdot\dif\vect{\ell}}{\oint_S\vect{J}\cdot d\vect{s}}\ELbr =\frac{-\int_L\vect{E}\cdot\dif\vect{\ell}}{\oint_S\sigma\vect{E}\cdot d\vect{s}}}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  درصورتیکه ضریب گذردهی و رسانندگی دارای وابستگی فضایی مشابهی باشند (\ELim{\epsilon(x,y,z)=k\sigma(x,y,z)}) و یا محیط دی‌الکتریک همگن باشد (\ELim{\epsilon} و \ELim{\sigma} وابستگی به مختصات فضایی نداشته باشند)
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{RC\ELbr =\frac CG\ELbr =\frac\epsilon\sigma}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\ELnextnum{4-2}
+
+\begin{ELexample}{}
+
+مطلوبست محاسبه مقاومت نشتی در واحد طول
+
+\begin{itemize}
+\tightlist
+\item
+  الف. بین هادی های داخلی و خارجی یک کابل هم محور با شعاع \ELim{a} برای هادی داخلی، شعاع \ELim{b} برای هادی خارجی و محیط دی الکتریک با رسانندگی \ELim{\sigma}
+\item
+  ب. خط انتقال دو سیمه شامل دو سیم با شعاع \ELim{a} و فاصله \ELim{D} درون محیطی با رسانندگی \ELim{\sigma}
+\end{itemize}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  الف. ظرفیت در واحد طول یک کابل کواکسیال
+\end{itemize}
+
+\ELdisp{C_1\ELbr =\frac{2\pi\epsilon}{\ln(b/a)}\qquad\ELbr (\mathrm{F/m})}
+
+\begin{itemize}
+\tightlist
+\item
+  مقاومت نشتی در واحد طول
+\end{itemize}
+
+\ELdisp{R_1\ELbr =\frac\epsilon\sigma\left(\frac{1}{C_1}\right)\ELbr =\frac{1}{2\pi\sigma}\ln\left(\frac ba\right)\qquad\ELbr (\Omega\cdot\mathrm{m})}
+
+\begin{itemize}
+\tightlist
+\item
+  ب. ظرفیت در واحد طول یک خط انتقال دوسیمه
+\end{itemize}
+
+\ELdisp{C'_1\ELbr =\frac{\pi\epsilon}{\cosh^{-1}\left(\dfrac{D}{2a}\right)}\qquad\ELbr (\mathrm{F/m})}
+
+\begin{itemize}
+\tightlist
+\item
+  مقاومت نشتی در واحد طول
+\end{itemize}
+
+\ELdisp{\begin{aligned}R'_1&=\frac\epsilon\sigma\left(\frac{1}{C'_1}\right)=\frac{1}{\pi\sigma}\cosh^{-1}\left(\frac{D}{2a}\right)\\&=\frac{1}{\pi\sigma}\ln\left[\frac{D}{2a}+\sqrt{\left(\frac{D}{2a}\right)^2-1}\right]\qquad(\Omega\cdot\mathrm{m})\end{aligned}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  در وضعیت‌های خاصی مسائل الکتریسیته ساکن و جریان دائم دقیقاً مشابه هم نیستند.
+\item
+  \textbf{روش اول} محاسبه مقاومت یک قطعه از ماده هادی بین دو سطح یا دو سر به صورت زیر است
+
+  \begin{itemize}
+  \tightlist
+  \item
+    انتخاب دستگاه مختصات مناسب
+  \item
+    قرار دادن اختلاف پتانسیل \ELim{V_0} بین دو سر هادی
+  \item
+    یافتن شدت میدان الکتریکی (اگر ماده همگن باشد، حل معادله لاپلاس و بدست آوردن پتانسیل الکتریکی و سپس محاسبه شدت میدان الکتریکی)
+  \item
+    یافتن جریان کل
+    \ELdisp{I\ELbr =\int_S\vect{J}\cdot d\vect{s}\ELbr =\int_S\sigma\vect{E}\cdot d\vect{s}}
+  \item
+    \ELim{S}: سطح مقطعی که جریان از آن می گذرد
+  \item
+    مقاومت برابر است با \ELim{V_0/I}
+  \end{itemize}
+\item
+  \textbf{روش دوم} محاسبه مقاومت یک قطعه از ماده هادی بین دو سطح یا دو سر به صورت زیر است (در صورتیکه \ELim{J} به سادگی از روی \ELim{I} قابل تعیین باشد)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    انتخاب دستگاه مختصات مناسب
+  \item
+    قرار دادن جریان \ELim{I} بین دو سر هادی
+  \item
+    یافتن \ELim{J} از روی \ELim{I}
+  \item
+    محاسبه شدت میدان الکتریکی \ELim{\vect{E}=\vect{J}/\sigma} و اختلاف پتانسیل \ELim{V_0}
+    \ELdisp{V_0\ELbr =-\int\vect{E}\cdot\dif\vect{\ell}}
+
+    \begin{itemize}
+    \tightlist
+    \item
+      انتگرالگیری از سر با پتانسیل پایین تا سر با پتانسیل بالا انجام می‌گیرد.
+    \end{itemize}
+  \item
+    مقاومت برابر است با \ELim{V_0/I}
+  \end{itemize}
+\end{itemize}
+
+\end{ELunit}
+
+\ELnextnum{4-3}
+
+\begin{ELexample}{}
+
+یک ماده هادی با ضخامت یکنواخت \ELim{h} و رسانندگی \ELim{\sigma} را به صورت شکل زیر در نظر بگیرید. مقاومت بین دو وجه انتهایی آن را بدست آورید.
+
+\ELfigure{m04-ex3}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  انتخاب دستگاه مختصات استوانه ای
+\end{itemize}
+
+\ELdisp{V\ELbr =0\quad\ELbr \text{\lr{at}}\quad\ELbr \phi\ELbr =0,\qquad\ELbr  V\ELbr =V_0\quad\ELbr \text{\lr{at}}\quad\ELbr \phi\ELbr =\pi/2}
+\ELdisp{\frac{d^2V}{d\phi^2}\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  V\ELbr =c_1\phi+c_2\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  V\ELbr =\frac{2V_0}{\pi}\phi}
+\ELdisp{\begin{aligned}\vect{J}=\sigma\vect{E}&=-\sigma\nabla V\\&=-\uvec{\phi}\sigma\frac{\partial V}{r\,\partial\phi}=-\uvec{\phi}\frac{2\sigma V_0}{\pi r}\end{aligned}}
+\ELdisp{\begin{aligned}I=\int_S\vect{J}\cdot d\vect{s}&=\int_0^h\!\!\int_a^b\left(-\uvec{\phi}\frac{2\sigma V_0}{\pi r}\right)\cdot\left(-\uvec{\phi}\,dr\,dz\right)\\&=\frac{2\sigma hV_0}{\pi}\ln\frac ba\end{aligned}}
+\ELdisp{R\ELbr =\frac{V_0}{I}\ELbr =\frac{\pi}{2\sigma h\ln(b/a)}}
+
+\end{ELsolution}
+
+\end{ELexample}

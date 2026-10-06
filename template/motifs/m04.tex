@@ -1,0 +1,10 @@
+% ============================================================
+%  Chapter 4 (steady electric currents): a conductor between two terminals with the current density
+%  J along it and the equipotential cross-sections normal to it.  Centred on \ELmotifcx.
+% ============================================================
+\begin{scope}[shift={(\ELmotifcx,4.3)},line cap=round]
+  \draw[white,opacity=0.85,line width=0.9pt] (-4.2,-1.4) rectangle (4.2,1.4);
+  \foreach \x in {-3.2,-2.0,...,3.4}{\draw[ELblueD,opacity=0.55,line width=0.6pt] (\x,-1.4)--(\x,1.4);}
+  \foreach \y in {-1.0,-0.5,...,1.0}{\draw[ELredD,opacity=0.85,line width=0.9pt,-{Stealth[length=5pt]}] (-4.0,\y)--(4.0,\y);}
+  \fill[white] (-4.2,-1.4) rectangle (-4.55,1.4) (4.2,-1.4) rectangle (4.55,1.4);
+\end{scope}

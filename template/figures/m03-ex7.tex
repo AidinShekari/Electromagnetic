@@ -1,0 +1,11 @@
+% Ch3_3, slide 19: a thin conducting tube of radius b split in two: upper half at V0, lower half at -V0
+\begin{tikzpicture}[scale=1]
+  \def\b{1.5}
+  \draw[ELcSource,line width=2pt] (4:\b) arc[start angle=4,end angle=176,radius=\b];
+  \draw[ELcField,line width=2pt] (184:\b) arc[start angle=184,end angle=356,radius=\b];
+  \fill[ELink] (0,0) circle (1.2pt);
+  \draw[ELthin] (0,0)--(30:\b) node[ELlabs,anchor=south east,pos=0.6]{$b$};
+  \draw[ELax] (\b+0.1,0)--(\b+0.9,0) node[ELlab,anchor=west]{$x$};
+  \draw[ELthin,-{Stealth[length=4pt]}] (\b+0.3,0.15)--(\b+0.3,0.7) node[ELlabs,anchor=south]{$\phi$};
+  \node[ELlabs,anchor=south] at (0,\b+0.05) {$V=V_0$}; \node[ELlabs,anchor=north] at (0,-\b-0.05) {$V=-V_0$};
+\end{tikzpicture}

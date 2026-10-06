@@ -1,0 +1,11 @@
+% Ch3_3, slide 17: two semi-infinite conducting plates meeting at the angle alpha; one grounded
+% (phi = 0), one at V0 (phi = alpha); phi measured counter-clockwise
+\begin{tikzpicture}[scale=1]
+  \def\al{40}
+  \draw[ELink,line width=1.6pt] (0,0)--(3.6,0); \draw[ELdash] (3.6,0)--(4.2,0);
+  \draw[ELink,line width=1.6pt] (0,0)--(\al:3.4); \draw[ELdash] (\al:3.4)--(\al:4.0);
+  \draw[ELthin] (0.7,0) arc[start angle=0,end angle=\al,radius=0.7]; \node[ELlabs,anchor=west] at (\al/2:0.72) {$\alpha$};
+  \node[ELlab,anchor=south east] at (\al:3.0) {$V_0$};
+  \draw[ELink,line width=0.7pt] (2.0,0)--(2.0,-0.55); \draw[ELink,line width=0.9pt] (1.7,-0.55)--(2.3,-0.55) (1.8,-0.67)--(2.2,-0.67) (1.9,-0.79)--(2.1,-0.79);
+  \draw[ELthin,-{Stealth[length=4pt]}] (4.5,-0.1)--(4.5,0.35); \node[ELlabs,anchor=west] at (4.55,0.12) {$\phi$};
+\end{tikzpicture}

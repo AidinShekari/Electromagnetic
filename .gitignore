@@ -1,24 +1,14 @@
-# LaTeX build by-products (the PDFs and tools/ are kept)
-*.aux
+# LaTeX build by-products (the PDFs and tools/ are kept: the build depends on tools/)
 *.log
+*.aux
 *.toc
 *.out
 *.synctex.gz
-*.fls
 *.fdb_latexmk
+*.fls
 *.xdv
 .DS_Store
 __pycache__/
-*.bbl
-*.blg
-*.lof
-*.lot
-*.nav
-*.snm
-*.vrb
-*.run.xml
-*.bcf
-*.pdf_tex
 *.pyc
 
 # figure QA harness output

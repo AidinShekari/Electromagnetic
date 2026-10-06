@@ -1,0 +1,20 @@
+% Ch4_2, slide 5: a parallel-plate capacitor with two lossy dielectric layers (eps1, sigma1, thickness d1;
+% eps2, sigma2, thickness d2) and the applied voltage; E1, E2, J1, J2 point downward; rho_si at the interface
+\begin{tikzpicture}[scale=1]
+  \def\L{4.4}\def\da{0.8}\def\db{1.1}
+  \fill[ELfillB] (0,\db) rectangle (\L,\db+\da); \fill[ELfillA] (0,0) rectangle (\L,\db);
+  \fill[pattern=north east lines,pattern color=ELink!60] (0,\db+\da) rectangle (\L,\db+\da+0.12) (0,-0.12) rectangle (\L,0);
+  \draw[ELink,line width=0.6pt] (0,\db+\da) rectangle (\L,\db+\da+0.12) (0,-0.12) rectangle (\L,0);
+  \draw[ELink,line width=0.5pt] (0,\db)--(\L,\db);
+  \foreach \x/\l in {1.6/{\vect{J}_1},2.9/{\vect{E}_1}}{\draw[ELvec,line width=0.9pt] (\x,\db+\da-0.08)--(\x,\db+0.1) node[ELlabs,anchor=west,pos=0.4]{$\l$};}
+  \foreach \x/\l in {1.6/{\vect{J}_2},2.9/{\vect{E}_2}}{\draw[ELvec,line width=0.9pt] (\x,\db-0.08)--(\x,0.12) node[ELlabs,anchor=west,pos=0.4]{$\l$};}
+  \node[ELlabs,anchor=west] at (0.08,\db+\da/2) {$\epsilon_1,\sigma_1$}; \node[ELlabs,anchor=west] at (0.08,\db/2) {$\epsilon_2,\sigma_2$};
+  \node[ELlabs,anchor=south west] at (3.4,\db-0.02) {$\rho_{si}$};
+  \draw[ELthin] (\L+0.1,0)--(\L+0.5,0) (\L+0.1,\db)--(\L+0.5,\db) (\L+0.1,\db+\da)--(\L+0.5,\db+\da);
+  \draw[ELthin,{Stealth[length=3pt]}-{Stealth[length=3pt]}] (\L+0.35,\db)--(\L+0.35,\db+\da) node[ELlabs,anchor=west,pos=0.5]{$d_1$};
+  \draw[ELthin,{Stealth[length=3pt]}-{Stealth[length=3pt]}] (\L+0.35,0)--(\L+0.35,\db) node[ELlabs,anchor=west,pos=0.5]{$d_2$};
+  \draw[ELink,line width=0.7pt] (0,\db+\da+0.06)--(-1.2,\db+\da+0.06)--(-1.2,1.35) (-1.2,0.9)--(-1.2,-0.06)--(0,-0.06);
+  \draw[ELink,line width=1.2pt] (-1.45,1.35)--(-0.95,1.35) (-1.35,1.22)--(-1.05,1.22) (-1.45,1.09)--(-0.95,1.09) (-1.35,0.96)--(-1.05,0.96);
+  \node[ELlabs,anchor=east] at (-1.5,1.15) {$\mathcal{V}$};
+  \node[ELlabs,anchor=south east] at (-1.45,1.3) {$+$}; \node[ELlabs,anchor=north east] at (-1.45,1.0) {$-$};
+\end{tikzpicture}

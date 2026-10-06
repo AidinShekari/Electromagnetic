@@ -1,0 +1,9 @@
+% Ch4_1, slide 7: charge carriers moving with velocity u through a small surface element Delta s with normal a_n
+\begin{tikzpicture}[scale=1]
+  \fill[ELfillB] plot[smooth cycle,tension=0.8] coordinates{(-1.6,-1.7)(-1.8,0.3)(-1.2,1.5)(0.0,1.2)(0.9,1.6)(1.2,0.4)(0.7,-0.8)(0.4,-1.9)};
+  \draw[ELcField!80,line width=0.6pt] plot[smooth cycle,tension=0.8] coordinates{(-1.6,-1.7)(-1.8,0.3)(-1.2,1.5)(0.0,1.2)(0.9,1.6)(1.2,0.4)(0.7,-0.8)(0.4,-1.9)};
+  \draw[ELink,line width=0.7pt,fill=white] (-1.05,-0.55)--(-0.6,-0.3)--(-0.6,0.35)--(-1.05,0.1)--cycle;
+  \node[ELlabs] at (-0.84,0.05) {$\Delta s$};
+  \draw[ELvec,line width=0.9pt] (-0.82,-0.12)--(-0.15,-0.12) node[ELlabs,anchor=west]{$\uvec{n}$};
+  \draw[ELvec2,line width=1pt] (-0.1,0.55)--(1.0,1.3) node[ELlab,anchor=south west]{$\vect{u}$};
+\end{tikzpicture}

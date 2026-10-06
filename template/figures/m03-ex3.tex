@@ -1,0 +1,21 @@
+% Ch3_2, slide 12: two parallel wires (radius a, centre distance D); the image line charges +rho_l, -rho_l
+% at the distance d_i from the centres, separated by d
+\begin{tikzpicture}[scale=1]
+  \def\a{0.95}\def\D{5.0}
+  \pgfmathsetmacro{\d}{0.5*(\D+sqrt(\D*\D-4*\a*\a))}\pgfmathsetmacro{\di}{\D-\d}
+  \foreach \c/\n in {0/2,\D/1}{
+    \fill[pattern=north east lines,pattern color=ELink!45] (\c,0) circle (\a);
+    \draw[ELink,line width=0.8pt] (\c,0) circle (\a);
+    \node[ELlabs,anchor=south] at (\c-0.6,0.85) {$\n$};
+    \fill[ELink] (\c,0) circle (1.2pt);}
+  \fill[ELcField] (\di,0) circle (2pt); \fill[ELcSource] (\D-\di,0) circle (2pt);
+  \node[ELlabs,anchor=south,fill=white,inner sep=1pt] at (\di+0.05,0.12) {$-\rho_\ell$};
+  \node[ELlabs,anchor=south,fill=white,inner sep=1pt] at (\D-\di-0.05,0.12) {$+\rho_\ell$};
+  \draw[ELthin] (0,0)--(50:\a) node[ELlabs,anchor=south east,pos=0.7,fill=white,inner sep=1pt]{$a$};
+  \draw[ELthin] (\D,0)--($(\D,0)+(50:\a)$) node[ELlabs,anchor=north west,pos=0.75,fill=white,inner sep=1pt]{$a$};
+  \draw[ELthin] (0,0)--(0,-1.75) (\D,0)--(\D,-1.75) (\di,0)--(\di,-1.3) (\D-\di,0)--(\D-\di,-1.3);
+  \draw[ELthin,{Stealth[length=3pt]}-{Stealth[length=3pt]}] (0,-0.5)--(\di,-0.5); \node[ELlabs,anchor=north,fill=white,inner sep=0.5pt] at (\di/2,-0.55) {$d_i$};
+  \draw[ELthin,{Stealth[length=3pt]}-{Stealth[length=3pt]}] (\D-\di,-0.5)--(\D,-0.5); \node[ELlabs,anchor=north,fill=white,inner sep=0.5pt] at (\D-\di/2,-0.55) {$d_i$};
+  \draw[ELthin,{Stealth[length=3.5pt]}-{Stealth[length=3.5pt]}] (\di,-1.15)--(\D-\di,-1.15) node[ELlabs,anchor=center,fill=white,pos=0.5]{$d$};
+  \draw[ELthin,{Stealth[length=3.5pt]}-{Stealth[length=3.5pt]}] (0,-1.6)--(\D,-1.6) node[ELlabs,anchor=center,fill=white,pos=0.5]{$D$};
+\end{tikzpicture}
