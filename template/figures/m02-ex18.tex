@@ -1,0 +1,11 @@
+% Ch2_7, slide 11: a spherical capacitor: inner conducting sphere of radius R_i, outer conductor of
+% radius R_o, dielectric eps between them
+\begin{tikzpicture}[scale=1]
+  \def\ri{0.75}\def\ro{1.6}
+  \fill[ELink!45] plot[smooth cycle,tension=0.9,domain=0:350,samples=36] ({(\ro+0.32+0.06*sin(5*\x))*cos(\x)},{(\ro+0.32+0.06*sin(5*\x))*sin(\x)});
+  \fill[ELfillA] (0,0) circle (\ro); \draw[ELcField!80,line width=0.6pt] (0,0) circle (\ro);
+  \fill[ELink!40] (0,0) circle (\ri); \draw[ELink,line width=0.6pt] (0,0) circle (\ri);
+  \draw[ELthin] (0,0)--(25:\ri) node[ELlabs,anchor=south,pos=0.6]{$R_i$};
+  \draw[ELthin] (0,0)--(-50:\ro) node[ELlabs,anchor=west,pos=0.75]{$R_o$};
+  \node[ELtag] at (0,1.12) {\ELL{Dielectric, $\epsilon$}{دی‌الکتریک، $\epsilon$}};
+\end{tikzpicture}

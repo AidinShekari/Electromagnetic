@@ -1,0 +1,26 @@
+% Ch2_7, slide 13: capacitors C1 ... Cn connected in parallel, equivalent to C_par
+\begin{tikzpicture}[scale=1.05]
+  \tikzset{cap/.pic={\draw[ELink,line width=0.7pt] (-0.6,0)--(-0.08,0) (0.08,0)--(0.6,0); \draw[ELink,line width=1.3pt] (-0.08,-0.28)--(-0.08,0.28) (0.08,-0.28)--(0.08,0.28);}}
+  \foreach \y/\n in {2.4/1,1.2/2,-0.6/n}{
+    \pic at (1.0,\y) {cap};
+    \draw[ELink,line width=0.7pt] (0,\y)--(0.4,\y) (1.6,\y)--(2.0,\y);
+    \node[ELlabs,anchor=south] at (1.0,\y+0.28) {$C_{\n}$};
+    \node[ELlabs,anchor=north east] at (0.92,\y-0.03) {$+Q_{\n}$};
+    \node[ELlabs,anchor=north west] at (1.08,\y-0.03) {$-Q_{\n}$};}
+  \draw[ELink,line width=0.7pt] (0,2.4)--(0,1.2) (2.0,2.4)--(2.0,1.2) (0,-0.6)--(0,-1.6) (2.0,-0.6)--(2.0,-1.6);
+  \draw[ELink,line width=0.7pt,dashed] (0,1.2)--(0,-0.6) (2.0,1.2)--(2.0,-0.6);
+  \foreach \p in {(0,1.2),(2.0,1.2),(0,-0.6),(2.0,-0.6)}{\fill[ELink] \p circle (1.6pt);}
+  \draw[ELink,line width=0.6pt,fill=white] (0,-1.7) circle (0.08) (2.0,-1.7) circle (0.08);
+  \node[ELlabs,anchor=north] at (0,-1.8) {$+$}; \node[ELlabs,anchor=north] at (2.0,-1.8) {$-$};
+  \draw[ELthin,{Stealth[length=4pt]}-{Stealth[length=4pt]}] (0,-1.25)--(2.0,-1.25) node[ELlabs,anchor=center,fill=white,pos=0.5]{$V$};
+  \node[ELlab] at (2.9,0.6) {$=$};
+  \begin{scope}[shift={(3.6,0.6)}]
+    \pic at (1.0,0) {cap};
+    \draw[ELink,line width=0.7pt] (0,-1.3)--(0,0)--(0.4,0) (1.6,0)--(2.0,0)--(2.0,-1.3);
+    \node[ELlabs,anchor=south] at (1.0,0.28) {$C_{\parallel}$};
+    \node[ELlabs,anchor=north east] at (0.92,-0.03) {$+Q$}; \node[ELlabs,anchor=north west] at (1.08,-0.03) {$-Q$};
+    \draw[ELink,line width=0.6pt,fill=white] (0,-1.4) circle (0.08) (2.0,-1.4) circle (0.08);
+    \node[ELlabs,anchor=north] at (0,-1.5) {$+$}; \node[ELlabs,anchor=north] at (2.0,-1.5) {$-$};
+    \draw[ELthin,{Stealth[length=4pt]}-{Stealth[length=4pt]}] (0,-0.95)--(2.0,-0.95) node[ELlabs,anchor=center,fill=white,pos=0.5]{$V$};
+  \end{scope}
+\end{tikzpicture}

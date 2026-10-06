@@ -1118,3 +1118,969 @@
 \ELdisp{\begin{aligned}\text{\lr{Total charge}}&=\oint_S\rho_{ps}\,ds+\int_V\rho_p\,dv\\&=\oint_S\vect{P}\cdot\uvec{n}\,ds-\int_V\nabla\cdot\vect{P}\,dv=0\end{aligned}}
 
 \end{ELremark}
+
+\ELhold
+
+\ELsection{چگالی شار الکتریکی}{چگالی شار الکتریکی}
+
+\begin{ELunit}
+
+\ELfigure{m02-map-flux}{}
+
+\begin{itemize}
+\tightlist
+\item
+  چون یک دی‌الکتریک موجب پیدایش چگالی بار حجمی معادل \ELim{\rho_p} می‌شود، انتظار داریم که شدت میدان الکتریکی ناشی از یک توزیع بار مفروض در یک دی‌الکتریک با شدت میدان الکتریکی در فضای آزاد متفاوت باشد.
+\end{itemize}
+
+\ELdisp{\nabla\cdot\vect{E}\ELbr =\frac{1}{\epsilon_0}(\rho+\rho_p)}
+\ELdisp{\nabla\cdot(\epsilon_0\vect{E}+\vect{P})\ELbr =\rho}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  چگالی شار الکتریکی یا جابجایی الکتریکیِ \ELim{\vect{D}} به صورت زیر تعریف می‌شود
+\end{itemize}
+
+\begin{ELdefinition}{}
+
+\ELdisp{\vect{D}\ELbr =\epsilon_0\vect{E}+\vect{P}\qquad\ELbr (\mathrm{C/m^2})}
+
+\end{ELdefinition}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  با استفاده از بردار \ELim{\vect{D}} می‌توان رابطه بین میدان الکتریکی و توزیع‌های بار آزاد را در هر محیط بدون لزوم درگیری با بردار قطبی‌شدگی \ELim{\vect{P}} یا چگالی‌های بار قطبی‌شدگی نوشت.
+\end{itemize}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{\nabla\cdot\vect{D}\ELbr =\rho\qquad\ELbr (\mathrm{C/m^3})}
+
+\end{ELimportant}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  فرم انتگرالی
+\end{itemize}
+
+\ELdisp{\int_V\nabla\cdot\vect{D}\,dv\ELbr =\int_V\rho\,dv}
+
+\begin{ELimportant}{شکل دیگر قانون گوس}
+
+\ELdisp{\oint_S\vect{D}\cdot d\vect{s}\ELbr =Q\qquad\ELbr (\mathrm{C})}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  معادلات اصلی حاکم بر الکتریسیته ساکن در هر محیط
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\begin{cases}\nabla\cdot\vect{D}=\rho\\\nabla\times\vect{E}=0\end{cases}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\ELhold
+
+\ELsection{ضریب دی‌الکتریک}{ضریب دی‌الکتریک}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  رابطه بین بردار قطبی شدگی و شدت میدان الکتریکی
+\end{itemize}
+
+\ELdisp{\vect{P}\ELbr =\epsilon_0\chi_e\vect{E}}
+
+\begin{itemize}
+\item
+  \ELim{\chi_e}: پذیرندگی الکتریکی
+\item
+  رابطه بین شدت میدان الکتریکی و چگالی شار الکتریکی
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\begin{aligned}\vect{D}&=\epsilon_0(1+\chi_e)\vect{E}\\&=\epsilon_0\epsilon_r\vect{E}=\epsilon\vect{E}\qquad(\mathrm{C/m^2})\end{aligned}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\ELdisp{\epsilon_r\ELbr =1+\chi_e\ELbr =\frac{\epsilon}{\epsilon_0}}
+
+\begin{itemize}
+\item
+  \ELim{\epsilon_r}: یک ثابت بدون بعد به نام گذردهی نسبی یا ضریب دی‌الکتریک
+\item
+  یک محیط دی‌الکتریک \textbf{خطی} است اگر \ELim{\epsilon_r} مستقل از \ELim{\vect{E}}، \textbf{همگن} است اگر \ELim{\epsilon_r} مستقل از مختصات فضایی و همه سو یکسان است اگر \ELim{\epsilon_r} اسکالر باشد.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    هر محیط خطی، همگن و همه سو یکسان را یک محیط ساده می‌نامند.
+  \item
+    در محیط‌های غیر همه سو یکسان ضریب دی‌الکتریک به صورت ماتریس است. در چنین محیط‌هایی \ELim{\vect{D}} و \ELim{\vect{E}} لزوماً هم جهت نیستند.
+  \end{itemize}
+\end{itemize}
+
+\end{ELunit}
+
+\ELnextnum{2-13}
+
+\begin{ELexample}{}
+
+بار نقطه‌ای \ELim{+Q} در مرکز یک پوسته کروی دی‌الکتریک به شعاع داخلی \ELim{R_i} و شعاع خارجی \ELim{R_o} قرار دارد. ثابت دی‌الکتریک پوسته \ELim{\epsilon_r} است. \ELim{\vect{E}}، \ELim{V}، \ELim{\vect{D}} و \ELim{\vect{P}} را در کل فضا بدست آورید.
+
+\ELfigure{m02-ex13}{}
+
+\begin{ELsolution}
+
+\ELdisp{\vect{E}\ELbr =E_R\uvec{R}}
+
+\begin{itemize}
+\tightlist
+\item
+  به ازای \ELim{R>R_o}
+\end{itemize}
+
+\ELdisp{E_{R1}\ELbr =\frac{Q}{4\pi\epsilon_0R^2}\qquad\ELbr  V_1\ELbr =\frac{Q}{4\pi\epsilon_0R}}
+\ELdisp{D_{R1}\ELbr =\epsilon_0E_{R1}\ELbr =\frac{Q}{4\pi R^2}\qquad\ELbr  P_{R1}\ELbr =0}
+
+\begin{itemize}
+\tightlist
+\item
+  به ازای \ELim{R_i<R<R_o}
+\end{itemize}
+
+\ELdisp{D_{R2}\ELbr =\frac{Q}{4\pi R^2}}
+\ELdisp{E_{R2}\ELbr =\frac{Q}{4\pi\epsilon_0\epsilon_rR^2}\ELbr =\frac{Q}{4\pi\epsilon R^2}}
+\ELdisp{P_{R2}\ELbr =\left(1-\frac{1}{\epsilon_r}\right)\frac{Q}{4\pi R^2}}
+\ELdisp{\begin{aligned}V_2&=-\int_{\infty}^{R_o}E_{R1}\,dR-\int_{R_o}^{R}E_{R2}\,dR\\&=V_1\Big|_{R=R_o}-\frac{Q}{4\pi\epsilon}\int_{R_o}^{R}\frac{1}{R^2}\,dR\\&=\frac{Q}{4\pi\epsilon_0}\left[\left(1-\frac{1}{\epsilon_r}\right)\frac{1}{R_o}+\frac{1}{\epsilon_rR}\right]\end{aligned}}
+
+\begin{itemize}
+\tightlist
+\item
+  به ازای \ELim{R<R_i}
+\end{itemize}
+
+\ELdisp{E_{R3}\ELbr =\frac{Q}{4\pi\epsilon_0R^2}\qquad\ELbr  D_{R3}\ELbr =\frac{Q}{4\pi R^2}\qquad\ELbr  P_{R3}\ELbr =0}
+\ELdisp{\begin{aligned}V_3&=V_2\Big|_{R=R_i}-\int_{R_i}^{R}E_{R3}\,dR\\&=\frac{Q}{4\pi\epsilon_0}\left[\left(1-\frac{1}{\epsilon_r}\right)\frac{1}{R_o}-\left(1-\frac{1}{\epsilon_r}\right)\frac{1}{R_i}+\frac{1}{R}\right]\end{aligned}}
+
+\ELdisp{\begin{aligned}\rho_{ps}\Big|_{R=R_i}&=\vect{P}\cdot(-\uvec{R})\Big|_{R=R_i}=-P_{R2}\Big|_{R=R_i}\\&=-\left(1-\frac{1}{\epsilon_r}\right)\frac{Q}{4\pi R_i^2}\end{aligned}}
+\ELdisp{\begin{aligned}\rho_{ps}\Big|_{R=R_o}&=\vect{P}\cdot\uvec{R}\Big|_{R=R_o}=P_{R2}\Big|_{R=R_o}\\&=\left(1-\frac{1}{\epsilon_r}\right)\frac{Q}{4\pi R_o^2}\end{aligned}}
+\ELdisp{\begin{aligned}\rho_p&=-\nabla\cdot\vect{P}\\&=-\frac{1}{R^2}\frac{\partial}{\partial R}(R^2P_{R2})=0\end{aligned}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELhold
+
+\ELsection{مقاومت دی‌الکتریک}{مقاومت دی‌الکتریک}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  میدان الکتریکی خارجی باعث جابجایی‌های کوچک در بارهای مقید شده و دوقطبی‌های الکتریکی را بوجود می‌آورد.
+\item
+  حال اگر میدان الکتریکی قوی باشد، باعث جدایی کامل الکترون‌ها از مولکول‌ها، شتاب گرفتن آن‌ها و تصادم آن‌ها با ساختار شبکه‌ای مولکولی می‌شود.
+\item
+  در این حالت ممکن است ماده هادی شود و جریان‌های بزرگی بوجود آید.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    این پدیده را \textbf{شکست دی‌الکتریک} گویند.
+  \end{itemize}
+\item
+  حداکثر شدت میدان الکتریکی که یک ماده دی‌الکتریک می‌تواند بدون شکست تحمل کند، \textbf{مقاومت دی‌الکتریک} ماده نامیده می‌شود.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    به عنوان مثال مقاومت دی الکتریک هوا \ELim{3\,\mathrm{kV/mm}} است.
+  \end{itemize}
+\end{itemize}
+
+\end{ELunit}
+
+\ELnextnum{2-14}
+
+\begin{ELexample}{}
+
+هنگامیکه یک کابل هم محور برای حمل توان الکتریکی استفاده می شود، شعاع هادی داخلی توسط جریان بار و ابعاد کلی توسط ولتاژ و ماده عایق مورد استفاده تعیین می شوند. فرض کنید که شعاع هادی داخلی \ELim{0.4\,\mathrm{cm}} و دو لایه شامل لاستیک با گذردهی نسبی \ELim{\epsilon_{rr}=3.2} و پلی استایرن با گذردهی الکتریکی \ELim{\epsilon_{rp}=2.6} به عنوان ماده عایق استفاده شده باشند. این کابل را به گونه ای طراحی کنید که قابلیت کار در ولتاژ \ELim{20\,\mathrm{kV}} را داشته باشد. به منظور اجتناب از پدیده شکست ناشی از شرایط خارجی غیر عادی، حداکثر شدت میدان الکتریکی در مواد عایق نباید از ۲۵٪ مقاومت عایق ها تجاوز کند. (مقاومت دی الکتریک لاستیک \ELim{25\times10^6\,\mathrm{V/m}} و مقاومت دی الکتریک پلی استیرین \ELim{20\times10^6\,\mathrm{V/m}} است)
+
+\ELfigure{m02-ex14}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  هدف تعیین ترتیب لایه های عایقی و مقادیر \ELim{r_o} و \ELim{r_m} است.
+\item
+  با فرض اینکه چگالی بار آزاد روی سطح هادی داخلی \ELim{\rho_s} باشد، با استفاده از قانون گوس داریم
+\end{itemize}
+
+\ELdisp{D_r2\pi rL\ELbr =\rho_s2\pi r_iL\qquad\ELbr  D_r\ELbr =\rho_s\frac{r_i}{r}\qquad\ELbr  E_r\ELbr =\frac{\rho_s}{\epsilon_0\epsilon_{r1,2}}\frac{r_i}{r}}
+\ELdisp{\text{\lr{Rubber}}\qquad\ELbr  \max\{E_{rr}\}\ELbr =0.25\times25\times10^6\,\mathrm{V/m}\ELbr =\frac{\rho_s}{\epsilon_0\epsilon_{rr}}\frac{r_i}{r_{r\min}}\qquad\ELbr  r_{r\min}\ELbr =r_i\ \text{\lr{or}}\ r_m}
+\ELdisp{\text{\lr{Polystyrene}}\qquad\ELbr  \max\{E_{rp}\}\ELbr =0.25\times20\times10^6\,\mathrm{V/m}\ELbr =\frac{\rho_s}{\epsilon_0\epsilon_{rp}}\frac{r_i}{r_{p\min}}\qquad\ELbr  r_{p\min}\ELbr =r_i\ \text{\lr{or}}\ r_m}
+\ELdisp{\frac{25}{20}\ELbr =\frac{\epsilon_{rp}}{\epsilon_{rr}}\times\frac{r_{p\min}}{r_{r\min}}\qquad\ELbr  r_{p\min}>r_{r\min}\ELbr \Rightarrow\begin{cases}r_{r\min}=r_i\\r_{p\min}=r_m\end{cases}}
+\ELdisp{\frac{25}{20}\ELbr =\frac{2.6}{3.2}\times\frac{r_m}{0.4}\ELbr \Rightarrow r_m\ELbr =0.616\,\mathrm{cm}}
+\ELdisp{\begin{aligned}-\int_{r_o}^{r_m}E_{rp}\,dr-\int_{r_m}^{r_i}E_{rr}\,dr&=\frac{\rho_sr_i}{\epsilon_0}\left(\frac{1}{\epsilon_{rp}}\ln\left(\frac{r_o}{r_m}\right)+\frac{1}{\epsilon_{rr}}\ln\left(\frac{r_m}{r_i}\right)\right)\\&=20000\,\mathrm{V}\end{aligned}}
+\ELdisp{\frac{\rho_sr_i}{\epsilon_0}\ELbr =0.25\times25\times10^6\epsilon_{rr}r_i\ELbr =8\times10^4}
+\ELdisp{\Longrightarrow\qquad\ELbr  r_o\ELbr =0.832\,\mathrm{cm}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELhold
+
+\ELsection{شرایط مرزی میدان‌های الکتریکی ساکن}{شرایط مرزی میدان‌های الکتریکی ساکن}
+
+\begin{ELunit}
+
+\ELfigure{m02-map-boundary}{}
+
+\ELfigure{m02-boundary}{}
+
+\begin{itemize}
+\tightlist
+\item
+  مؤلفه مماسی:
+\end{itemize}
+
+\ELdisp{\oint_{abcda}\vect{E}\cdot\dif\vect{\ell}\ELbr =\vect{E}_1\cdot\Delta\vect{w}+\vect{E}_2\cdot(-\Delta\vect{w})\ELbr =E_{1t}\Delta w-E_{2t}\Delta w\ELbr =0}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{E_{1t}\ELbr =E_{2t}\qquad\ELbr \qquad\ELbr  \frac{D_{1t}}{\epsilon_1}\ELbr =\frac{D_{2t}}{\epsilon_2}}
+
+\end{ELimportant}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  مؤلفه عمودی:
+\end{itemize}
+
+\ELdisp{\begin{aligned}\oint_S\vect{D}\cdot d\vect{s}&=(\vect{D}_1\cdot\uvec{n2}+\vect{D}_2\cdot\uvec{n1})\Delta S\\&=\uvec{n2}\cdot(\vect{D}_1-\vect{D}_2)\Delta S\\&=\rho_s\Delta S\end{aligned}}
+
+\begin{ELimportant}{}
+
+\ELdisp{\uvec{n2}\cdot(\vect{D}_1-\vect{D}_2)\ELbr =\rho_s\qquad\ELbr \qquad\ELbr  \uvec{n2}\cdot(\epsilon_1\vect{E}_1-\epsilon_2\vect{E}_2)\ELbr =\rho_s}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\ELnextnum{2-15}
+
+\begin{ELexample}{}
+
+دو محیط دی الکتریک با گذردهی الکتریکی \ELim{\epsilon_1} و \ELim{\epsilon_2} توسط یک مرز بدون بار مطابق شکل زیر از هم جدا شده اند. شدت میدان الکتریکی در محیط ۱ و در نقطه \ELim{P_1} دارای اندازه \ELim{E_1} بوده و زاویه \ELim{\alpha_1} با جهت عمود می سازد. اندازه و جهت شدت میدان الکتریکی در نقطه \ELim{P_2} در ناحیه ۲ را تعیین کنید.
+
+\ELfigure{m02-ex15}{}
+
+\begin{ELsolution}
+
+\ELdisp{E_{1t}\ELbr =E_{2t}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  E_2\sin\alpha_2\ELbr =E_1\sin\alpha_1}
+\ELdisp{\uvec{n2}\cdot(\epsilon_1\vect{E}_1-\epsilon_2\vect{E}_2)\ELbr =\epsilon_1E_{1n}-\epsilon_2E_{2n}\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \epsilon_2E_2\cos\alpha_2\ELbr =\epsilon_1E_1\cos\alpha_1}
+
+\begin{ELimportant}{}
+
+\ELdisp{\frac{\tan\alpha_2}{\tan\alpha_1}\ELbr =\frac{\epsilon_2}{\epsilon_1}}
+
+\end{ELimportant}
+
+\ELdisp{\begin{aligned}E_2&=\sqrt{E_{2t}^2+E_{2n}^2}=\sqrt{(E_2\sin\alpha_2)^2+(E_2\cos\alpha_2)^2}\\&=\left[(E_1\sin\alpha_1)^2+\left(\frac{\epsilon_1}{\epsilon_2}E_1\cos\alpha_1\right)^2\right]^{1/2}\end{aligned}}
+
+\begin{ELimportant}{}
+
+\ELdisp{E_2\ELbr =E_1\left[\sin^2\alpha_1+\left(\frac{\epsilon_1}{\epsilon_2}\cos\alpha_1\right)^2\right]^{1/2}}
+
+\end{ELimportant}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELhold
+
+\ELsection{ظرفیت و خازن‌ها}{ظرفیت و خازن‌ها}
+
+\begin{ELunit}
+
+\ELfigure{m02-map-cap}{}
+
+\begin{itemize}
+\item
+  خازن چه المانی است و مفهوم ظرفیت چیست؟
+\item
+  نحوه محاسبه ظرفیت خازنی ساختارهای مختلف به چه صورتی است؟
+\item
+  چگونه می توان انرژی الکتریکی ذخیره شده در مجموعه ای بار یا کار لازم برای گرد آوردن مجموعه ای بار در کنار هم را بدست آورد؟
+\item
+  چگونه می توان انرژی الکتریکی ذخیره شده در ساختارهای خازنی را محاسبه کرد؟
+\item
+  فرض کنیم که بار \ELim{Q} روی یک هادی دلخواه قرار داده شود. این بار روی سطح هادی توزیع شده و چگالی بار \ELim{\rho_s} را تشکیل می‌دهد.
+\item
+  افزایش کل بار با ضریب \ELim{k} باعث افزایش چگالی بار \ELim{\rho_s} با ضریب \ELim{k} شده و در نتیجه پتانسیل ناشی از این بار نیز با ضریب \ELim{k} افزایش می‌یابد.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    بنابراین نسبت \ELim{Q} به \ELim{V} ثابت می‌ماند
+  \end{itemize}
+\end{itemize}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{Q\ELbr =CV}
+
+\end{ELimportant}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  ثابت تناسب \ELim{(C)} \textbf{ظرفیت جسم هادی مجزا} نامیده شده و عبارتست از مقدار بار الکتریکی که باید به جسم اضافه شود تا پتانسیل الکتریکی آن به اندازه واحد افزایش یابد.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    واحد آن نیز کولمب بر ولت یا فاراد \ELim{(\mathrm{F})} است.
+  \end{itemize}
+\item
+  دو هادی که توسط فضای آزاد یا محیط دی‌الکتریک از هم جدا شده‌اند را خازن گویند.
+\end{itemize}
+
+\ELfigure{m02-capacitor}{}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  ظرفیت یک خازن به صورت زیر تعریف می‌شود
+\end{itemize}
+
+\begin{ELdefinition}{}
+
+\ELdisp{C\ELbr =\frac{Q}{V_{12}}\qquad\ELbr (\mathrm{F})}
+
+\end{ELdefinition}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  ظرفیت یک خازن به شکل هندسی و گذردهی محیط بین دو هادی بستگی دارد.
+\item
+  نحوه محاسبه ظرفیت خازن
+
+  \begin{itemize}
+  \tightlist
+  \item
+    انتخاب دستگاه مختصات مناسب
+  \item
+    قرار دادن بارهای \ELim{+Q} و \ELim{-Q} روی هادی‌ها
+  \item
+    یافتن \ELim{\vect{E}} از روی \ELim{Q}
+  \item
+    محاسبه اختلاف پتانسیل بین دو هادی از رابطه زیر از بار \ELim{-Q} تا بار \ELim{+Q}
+    \ELdisp{V\ELbr =-\int_{P_{-Q}}^{P_{+Q}}\vect{E}\cdot\dif\vect{\ell}}
+  \item
+    یافتن ظرفیت خازن از رابطه \ELim{Q/V}
+  \end{itemize}
+\end{itemize}
+
+\end{ELunit}
+
+\ELnextnum{2-16}
+
+\begin{ELexample}{}
+
+یک خازن صفحه موازی شامل دو صفحه هادی موازی به مساحت \ELim{S} و فاصله \ELim{d} است. فضای بین صفحات توسط یک دی الکتریک با ضریب گذردهی الکتریکی ثابت \ELim{\epsilon} پر شده است. ظرفیت این خازن را بدست آورید.
+
+\ELfigure{m02-ex16}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  استفاده از دستگاه مختصات کارتزین
+\item
+  قرار دادن بارهای \ELim{+Q} و \ELim{-Q} روی صفحات \ELim{\ELto} \ELim{\rho_s=\dfrac{Q}{S}}
+\item
+  محاسبه شدت میدان الکتریکی با استفاده از قانون گوس در فضای بین دو صفحه هادی با صرف نظر کردن از میدان های حاشیه ای
+\end{itemize}
+
+\ELdisp{\vect{E}\ELbr =-\uvec{y}\frac{\rho_s}{\epsilon}\ELbr =-\uvec{y}\frac{Q}{\epsilon S}}
+
+\begin{itemize}
+\tightlist
+\item
+  محاسبه اختلاف پتانسیل بین صفحات هادی برحسب \ELim{Q}
+\end{itemize}
+
+\ELdisp{V_{12}\ELbr =-\int_{y=0}^{y=d}\vect{E}\cdot\dif\vect{\ell}\ELbr =-\int_0^d\left(-\uvec{y}\frac{Q}{\epsilon S}\right)\cdot(\uvec{y}\,dy)\ELbr =\frac{Q}{\epsilon S}d}
+
+\begin{itemize}
+\tightlist
+\item
+  تعیین ظرفیت خازن
+\end{itemize}
+
+\ELdisp{C\ELbr =\frac{Q}{V_{12}}\ELbr =\epsilon\frac{S}{d}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELnextnum{2-17}
+
+\begin{ELexample}{}
+
+یک خازن استوانه ای شامل یک هادی داخلی به شعاع \ELim{a} و هادی خارجی به شعاع \ELim{b} است. فضای بین دو هادی توسط یک دی الکتریک با ضریب گذردهی الکتریکی ثابت \ELim{\epsilon} پر شده و طول خازن برابر با \ELim{L} است. ظرفیت این خازن را بدست آورید.
+
+\ELfigure{m02-ex17}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  استفاده از دستگاه مختصات استوانه ای
+\item
+  قرار دادن بارهای \ELim{+Q} و \ELim{-Q} به ترتیب روی هادی های داخلی و خارجی
+\item
+  محاسبه شدت میدان الکتریکی با استفاده از قانون گوس در فضای بین دو هادی
+\end{itemize}
+
+\ELdisp{\vect{E}\ELbr =\uvec{r}E_r\ELbr =\uvec{r}\frac{Q}{2\pi\epsilon Lr}}
+
+\begin{itemize}
+\tightlist
+\item
+  محاسبه اختلاف پتانسیل بین صفحات هادی برحسب \ELim{Q}
+\end{itemize}
+
+\ELdisp{\begin{aligned}V_{ab}&=-\int_{r=b}^{r=a}\vect{E}\cdot\dif\vect{\ell}=-\int_b^a\left(\uvec{r}\frac{Q}{2\pi\epsilon Lr}\right)\cdot(\uvec{r}\,dr)\\&=\frac{Q}{2\pi\epsilon L}\ln\left(\frac ba\right)\end{aligned}}
+
+\begin{itemize}
+\tightlist
+\item
+  تعیین ظرفیت خازن
+\end{itemize}
+
+\ELdisp{C\ELbr =\frac{Q}{V_{ab}}\ELbr =\frac{2\pi\epsilon L}{\ln\left(\dfrac ba\right)}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELnextnum{2-18}
+
+\begin{ELexample}{}
+
+یک خازن کروی شامل یک کره هادی داخلی به شعاع \ELim{R_i} و یک کره هادی خارجی به شعاع \ELim{R_o} است. فضای بین دو هادی توسط یک دی الکتریک با ضریب گذردهی الکتریکی ثابت \ELim{\epsilon} پر شده است. ظرفیت این خازن را تعیین کنید.
+
+\ELfigure{m02-ex18}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  استفاده از دستگاه مختصات کروی
+\item
+  قرار دادن بارهای \ELim{+Q} و \ELim{-Q} به ترتیب روی هادی های داخلی و خارجی
+\item
+  محاسبه شدت میدان الکتریکی با استفاده از قانون گوس در فضای بین دو هادی
+\end{itemize}
+
+\ELdisp{\vect{E}\ELbr =\uvec{R}E_R\ELbr =\uvec{R}\frac{Q}{4\pi\epsilon R^2}}
+
+\begin{itemize}
+\tightlist
+\item
+  محاسبه اختلاف پتانسیل بین صفحات هادی برحسب \ELim{Q}
+\end{itemize}
+
+\ELdisp{V\ELbr =-\int_{R_o}^{R_i}\vect{E}\cdot(\uvec{R}\,dR)\ELbr =-\int_{R_o}^{R_i}\frac{Q}{4\pi\epsilon R^2}\,dR\ELbr =\frac{Q}{4\pi\epsilon}\left(\frac{1}{R_i}-\frac{1}{R_o}\right)}
+
+\begin{itemize}
+\tightlist
+\item
+  تعیین ظرفیت خازن
+\end{itemize}
+
+\ELdisp{C\ELbr =\frac QV\ELbr =\frac{4\pi\epsilon}{\dfrac{1}{R_i}-\dfrac{1}{R_o}}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{اتصال موازی خازن ها}
+\end{itemize}
+
+\ELfigure{m02-parallel}{}
+
+\ELdisp{\begin{aligned}Q&=Q_1+Q_2+\cdots+Q_n\\&=C_1V+C_2V+\cdots+C_nV=C_{\parallel}V\end{aligned}}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{C_{\parallel}\ELbr =C_1+C_2+\cdots+C_n}
+
+\end{ELimportant}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{اتصال سری خازن ها}
+\end{itemize}
+
+\ELfigure{m02-series}{}
+
+\ELdisp{V\ELbr =\frac{Q}{C_{sr}}\ELbr =\frac{Q}{C_1}+\frac{Q}{C_2}+\cdots+\frac{Q}{C_n}}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{\frac{1}{C_{sr}}\ELbr =\frac{1}{C_1}+\frac{1}{C_2}+\cdots+\frac{1}{C_n}}
+
+\end{ELimportant}
+
+\ELnextnum{2-19}
+
+\begin{ELexample}{}
+
+یک خازن استوانه ای به طول \ELim{L} از سطوح هادی استوانه ای هم محور به شعاع های \ELim{r_i} و \ELim{r_o} تشکیل شده است. دو ماده دی الکتریک با ضرایب گذردهی الکتریکی \ELim{\epsilon_1} و \ELim{\epsilon_2} فضای بین هادی ها را مطابق شکل زیر پر کرده اند. ظرفیت این خازن را تعیین کنید.
+
+\ELfigure{m02-ex19}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{روش اول}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ظرفیت یک خازن استوانه ای \ELim{\ELto} \ELim{C=\dfrac{2\pi\epsilon L}{\ln\left(\dfrac{r_o}{r_i}\right)}}
+  \item
+    از آنجا که هر ماده دی الکتریک نیمی از فضا را پر می کند، ظرفیت هر نیمه برابر است با
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{C_1\ELbr =\frac{\pi\epsilon_1L}{\ln\left(\dfrac{r_o}{r_i}\right)}\qquad\ELbr \qquad\ELbr  C_2\ELbr =\frac{\pi\epsilon_2L}{\ln\left(\dfrac{r_o}{r_i}\right)}}
+
+\begin{itemize}
+\tightlist
+\item
+  از آنجا که دو خازن \ELim{C_1} و \ELim{C_2} موازی هستند، ظرفیت کل برابر است با
+\end{itemize}
+
+\ELdisp{C\ELbr =C_1+C_2\ELbr =\frac{2\pi L}{\ln\left(\dfrac{r_o}{r_i}\right)}\left(\frac{\epsilon_1+\epsilon_2}{2}\right)}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{روش دوم}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    استفاده از دستگاه مختصات استوانه ای
+  \item
+    قرار دادن بارهای \ELim{+Q} و \ELim{-Q} به ترتیب روی هادی های داخلی و خارجی
+  \item
+    محاسبه شدت میدان الکتریکی با استفاده از قانون گوس در فضای بین دو هادی
+  \end{itemize}
+\end{itemize}
+
+\ELfigure{m02-ex19-gauss}{}
+
+\ELdisp{\left.\begin{aligned}E_{r1}&=\frac{Q_1}{\pi r\epsilon_1L}\\E_{r2}&=\frac{Q_2}{\pi r\epsilon_2L}\end{aligned}\right\}\ \overset{E_{r1}=E_{r2}}{\Longrightarrow}\ \left.\begin{aligned}\frac{Q_1}{\epsilon_1}&=\frac{Q_2}{\epsilon_2}\\Q_1+Q_2&=Q\end{aligned}\right\}\ \begin{cases}Q_1=\dfrac{Q\epsilon_1}{\epsilon_1+\epsilon_2}\\\noalign{\vskip 3mm}Q_2=\dfrac{Q\epsilon_2}{\epsilon_1+\epsilon_2}\end{cases}}
+
+\begin{itemize}
+\tightlist
+\item
+  محاسبه اختلاف پتانسیل بین صفحات هادی برحسب \ELim{Q}
+\end{itemize}
+
+\ELdisp{V\ELbr =-\int_{r_o}^{r_i}\frac{Q_1}{\pi r\epsilon_1L}\,dr\ELbr =-\int_{r_o}^{r_i}\frac{Q}{\pi rL(\epsilon_1+\epsilon_2)}\,dr\ELbr =\frac{Q}{\pi L(\epsilon_1+\epsilon_2)}\ln\left(\frac{r_o}{r_i}\right)}
+
+\begin{itemize}
+\tightlist
+\item
+  تعیین ظرفیت خازن
+\end{itemize}
+
+\ELdisp{C\ELbr =\frac{2\pi L}{\ln\left(\dfrac{r_o}{r_i}\right)}\left(\frac{\epsilon_1+\epsilon_2}{2}\right)}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELnextnum{2-20}
+
+\begin{ELexample}{}
+
+خازنی از دو پوسته کروی هادی هم مرکز به شعاع های \ELim{R_i} و \ELim{R_o} تشکیل شده است. فضای بین این دو پوسته با یک دی الکتریک با ضریب گذردهی نسبی \ELim{\epsilon_r} از \ELim{R_i} تا \ELim{b} و یک دی الکتریک با ضریب گذردهی نسبی \ELim{2\epsilon_r} از \ELim{b} تا \ELim{R_o} پر شده است. ظرفیت این خازن را تعیین کنید.
+
+\ELfigure{m02-ex20}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{روش اول}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ظرفیت یک خازن کروی \ELim{\ELto} \ELim{C=\dfrac QV=\dfrac{4\pi\epsilon}{\dfrac{1}{R_i}-\dfrac{1}{R_o}}}
+  \item
+    این خازن را می توان معادل دو خازن سری به صورت زیر در نظر گرفت
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{C_1\ELbr =\frac{4\pi\epsilon_0\epsilon_r}{\dfrac{1}{R_i}-\dfrac1b}\qquad\ELbr \qquad\ELbr  C_2\ELbr =\frac{4\pi\epsilon_0(2\epsilon_r)}{\dfrac1b-\dfrac{1}{R_o}}}
+
+\begin{itemize}
+\tightlist
+\item
+  بنابراین ظرفیت کل برابر است با
+\end{itemize}
+
+\ELdisp{C\ELbr =\frac{1}{1/C_1+1/C_2}\ELbr =\frac{4\pi\epsilon_0\epsilon_r}{\dfrac{1}{R_i}-\dfrac{1}{2b}-\dfrac{1}{2R_o}}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{روش دوم}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    استفاده از دستگاه مختصات کروی
+  \item
+    قرار دادن بارهای \ELim{+Q} و \ELim{-Q} به ترتیب روی هادی های داخلی و خارجی
+  \item
+    محاسبه شدت میدان الکتریکی با استفاده از قانون گوس در فضای بین دو هادی
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{E_{R1}\ELbr =\frac{Q}{4\pi\epsilon_0\epsilon_rR^2}\qquad\ELbr \qquad\ELbr  E_{R2}\ELbr =\frac{Q}{4\pi\epsilon_0(2\epsilon_r)R^2}}
+
+\begin{itemize}
+\tightlist
+\item
+  محاسبه اختلاف پتانسیل بین صفحات هادی برحسب \ELim{Q}
+\end{itemize}
+
+\ELdisp{V\ELbr =-\int_{R_o}^{b}\frac{Q}{4\pi\epsilon_0(2\epsilon_r)R^2}\,dR-\int_{b}^{R_i}\frac{Q}{4\pi\epsilon_0\epsilon_rR^2}\,dR\ELbr =\frac{Q}{4\pi\epsilon_0\epsilon_r}\left(\frac{1}{R_i}-\frac{1}{2b}-\frac{1}{2R_o}\right)}
+
+\begin{itemize}
+\tightlist
+\item
+  تعیین ظرفیت خازن
+\end{itemize}
+
+\ELdisp{C\ELbr =\frac{4\pi\epsilon_0\epsilon_r}{\dfrac{1}{R_i}-\dfrac{1}{2b}-\dfrac{1}{2R_o}}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELhold
+
+\ELsection{انرژی الکتریکی ساکن}{انرژی الکتریکی ساکن}
+
+\begin{ELunit}
+
+\ELfigure{m02-map-energy}{}
+
+\begin{itemize}
+\tightlist
+\item
+  پتانسیل الکتریکیِ یک نقطه در حضور میدان الکتریکی، برابر با کار لازم برای آوردن یک بار مثبت واحد از بی‌نهایت (با پتانسیل مرجع صفر) به آن نقطه است.
+\item
+  برای آوردن بار \ELim{Q_2} از بی‌نهایت به فاصله \ELim{R_{12}} از بار \ELim{Q_1} مقدار کار لازم برابر است با
+\end{itemize}
+
+\ELfigure{m02-energy-two}{}
+
+\ELdisp{W_2\ELbr =Q_2V_2\ELbr =Q_2\frac{Q_1}{4\pi\epsilon_0R_{12}}}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{V_2}: پتانسیل در محل بار \ELim{Q_2}
+\end{itemize}
+
+\ELdisp{W_2\ELbr =Q_1\frac{Q_2}{4\pi\epsilon_0R_{12}}\ELbr =Q_1V_1}
+\ELdisp{W_2\ELbr =\tfrac12(Q_1V_1+Q_2V_2)}
+
+\begin{itemize}
+\item
+  این کار در مجموعه دو بار به صورت انرژی پتانسیل ذخیره می‌شود.
+\item
+  حال فرض کنید که بار دیگر \ELim{Q_3} از بی‌نهایت به نقطه‌ای به فاصله \ELim{R_{13}} از بار \ELim{Q_1} و \ELim{R_{23}} از بار \ELim{Q_2} آورده شود، کار اضافی مورد نیاز برابر خواهد بود با
+\end{itemize}
+
+\ELfigure{m02-energy-three}{}
+
+\ELdisp{\Delta W\ELbr =Q_3V_3\ELbr =Q_3\left(\frac{Q_1}{4\pi\epsilon_0R_{13}}+\frac{Q_2}{4\pi\epsilon_0R_{23}}\right)}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{V_3}: پتانسیل در محل بار \ELim{Q_3}
+\item
+  به این ترتیب انرژی پتانسیل ذخیره شده در مجموعه سه بار برابر است با
+\end{itemize}
+
+\ELdisp{W_3\ELbr =W_2+\Delta W\ELbr =\frac{1}{4\pi\epsilon_0}\left(\frac{Q_1Q_2}{R_{12}}+\frac{Q_1Q_3}{R_{13}}+\frac{Q_2Q_3}{R_{23}}\right)}
+\ELdisp{\begin{aligned}W_3=\frac12\bigg[&Q_1\left(\frac{Q_2}{4\pi\epsilon_0R_{12}}+\frac{Q_3}{4\pi\epsilon_0R_{13}}\right)+Q_2\left(\frac{Q_1}{4\pi\epsilon_0R_{12}}+\frac{Q_3}{4\pi\epsilon_0R_{23}}\right)\\&+Q_3\left(\frac{Q_1}{4\pi\epsilon_0R_{13}}+\frac{Q_2}{4\pi\epsilon_0R_{23}}\right)\bigg]=\tfrac12(Q_1V_1+Q_2V_2+Q_3V_3)\end{aligned}}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  به این ترتیب انرژی پتانسیل \ELim{N} بار نقطه‌ای گسسته ساکن برابر است با
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{W_e\ELbr =\frac12\sum_{k=1}^{N}Q_kV_k\qquad\ELbr (\mathrm{J})}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  که \ELim{V_k} پتانسیل الکتریکی در نقطه \ELim{Q_k} ناشی از بارهای دیگر است.
+\item
+  واحد \ELim{\mathrm{SI}} انرژی، ژول است که واحد بزرگی است. در اینجا از واحد دیگری به نام الکترون ولت \ELim{(\mathrm{eV})} استفاده می‌شود.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ۱ الکترون ولت، انرژی یا کار لازم برای حرکت دادن یک الکترون بر علیه اختلاف پتانسیل یک ولتی است.
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{1\,(\mathrm{eV})\ELbr =(1.60\times10^{-19})\times1\ELbr =1.60\times10^{-19}\qquad\ELbr (\mathrm{J})}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  در یک توزیع پیوسته بار با چگالی \ELim{\rho} انرژی ذخیره شده برابر است با
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{W_e\ELbr =\tfrac12\int_{V'}\rho V\,dv\qquad\ELbr (\mathrm{J})}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  که \ELim{V} پتانسیل در نقطه‌ای است که چگالی بار حجمی در آن \ELim{\rho} است و \ELim{V'} حجم ناحیه‌ای است که \ELim{\rho} در آن قرار دارد.
+\end{itemize}
+
+\ELnextnum{2-21}
+
+\begin{ELexample}{}
+
+انرژی مورد نیاز برای ایجاد یک کره یکنواخت باردار به شعاع \ELim{b} و چگالی حجمی \ELim{\rho} را بدست آورید.
+
+\begin{ELsolution}
+
+\ELdisp{W_e\ELbr =\frac\rho2\int_{V'}V\,dv\ELbr =\frac\rho2\int_0^bV\,4\pi R^2\,dR}
+\ELdisp{\vect{E}_{R1}\ELbr =\uvec{R}\frac{Q}{4\pi\epsilon_0R^2}\ELbr =\uvec{R}\frac{\rho b^3}{3\epsilon_0R^2},\qquad\ELbr  R\geq b}
+\ELdisp{\vect{E}_{R2}\ELbr =\uvec{R}\frac{Q_R}{4\pi\epsilon_0R^2}\ELbr =\uvec{R}\frac{\rho R}{3\epsilon_0},\qquad\ELbr  0<R\leq b}
+\ELdisp{\begin{aligned}V&=-\int_{\infty}^{R}\vect{E}\cdot d\vect{R}=-\left[\int_{\infty}^{b}E_{R1}\,dR+\int_b^RE_{R2}\,dR\right]\\&=-\left[\int_{\infty}^{b}\frac{\rho b^3}{3\epsilon_0R^2}\,dR+\int_b^R\frac{\rho R}{3\epsilon_0}\,dR\right]\\&=\frac{\rho}{3\epsilon_0}\left(b^2+\frac{b^2}{2}-\frac{R^2}{2}\right)=\frac{\rho}{3\epsilon_0}\left(\frac32b^2-\frac{R^2}{2}\right)\end{aligned}}
+\ELdisp{W_e\ELbr =\frac\rho2\int_0^b\frac{\rho}{3\epsilon_0}\left(\frac32b^2-\frac{R^2}{2}\right)4\pi R^2\,dR\ELbr =\frac{4\pi\rho^2b^5}{15\epsilon_0}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  پیش از این انرژی الکتریکی ساکن یک توزیع بار را برحسب چگالی بار و پتانسیل بدست آوردیم.
+\item
+  گاهی بهتر است این انرژی برحسب کمیات میدان بیان شود.
+\item
+  می توان نشان داد
+\end{itemize}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{W_e\ELbr =\tfrac12\int_{V'}\vect{D}\cdot\vect{E}\,dv\qquad\ELbr (\mathrm{J})}
+\ELdisp{W_e\ELbr =\tfrac12\int_{V'}\epsilon E^2\,dv\qquad\ELbr (\mathrm{J})}
+\ELdisp{W_e\ELbr =\tfrac12\int_{V'}\frac{D^2}{\epsilon}\,dv\qquad\ELbr (\mathrm{J})}
+
+\end{ELimportant}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{V'}: کل فضا
+\end{itemize}
+
+\ELnextnum{2-22}
+
+\begin{ELexample}{}
+
+مثال \ELnumc{2-21} را با استفاده از رابطه انرژی برحسب کمیت های میدان حل کنید.
+
+\begin{ELsolution}
+
+\ELdisp{\vect{E}_{R1}\ELbr =\uvec{R}\frac{Q}{4\pi\epsilon_0R^2}\ELbr =\uvec{R}\frac{\rho b^3}{3\epsilon_0R^2},\qquad\ELbr  R\geq b}
+\ELdisp{\vect{E}_{R2}\ELbr =\uvec{R}\frac{Q_R}{4\pi\epsilon_0R^2}\ELbr =\uvec{R}\frac{\rho R}{3\epsilon_0},\qquad\ELbr  0<R\leq b}
+\ELdisp{\begin{aligned}W_e=\frac12\epsilon_0\int_{V'}\abs{\vect{E}}^2\,dv&=\frac12\epsilon_0\int_0^b\left(\frac{\rho R}{3\epsilon_0}\right)^24\pi R^2\,dR\\&\quad+\frac12\epsilon_0\int_b^{\infty}\left(\frac{\rho b^3}{3\epsilon_0R^2}\right)^24\pi R^2\,dR=\frac{4\pi\rho^2b^5}{15\epsilon_0}\end{aligned}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\end{ELjoin}
+
+\ELnextnum{2-23}
+
+\begin{ELexample}{}
+
+در شکل زیر یک خازن صفحه موازی به مساحت \ELim{S} و فاصله بین صفحات \ELim{d} توسط ولتاژ \ELim{V} شارژ شده است. ضریب گذردهی الکتریکی عایق \ELim{\epsilon} است. انرژی ذخیره شده را بدست آورید.
+
+\ELfigure{m02-ex23}{}
+
+\begin{ELsolution}
+
+\ELdisp{E\ELbr =\frac Vd}
+\ELdisp{W_e\ELbr =\frac12\int_{V'}\epsilon\left(\frac Vd\right)^2dv\ELbr =\frac12\epsilon\left(\frac Vd\right)^2(Sd)\ELbr =\frac12\left(\epsilon\frac Sd\right)V^2}
+
+\begin{ELimportant}{}
+
+\ELdisp{W_e\ELbr =\tfrac12CV^2\quad\ELbr (\mathrm{J})\qquad\ELbr \qquad\ELbr  W_e\ELbr =\tfrac12QV\quad\ELbr (\mathrm{J})\qquad\ELbr \qquad\ELbr  W_e\ELbr =\frac{Q^2}{2C}\quad\ELbr (\mathrm{J})}
+
+\end{ELimportant}
+
+\begin{ELremark}{}
+
+ثابت می‌شود که معادلات فوق برای هر خازن متشکل از دو هادی برقرار است.
+
+\end{ELremark}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELnextnum{2-24}
+
+\begin{ELexample}{}
+
+با استفاده از رابطه انرژی، ظرفیت یک خازن استوانه ای به طول \ELim{L} شامل هادی داخلی به شعاع \ELim{a} و هادی خارجی به شعاع \ELim{b} و ضریب گذردهی الکتریکی \ELim{\epsilon} را بدست آورید.
+
+\begin{ELsolution}
+
+\ELdisp{\vect{E}\ELbr =\uvec{r}E_r\ELbr =\uvec{r}\frac{Q}{2\pi\epsilon Lr},\qquad\ELbr  a<r<b}
+\ELdisp{\begin{aligned}W_e&=\frac12\int_a^b\epsilon\left(\frac{Q}{2\pi\epsilon Lr}\right)^2(L2\pi r\,dr)\\&=\frac{Q^2}{4\pi\epsilon L}\int_a^b\frac{dr}{r}=\frac{Q^2}{4\pi\epsilon L}\ln\frac ba\end{aligned}}
+\ELdisp{\frac{Q^2}{2C}\ELbr =\frac{Q^2}{4\pi\epsilon L}\ln\frac ba\qquad\ELbr \ELbr \Longrightarrow\qquad\ELbr  C\ELbr =\frac{2\pi\epsilon L}{\ln\dfrac ba}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\begin{ELunit}
+
+\ELfigure{m02-map-end}{}
+
+\end{ELunit}

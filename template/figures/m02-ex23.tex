@@ -1,0 +1,16 @@
+% Ch2_8, slide 10: a parallel-plate capacitor (area S, spacing d, permittivity eps) charged to V
+\begin{tikzpicture}[scale=1]
+  \def\L{3.6}\def\d{0.8}
+  \fill[ELfillB] (0,0) rectangle (\L,\d);
+  \fill[ELink] (0,\d) rectangle (\L,\d+0.1) (0,-0.1) rectangle (\L,0);
+  \node[ELlabs,anchor=west] at (0.2,0.6) {$+Q$}; \node[ELlabs,anchor=west] at (0.2,0.2) {$-Q$};
+  \node[ELlabs] at (2.6,0.4) {$\epsilon$};
+  \draw[ELink,line width=0.7pt] (0,\d+0.05)--(-1.3,\d+0.05)--(-1.3,0.55) (-1.3,0.05)--(-1.3,-0.05)--(0,-0.05);
+  \draw[ELink,line width=1.2pt] (-1.55,0.55)--(-1.05,0.55) (-1.45,0.42)--(-1.15,0.42) (-1.55,0.29)--(-1.05,0.29) (-1.45,0.16)--(-1.15,0.16);
+  \draw[ELink,line width=0.7pt] (-1.3,0.16)--(-1.3,0.05);
+  \node[ELlabs,anchor=east] at (-1.6,0.36) {$V$};
+  \node[ELlabs,anchor=south east] at (-1.55,0.5) {$+$}; \node[ELlabs,anchor=north east] at (-1.55,0.2) {$-$};
+  \draw[ELthin] (\L+0.1,\d)--(\L+0.5,\d) (\L+0.1,0)--(\L+0.5,0);
+  \draw[ELthin,{Stealth[length=3.5pt]}-{Stealth[length=3.5pt]}] (\L+0.35,0)--(\L+0.35,\d) node[ELlabs,anchor=west,pos=0.5]{$d$};
+  \node[ELtag,anchor=south] at (2.8,\d+0.1) {\ELL{Area $S$}{مساحت $S$}};
+\end{tikzpicture}

@@ -1,0 +1,8 @@
+% Ch2_8, slide 3: bringing Q2 from infinity to the distance R12 from Q1
+\begin{tikzpicture}[scale=1]
+  \fill[ELcSource] (0,0) circle (2pt); \node[ELlab,anchor=north east] at (0,0) {$Q_1$};
+  \draw[ELthin,-{Stealth[length=5pt]}] (40:1.8)--(40:0.1);
+  \node[ELlab,anchor=south east] at (40:0.9) {$R_{12}$};
+  \draw[ELdash,-{Stealth[length=5pt]}] (40:3.6)--(40:1.85);
+  \fill[ELink] (40:3.65) circle (2pt); \node[ELlab,anchor=north west] at (40:3.65) {$Q_2$}; \node[ELlab,anchor=south] at (40:3.75) {$\infty$};
+\end{tikzpicture}

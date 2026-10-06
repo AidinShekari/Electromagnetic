@@ -1,0 +1,11 @@
+% Ch2_8, slide 4: bringing Q3 from infinity to the distances R13 from Q1 and R23 from Q2
+\begin{tikzpicture}[scale=1]
+  \coordinate (Q1) at (0,0); \coordinate (Q2) at (0.8,0.9); \coordinate (Q3) at (1.45,-1.0);
+  \fill[ELcSource] (Q1) circle (2pt); \node[ELlab,anchor=east] at (Q1) {$Q_1$};
+  \fill[ELcSource] (Q2) circle (2pt); \node[ELlab,anchor=south west] at (Q2) {$Q_2$};
+  \draw[ELthin,{Stealth[length=4pt]}-{Stealth[length=4pt]}] ($(Q1)!0.08!(Q2)$)--($(Q1)!0.92!(Q2)$); \node[ELlab,anchor=south east] at ($(Q1)!0.5!(Q2)$) {$R_{12}$};
+  \draw[ELthin,{Stealth[length=4pt]}-{Stealth[length=4pt]}] ($(Q1)!0.08!(Q3)$)--($(Q1)!0.95!(Q3)$); \node[ELlab,anchor=north east] at ($(Q1)!0.5!(Q3)$) {$R_{13}$};
+  \draw[ELthin,{Stealth[length=4pt]}-{Stealth[length=4pt]}] ($(Q2)!0.08!(Q3)$)--($(Q2)!0.95!(Q3)$); \node[ELlab,anchor=west] at ($(Q2)!0.5!(Q3)$) {$R_{23}$};
+  \draw[ELdash,-{Stealth[length=5pt]}] (3.0,-3.0)--($(Q3)+(0.06,-0.08)$);
+  \fill[ELink] (3.05,-3.05) circle (2pt); \node[ELlab,anchor=north east] at (3.05,-3.05) {$Q_3$}; \node[ELlab,anchor=west] at (3.12,-3.02) {$\infty$};
+\end{tikzpicture}

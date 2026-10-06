@@ -1,0 +1,11 @@
+% Ch2_7, slide 14: a cylindrical capacitor (radii r_i, r_o) whose two halves are filled with eps1 and eps2
+\begin{tikzpicture}[scale=1]
+  \def\ri{0.7}\def\ro{1.6}
+  \fill[ELfillA] (90:\ro) arc[start angle=90,end angle=270,radius=\ro]--(270:\ri) arc[start angle=270,end angle=90,radius=\ri]--cycle;
+  \fill[ELfillC] (90:\ro) arc[start angle=90,end angle=-90,radius=\ro]--(-90:\ri) arc[start angle=-90,end angle=90,radius=\ri]--cycle;
+  \draw[ELink,line width=1.3pt] (0,0) circle (\ro) (0,0) circle (\ri);
+  \draw[ELink,line width=0.6pt] (0,\ri)--(0,\ro) (0,-\ri)--(0,-\ro);
+  \draw[ELthin,-{Stealth[length=4pt]}] (0,0)--(120:\ri) node[ELlabs,anchor=west,pos=0.6,xshift=1pt]{$r_i$};
+  \draw[ELthin,-{Stealth[length=4pt]}] (0,0)--(-40:\ro) node[ELlabs,anchor=south west,pos=0.75]{$r_o$};
+  \node[ELlab] at (180:1.15) {$\epsilon_1$}; \node[ELlab] at (15:1.15) {$\epsilon_2$};
+\end{tikzpicture}

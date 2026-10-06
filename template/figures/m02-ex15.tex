@@ -1,0 +1,27 @@
+% Ch2_6, slide 17: refraction of E at a charge-free interface: E1 at P1 makes alpha1 with the normal,
+% E2 at P2 makes alpha2; components E1t, E1n, E2t, E2n (drawn for eps2 > eps1)
+\begin{tikzpicture}[scale=1]
+  \fill[ELfillA] (-2.4,0)--(3.6,0)--(3.6,2.6)--(-2.4,2.6)--cycle;
+  \fill[ELfillB] (-2.4,0)--(3.6,0)--(3.6,-3.6)--(-2.4,-3.6)--cycle;
+  \draw[ELink,line width=1pt] (-2.4,0)--(3.6,0);
+  \node[ELlabs,anchor=south east] at (3.55,0) {$\epsilon_1$}; \node[ELlabs,anchor=north east] at (3.55,0) {$\epsilon_2$};
+  \draw[ELdash] (0,-3.4)--(0,2.4);
+  \def\aa{55}\def\ab{30}
+  % E1 arrives at P1 (pointing toward the interface)
+  \draw[ELvec2,line width=1.2pt] ({2.4*sin(\aa)},{2.4*cos(\aa)})--(0,0.02);
+  \node[ELlabs,anchor=south west] at ({2.4*sin(\aa)},{2.4*cos(\aa)}) {$\vect{E}_1$};
+  \draw[ELthin] ({2.4*sin(\aa)},0.02)--({2.4*sin(\aa)},{2.4*cos(\aa)}) node[ELlabs,anchor=west,pos=0.5]{$E_{1n}$};
+  \node[ELlabs,anchor=north] at ({1.2*sin(\aa)},0.0) {$E_{1t}$};
+  \draw[ELthin] (0,0.75) arc[start angle=90,end angle={90-\aa},radius=0.75];
+  \node[ELlabs,anchor=south] at (0.3,0.78) {$\alpha_1$};
+  \node[ELlabs,anchor=south east] at (0,0.02) {$P_1$};
+  % E2 leaves P2
+  \draw[ELvec2,line width=1.2pt] (0,-0.02)--({-3.2*sin(\ab)},{-3.2*cos(\ab)});
+  \node[ELlabs,anchor=north east] at ({-3.2*sin(\ab)},{-3.2*cos(\ab)}) {$\vect{E}_2$};
+  \draw[ELthin] (0,{-3.2*cos(\ab)})--({-3.2*sin(\ab)},{-3.2*cos(\ab)}) node[ELlabs,anchor=north,pos=0.5]{$E_{2t}$};
+  \node[ELlabs,anchor=west] at (0,{-1.6*cos(\ab)-0.3}) {$E_{2n}$};
+  \draw[ELthin] (0,-0.95) arc[start angle=-90,end angle={-90-\ab},radius=0.95];
+  \node[ELlabs,anchor=north] at (-0.28,-0.98) {$\alpha_2$};
+  \node[ELlabs,anchor=north west] at (0.05,-0.02) {$P_2$};
+  \draw[ELvec,line width=0.8pt] (0.6,-0.02)--(0.6,-0.6) node[ELlabs,anchor=west]{$\uvec{n1}$};
+\end{tikzpicture}

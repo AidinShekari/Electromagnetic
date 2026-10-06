@@ -17,6 +17,8 @@ The slides remain the source of truth. Each entry names the slide (file and page
 | Ch2_1 p. 12 | the annotation reads «شدن میدان الکتریکی روی سطح کره» | «شدت میدان الکتریکی …» | a typing slip (شدن for شدت, "intensity") |
 | Ch2_1 p. 12 | $E_R(4\pi R^2):=\dfrac{q}{\epsilon_0}$ | $=$ | an equation, not a definition; the lines above and below use $=$ |
 | Ch2_4 p. 13 (example 2-10) | $V=\dfrac{1}{4\pi\varepsilon_0}\int_{S'}\dfrac{\rho_\ell\,d\ell'}{\lvert\mathbf R-\mathbf R'\rvert}$ | $\int_{L'}$ | a line charge: the general formula on Ch2_4 p. 8 integrates over $L'$ |
+| Ch2_7 p. 19 (example 2-20) | $\int\frac{Q}{4\pi\varepsilon_0(2\varepsilon_r)R^2}\,dr$ (both integrals) | $dR$ | the variable of integration is $R$ (the limits are $R_o$, $b$, $R_i$) |
+| Ch2_7 pp. 8, 10, 12, 16, 19 | «محاسبه اختلاف پتانسیل بین صفحات هادی» also for the cylindrical and spherical capacitors | kept in Persian; the English edition says "between the conductors" for those | the wording of the parallel-plate case carried over |
 
 ## Presentation (no change to the content)
 

@@ -19,7 +19,7 @@ deliberate difference from the source (an unambiguous typo, for example) is list
 | Build pipeline (`tools/`) | done |
 | Design specimen, both editions (`specimen/`) | done (QA only, not course content) |
 | Chapter 1, Vector Analysis (slides `Ch1_1` to `Ch1_5`), both editions | done |
-| Chapter 2, Static Electric Fields (slides `Ch2_1` to `Ch2_5`), both editions | done |
+| Chapter 2, Static Electric Fields (slides `Ch2_1` to `Ch2_8`), both editions | done |
 | Later chapters | waiting for the instructor's slides |
 
 ## Complete book / کتاب کامل

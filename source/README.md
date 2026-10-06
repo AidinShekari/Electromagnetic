@@ -16,6 +16,9 @@ values and the figures.
 | `Ch2_3.pdf` | Part 3: Gauss's law (examples 2-4 to 2-7) | 10 |
 | `Ch2_4.pdf` | Part 4: electric potential (examples 2-8 to 2-11) | 14 |
 | `Ch2_5.pdf` | Part 5: material media, conductors, dielectrics (example 2-12) | 12 |
+| `Ch2_6.pdf` | Part 6: electric flux density, dielectric constant, dielectric strength, boundary conditions (examples 2-13 to 2-15) | 18 |
+| `Ch2_7.pdf` | Part 7: capacitance and capacitors (examples 2-16 to 2-20) | 19 |
+| `Ch2_8.pdf` | Part 8: electrostatic energy (examples 2-21 to 2-24) | 12 |
 
 The book currently contains only the material in these files. Each later chapter goes in its own
 folder `NN-slug/{fa,en}/moduleNN-slug.md`, transcribed from its slides in order and in the same
