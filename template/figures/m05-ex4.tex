@@ -1,0 +1,16 @@
+% Ch5_2, slide 10 (example 5-4): a straight wire of length 2L on the z-axis carrying I; the field point
+% P(r, 0, 0) in the bisecting plane; the element dz' at z' and the vector R
+\begin{tikzpicture}[scale=1]
+  \draw[ELink,line width=2.2pt] (0,-2.0)--(0,2.0);
+  \draw[ELax] (0,2.0)--(0,2.7) node[ELlab,anchor=south]{$z$};
+  \draw[ELcSource,line width=0.9pt,-{Stealth[length=5pt]}] (0.18,-1.3)--(0.18,-0.7) node[ELlabs,anchor=west,pos=0.5]{$I$};
+  \fill[ELink] (0,0) circle (1.5pt); \node[ELlabs,anchor=north east] at (0,0) {$O$};
+  \draw[ELdash] (0,0)--(3.6,0) node[ELlabs,anchor=south,pos=0.5]{$r$};
+  \fill[ELcSource] (3.6,0) circle (1.8pt); \node[ELlab,anchor=north] at (3.6,-0.05) {$P(r,0,0)$};
+  \draw[ELcField,line width=1.6pt] (0,1.25)--(0,1.55); \node[ELlabs,anchor=west] at (0.08,1.62) {$dz'$};
+  \draw[ELthin] (0.12,1.4)--(0.4,1.4); \node[ELlabs,anchor=west] at (0.05,0.95) {$z'$};
+  \draw[ELvec,line width=0.8pt] (0,1.4)--(3.55,0.03) node[ELlabs,anchor=south west,pos=0.45]{$\vect{R}$};
+  \draw[ELthin] (-0.15,2.0)--(-0.75,2.0) (-0.15,-2.0)--(-0.75,-2.0) (-0.15,0)--(-0.75,0);
+  \draw[ELthin,{Stealth[length=3pt]}-{Stealth[length=3pt]}] (-0.6,0)--(-0.6,2.0) node[ELlabs,anchor=east,pos=0.5]{$L$};
+  \draw[ELthin,{Stealth[length=3pt]}-{Stealth[length=3pt]}] (-0.6,-2.0)--(-0.6,0) node[ELlabs,anchor=east,pos=0.5]{$L$};
+\end{tikzpicture}

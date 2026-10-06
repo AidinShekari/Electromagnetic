@@ -1,0 +1,30 @@
+% Ch5_3, slide 12 (example 5-8): a cylindrical bar magnet of radius b and length L, M = a_z M0; the
+% point P(0, 0, z) on its axis and the band of surface current J_ms of height dz' at z'
+\begin{tikzpicture}[ELoblique,scale=1.0]
+  \def\b{1.2}\def\L{2.4}
+  \fill[ELfillA] plot[domain=-63.43:116.57,samples=50] ({\b*cos(\x)},{\b*sin(\x)},0)
+    -- plot[domain=116.57:-63.43,samples=50] ({\b*cos(\x)},{\b*sin(\x)},\L) -- cycle;
+  \fill[ELfillB] plot[domain=0:360,samples=80] ({\b*cos(\x)},{\b*sin(\x)},\L);
+  \fill[ELcSource!35] plot[domain=-63.43:116.57,samples=50] ({\b*cos(\x)},{\b*sin(\x)},1.0)
+    -- plot[domain=116.57:-63.43,samples=50] ({\b*cos(\x)},{\b*sin(\x)},1.25) -- cycle;
+  \draw[ELcField,line width=0.6pt,dashed] plot[domain=116.57:296.57,samples=50] ({\b*cos(\x)},{\b*sin(\x)},0);
+  \draw[ELcField,line width=0.8pt] plot[domain=-63.43:116.57,samples=50] ({\b*cos(\x)},{\b*sin(\x)},0);
+  \draw[ELcField,line width=0.8pt] plot[domain=0:360,samples=80] ({\b*cos(\x)},{\b*sin(\x)},\L);
+  \draw[ELcField,line width=0.8pt] ({\b*cos(116.57)},{\b*sin(116.57)},0)--({\b*cos(116.57)},{\b*sin(116.57)},\L)
+    ({\b*cos(-63.43)},{\b*sin(-63.43)},0)--({\b*cos(-63.43)},{\b*sin(-63.43)},\L);
+  \draw[ELcSource,line width=0.6pt] plot[domain=-63.43:116.57,samples=50] ({\b*cos(\x)},{\b*sin(\x)},1.0);
+  \draw[ELcSource,line width=0.6pt] plot[domain=-63.43:116.57,samples=50] ({\b*cos(\x)},{\b*sin(\x)},1.25);
+  \draw[ELcSource,line width=0.9pt,-{Stealth[length=5pt]}] ({\b*cos(-10)},{\b*sin(-10)},1.12)--({\b*cos(20)},{\b*sin(20)},1.12);
+  \node[ELlabs,anchor=east] at ({\b*cos(-63.43)},{\b*sin(-63.43)},1.12) {$\vect{J}_{ms}$};
+  \draw[ELthin,dashed] (0,0,0)--(0,0,\L);
+  \draw[ELthin] (0,0,\L)--({\b*cos(90)},{\b*sin(90)},\L) node[ELlabs,anchor=south,pos=0.5]{$b$};
+  \draw[ELax] (0,0,\L)--(0,0,\L+1.5) node[ELlab,anchor=south]{$z$};
+  \draw[ELax] (0,0,0)--(2.2,0,0) node[ELlab,anchor=north east]{$x$};
+  \draw[ELax] ({\b},0,0)--(0,2.6,0) node[ELlab,anchor=west]{$y$};
+  \fill[ELink] (0,0,0) circle (1.3pt); \node[ELlabs,anchor=east] at (0,-0.05,0) {$O$};
+  \fill[ELcSource] (0,0,\L+1.0) circle (1.7pt); \node[ELlab,anchor=east] at (0,-0.05,\L+1.0) {$P(0,0,z)$};
+  \draw[ELthin] (0,1.45,0)--(0,2.15,0) (0,1.45,\L)--(0,2.15,\L) (0,1.3,1.0)--(0,1.75,1.0) (0,1.3,1.25)--(0,1.75,1.25);
+  \draw[ELthin,{Stealth[length=3pt]}-{Stealth[length=3pt]}] (0,2.05,0)--(0,2.05,\L) node[ELlabs,anchor=west,pos=0.7]{$L$};
+  \draw[ELthin,{Stealth[length=3pt]}-{Stealth[length=3pt]}] (0,1.65,0)--(0,1.65,1.0) node[ELlabs,anchor=west,pos=0.5]{$z'$};
+  \node[ELlabs,anchor=south west] at (0,1.6,1.2) {$dz'$};
+\end{tikzpicture}

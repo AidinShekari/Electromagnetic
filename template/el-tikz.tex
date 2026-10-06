@@ -74,3 +74,6 @@
     \draw[ELcField,line width=0.8pt,-{Stealth[length=5pt]}] (-48:1) arc (-48:-132:1);
     \draw[ELcField,line width=0.8pt,-{Stealth[length=5pt]}] (192:1) arc (192:112:1);
   \end{tikzpicture}}
+% a resistor (or a reluctance) drawn upward from the point where it is placed, 1.15 units long
+\tikzset{ELresV/.pic={\draw[ELink,line width=0.8pt,line join=round] (0,0)--(0,0.15)--(0.12,0.22)--(-0.12,0.36)--(0.12,0.5)
+  --(-0.12,0.64)--(0.12,0.78)--(-0.12,0.92)--(0,0.99)--(0,1.15);}}

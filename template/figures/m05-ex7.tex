@@ -1,0 +1,22 @@
+% Ch5_3, slide 2 (example 5-7): a small loop of radius b carrying I; a distant point P(R, theta, pi/2) in
+% the yz-plane, the distances R (from O) and R1 (from dl'), the angle theta, the angle phi' of dl'
+\begin{tikzpicture}[ELoblique,scale=1.0]
+  \def\b{0.9}
+  \draw[ELax] (0,0,0)--(2.2,0,0) node[ELlab,anchor=north east]{$x$};
+  \draw[ELax] (0,0,0)--(0,4.0,0) node[ELlab,anchor=west]{$y$};
+  \draw[ELax] (0,0,0)--(0,0,3.6) node[ELlab,anchor=south]{$z$};
+  \draw[ELcField,line width=1.4pt,domain=0:360,samples=90,smooth] plot ({\b*cos(\x)},{\b*sin(\x)},0);
+  \draw[ELcField,line width=1.4pt,-{Stealth[length=6pt,width=5pt]}] ({\b*cos(150)},{\b*sin(150)},0)--({\b*cos(158)},{\b*sin(158)},0);
+  \node[ELlabs,anchor=south east] at ({\b*cos(150)},{\b*sin(150)},0) {$I$};
+  \fill[ELink] (0,0,0) circle (1.3pt); \node[ELlabs,anchor=south east] at (0,0,0) {$O$};
+  \coordinate (dl) at ({\b*cos(-35)},{\b*sin(-35)},0); \fill[ELcSource] (dl) circle (1.7pt);
+  \node[ELlabs,anchor=north] at (dl) {$d\ell'$};
+  \draw[ELthin] (0,0,0)--(dl) node[ELlabs,anchor=south west,pos=0.75,inner sep=0.5pt]{$b$};
+  \coordinate (P) at (0,3.2,2.6); \fill[ELcSource] (P) circle (1.8pt);
+  \node[ELlab,anchor=south] at (P) {$P(R,\theta,\pi/2)$};
+  \draw[ELdash] (P)--(0,3.2,0); \fill[ELink] (0,3.2,0) circle (1.2pt); \node[ELlabs,anchor=north] at (0,3.2,0) {$P''$};
+  \draw[ELthin,dashed] (0,0,0)--(P) node[ELlabs,anchor=south east,pos=0.55]{$R$};
+  \draw[ELvec,line width=0.8pt] (dl)--(P) node[ELlabs,anchor=north west,pos=0.5]{$R_1$};
+  \draw[ELthin,-{Stealth[length=3pt]}] plot[domain=0:50,samples=20] (0,{1.2*sin(\x)},{1.2*cos(\x)});
+  \node[ELlabs,anchor=south west] at (0,{1.25*sin(20)},{1.25*cos(20)}) {$\theta$};
+\end{tikzpicture}

@@ -1,0 +1,21 @@
+% Ch5_5, slide 3: (a) the magnetic circuit of the core with the air gap: the mmf V_m and the reluctances
+% R_f, R_g in series, the flux Phi; (b) the analogous electric circuit: the emf V, R_f, R_g, the current I
+\begin{tikzpicture}[scale=1]
+  \draw[ELink,line width=0.8pt] (0,0)--(0,1.0) (0,2.0)--(0,3.0)--(2.0,3.0)--(2.0,2.5) (2.0,1.35)--(2.0,1.25) (2.0,0.1)--(2.0,0)--(0,0);
+  \pic at (2.0,1.35) {ELresV}; \pic at (2.0,0.1) {ELresV};
+  \node[ELlabs,anchor=west] at (2.2,1.9) {$\mathcal{R}_f$}; \node[ELlabs,anchor=west] at (2.2,0.65) {$\mathcal{R}_g$};
+  \draw[ELink,line width=0.8pt] (0,1.5) circle (0.5); \node[ELlabs] at (0,1.5) {$\mathcal{V}_m$};
+  \node[ELlabs,anchor=east] at (-0.5,2.1) {$+$}; \node[ELlabs,anchor=east] at (-0.5,0.9) {$-$};
+  \draw[ELcField,line width=0.9pt,-{Stealth[length=5pt]}] (0.8,3.0)--(1.1,3.0); \node[ELlabs,anchor=south] at (1.0,3.05) {$\Phi$};
+  \node[ELlabs,anchor=north] at (1.0,-0.2) {\ELL{(a) Magnetic circuit}{(الف) مدار مغناطیسی}};
+  \begin{scope}[xshift=4.2cm]
+    \draw[ELink,line width=0.8pt] (0,0)--(0,1.35) (0,1.65)--(0,3.0)--(2.0,3.0)--(2.0,2.5) (2.0,1.35)--(2.0,1.25) (2.0,0.1)--(2.0,0)--(0,0);
+    \pic at (2.0,1.35) {ELresV}; \pic at (2.0,0.1) {ELresV};
+    \node[ELlabs,anchor=west] at (2.2,1.9) {$R_f$}; \node[ELlabs,anchor=west] at (2.2,0.65) {$R_g$};
+    \draw[ELink,line width=0.9pt] (-0.3,1.65)--(0.3,1.65); \draw[ELink,line width=2pt] (-0.15,1.35)--(0.15,1.35);
+    \node[ELlabs,anchor=east] at (-0.35,1.5) {$\mathcal{V}$};
+    \node[ELlabs,anchor=south east] at (-0.2,1.7) {$+$}; \node[ELlabs,anchor=north east] at (-0.2,1.3) {$-$};
+    \draw[ELcField,line width=0.9pt,-{Stealth[length=5pt]}] (0.8,3.0)--(1.1,3.0); \node[ELlabs,anchor=south] at (1.0,3.05) {$I$};
+    \node[ELlabs,anchor=north] at (1.0,-0.2) {\ELL{(b) Electric circuit}{(ب) مدار الکتریکی}};
+  \end{scope}
+\end{tikzpicture}

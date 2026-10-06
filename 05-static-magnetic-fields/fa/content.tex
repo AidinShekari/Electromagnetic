@@ -1,0 +1,1222 @@
+\ELhold
+
+\ELsection{سرفصل‌ها}{سرفصل‌ها}
+
+\begin{ELunit}
+
+\ELfigure{m05-course-outline}{}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{میدان‌های مغناطیسی ساکن}{میدان‌های مغناطیسی ساکن}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  هنگامیکه بار آزمون کوچکی در میدان الکتریکی \ELim{\vect{E}} قرار می‌گیرد، نیروی زیر به آن وارد می‌شود
+\end{itemize}
+
+\ELdisp{\vect{F}_e\ELbr =q\vect{E}\qquad\ELbr (\mathrm{N})}
+
+\begin{itemize}
+\tightlist
+\item
+  هنگامیکه این بار آزمون، در حال حرکت درون یک میدان مغناطیسی باشد، نیروی دیگری به آن وارد می‌شود که برابر است با
+\end{itemize}
+
+\ELdisp{\vect{F}_m\ELbr =q\vect{u}\times\vect{B}\qquad\ELbr (\mathrm{N})}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{\vect{B}}: چگالی شار مغناطیسی با واحد وبر بر متر مربع یا تسلا
+\item
+  پس نیروی الکترومغناطیسی کل وارد بر بار \ELim{q} برابر است با
+\end{itemize}
+
+\begin{ELimportant}{معادله نیروی لورنتس}
+
+\ELdisp{\vect{F}\ELbr =q(\vect{E}+\vect{u}\times\vect{B})\qquad\ELbr (\mathrm{N})}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\ELfigure{m05-map}{}
+
+\begin{itemize}
+\tightlist
+\item
+  فرضیات اصلی مغناطیس ساکن که بر اساس آن‌ها می‌توان دیگر روابط و قوانین این حوزه را استخراج کرد کدامند؟
+\item
+  چگونه بر اساس فرضیات فوق، \textbf{قانون مداری آمپر} استخراج می‌شود؟
+\item
+  چگونه می‌توان با استفاده از قانون مداری آمپر، چگالی شار مغناطیسی ناشی از یک جریان را بدست آورد؟
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{فرضیات اصلی مغناطیس ساکن در فضای آزاد}{فرضیات اصلی مغناطیس ساکن در فضای آزاد}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  دو فرض اساسی مغناطیس ساکن در فضای آزاد
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\nabla\cdot\vect{B}\ELbr =0}
+\ELdisp{\nabla\times\vect{B}\ELbr =\mu_0\vect{J}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{\mu_0=4\pi\times10^{-7}\,\mathrm{(H/m)}}: ضریب نفوذپذیری فضای آزاد
+\item
+  \ELim{\vect{J}}: چگالی حجمی جریان \ELim{\mathrm{(A/m^2)}}
+\item
+  چون دیورژانس کرل هر میدان برداری صفر است، در نتیجه
+\end{itemize}
+
+\ELdisp{\nabla\cdot\vect{J}\ELbr =0}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  برای چگالی بار الکتریکی هیچ مشابه مغناطیسی وجود ندارد.
+\item
+  شکل انتگرالی رابطه اول \ELim{\ELto} انتگرالگیری روی حجم دلخواه \ELim{V} و استفاده از قضیه دیورژانس
+\end{itemize}
+
+\begin{ELimportant}{قانون بقای شار مغناطیسی}
+
+\ELdisp{\oint_S\vect{B}\cdot d\vect{s}\ELbr =0}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  این معادله را \textbf{قانون بقای شار مغناطیسی} می‌نامند.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    هیچ منبع شار مغناطیسی وجود ندارد و خطوط شار مغناطیسی همیشه در خود بسته می‌شوند.
+  \end{itemize}
+\item
+  شکل انتگرالی رابطه دوم \ELim{\ELto} انتگرالگیری روی سطح باز دلخواه \ELim{S} و استفاده از قضیه استوکس
+\end{itemize}
+
+\ELdisp{\int_S(\nabla\times\vect{B})\cdot d\vect{s}\ELbr =\mu_0\int_S\vect{J}\cdot d\vect{s}}
+
+\end{ELunit}
+
+\begin{ELimportant}{قانون مداری آمپر}
+
+\ELdisp{\oint_C\vect{B}\cdot\dif\vect{\ell}\ELbr =\mu_0I}
+
+\end{ELimportant}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{C}: مسیر محصور کننده سطح \ELim{S} (مسیر \ELim{C} و جریان \ELim{I} از قانون دست راست تبعیت می‌کنند)
+\item
+  \ELim{I}: جریان گذرنده از سطح \ELim{S}
+\item
+  این معادله شکلی از \textbf{قانون مداری آمپر} است.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    گردش چگالی شار مغناطیسی در فضای آزاد به دور هر مسیر بسته، برابر با حاصلضرب \ELim{\mu_0} در کل جریان گذرنده از سطح محصور شده توسط این مسیر است.
+  \end{itemize}
+\item
+  قانون مداری آمپر در تعیین چگالی شار مغناطیسی ناشی از جریان \ELim{I} هنگامیکه مسیر بسته \ELim{C} به دور جریان چنان وجود داشته باشد که \ELim{\vect{B}} روی مسیر ثابت باشد، مفید است.
+\end{itemize}
+
+\end{ELunit}
+
+\ELnextnum{5-1}
+
+\begin{ELexample}{}
+
+یک هادی بسیار بلند مستقیم با سطح مقطع دایروی به شعاع \ELim{b} حامل جریان \ELim{I} است. چگالی شار مغناطیسی درون و بیرون هادی را بدست آورید.
+
+\ELfigure{m05-ex1}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  اگر هادی در امتداد محور \ELim{z} باشد، \ELim{\vect{B}} در راستای \ELim{\phi} بوده و مقدار آن در امتداد هر مسیر دایروی حول محور \ELim{z} ثابت است.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    درون هادی
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{\left.\begin{aligned}&\vect{B}_1=\uvec{\phi}B_{\phi1},\qquad\dif\vect{\ell}=\uvec{\phi}r_1\,d\phi\\&\oint_{C_1}\vect{B}_1\cdot\dif\vect{\ell}=\int_0^{2\pi}B_{\phi1}r_1\,d\phi=2\pi r_1B_{\phi1}\\&I_1=\frac{\pi r_1^2}{\pi b^2}I=\left(\frac{r_1}{b}\right)^2I\end{aligned}\right\}\quad\ELbr \vect{B}_1\ELbr =\uvec{\phi}B_{\phi1}\ELbr =\uvec{\phi}\frac{\mu_0r_1I}{2\pi b^2}}
+
+\begin{itemize}
+\tightlist
+\item
+  بیرون هادی
+\end{itemize}
+
+\ELdisp{\vect{B}_2\ELbr =\uvec{\phi}B_{\phi2},\qquad\ELbr \dif\vect{\ell}\ELbr =\uvec{\phi}r_2\,d\phi}
+\ELdisp{\oint_{C_2}\vect{B}_2\cdot\dif\vect{\ell}\ELbr =2\pi r_2B_{\phi2}}
+\ELdisp{\vect{B}_2\ELbr =\uvec{\phi}B_{\phi2}\ELbr =\uvec{\phi}\frac{\mu_0I}{2\pi r_2}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELnextnum{5-2}
+
+\begin{ELexample}{}
+
+چگالی شار مغناطیسی درون یک سیم پیچ چنبره‌ای با هسته هوا و \ELim{N} دور سیمِ حامل جریان \ELim{I} را بدست آورید.
+
+\ELfigure{m05-ex2}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  تقارن استوانه‌ای تضمین می‌کند که \ELim{\vect{B}} فقط مولفه در راستای \ELim{\phi} دارد و مقدار آن در امتداد هر مسیر دایروی حول محور سیم پیچ ثابت است.
+\end{itemize}
+
+\ELdisp{\oint\vect{B}\cdot\dif\vect{\ell}\ELbr =2\pi rB_\phi\ELbr =\mu_0NI}
+\ELdisp{\vect{B}\ELbr =\uvec{\phi}B_\phi\ELbr =\uvec{\phi}\frac{\mu_0NI}{2\pi r},\qquad\ELbr (b-a)<r<(b+a)}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELnextnum{5-3}
+
+\begin{ELexample}{}
+
+چگالی شار مغناطیسی درون یک سیم پیچ بسیار بلند با هسته هوا و \ELim{n} دور سیم در واحد طول حامل جریان \ELim{I} را بدست آورید.
+
+\ELfigure{m05-ex3}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  خارج از سیم پیچ میدان مغناطیسی صفر است.
+\item
+  با توجه به تقارن ساختار، \ELim{\vect{B}} هم‌راستا با محور سیم پیچ بوده و مقدار آن در امتداد سیم پیچ ثابت است.
+\end{itemize}
+
+\ELdisp{BL\ELbr =\mu_0nLI}
+\ELdisp{B\ELbr =\mu_0nI}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELhold
+
+\ELsection{پتانسیل مغناطیسی برداری}{پتانسیل مغناطیسی برداری}
+
+\begin{ELunit}
+
+\ELfigure{m05-map-vecpot}{}
+
+\begin{itemize}
+\tightlist
+\item
+  مفهوم پتانسیل مغناطیسی برداری چیست، کاربرد آن کجاست و چگونه محاسبه می‌شود؟
+\item
+  رابطه قانون بیوساوار و نحوه استفاده از آن برای محاسبه چگالی شار مغناطیسی چگونه است؟
+\end{itemize}
+
+\ELdisp{\nabla\cdot\vect{B}\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \boxed{\vect{B}=\nabla\times\vect{A}\qquad(\mathrm{T})}}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{\vect{A}} را \textbf{پتانسیل مغناطیسی برداری} می‌نامند. واحد آن وبر بر متر است.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    اگر بتوانیم در مورد یک توزیع جریان، \ELim{\vect{A}} را بیابیم، آنگاه به سادگی \ELim{\vect{B}} قابل محاسبه خواهد بود (دقیقاً مانند \ELim{V} و \ELim{\vect{E}}).
+  \end{itemize}
+\item
+  تعریف یک بردار به مشخص کردن کرل و دیورژانس آن نیاز دارد. برای مشخص کردن دیورژانس \ELim{\vect{A}} به ترتیب زیر عمل می‌کنیم
+\end{itemize}
+
+\ELdisp{\nabla\times\vect{B}\ELbr =\mu_0\vect{J}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \nabla\times\nabla\times\vect{A}\ELbr =\mu_0\vect{J}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{لاپلاسین یک کمیت برداری} را به صورت زیر تعریف می‌کنیم
+\end{itemize}
+
+\ELdisp{\nabla^2\vect{A}\ELbr =\nabla(\nabla\cdot\vect{A})-\nabla\times\nabla\times\vect{A}}
+
+\begin{itemize}
+\tightlist
+\item
+  به عنوان مثال لاپلاسین \ELim{\vect{A}} در دستگاه مختصات کارتزین به صورت زیر است
+\end{itemize}
+
+\ELdisp{\nabla^2\vect{A}\ELbr =\uvec{x}\nabla^2A_x+\uvec{y}\nabla^2A_y+\uvec{z}\nabla^2A_z}
+
+\begin{itemize}
+\tightlist
+\item
+  بنابراین
+\end{itemize}
+
+\ELdisp{\nabla(\nabla\cdot\vect{A})-\nabla^2\vect{A}\ELbr =\mu_0\vect{J}}
+
+\begin{itemize}
+\tightlist
+\item
+  برای ساده شدن رابطه فوق انتخاب می‌کنیم
+\end{itemize}
+
+\ELdisp{\nabla\cdot\vect{A}\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \boxed{\nabla^2\vect{A}=-\mu_0\vect{J}}}
+
+\begin{itemize}
+\tightlist
+\item
+  رابطه اخیر \textbf{معادله برداری پواسون} است.
+\item
+  در مختصات کارتزین داریم
+\end{itemize}
+
+\ELdisp{\nabla^2A_x\ELbr =-\mu_0J_x,\qquad\ELbr \nabla^2A_y\ELbr =-\mu_0J_y,\qquad\ELbr \nabla^2A_z\ELbr =-\mu_0J_z}
+
+\begin{itemize}
+\tightlist
+\item
+  هر کدام از این سه معادله از نظر ریاضی شبیه معادله پواسون در الکتریسیته ساکن هستند.
+\item
+  پیش از این داشتیم
+\end{itemize}
+
+\ELdisp{\nabla^2V\ELbr =-\frac{\rho}{\epsilon_0}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  V\ELbr =\frac{1}{4\pi\epsilon_0}\int_{V'}\frac{\rho}{\lvert\vect{R}-\vect{R}'\rvert}\,dv'}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  به طور مشابه خواهیم داشت
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\vect{A}\ELbr =\frac{\mu_0}{4\pi}\int_{V'}\frac{\vect{J}}{\lvert\vect{R}-\vect{R}'\rvert}\,dv'}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  به این ترتیب می‌توان با استفاده از رابطه فوق، \ELim{\vect{A}} را از روی چگالی جریان بدست آورد و سپس با گرفتن کرل از آن، \ELim{\vect{B}} را محاسبه نمود.
+\item
+  مفهوم فیزیکی پتانسیل مغناطیسی برداری
+\end{itemize}
+
+\ELdisp{\Phi\ELbr =\int_S\vect{B}\cdot d\vect{s}}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{\Phi}: شار مغناطیسی با واحد وبر
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\Phi\ELbr =\int_S(\nabla\times\vect{A})\cdot d\vect{s}\ELbr =\oint_C\vect{A}\cdot\dif\vect{\ell}\qquad\ELbr (\mathrm{Wb})}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  انتگرال خطی \ELim{\vect{A}} به دور هر مسیر بسته \ELim{C}، برابر با کل شار مغناطیسی گذرنده از سطح محصور شده توسط این مسیر است.
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{قانون بیوساوار}{قانون بیوساوار}
+
+\begin{ELunit}
+
+\ELfigure{m05-map-biot}{}
+
+\begin{itemize}
+\tightlist
+\item
+  در یک سیم نازک حامل جریان \ELim{I} و با سطح مقطع \ELim{S} داریم
+\end{itemize}
+
+\ELdisp{\vect{J}\,dv'\ELbr =JS\,d\ell'\ELbr =I\,\dif\vect{\ell}'\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \vect{A}\ELbr =\frac{\mu_0I}{4\pi}\oint_{C'}\frac{\dif\vect{\ell}'}{\lvert\vect{R}-\vect{R}'\rvert}}
+
+\begin{itemize}
+\tightlist
+\item
+  می‌توان نشان داد
+\end{itemize}
+
+\ELdisp{\vect{B}\ELbr =\nabla\times\vect{A}\ELbr =\nabla\times\left[\frac{\mu_0I}{4\pi}\oint_{C'}\frac{\dif\vect{\ell}'}{\lvert\vect{R}-\vect{R}'\rvert}\right]}
+
+\end{ELunit}
+
+\begin{ELimportant}{قانون بیوساوار}
+
+\ELdisp{\vect{B}\ELbr =\frac{\mu_0I}{4\pi}\oint_{C'}\frac{\dif\vect{\ell}'\times(\vect{R}-\vect{R}')}{\lvert\vect{R}-\vect{R}'\rvert^3}}
+
+\end{ELimportant}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  معادله فوق را \textbf{قانون بیوساوار} گویند.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    به طور کلی استفاده از قانون بیوساوار مشکل‌تر از قانون مداری آمپر است. اما اگر مسیر بسته‌ای که \ELim{\vect{B}} روی آن ثابت باشد پیدا نشود، استفاده از قانون مداری آمپر برای تعیین \ELim{\vect{B}} امکان‌پذیر نیست.
+  \end{itemize}
+\end{itemize}
+
+\end{ELunit}
+
+\ELnextnum{5-4}
+
+\begin{ELexample}{}
+
+جریان مستقیم \ELim{I} در یک سیم مستقیم به طول \ELim{2L} جاری است. چگالی شار مغناطیسی را در نقطه‌ای به فاصله \ELim{r} از سیم در صفحه عمود منصف آن تعیین کنید.
+
+\ELfigure{m05-ex4}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  جریان فقط در مدارهای بسته وجود دارد. بنابراین سیم موجود در این مثال باید بخشی از یک حلقه حامل جریان باشد. چون از بقیه مدار اطلاعی نداریم، بنابراین نمی‌توان از قانون مداری آمپر استفاده کرد.
+\item
+  \textbf{روش اول حل}
+\end{itemize}
+
+\ELdisp{\left.\begin{aligned}&\vect{A}=\frac{\mu_0I}{4\pi}\oint_{C'}\frac{\dif\vect{\ell}'}{\lvert\vect{R}-\vect{R}'\rvert}\\&\dif\vect{\ell}'=dz'\,\uvec{z}\\&\vect{R}=r\uvec{r}\\&\vect{R}'=z'\uvec{z}\end{aligned}\right\}\quad\ELbr \begin{aligned}\vect{A}&=\uvec{z}\frac{\mu_0I}{4\pi}\int_{-L}^{L}\frac{dz'}{\sqrt{z'^2+r^2}}\\&=\uvec{z}\frac{\mu_0I}{4\pi}\ln\frac{\sqrt{L^2+r^2}+L}{\sqrt{L^2+r^2}-L}\end{aligned}}
+\ELdisp{\vect{B}\ELbr =\nabla\times\vect{A}\ELbr =\nabla\times(\uvec{z}A_z)\ELbr =\uvec{r}\frac1r\frac{\partial A_z}{\partial\phi}-\uvec{\phi}\frac{\partial A_z}{\partial r}}
+\ELdisp{\begin{aligned}\vect{B}&=-\uvec{\phi}\frac{\partial}{\partial r}\left[\frac{\mu_0I}{4\pi}\ln\frac{\sqrt{L^2+r^2}+L}{\sqrt{L^2+r^2}-L}\right]\\&=\uvec{\phi}\frac{\mu_0IL}{2\pi r\sqrt{L^2+r^2}}\end{aligned}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{روش دوم حل}
+\end{itemize}
+
+\ELdisp{\left.\begin{aligned}&\vect{B}=\frac{\mu_0I}{4\pi}\oint_{C'}\frac{\dif\vect{\ell}'\times(\vect{R}-\vect{R}')}{\lvert\vect{R}-\vect{R}'\rvert^3}\\&\vect{R}-\vect{R}'=r\uvec{r}-z'\uvec{z}\\&\dif\vect{\ell}'\times(\vect{R}-\vect{R}')=dz'\uvec{z}\times(r\uvec{r}-z'\uvec{z})=r\,dz'\,\uvec{\phi}\end{aligned}\right\}\quad\ELbr \begin{aligned}\vect{B}=\int d\vect{B}&=\uvec{\phi}\frac{\mu_0I}{4\pi}\int_{-L}^{L}\frac{r\,dz'}{(z'^2+r^2)^{3/2}}\\&=\uvec{\phi}\frac{\mu_0IL}{2\pi r\sqrt{L^2+r^2}}\end{aligned}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELnextnum{5-5}
+
+\begin{ELexample}{}
+
+چگالی شار مغناطیسی در مرکز یک حلقه مربعی به ضلع \ELim{w} و حامل جریان \ELim{I} را بدست آورید.
+
+\ELfigure{m05-ex5}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  فرض می‌کنیم که حلقه در صفحه \ELim{xy} باشد. \ELim{\vect{B}} در مرکز حلقه، چهار برابر چگالی شار مغناطیسی ناشی از یک ضلع به طول \ELim{w} است. بنابراین
+\item
+  اندازه چگالی شار مغناطیسی یک تکه سیم به طول \ELim{2L} در فاصله \ELim{r} از آن
+\end{itemize}
+
+\ELdisp{B\ELbr =\frac{\mu_0IL}{2\pi r\sqrt{L^2+r^2}}\qquad\ELbr  L\ELbr =\frac w2,\quad\ELbr  r\ELbr =\frac w2}
+\ELdisp{\vect{B}\ELbr =\uvec{z}\frac{\mu_0I}{\sqrt2\pi w}\times4\ELbr =\uvec{z}\frac{2\sqrt2\mu_0I}{\pi w}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELnextnum{5-6}
+
+\begin{ELexample}{}
+
+چگالی شار مغناطیسی روی محور یک حلقه جریان دایروی به شعاع \ELim{b} و حامل جریان \ELim{I} را بدست آورید.
+
+\ELfigure{m05-ex6}{}
+
+\begin{ELsolution}
+
+\ELdisp{\left.\begin{aligned}&\vect{B}=\frac{\mu_0I}{4\pi}\oint_{C'}\frac{\dif\vect{\ell}'\times(\vect{R}-\vect{R}')}{\lvert\vect{R}-\vect{R}'\rvert^3}\\&\dif\vect{\ell}'=b\,d\phi'\,\uvec{\phi'},\quad\vect{R}=z\uvec{z},\quad\vect{R}'=b\uvec{r'}\\&\vect{R}-\vect{R}'=z\uvec{z}-b\uvec{r'}\\&\begin{aligned}\dif\vect{\ell}'\times(\vect{R}-\vect{R}')&=b\,d\phi'\,\uvec{\phi'}\times(z\uvec{z}-b\uvec{r'})\\&=bz\,d\phi'\,\uvec{r'}+b^2d\phi'\,\uvec{z}\end{aligned}\end{aligned}\right\}\quad\ELbr \vect{B}\ELbr =\frac{\mu_0I}{4\pi}\int_0^{2\pi}\uvec{z}\frac{b^2\,d\phi'}{(z^2+b^2)^{3/2}}}
+
+\begin{itemize}
+\tightlist
+\item
+  به صورت شهودی واضح است که مؤلفه \ELim{r} چگالی شار مغناطیسی صفر است.
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\vect{B}\ELbr =\uvec{z}\frac{\mu_0Ib^2}{2(z^2+b^2)^{3/2}}\qquad\ELbr (\mathrm{T})}
+
+\end{ELimportant}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELnextnum{5-7}
+
+\begin{ELexample}{}
+
+چگالی شار مغناطیسی ناشی از یک دوقطبی مغناطیسی به شعاع \ELim{b} و حامل جریان \ELim{I} را به فاصله بسیار دور از آن بدست آورید.
+
+\ELfigure{m05-ex7}{}
+
+\begin{ELsolution}
+
+\ELdisp{\vect{A}\ELbr =\frac{\mu_0I}{4\pi}\oint_{C'}\frac{\dif\vect{\ell}'}{\lvert\vect{R}-\vect{R}'\rvert}}
+
+\begin{itemize}
+\tightlist
+\item
+  با توجه به تقارن هندسه، میدان مغناطیسی مستقل از زاویه \ELim{\phi} است. بنابراین جهت سادگی نقطه مشاهده را در صفحه \ELim{yz} قرار می‌دهیم.
+\end{itemize}
+
+\ELdisp{\dif\vect{\ell}'\ELbr =b\,d\phi'\,\uvec{\phi'}\ELbr =b\,d\phi'\left(-\uvec{x}\sin\phi'+\uvec{y}\cos\phi'\right)}
+\ELdisp{\vect{A}\ELbr =-\uvec{x}\frac{\mu_0I}{4\pi}\int_0^{2\pi}\frac{b\sin\phi'}{\lvert\vect{R}-\vect{R}'\rvert}\,d\phi'+\uvec{y}\frac{\mu_0I}{4\pi}\int_0^{2\pi}\frac{b\cos\phi'}{\lvert\vect{R}-\vect{R}'\rvert}\,d\phi'}
+
+\begin{itemize}
+\tightlist
+\item
+  به صورت شهودی روشن است که مؤلفه \ELim{\vect{A}} در راستای \ELim{y} صفر است.
+\end{itemize}
+
+\ELfigure{m05-ex7-top}{}
+
+\ELdisp{\begin{aligned}\vect{R}=R\uvec{R}&=R\left(\sin\theta\cos(\pi/2)\uvec{x}+\sin\theta\sin(\pi/2)\uvec{y}+\cos\theta\,\uvec{z}\right)\\&=R\left(\sin\theta\,\uvec{y}+\cos\theta\,\uvec{z}\right)\end{aligned}}
+\ELdisp{\vect{R}'\ELbr =b\uvec{r'}\ELbr =b\left(\cos\phi'\,\uvec{x}+\sin\phi'\,\uvec{y}\right)}
+\ELdisp{\vect{R}-\vect{R}'\ELbr =-b\cos\phi'\,\uvec{x}+(R\sin\theta-b\sin\phi')\uvec{y}+R\cos\theta\,\uvec{z}}
+\ELdisp{\begin{aligned}\lvert\vect{R}-\vect{R}'\rvert^2&=R^2+b^2-2bR\sin\theta\sin\phi'\\&=R^2\left(1+\frac{b^2}{R^2}-\frac{2b}{R}\sin\theta\sin\phi'\right)\end{aligned}}
+\ELdisp{\begin{aligned}\frac{1}{\lvert\vect{R}-\vect{R}'\rvert}&=\frac1R\left(1+\frac{b^2}{R^2}-\frac{2b}{R}\sin\theta\sin\phi'\right)^{-1/2}\\&\cong\frac1R\left(1-\frac{2b}{R}\sin\theta\sin\phi'\right)^{-1/2}\cong\frac1R\left(1+\frac bR\sin\theta\sin\phi'\right)\end{aligned}}
+\ELdisp{\begin{aligned}\vect{A}&=-\uvec{x}\frac{\mu_0Ib}{4\pi R}\int_0^{2\pi}\left(1+\frac bR\sin\theta\sin\phi'\right)\sin\phi'\,d\phi'\\&=-\uvec{x}\frac{\mu_0Ib^2}{4R^2}\sin\theta\end{aligned}}
+
+\begin{itemize}
+\tightlist
+\item
+  حال در هر نقطه مشاهده دلخواهی بردار پتانسل مغناطیسی به صورت زیر خواهد شد
+\end{itemize}
+
+\ELdisp{\vect{A}\ELbr =\uvec{\phi}\frac{\mu_0Ib^2}{4R^2}\sin\theta\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \vect{A}\ELbr =\uvec{\phi}\frac{\mu_0(I\pi b^2)}{4\pi R^2}\sin\theta}
+
+\begin{itemize}
+\tightlist
+\item
+  بردار گشتاور دوقطبی مغناطیسی
+\end{itemize}
+
+\ELdisp{\vect{m}\ELbr =\uvec{z}I\pi b^2\ELbr =\uvec{z}IS\ELbr =\uvec{z}m}
+
+\begin{ELimportant}{}
+
+\ELdisp{\vect{A}\ELbr =\frac{\mu_0\vect{m}\times\uvec{R}}{4\pi R^2}}
+
+\end{ELimportant}
+
+\ELdisp{\vect{B}\ELbr =\nabla\times\vect{A}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \vect{B}\ELbr =\frac{\mu_0Ib^2}{4R^3}\left(\uvec{R}2\cos\theta+\uvec{\theta}\sin\theta\right)}
+
+\begin{ELimportant}{}
+
+\ELdisp{\vect{B}\ELbr =\frac{\mu_0m}{4\pi R^3}\left(\uvec{R}2\cos\theta+\uvec{\theta}\sin\theta\right)}
+
+\end{ELimportant}
+
+\ELfigure{m05-dipoles}{}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELhold
+
+\ELsection{رفتار میدان مغناطیسی ساکن در محیط‌های مادی}{رفتار میدان مغناطیسی ساکن در محیط‌های مادی}
+
+\begin{ELunit}
+
+\ELfigure{m05-map-media}{}
+
+\begin{itemize}
+\tightlist
+\item
+  تمام مواد از اتم‌هایی با هسته با بار مثبت و تعدادی الکترون با بار منفی در حال گردش به دور آن تشکیل می‌شوند.
+\item
+  حرکت الکترون‌ها باعث تولید جریان گردان و در نتیجه دوقطبی‌های مغناطیسی میکروسکوپی می‌شود.
+\item
+  در غیاب میدان مغناطیسی خارجی، دو قطبی‌های مغناطیسی اتم‌های اکثر مواد (به جز آهنربای دائمی) دارای جهت‌های تصادفی هستند و هیچ گشتاور مغناطیسی خالصی ایجاد نمی‌شود. با اعمال میدان مغناطیسی خارجی، گشتاور مغناطیسی الکترون‌های چرخان هم‌امتداد می‌شوند.
+\item
+  مواد مختلف در معرض میدان مغناطیسی چه رفتاری از خود نشان می‌دهند و چگونه می‌توان این رفتار را تحلیل کرد؟
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsubsection{مغناطیس‌شدگی و چگالی جریان‌های معادل}{مغناطیس‌شدگی و چگالی جریان‌های معادل}
+
+\begin{ELunit}
+
+\ELfigure{m05-magnetization}{}
+
+\begin{itemize}
+\tightlist
+\item
+  بردار مغناطیس شدگی (و بردار قطبی شدگی در الکتریسیته ساکن)
+\end{itemize}
+
+\ELdisp{\vect{M}\ELbr =\lim_{\Delta v\to0}\frac{\sum_{k=1}^{n\Delta v}\vect{m}_k}{\Delta v}\quad\ELbr (\mathrm{A/m})\qquad\ELbr \qquad\ELbr \vect{P}\ELbr =\lim_{\Delta v\to0}\frac{\sum_{k=1}^{n\Delta v}\vect{p}_k}{\Delta v}\quad\ELbr (\mathrm{C/m^2})}
+
+\begin{itemize}
+\tightlist
+\item
+  پتانسیل مغناطیسی برداری ناشی از ماده مغناطیس شده (و پتانسیل الکتریکی ناشی از ماده قطبی شده)
+\end{itemize}
+
+\ELdisp{\vect{A}\ELbr =\frac{\mu_0}{4\pi}\int_{V'}\frac{\nabla'\times\vect{M}}{R}\,dv'+\frac{\mu_0}{4\pi}\oint_{S'}\frac{\vect{M}\times\uvec{n}'}{R}\,ds'}
+\ELdisp{V\ELbr =\frac{1}{4\pi\epsilon_0}\oint_{S'}\frac{\vect{P}\cdot\uvec{n}'}{R}\,ds'+\frac{1}{4\pi\epsilon_0}\int_{V'}\frac{(-\nabla'\cdot\vect{P})}{R}\,dv'}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  چگالی جریان‌های سطحی و حجمی مغناطیس‌شدگی معادل
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\vect{J}_{ms}\ELbr =\vect{M}\times\uvec{n},\qquad\ELbr \vect{J}_m\ELbr =\nabla\times\vect{M}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  چگالی بارهای سطحی و حجمی قطبی‌شدگی معادل
+\end{itemize}
+
+\ELdisp{\rho_{ps}\ELbr =\vect{P}\cdot\uvec{n},\qquad\ELbr \rho_p\ELbr =-\nabla\cdot\vect{P}}
+
+\begin{itemize}
+\tightlist
+\item
+  مسئله یافتن چگالی شار مغناطیسی \ELim{\vect{B}} ناشی از یک چگالی حجمی مشخص از گشتاور دو قطبی مغناطیسی \ELim{\vect{M}}، به پیدا کردن چگالی‌های جریان مغناطیس‌شدگی معادل و سپس تعیین \ELim{\vect{A}} و به دنبال آن محاسبه \ELim{\vect{B}} تبدیل می‌شود.
+\end{itemize}
+
+\end{ELunit}
+
+\ELnextnum{5-8}
+
+\begin{ELexample}{}
+
+چگالی شار مغناطیسی را روی محور یک استوانه مغناطیسی بدست آورید. این استوانه دارای شعاع \ELim{b}، طول \ELim{L} و بردار مغناطیس شدگی \ELim{\vect{M}=\uvec{z}M_0} است.
+
+\ELfigure{m05-ex8}{}
+
+\begin{ELsolution}
+
+\ELdisp{\vect{J}_m\ELbr =\nabla\times\vect{M}\ELbr =0}
+
+\begin{itemize}
+\tightlist
+\item
+  چگالی جریان سطحی معادل روی دیواره جانبی
+\end{itemize}
+
+\ELdisp{\vect{J}_{ms}\ELbr =\vect{M}\times\uvec{n}\ELbr =\uvec{z}M_0\times\uvec{r}\ELbr =\uvec{\phi}M_0}
+
+\begin{itemize}
+\tightlist
+\item
+  چگالی جریان سطحی معادل روی سطوح بالایی و پایینی صفر است.
+\end{itemize}
+
+\ELdisp{\left.\begin{aligned}&\vect{B}=\frac{\mu_0}{4\pi}\int_{S'}\frac{\vect{J}_{ms}\times(\vect{R}-\vect{R}')\,ds'}{\lvert\vect{R}-\vect{R}'\rvert^3}\\&ds'=b\,d\phi'\,dz'\\&\vect{R}=z\uvec{z}\\&\vect{R}'=b\uvec{r'}+z'\uvec{z}\\&\vect{R}-\vect{R}'=(z-z')\uvec{z}-b\uvec{r'}\\&\begin{aligned}\vect{J}_{ms}\times(\vect{R}-\vect{R}')&=M_0\uvec{\phi'}\times\left((z-z')\uvec{z}-b\uvec{r'}\right)\\&=M_0(z-z')\uvec{r'}+bM_0\uvec{z}\end{aligned}\end{aligned}\right\}}
+
+\begin{itemize}
+\tightlist
+\item
+  به صورت شهودی واضح است که مؤلفه \ELim{r} چگالی شار مغناطیسی صفر است.
+\end{itemize}
+
+\ELdisp{\begin{aligned}\vect{B}=\int d\vect{B}&=\uvec{z}\int_0^L\frac{\mu_0M_0b^2\,dz'}{2\left[(z-z')^2+b^2\right]^{3/2}}\\&=\uvec{z}\frac{\mu_0M_0}{2}\left[\frac{z}{\sqrt{z^2+b^2}}-\frac{z-L}{\sqrt{(z-L)^2+b^2}}\right]\end{aligned}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELhold
+
+\ELsection{شدت میدان مغناطیسی و نفوذپذیری نسبی}{شدت میدان مغناطیسی و نفوذپذیری نسبی}
+
+\begin{ELunit}
+
+\ELfigure{m05-map-hmu}{}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsubsection{شدت میدان مغناطیسی}{شدت میدان مغناطیسی}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  چون اعمال یک میدان مغناطیسی خارجی باعث هم‌امتداد شدن گشتاورهای دوقطبی داخلی و القای گشتاور مغناطیسی در ماده مغناطیسی می‌شود، انتظار داریم که چگالی شار مغناطیسی حاصل شده در حضور ماده مغناطیسی با مقدار آن در فضای آزاد متفاوت باشد.
+\item
+  با درنظر گرفتن چگالی جریان حجمی معادل در ماده داریم
+\end{itemize}
+
+\ELdisp{\frac{1}{\mu_0}\nabla\times\vect{B}\ELbr =\vect{J}+\vect{J}_m\ELbr =\vect{J}+\nabla\times\vect{M}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \nabla\times\left(\frac{\vect{B}}{\mu_0}-\vect{M}\right)\ELbr =\vect{J}}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  شدت میدان مغناطیسی را به صورت زیر تعریف می‌کنیم
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\vect{H}\ELbr =\frac{\vect{B}}{\mu_0}-\vect{M}\qquad\ELbr (\mathrm{A/m})}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  استفاده از بردار \ELim{\vect{H}} ما را قادر می‌سازد که معادله کرل ارتباط دهنده میدان مغناطیسی و توزیع جریان‌های آزاد را در هر محیطی بدون نیاز به بکار بردن \ELim{\vect{M}} یا \ELim{\vect{J}_m} بنویسیم
+\end{itemize}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{\nabla\times\vect{H}\ELbr =\vect{J}\qquad\ELbr (\mathrm{A/m^2})}
+
+\end{ELimportant}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{\vect{J}}: چگالی جریان آزاد
+\item
+  فرم انتگرالی
+\end{itemize}
+
+\ELdisp{\int_S(\nabla\times\vect{H})\cdot d\vect{s}\ELbr =\int_S\vect{J}\cdot d\vect{s}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \boxed{\oint_C\vect{H}\cdot\dif\vect{\ell}=I\qquad(\mathrm{A})}}
+
+\begin{itemize}
+\tightlist
+\item
+  رابطه اخیر شکل دیگر قانون مداری آمپر است.
+\item
+  معادلات اصلی حاکم بر مغناطیس ساکن در هر محیطی
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\left\{\begin{aligned}&\nabla\cdot\vect{B}=0\\&\nabla\times\vect{H}=\vect{J}\end{aligned}\right.}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\ELhold
+
+\ELsubsection{ضریب نفوذپذیری نسبی}{ضریب نفوذپذیری نسبی}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  رابطه بین بردار مغناطیس شدگی و شدت میدان مغناطیسی
+\end{itemize}
+
+\ELdisp{\vect{M}\ELbr =\chi_m\vect{H}}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{\chi_m}: ضریب حساسیت مغناطیسی
+\item
+  رابطه بین شدت میدان مغناطیسی و چگالی شار مغناطیسی
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\begin{aligned}\vect{B}&=\mu_0(1+\chi_m)\vect{H}\\&=\mu_0\mu_r\vect{H}=\mu\vect{H}\qquad(\mathrm{Wb/m^2})\end{aligned}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\ELdisp{\mu_r\ELbr =1+\chi_m\ELbr =\frac{\mu}{\mu_0}}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{\mu_r}: کمیت بدون بعد به نام نفوذپذیری نسبی محیط
+\item
+  روابط میدان الکتریکی و مغناطیسی ساکن دوگان یکدیگرند
+\end{itemize}
+
+\end{ELunit}
+
+\Needspace{19\baselineskip}
+\begin{ELltr}
+\begin{longtable}[c]{cc}
+\toprule\noalign{}
+\ELtablehead \lr{Electrostatics} & \lr{Magnetostatics} \\\noalign{\vskip 4pt}
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\ELim{\vect{E}} & \ELim{\vect{B}} \\\noalign{\vskip 4pt}
+\ELim{\vect{D}} & \ELim{\vect{H}} \\\noalign{\vskip 4pt}
+\ELim{\epsilon} & \ELim{\dfrac1\mu} \\\noalign{\vskip 4pt}
+\ELim{\vect{P}} & \ELim{-\vect{M}} \\\noalign{\vskip 4pt}
+\ELim{\rho} & \ELim{\vect{J}} \\\noalign{\vskip 4pt}
+\ELim{V} & \ELim{\vect{A}} \\\noalign{\vskip 4pt}
+\ELim{\cdot} & \ELim{\times} \\\noalign{\vskip 4pt}
+\ELim{\times} & \ELim{\cdot} \\\noalign{\vskip 4pt}
+\end{longtable}\end{ELltr}
+
+
+\ELhold
+
+\ELsubsection{رفتار مواد مغناطیسی}{رفتار مواد مغناطیسی}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  مواد مغناطیسی را به طور تقریبی می‌توان بر اساس مقدار ضریب نفوذپذیری نسبی آن‌ها به سه گروه اصلی طبقه بندی کرد
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{مواد دیامغناطیس}: \ELim{\mu_r<1} (\ELim{\chi_m} عدد منفی بسیار کوچکی است)
+
+    \begin{itemize}
+    \tightlist
+    \item
+      در این مواد گشتاور مغناطیسی خالص در غیاب میدان مغناطیسی اعمال شده خارجی صفر است. \ELim{\ELto} مس، سرب، جیوه، نقره و طلا \ELim{\ELto} \ELim{\chi_m\approx-10^{-5}}
+    \end{itemize}
+  \item
+    \textbf{مواد پارامغناطیس}: \ELim{\mu_r>1} (\ELim{\chi_m} عدد مثبت بسیار کوچکی است)
+
+    \begin{itemize}
+    \tightlist
+    \item
+      در این مواد گشتاور مغناطیسی متوسط خالصی در غیاب میدان مغناطیسی اعمالی خارجی وجود دارد. \ELim{\ELto} آلومینیوم، منیزیوم و تنگستن \ELim{\ELto} \ELim{\chi_m\approx10^{-5}}
+    \end{itemize}
+  \item
+    \textbf{مواد فرومغناطیس}: \ELim{\mu_r\gg1} (\ELim{\chi_m} عدد مثبت بزرگی است)
+
+    \begin{itemize}
+    \tightlist
+    \item
+      در این مواد گشتاور مغناطیسی از نظر اندازه چندین برابر مقدار نظیر در مواد پارامغناطیس است. \ELim{\ELto} کوبالت، نیکل و آهن
+    \item
+      رابطه بین \ELim{\vect{B}} و \ELim{\vect{H}} در یک ماده فرومغناطیس غیرخطی است.
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\ELfigure{m05-hysteresis}{پدیده هیسترزیس یا پس‌ماند}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{مدارهای مغناطیسی}{مدارهای مغناطیسی}
+
+\begin{ELunit}
+
+\ELfigure{m05-map-circ}{}
+
+\begin{itemize}
+\tightlist
+\item
+  مشابه بحث مدارهای الکتریکی، گاهی اوقات لازم است که در یک مدار مغناطیسی، شار مغناطیسی و شدت میدان مغناطیسی ناشی از سیم‌پیچ‌های حامل جریان محاسبه شود.
+\item
+  برای تحلیل مدارهای مغناطیسی داریم
+\end{itemize}
+
+\ELdisp{\nabla\cdot\vect{B}\ELbr =0,\qquad\ELbr \nabla\times\vect{H}\ELbr =\vect{J}}
+\ELdisp{\oint_C\vect{H}\cdot\dif\vect{\ell}\ELbr =NI\ELbr =\mathcal{V}_m}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{\mathcal{V}_m}: نیروی محرکه مغناطیسی با واحد \ELim{\mathrm{A}}. این کمیت مشابه نیروی محرکه الکتریکی در مدارات الکتریکی است.
+\end{itemize}
+
+\ELnextnum{5-9}
+
+\begin{ELexample}{}
+
+فرض کنید که \ELim{N} دور سیم برروی یک هسته چنبره‌ای از ماده مغناطیسی با نفوذپذیری \ELim{\mu} پیچیده شده باشد. هسته دارای شعاع متوسط \ELim{r_0}، سطح مقطع دایروی با شعاع \ELim{a} و یک فاصله هوایی کوچک به طول \ELim{\ell_g} است. جریان دائمی \ELim{I_0} در سیم جاری است. مطلوبست
+
+\begin{itemize}
+\tightlist
+\item
+  الف. چگالی شار مغناطیسی در هسته مغناطیسی
+\item
+  ب. شدت میدان مغناطیسی در هسته مغناطیسی
+\item
+  ج. شدت میدان مغناطیسی در فاصله هوایی
+\end{itemize}
+
+\ELfigure{m05-ex9}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{فرض اول}: از شار نشتی صرف نظر می‌کنیم
+\end{itemize}
+
+\ELfigure{m05-ex9-gauss}{}
+
+\ELdisp{\nabla\cdot\vect{B}\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \oint_S\vect{B}\cdot d\vect{s}\ELbr =0}
+
+\begin{itemize}
+\tightlist
+\item
+  شار در هسته و فاصله هوایی یکسان است.
+\item
+  \textbf{فرض دوم}: از اثرات حاشیه‌ای شار در فاصله هوایی صرف نظر می‌کنیم.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    چگالی شار در هسته و فاصله هوایی یکسان است.
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{\vect{B}_f\ELbr =\vect{B}_g\ELbr =\uvec{\phi}B_f}
+\ELdisp{\vect{H}_f\ELbr =\uvec{\phi}\frac{B_f}{\mu},\qquad\ELbr \vect{H}_g\ELbr =\uvec{\phi}\frac{B_f}{\mu_0}}
+\ELdisp{\oint_C\vect{H}\cdot\dif\vect{\ell}\ELbr =NI_0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \frac{B_f}{\mu}(2\pi r_0-\ell_g)+\frac{B_f}{\mu_0}\ell_g\ELbr =NI_0}
+
+\begin{itemize}
+\tightlist
+\item
+  الف.
+\end{itemize}
+
+\ELdisp{\vect{B}_f\ELbr =\uvec{\phi}\frac{\mu_0\mu NI_0}{\mu_0(2\pi r_0-\ell_g)+\mu\ell_g}}
+
+\begin{itemize}
+\tightlist
+\item
+  ب.
+\end{itemize}
+
+\ELdisp{\vect{H}_f\ELbr =\uvec{\phi}\frac{\mu_0NI_0}{\mu_0(2\pi r_0-\ell_g)+\mu\ell_g}}
+
+\begin{itemize}
+\tightlist
+\item
+  ج.
+\end{itemize}
+
+\ELdisp{\vect{H}_g\ELbr =\uvec{\phi}\frac{\mu NI_0}{\mu_0(2\pi r_0-\ell_g)+\mu\ell_g}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\end{ELjoin}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  اگر شعاع سطح مقطع هسته بسیار کوچکتر از شعاع متوسط چنبره باشد، چگالی شار مغناطیسی در هسته تقریباً ثابت بوده و داریم
+\end{itemize}
+
+\ELdisp{\Phi\ELbr \cong BS\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \Phi\ELbr =\frac{NI_0}{(2\pi r_0-\ell_g)/\mu S+\ell_g/\mu_0S}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \Phi\ELbr =\frac{\mathcal{V}_m}{\mathcal{R}_f+\mathcal{R}_g}}
+
+\begin{ELimportant}{}
+
+\ELdisp{\mathcal{R}_f\ELbr =\frac{2\pi r_0-\ell_g}{\mu S}\ELbr =\frac{\ell_f}{\mu S},\qquad\ELbr \mathcal{R}_g\ELbr =\frac{\ell_g}{\mu_0S}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\item
+  \ELim{\mathcal{R}_f} و \ELim{\mathcal{R}_g}: رلوکتانس با واحد \ELim{1/\mathrm{H}}
+\item
+  تشابه این مدار مغناطیسی با یک مدار الکتریکی به صورت زیر است
+\end{itemize}
+
+\ELfigure{m05-circuits}{}
+
+\ELdisp{\Phi\ELbr =\frac{\mathcal{V}_m}{\mathcal{R}_f+\mathcal{R}_g},\qquad\ELbr  I\ELbr =\frac{\mathcal{V}}{R_f+R_g}}
+
+\end{ELunit}
+
+\Needspace{12\baselineskip}
+\begin{ELltr}
+\begin{longtable}[c]{ll}
+\toprule\noalign{}
+\ELtablehead \lr{Magnetic Circuits} & \lr{Electric Circuits} \\\noalign{\vskip 4pt}
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\lr{mmf}, \ELim{\mathcal{V}_m\,(=NI)} & \lr{emf}, \ELim{\mathcal{V}} \\\noalign{\vskip 4pt}
+\lr{magnetic flux}, \ELim{\Phi} & \lr{electric current}, \ELim{I} \\\noalign{\vskip 4pt}
+\lr{reluctance}, \ELim{\mathcal{R}} & \lr{resistance}, \ELim{R} \\\noalign{\vskip 4pt}
+\lr{permeability}, \ELim{\mu} & \lr{conductivity}, \ELim{\sigma} \\\noalign{\vskip 4pt}
+\end{longtable}\end{ELltr}
+
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  مشابه قانون ولتاژ کرشهف در مدارات الکتریکی، در مدارات مغناطیسی داریم
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\sum_jN_jI_j\ELbr =\sum_k\mathcal{R}_k\Phi_k}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  در نتیجه جمع جبری آمپردورها در پیرامون هر مسیر بسته یک مدار مغناطیسی، برابر با جمع جبری حاصلضرب رلوکتانس‌ها و شارهاست.
+\item
+  مشابه قانون جریان کرشهف در مدارات الکتریکی، در مدارات مغناطیسی داریم
+\end{itemize}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{\sum_j\Phi_j\ELbr =0}
+
+\end{ELimportant}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  که بیان می‌کند جمع جبری شارهای مغناطیسی خارج‌شونده از یک گره در هر مدار مغناطیسی صفر است.
+\item
+  با وجود این تشابه ساده، تحلیل دقیق مدارهای مغناطیسی به دلایل زیر بسیار دشوار است
+
+  \begin{itemize}
+  \tightlist
+  \item
+    وجود شارهای نشتی
+  \item
+    وجود اثرات لبه‌ای که باعث می‌شود خطوط شار مغناطیسی در شکاف هوایی پخش و برآمده شود.
+  \item
+    وابسته بودن نفوذپذیری مواد فرومغناطیسی به شدت میدان مغناطیسی و به عبارتی غیرخطی بودن رابطه \ELim{\vect{B}} و \ELim{\vect{H}}
+  \end{itemize}
+\end{itemize}
+
+\end{ELunit}
+
+\ELnextnum{5-10}
+
+\begin{ELexample}{}
+
+مدار مغناطیسی شکل زیر را در نظر بگیرید. جریان‌های دائمی \ELim{I_1} و \ELim{I_2} به ترتیب در سیم پیچ‌هایی با \ELim{N_1} و \ELim{N_2} دور جاری هستند. هسته دارای سطح مقطعی به مساحت \ELim{S_c} و نفوذپذیری \ELim{\mu} است. شار مغناطیسی را در بازوی وسط تعیین کنید.
+
+\ELfigure{m05-ex10}{}
+
+\begin{ELsolution}
+
+\begin{itemize}
+\tightlist
+\item
+  مدار معادل
+\end{itemize}
+
+\ELfigure{m05-ex10-circuit}{}
+
+\ELdisp{\mathcal{R}_1\ELbr =\frac{\ell_1}{\mu S_c},\qquad\ELbr \mathcal{R}_2\ELbr =\frac{\ell_2}{\mu S_c},\qquad\ELbr \mathcal{R}_3\ELbr =\frac{\ell_3}{\mu S_c}}
+\ELdisp{\begin{aligned}&\mathit{Loop}~1:&N_1I_1&=(\mathcal{R}_1+\mathcal{R}_3)\Phi_1+\mathcal{R}_1\Phi_2\\&\mathit{Loop}~2:&N_1I_1-N_2I_2&=\mathcal{R}_1\Phi_1+(\mathcal{R}_1+\mathcal{R}_2)\Phi_2\end{aligned}}
+\ELdisp{\Phi_1\ELbr =\frac{\mathcal{R}_2N_1I_1+\mathcal{R}_1N_2I_2}{\mathcal{R}_1\mathcal{R}_2+\mathcal{R}_1\mathcal{R}_3+\mathcal{R}_2\mathcal{R}_3}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELhold
+
+\ELsection{شرایط مرزی میدان‌های مغناطیسی ساکن}{شرایط مرزی میدان‌های مغناطیسی ساکن}
+
+\begin{ELunit}
+
+\ELfigure{m05-map-bc}{}
+
+\begin{itemize}
+\tightlist
+\item
+  شرط مرزی مؤلفه‌های عمودی
+\end{itemize}
+
+\ELdisp{\nabla\cdot\vect{B}\ELbr =0\quad\ELbr \ELbr \Longrightarrow\quad\ELbr \boxed{B_{1n}=B_{2n}\qquad(\mathrm{T})}}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  در محیط‌های خطی
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\mu_1H_{1n}\ELbr =\mu_2H_{2n}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  شرط مرزی مؤلفه‌های مماسی
+\end{itemize}
+
+\ELfigure{m05-bc}{}
+
+\ELdisp{\oint_C\vect{H}\cdot\dif\vect{\ell}\ELbr =I}
+\ELdisp{\oint_{abcda}\vect{H}\cdot\dif\vect{\ell}\ELbr =\vect{H}_1\cdot\Delta\vect{w}+\vect{H}_2\cdot(-\Delta\vect{w})\ELbr =J_{sn}\Delta w}
+\ELdisp{H_{1t}-H_{2t}\ELbr =J_{sn}\qquad\ELbr (\mathrm{A/m})}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{\uvec{n2}\times(\vect{H}_1-\vect{H}_2)\ELbr =\vect{J}_s\qquad\ELbr (\mathrm{A/m})}
+
+\end{ELimportant}

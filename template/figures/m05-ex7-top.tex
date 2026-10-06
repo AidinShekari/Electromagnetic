@@ -1,0 +1,11 @@
+% Ch5_3, slide 3 (example 5-7): the loop seen from above (x down, y to the right); at the point P on the
+% y-axis the contributions of two symmetric elements: their y-components cancel
+\begin{tikzpicture}[scale=0.9]
+  \draw[ELcField,line width=1.2pt] (0,0) circle (1.0);
+  \draw[ELcField,line width=1.2pt,-{Stealth[length=6pt,width=5pt]}] (-20:1.0) arc[start angle=-20,end angle=30,radius=1.0];
+  \draw[ELcField,line width=1.2pt,-{Stealth[length=6pt,width=5pt]}] (200:1.0) arc[start angle=200,end angle=250,radius=1.0];
+  \draw[ELax] (0,0)--(2.3,0) node[ELlab,anchor=west]{$y$};
+  \draw[ELax] (0,0)--(0,-1.8) node[ELlab,anchor=north]{$x$};
+  \fill[ELcSource] (1.55,0) circle (1.6pt); \node[ELlabs,anchor=north] at (1.55,-0.05) {$P$};
+  \draw[ELvec2,line width=0.8pt] (1.55,0)--++(130:0.55); \draw[ELvec2,line width=0.8pt] (1.55,0)--++(50:0.55);
+\end{tikzpicture}

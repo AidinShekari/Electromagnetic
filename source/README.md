@@ -24,6 +24,11 @@ values and the figures.
 | `Ch3_3.pdf` | Part 3: boundary-value problems in Cartesian and cylindrical coordinates (examples 3-4 to 3-7) | 22 |
 | `Ch4_1.pdf` | Chapter 4, part 1: outline, current density and Ohm's law, equation of continuity, Joule's law | 17 |
 | `Ch4_2.pdf` | Part 2: boundary conditions for current density, resistance calculations (examples 4-1 to 4-3) | 17 |
+| `Ch5_1.pdf` | Chapter 5, part 1: outline, Lorentz force, postulates of magnetostatics in free space, Ampère's circuital law (examples 5-1 to 5-3) | 13 |
+| `Ch5_2.pdf` | Part 2: vector magnetic potential, the Biot–Savart law (examples 5-4 to 5-6) | 13 |
+| `Ch5_3.pdf` | Part 3: the magnetic dipole (example 5-7), magnetization and equivalent current densities (example 5-8) | 13 |
+| `Ch5_4.pdf` | Part 4: magnetic field intensity, relative permeability, magnetic materials, magnetic circuits (example 5-9) | 13 |
+| `Ch5_5.pdf` | Part 5: magnetic circuits (example 5-10), boundary conditions for magnetostatic fields | 9 |
 
 The book currently contains only the material in these files. Each later chapter goes in its own
 folder `NN-slug/{fa,en}/moduleNN-slug.md`, transcribed from its slides in order and in the same

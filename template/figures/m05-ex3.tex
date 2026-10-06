@@ -1,0 +1,22 @@
+% Ch5_1, slide 13 (example 5-3): a long solenoid with an air core, n turns per unit length, carrying I;
+% the rectangular path C of length L, half inside and half outside; the end view with B into the page
+\begin{tikzpicture}[scale=1]
+  \fill[ELfillB] (-0.4,-0.55) rectangle (6.4,0.55);
+  \draw[ELink,line width=0.5pt] (-0.4,-0.55)--(6.4,-0.55) (-0.4,0.55)--(6.4,0.55);
+  \foreach \x in {0,0.2,...,6.0}{\draw[ELcSource,line width=0.8pt] (\x,-0.62)--(\x+0.14,0.62);}
+  \draw[ELcSource,line width=0.8pt,-{Stealth[length=4pt]}] (0,-0.62)--(0,-1.3) node[ELlabs,anchor=north]{$I$};
+  \draw[ELcSource,line width=0.8pt,{Stealth[length=4pt]}-] (6.14,0.62)--(6.14,1.3) node[ELlabs,anchor=south]{$I$};
+  \draw[ELdash,line width=0.8pt] (2.3,0.0) rectangle (3.9,1.2);
+  \draw[ELcField,line width=0.8pt,-{Stealth[length=5pt]}] (2.9,1.2)--(3.2,1.2);
+  \node[ELlabs,anchor=south] at (3.1,1.22) {$C$};
+  \draw[ELcField,line width=0.8pt,-{Stealth[length=5pt]}] (3.3,0.0)--(3.0,0.0);
+  \draw[ELthin] (2.3,1.3)--(2.3,1.85) (3.9,1.3)--(3.9,1.85);
+  \draw[ELthin,{Stealth[length=3pt]}-{Stealth[length=3pt]}] (2.3,1.7)--(3.9,1.7) node[ELlabs,anchor=south,pos=0.5]{$L$};
+  \begin{scope}[xshift=8.0cm]
+    \fill[ELfillB] (0,0) circle (0.55); \draw[ELcSource,line width=0.8pt] (0,0) circle (0.66);
+    \draw[ELink,line width=0.5pt] (0,0) circle (0.55);
+    \ELinto[ELink]{(0,0)} \node[ELlabs,anchor=west] at (0.12,0) {$\vect{B}$};
+    \draw[ELcSource,line width=0.8pt,-{Stealth[length=4pt]}] (120:0.66) arc[start angle=120,end angle=60,radius=0.66];
+    \node[ELlabs,anchor=south] at (0,0.7) {$I$};
+  \end{scope}
+\end{tikzpicture}

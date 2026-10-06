@@ -1,0 +1,15 @@
+% Ch5_4, slide 8: the B-H curve of a ferromagnetic material: the initial magnetization curve O-P1-P2-P3,
+% the hysteresis loop through P3 and P3' with the remanence Br and the coercive field Hc, and a minor
+% loop P2-P2' (dashed).  The curves are model functions that show the shape; the slide gives no values.
+\begin{tikzpicture}[x=1.15cm,y=1.35cm]
+  \draw[ELax] (-3.3,0)--(3.5,0) node[ELlab,anchor=west]{$H$};
+  \draw[ELax] (0,-1.8)--(0,1.95) node[ELlab,anchor=south]{$B$};
+  \draw[ELcField,line width=1.1pt,domain=3:-3,samples=80,smooth] plot (\x,{1.6*tanh(\x/1.2)+0.75*(1-\x*\x/9)});
+  \draw[ELcField,line width=1.1pt,domain=-3:3,samples=80,smooth] plot (\x,{1.6*tanh(\x/1.2)-0.75*(1-\x*\x/9)});
+  \draw[ELcSource,line width=1.0pt,domain=0:3,samples=50,smooth] plot (\x,{1.6*tanh(\x/1.2)});
+  \draw[ELcSource,dashed,line width=0.8pt,domain=-1.3:1.3,samples=50,smooth] plot (\x,{1.6*tanh(\x/1.2)+0.3*(1-\x*\x/1.69)});
+  \draw[ELcSource,dashed,line width=0.8pt,domain=-1.3:1.3,samples=50,smooth] plot (\x,{1.6*tanh(\x/1.2)-0.3*(1-\x*\x/1.69)});
+  \foreach \p/\q/\l/\a in {3/1.5786/P_3/south,-3/-1.5786/P'_3/north,0.5/0.6306/P_1/south east,1.3/1.2711/P_2/south east,-1.3/-1.2711/P'_2/north west,0/0.75/B_r/south east,-0.5832/0/H_c/north east}{
+    \fill[ELink] (\p,\q) circle (1.6pt); \node[ELlabs,anchor=\a] at (\p,\q) {$\l$};}
+  \node[ELlabs,anchor=north west] at (0,0) {$O$};
+\end{tikzpicture}

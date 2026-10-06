@@ -1,0 +1,21 @@
+% The map of chapter 5 (Ch5_1 slide 5; Ch5_2 slides 2, 8; Ch5_3 slide 7; Ch5_4 slides 2, 9; Ch5_5 slide 8).
+% \ELmapon = none | post | ampere | vecpot | biot | media | hmu | circ | bc | induct | energy: the highlighted item.
+% A text hierarchy, mirrored between the editions.
+\providecommand{\ELmapon}{none}
+\begin{tikzpicture}[x=\ELrsgn cm,y=1cm]
+  \def\ELon#1#2{\ifnum\strcmp{\ELmapon}{#1}=0 #2\fi}
+  \node[ELtreeroot,text width=3.0cm] (root) at (4.6,0) {\ELL{Static magnetic fields}{میدان‌های مغناطیسی ساکن}};
+  \foreach \k/\y/\st/\on/\en/\fa in {
+      post/4.275/ELtreebox/ELtreeon/{Fundamental postulates of magnetostatics in free space}/{فرضیات اصلی مغناطیس ساکن در فضای آزاد},
+      ampere/3.325/ELtreeboxR/ELtreeonR/{Ampère's circuital law}/{قانون مداری آمپر},
+      vecpot/2.375/ELtreebox/ELtreeon/{Vector magnetic potential}/{پتانسیل مغناطیسی برداری},
+      biot/1.425/ELtreeboxR/ELtreeonR/{The Biot--Savart law}/{قانون بیوساوار},
+      media/0.475/ELtreebox/ELtreeon/{The static magnetic field in material media}/{رفتار میدان مغناطیسی ساکن در محیط‌های مادی},
+      hmu/-0.475/ELtreeboxR/ELtreeonR/{Magnetic field intensity and relative permeability}/{شدت میدان مغناطیسی و نفوذپذیری نسبی},
+      circ/-1.425/ELtreebox/ELtreeon/{Magnetic circuits}/{مدارهای مغناطیسی},
+      bc/-2.375/ELtreeboxR/ELtreeonR/{Boundary conditions for magnetostatic fields}/{شرایط مرزی میدان‌های مغناطیسی ساکن},
+      induct/-3.325/ELtreebox/ELtreeon/{Inductances and inductors}/{اندوکتانس و سلف‌ها},
+      energy/-4.275/ELtreeboxR/ELtreeonR/{Magnetic energy and forces}/{انرژی و نیروهای مغناطیس ساکن}}{
+    \node[\st,text width=8.6cm,minimum height=0.78cm,\ELon{\k}{\on}] (\k) at (-2.3,\y) {\ELL{\en}{\fa}};
+    \draw[ELtreelineG] (root.\ELend)--(\k.\ELstart);}
+\end{tikzpicture}

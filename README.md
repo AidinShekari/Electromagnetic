@@ -29,6 +29,7 @@
 | 2 | میدان‌های الکتریکی ساکن | Static Electric Fields | [PDF](02-static-electric-fields/fa/module02-static-electric-fields.pdf) | [PDF](02-static-electric-fields/en/module02-static-electric-fields.pdf) |
 | 3 | حل مسائل الکتریسیته ساکن | Solution of Electrostatic Problems | [PDF](03-electrostatic-problems/fa/module03-electrostatic-problems.pdf) | [PDF](03-electrostatic-problems/en/module03-electrostatic-problems.pdf) |
 | 4 | جریان‌های الکتریکی دائم | Steady Electric Currents | [PDF](04-steady-electric-currents/fa/module04-steady-electric-currents.pdf) | [PDF](04-steady-electric-currents/en/module04-steady-electric-currents.pdf) |
+| 5 | میدان‌های مغناطیسی ساکن | Static Magnetic Fields | [PDF](05-static-magnetic-fields/fa/module05-static-magnetic-fields.pdf) | [PDF](05-static-magnetic-fields/en/module05-static-magnetic-fields.pdf) |
 
 The notes contain only the chapters whose slides have been provided ([source/](source/README.md)).
 The instructor's slides are the only source of the content; every deliberate difference is
@@ -44,7 +45,7 @@ Electromagnetic/
 ├── 01-vector-analysis/
 │   ├── fa/   module01-vector-analysis.md · .tex · content.tex · .pdf
 │   └── en/   module01-vector-analysis.md · .tex · content.tex · .pdf
-├── …                                          (one folder per chapter, 01 … 04)
+├── …                                          (one folder per chapter, 01 … 05)
 ├── source/                                    اسلایدهای استاد · the instructor's slides
 ├── specimen/                                  design specimen (layout check only)
 ├── template/                                  قالب لتک، لوگوی دانشگاه، فونت Vazirmatn، شکل‌ها

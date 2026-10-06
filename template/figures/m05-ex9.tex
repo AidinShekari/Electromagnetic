@@ -1,0 +1,25 @@
+% Ch5_4, slides 11-12; Ch5_5, slide 2 (example 5-9): N turns on a toroidal core of mean radius r0 with a
+% small air gap of length l_g, seen from above; the current I0 in the leads; the leakage flux
+\providecommand{\ELgauss}{0}
+\begin{tikzpicture}[scale=0.95]
+  \fill[ELfillB,even odd rule] (-84:2.4) arc[start angle=-84,end angle=264,radius=2.4]
+    -- (264:1.6) arc[start angle=264,end angle=-84,radius=1.6] -- cycle;
+  \draw[ELcField,line width=0.8pt] (-84:2.4) arc[start angle=-84,end angle=264,radius=2.4]
+    -- (264:1.6) arc[start angle=264,end angle=-84,radius=1.6] -- cycle;
+  \foreach \t in {-70,-55,...,255}{\draw[ELcSource,line width=0.8pt] (\t:1.52)--(\t:2.48);}
+  \draw[ELdash] (0,0) circle (2.0);
+  \fill[ELink] (0,0) circle (1.2pt);
+  \draw[ELthin] (0,0)--(180:2.0) node[ELlabs,anchor=south,pos=0.5]{$r_0$};
+  \ifnum\ELgauss=1
+    \fill[ELcThird,opacity=0.25] (-0.9,-2.9) .. controls (-1.0,-1.3) and (0.9,-1.2) .. (0.95,-2.2)
+      .. controls (1.0,-3.0) and (-0.8,-3.5) .. cycle;
+    \node[ELlab] at (0.55,-2.85) {$S$};
+  \fi
+  \draw[ELcSource,line width=0.8pt,-{Stealth[length=4pt]}] (-100:2.48)--++(0,-0.9) node[ELlabs,anchor=north]{$I_0$};
+  \draw[ELcSource,line width=0.8pt,{Stealth[length=4pt]}-] (-112:2.48)--++(0,-0.9) node[ELlabs,anchor=north]{$I_0$};
+  \draw[ELthin] (-84:2.45)--(-84:3.0) (-96:2.45)--(-96:3.0);
+  \draw[ELthin,{Stealth[length=3pt]}-{Stealth[length=3pt]}] (-84:2.85)--(-96:2.85);
+  \node[ELlabs,anchor=west] at (-80:2.9) {$\ell_g$};
+  \draw[ELcSource,dashed,line width=0.7pt,ELmid] (70:2.2) .. controls (60:3.3) and (90:3.4) .. (100:2.2);
+  \node[ELtag,anchor=south west] at (65:3.05) {\ELL{Leakage flux}{شار نشتی}};
+\end{tikzpicture}

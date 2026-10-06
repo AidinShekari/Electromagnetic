@@ -1,0 +1,18 @@
+% Ch5_3, slide 10: a magnetized material, M out of the paper: the atomic currents of the dipoles cancel
+% inside and leave a current along the edges; and, for comparison, a polarized dielectric in an external E
+\begin{tikzpicture}[scale=0.85]
+  \draw[ELink,line width=0.7pt] (0,0) rectangle (3.2,4.2);
+  \foreach \i in {0,1,2}{\foreach \j in {0,1,2,3}{
+    \draw[ELcField,line width=0.7pt] (0.6+\i*1.0,0.6+\j*1.0) circle (0.45);
+    \draw[ELcField,line width=0.7pt,-{Stealth[length=4pt]}] (0.6+\i*1.0,0.6+\j*1.0)++(-80:0.45) arc[start angle=-80,end angle=-20,radius=0.45];}}
+  \foreach \x/\a/\b in {0.15/3.9/0.3,3.05/0.3/3.9}{\draw[ELcSource,dashed,line width=0.7pt,-{Stealth[length=5pt]}] (\x,\a)--(\x,\b);}
+  \ELoutof[ELink]{(0.2,4.6)} \node[ELlabs,anchor=west] at (0.35,4.6) {\ELL{$\vect{M}$, out of the paper}{بردار $\vect{M}$ به سمت بیرون صفحه}};
+  \begin{scope}[xshift=5.6cm]
+    \fill[ELfillA] (0,0) rectangle (3.4,4.2); \draw[ELink,line width=0.7pt] (0,0) rectangle (3.4,4.2);
+    \foreach \i in {0,1,2}{\foreach \j in {0,...,5}{
+      \draw[ELink,line width=0.5pt,fill=white] (0.6+\i*1.1,0.4+\j*0.68) ellipse (0.42 and 0.22);
+      \node[font=\tiny,text=ELcField] at (0.38+\i*1.1,0.4+\j*0.68) {$-$};
+      \node[font=\tiny,text=ELcSource] at (0.82+\i*1.1,0.4+\j*0.68) {$+$};}}
+    \draw[ELvec,line width=0.9pt] (0.3,-0.45)--(3.1,-0.45) node[ELlabs,anchor=north,pos=0.5]{\ELL{external $\vect{E}$}{$\vect{E}$ خارجی}};
+  \end{scope}
+\end{tikzpicture}

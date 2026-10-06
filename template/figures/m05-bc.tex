@@ -1,0 +1,20 @@
+% Ch5_5, slide 9: the interface between medium 1 and medium 2, the normal a_n2, the fields H1 and H2 and
+% the small rectangular path abcda of width dw and height dh (dh -> 0)
+\begin{tikzpicture}[scale=1]
+  \fill[ELfillA] (-3.2,0.2) .. controls (-1,0.5) and (1.5,-0.1) .. (3.2,-0.4) -- (3.2,2.0) -- (-3.2,2.0) -- cycle;
+  \fill[ELfillB] (-3.2,0.2) .. controls (-1,0.5) and (1.5,-0.1) .. (3.2,-0.4) -- (3.2,-2.0) -- (-3.2,-2.0) -- cycle;
+  \draw[ELink,line width=0.8pt] (-3.2,0.2) .. controls (-1,0.5) and (1.5,-0.1) .. (3.2,-0.4);
+  \node[ELlabs,anchor=east] at (3.1,1.0) {\ELL{Medium 1}{محیط ۱}};
+  \node[ELlabs,anchor=east] at (3.1,-1.2) {\ELL{Medium 2}{محیط ۲}};
+  \draw[ELcSource,line width=0.8pt] (-1.0,0.6)--(1.0,0.45)--(1.0,-0.05)--(-1.0,0.1)--cycle;
+  \draw[ELcSource,line width=0.8pt,-{Stealth[length=5pt]}] (0.4,0.495)--(0.0,0.525);
+  \draw[ELcSource,line width=0.8pt,-{Stealth[length=5pt]}] (-0.4,0.055)--(0.0,0.025);
+  \node[ELlabs,anchor=south east] at (-1.0,0.6) {$b$}; \node[ELlabs,anchor=south west] at (1.0,0.45) {$a$};
+  \node[ELlabs,anchor=north east] at (-1.0,0.1) {$c$}; \node[ELlabs,anchor=north west] at (1.0,-0.05) {$d$};
+  \draw[ELthin,{Stealth[length=3pt]}-{Stealth[length=3pt]}] (-1.0,-0.35)--(1.0,-0.5) node[ELlabs,anchor=north,pos=0.5]{$\Delta w$};
+  \draw[ELthin,{Stealth[length=3pt]}-{Stealth[length=3pt]}] (1.35,0.42)--(1.35,-0.08) node[ELlabs,anchor=west,pos=0.5]{$\Delta h$};
+  \draw[ELvec,line width=0.9pt] (-0.15,0.31)--(-0.15,1.4) node[ELlabs,anchor=east]{$\uvec{n2}$};
+  \draw[ELvec,line width=1.0pt] (2.2,2.0)--(0.25,0.32); \node[ELlabs,anchor=west] at (1.6,1.6) {$\vect{H}_1$};
+  \draw[ELvec,line width=1.0pt] (0.25,0.28)--(-1.8,-1.6); \node[ELlabs,anchor=east] at (-1.4,-1.1) {$\vect{H}_2$};
+  \node[ELlabs,anchor=north west] at (-3.15,1.95) {$\Delta h\to0$};
+\end{tikzpicture}

@@ -1,0 +1,13 @@
+% Ch5_1, slide 10 (example 5-1): the cross-section of a long round conductor of radius b carrying I
+% along z; the circular paths C1 (radius r1, inside) and C2 (radius r2, outside)
+\begin{tikzpicture}[scale=1]
+  \fill[ELfillB] (0,0) circle (1.0); \draw[ELcField,line width=0.9pt] (0,0) circle (1.0);
+  \draw[ELcSource,dashed,line width=0.7pt,ELmid] (0.6,0) arc[start angle=0,end angle=360,radius=0.6];
+  \draw[ELcSource,dashed,line width=0.7pt,ELmid] (2.0,0) arc[start angle=0,end angle=360,radius=2.0];
+  \fill[ELink] (0,0) circle (1.3pt);
+  \draw[ELthin,-{Stealth[length=4pt]}] (0,0)--(-40:1.0) node[ELlabs,anchor=north west,pos=0.75]{$b$};
+  \draw[ELthin,-{Stealth[length=4pt]}] (0,0)--(205:0.6) node[ELlabs,anchor=south,pos=0.6]{$r_1$};
+  \draw[ELthin,-{Stealth[length=4pt]}] (0,0)--(60:2.0) node[ELlabs,anchor=east,pos=0.75]{$r_2$};
+  \node[ELlabs,anchor=north] at (250:0.62) {$C_1$};
+  \node[ELlabs,anchor=west] at (-25:2.02) {$C_2$};
+\end{tikzpicture}

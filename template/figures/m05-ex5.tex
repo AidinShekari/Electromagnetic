@@ -1,0 +1,14 @@
+% Ch5_2, slide 12 (example 5-5): a square loop of side w carrying I, its centre O, the z-axis
+\begin{tikzpicture}[ELoblique,scale=1.1]
+  \def\h{1.2}
+  \draw[ELcField,line width=1.3pt] (\h,-\h,0)--(\h,\h,0)--(-\h,\h,0)--(-\h,-\h,0)--cycle;
+  \draw[ELcField,line width=1.3pt,-{Stealth[length=6pt,width=5pt]}] (\h,-\h,0)--(\h,0.15,0);
+  \draw[ELcField,line width=1.3pt,-{Stealth[length=6pt,width=5pt]}] (\h,\h,0)--(-0.15,\h,0);
+  \draw[ELcField,line width=1.3pt,-{Stealth[length=6pt,width=5pt]}] (-\h,\h,0)--(-\h,-0.15,0);
+  \draw[ELcField,line width=1.3pt,-{Stealth[length=6pt,width=5pt]}] (-\h,-\h,0)--(0.15,-\h,0);
+  \node[ELlabs,anchor=north west] at (\h,0.35,0) {$I$};
+  \fill[ELink] (0,0,0) circle (1.4pt); \node[ELlabs,anchor=north east] at (0,0,0) {$O$};
+  \draw[ELax] (0,0,0)--(0,0,1.7) node[ELlab,anchor=south]{$z$};
+  \draw[ELthin] (\h,-\h,0)--(\h+0.6,-\h,0) (\h,\h,0)--(\h+0.6,\h,0);
+  \draw[ELthin,{Stealth[length=3pt]}-{Stealth[length=3pt]}] (\h+0.5,-\h,0)--(\h+0.5,\h,0) node[ELlabs,anchor=north,pos=0.5]{$w$};
+\end{tikzpicture}

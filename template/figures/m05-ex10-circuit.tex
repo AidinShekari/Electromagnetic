@@ -1,0 +1,20 @@
+% Ch5_5, slide 7 (example 5-10): the equivalent magnetic circuit: N1 I1 and R1 on the left, R3 between the
+% junctions P1 and P2, R2 and N2 I2 on the right; the loop fluxes Phi1 (left loop) and Phi2 (outer loop)
+\begin{tikzpicture}[scale=1]
+  \draw[ELink,line width=0.8pt] (0,0)--(0,0.65) (0,1.55)--(0,1.75) (0,3.0)--(0,3.4)--(6.0,3.4)--(6.0,3.0) (6.0,1.75)--(6.0,1.55) (6.0,0.65)--(6.0,0)--(0,0)
+    (3.0,0)--(3.0,1.1) (3.0,2.35)--(3.0,3.4);
+  \pic at (0,1.75) {ELresV}; \pic at (6.0,1.75) {ELresV}; \pic at (3.0,1.1) {ELresV};
+  \node[ELlabs,anchor=east] at (-0.2,2.35) {$\mathcal{R}_1$}; \node[ELlabs,anchor=west] at (6.2,2.35) {$\mathcal{R}_2$};
+  \node[ELlabs,anchor=west] at (3.2,1.7) {$\mathcal{R}_3$};
+  \draw[ELink,line width=0.8pt] (0,1.1) circle (0.45); \draw[ELink,line width=0.8pt] (6.0,1.1) circle (0.45);
+  \node[ELlabs,anchor=east] at (-0.5,1.1) {$N_1I_1$}; \node[ELlabs,anchor=west] at (6.5,1.1) {$N_2I_2$};
+  \node[ELlabs,anchor=south east] at (-0.3,1.5) {$+$}; \node[ELlabs,anchor=north east] at (-0.3,0.7) {$-$};
+  \node[ELlabs,anchor=south west] at (6.3,1.5) {$+$}; \node[ELlabs,anchor=north west] at (6.3,0.7) {$-$};
+  \fill[ELink] (3.0,3.4) circle (1.8pt) (3.0,0) circle (1.8pt);
+  \node[ELlabs,anchor=south] at (3.0,3.45) {$P_1$}; \node[ELlabs,anchor=north] at (3.0,-0.05) {$P_2$};
+  \draw[ELcField,line width=0.9pt,-{Stealth[length=6pt]}] (1.9,2.6) arc[start angle=60,end angle=-240,radius=0.75];
+  \node[ELlabs] at (1.5,1.95) {$\Phi_1$};
+  \draw[ELcSource,line width=0.9pt,-{Stealth[length=6pt]}] (5.0,2.8) .. controls (5.6,2.3) and (5.6,0.9) .. (4.8,0.5)
+    -- (1.0,0.5) .. controls (0.6,0.6) and (0.6,2.8) .. (1.0,2.9) -- (4.4,2.95);
+  \node[ELlabs,anchor=north] at (4.6,2.85) {$\Phi_2$};
+\end{tikzpicture}

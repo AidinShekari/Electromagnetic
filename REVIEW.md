@@ -19,6 +19,8 @@ The slides remain the source of truth. Each entry names the slide (file and page
 | Ch2_4 p. 13 (example 2-10) | $V=\dfrac{1}{4\pi\varepsilon_0}\int_{S'}\dfrac{\rho_\ell\,d\ell'}{\lvert\mathbf R-\mathbf R'\rvert}$ | $\int_{L'}$ | a line charge: the general formula on Ch2_4 p. 8 integrates over $L'$ |
 | Ch2_7 p. 19 (example 2-20) | $\int\frac{Q}{4\pi\varepsilon_0(2\varepsilon_r)R^2}\,dr$ (both integrals) | $dR$ | the variable of integration is $R$ (the limits are $R_o$, $b$, $R_i$) |
 | Ch2_7 pp. 8, 10, 12, 16, 19 | «محاسبه اختلاف پتانسیل بین صفحات هادی» also for the cylindrical and spherical capacitors | kept in Persian; the English edition says "between the conductors" for those | the wording of the parallel-plate case carried over |
+| Ch5_3 p. 12 (example 5-8) | $\mathbf J_m=\mathbf M\times\mathbf a_n=\mathbf a_\phi M_0$ for the side wall | $\mathbf J_{ms}$ | the line is the surface current density, as the text above it says and as $\mathbf J_{ms}$ is used on p. 13 |
+| Ch5_4 p. 13 (example 5-9, part c) | $\mu_0(2\pi r_o-\ell_a)+\mu\ell_a$ in the denominator of $\mathbf H_g$ | $\ell_g$ | the air gap is $\ell_g$ everywhere else (parts a and b, Ch5_5 p. 2) |
 
 ## Presentation (no change to the content)
 
@@ -37,6 +39,10 @@ The slides remain the source of truth. Each entry names the slide (file and page
 | Ch2 figures with a hand-drawn molecule picture (Ch2_5 p. 10) | redrawn in TikZ with the same elements: the atom in the field, the equivalent dipole, the polarized slab with its surface charges |
 | Ch3_2 p. 7 (method of images) | the field lines of $Q$ and its image $-Q$ are computed from the two charges by `tools/genfigs.py`; they follow the slide's sketch |
 | Ch3_3 (table of the solutions of $X''+k_x^2X=0$) | the table is set left to right in both editions, as on the slide |
+| Ch5_3 p. 6 (electric and magnetic dipoles) | the field lines are computed by `tools/genfigs.py`: the electric dipole from the two charges, the magnetic dipole from a small current loop; they follow the slide's sketch |
+| Ch5_3 p. 10 (magnetization) | the side-by-side comparison of $\mathbf M$ and $\mathbf P$ is written as pairs of formulas; the hand-drawn dielectric is redrawn as a slab of dipoles |
+| Ch5_4 p. 8 (hysteresis loop) | the $B$–$H$ curves are model functions that show the shape; the slide gives no values |
+| Ch5_4 pp. 11–12, Ch5_5 p. 2 (toroid with an air gap) | the photograph-like core is redrawn in TikZ seen from above, with the same labels ($r_0$, $\ell_g$, $I_0$, leakage flux, the surface $S$) |
 
 ## Statements kept as written but worth a second look
 

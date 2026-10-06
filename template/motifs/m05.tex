@@ -1,0 +1,10 @@
+% ============================================================
+%  Chapter 5 (static magnetic fields): a straight current out of the page and the circular lines of
+%  its magnetic flux density around it (Ampère's circuital law).  Centred on \ELmotifcx.
+% ============================================================
+\begin{scope}[shift={(\ELmotifcx,4.3)},line cap=round]
+  \foreach \r/\o in {0.75/0.85,1.35/0.75,2.05/0.65,2.85/0.55,3.75/0.45}{
+    \draw[ELblueD,opacity=\o,line width=0.8pt] (0,0) circle (\r);
+    \foreach \a in {0,120,240}{\draw[ELblueD,opacity=\o,line width=0.8pt,-{Stealth[length=5pt]}] (\a:\r) arc[start angle=\a,end angle=\a+8,radius=\r];}}
+  \draw[ELredD,line width=1.4pt] (0,0) circle (0.3); \fill[ELredD] (0,0) circle (0.11);
+\end{scope}

@@ -1,0 +1,20 @@
+% Ch5_2, slide 13 (example 5-6): a circular loop of radius b carrying I in the xy-plane; the point
+% P(0, 0, z) on its axis, the element dl' at the angle phi' and the vector R
+\begin{tikzpicture}[ELoblique,scale=1.1]
+  \def\b{1.4}
+  \draw[ELax] (0,0,0)--(2.4,0,0) node[ELlab,anchor=north east]{$x$};
+  \draw[ELax] (0,0,0)--(0,2.4,0) node[ELlab,anchor=west]{$y$};
+  \draw[ELax] (0,0,0)--(0,0,2.7) node[ELlab,anchor=south]{$z$};
+  \draw[ELcField,line width=1.4pt,domain=0:360,samples=90,smooth] plot ({\b*cos(\x)},{\b*sin(\x)},0);
+  \draw[ELcField,line width=1.4pt,-{Stealth[length=6pt,width=5pt]}] ({\b*cos(150)},{\b*sin(150)},0)--({\b*cos(156)},{\b*sin(156)},0);
+  \node[ELlabs,anchor=south east] at ({\b*cos(150)},{\b*sin(150)},0) {$I$};
+  \fill[ELink] (0,0,0) circle (1.3pt); \node[ELlabs,anchor=south east] at (0,0,0) {$O$};
+  \coordinate (dl) at ({\b*cos(40)},{\b*sin(40)},0);
+  \draw[ELthin] (0,0,0)--(dl) node[ELlabs,anchor=north,pos=0.6]{$b$};
+  \draw[ELthin,-{Stealth[length=3pt]}] plot[domain=0:40,samples=20] ({0.55*cos(\x)},{0.55*sin(\x)},0);
+  \node[ELlabs,anchor=north] at ({0.7*cos(20)},{0.7*sin(20)},0) {$\phi'$};
+  \fill[ELcSource] (dl) circle (1.8pt); \node[ELlabs,anchor=north west] at (dl) {$d\ell'$};
+  \coordinate (P) at (0,0,2.1); \fill[ELcSource] (P) circle (1.8pt);
+  \node[ELlab,anchor=west] at (0,0.1,2.1) {$P(0,0,z)$};
+  \draw[ELvec,line width=0.8pt] (dl)--(P) node[ELlabs,anchor=west,pos=0.5]{$\vect{R}$};
+\end{tikzpicture}
