@@ -1,0 +1,9 @@
+% Ch2_4, slide 7: the potential of a point charge q: a unit charge brought from infinity to R
+\begin{tikzpicture}[scale=1]
+  \fill[ELcSource] (0,0) circle (2pt); \node[ELlab,anchor=north] at (0,-0.05) {$q$};
+  \draw[ELvec,line width=1.2pt] (0,0)--(35:1.9) node[ELlab,anchor=south east,pos=0.55]{$R$};
+  \draw[ELdash,-{Stealth[length=5pt]}] (35:3.8)--(35:2.0);
+  \fill[ELink] (35:3.85) circle (1.6pt);
+  \node[ELlabs,anchor=north west] at (35:3.85) {$1\,\mathrm{C}$};
+  \node[ELlab,anchor=south west] at (35:3.9) {$\infty$};
+\end{tikzpicture}

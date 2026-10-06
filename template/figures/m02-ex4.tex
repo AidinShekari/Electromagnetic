@@ -1,0 +1,18 @@
+% Ch2_3, slide 4: a cylindrical Gaussian surface of radius r and length L about an infinitely
+% long uniform line charge rho_l
+\begin{tikzpicture}[scale=1]
+  \def\r{0.9}\def\L{1.8}
+  \draw[ELink,line width=1.6pt] (0,-2.4)--(0,0);
+  \fill[ELfillA] (-\r,0) arc[start angle=180,end angle=360,x radius=\r,y radius=0.28] -- (\r,\L) arc[start angle=0,end angle=180,x radius=\r,y radius=0.28] -- cycle;
+  \fill[ELfillB] (0,\L) ellipse[x radius=\r,y radius=0.28];
+  \draw[ELcField!80,line width=0.6pt] (0,\L) ellipse[x radius=\r,y radius=0.28];
+  \draw[ELcField!80,line width=0.6pt] (-\r,0) arc[start angle=180,end angle=360,x radius=\r,y radius=0.28];
+  \draw[ELcField!50,dashed,line width=0.5pt] (\r,0) arc[start angle=0,end angle=180,x radius=\r,y radius=0.28];
+  \draw[ELcField!80,line width=0.6pt] (-\r,0)--(-\r,\L) (\r,0)--(\r,\L);
+  \draw[ELink,line width=1.6pt] (0,\L)--(0,4.2);
+  \draw[ELthin] (0,\L)--(\r,\L) node[ELlabs,anchor=south,pos=0.55]{$r$};
+  \draw[ELthin] (\r+0.15,0)--(\r+0.5,0) (\r+0.15,\L)--(\r+0.5,\L);
+  \draw[ELthin,{Stealth[length=4pt]}-{Stealth[length=4pt]}] (\r+0.35,0)--(\r+0.35,\L) node[ELlabs,anchor=west,pos=0.5]{$L$};
+  \node[ELtag,anchor=east,align=right,text width=2.1cm] at (-\r-0.15,1.2) {\ELL{Cylindrical Gaussian surface}{سطح گوسی استوانه‌ای}};
+  \node[ELtag,anchor=west,align=left,text width=2.4cm] at (0.25,-1.6) {\ELL{Infinitely long uniform line charge, $\rho_\ell$}{بار خطی یکنواخت بینهایت بلند، $\rho_\ell$}};
+\end{tikzpicture}

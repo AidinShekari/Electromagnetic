@@ -1,0 +1,35 @@
+% Ch2_5, slide 6: the conductor / free-space boundary: a pillbox of face Delta S and height Delta h
+% (normal component) and a rectangular path abcd of width Delta w (tangential component)
+\begin{tikzpicture}[scale=1]
+  \fill[ELfillB,opacity=0.6] (-4.2,-0.5) .. controls (-1,0.35) and (1.5,0.35) .. (4.4,-0.3) -- (4.4,-1.9) -- (-4.2,-1.9) -- cycle;
+  \draw[ELink,line width=1.1pt] (-4.2,-0.5) .. controls (-1,0.35) and (1.5,0.35) .. (4.4,-0.3);
+  \node[ELtag,anchor=west] at (-1.4,1.55) {\ELL{Free space}{فضای آزاد}};
+  \node[ELtag,anchor=west] at (-1.2,-1.35) {\ELL{Conductor}{هادی}};
+  \node[ELlab,anchor=west] at (-4.1,1.6) {$\Delta h\to0$};
+  % pillbox
+  \begin{scope}[shift={(-3.0,-0.2)},rotate=-12]
+    \fill[ELfillA,opacity=0.8] (-0.55,-0.55)--(-0.55,0.55) arc[start angle=180,end angle=0,x radius=0.55,y radius=0.17]--(0.55,-0.55) arc[start angle=0,end angle=-180,x radius=0.55,y radius=0.17];
+    \draw[ELcField!80,line width=0.6pt] (0,0.55) ellipse[x radius=0.55,y radius=0.17] (-0.55,0.55)--(-0.55,-0.55) (0.55,0.55)--(0.55,-0.55);
+    \draw[ELcField!80,line width=0.6pt] (-0.55,-0.55) arc[start angle=180,end angle=360,x radius=0.55,y radius=0.17];
+    \draw[ELcField!50,dashed,line width=0.5pt] (0.55,-0.55) arc[start angle=0,end angle=180,x radius=0.55,y radius=0.17];
+    \node[ELlabs,anchor=south] at (-0.2,0.75) {$\Delta S$};
+    \draw[ELthin,{Stealth[length=3.5pt]}-{Stealth[length=3.5pt]}] (0.85,-0.55)--(0.85,0.55) node[ELlabs,anchor=west,pos=0.5]{$\Delta h$};
+  \end{scope}
+  % path abcd
+  \coordinate (a) at (-0.5,0.62); \coordinate (b) at (0.9,0.62); \coordinate (c) at (0.9,-0.18); \coordinate (d) at (-0.5,-0.18);
+  \draw[ELcField!80,line width=0.6pt] (a) rectangle (c);
+  \draw[ELcField,line width=0.9pt,-{Stealth[length=4pt]}] (-0.1,0.62)--(0.5,0.62);
+  \draw[ELcField,line width=0.9pt,-{Stealth[length=4pt]}] (0.5,-0.18)--(-0.1,-0.18);
+  \node[ELlabs,anchor=south east] at (a) {$a$}; \node[ELlabs,anchor=south west] at (b) {$b$};
+  \node[ELlabs,anchor=north west] at (c) {$c$}; \node[ELlabs,anchor=north east] at (d) {$d$};
+  \node[ELlabs,anchor=south] at (0.2,0.66) {$\Delta w$}; \node[ELlabs,anchor=north] at (0.2,-0.22) {$\Delta w$};
+  \node[ELlabs,anchor=east] at (-0.52,0.22) {$\Delta h$}; \node[ELlabs,anchor=west] at (0.92,0.22) {$\Delta h$};
+  % the field at the surface
+  \coordinate (S) at (2.4,0.1);
+  \draw[ELvec2,line width=1.2pt] (S)--++(1.8,1.1) node[ELlab,anchor=west]{$\vect{E}$};
+  \draw[ELvec,line width=0.9pt] (S)--++(0,1.1) node[ELlab,anchor=south]{$E_N$};
+  \draw[ELvec,line width=0.9pt] (S)--++(1.8,-0.12) node[ELlab,anchor=west]{$E_t$};
+  \draw[ELdash] (2.4,1.2)--(4.2,1.2)--(4.2,-0.02);
+  \node[ELlab,anchor=north] at (-3.0,-1.95) {\ELL{normal component}{مؤلفه عمودی}};
+  \node[ELlab,anchor=north] at (0.2,-1.95) {\ELL{tangential component}{مؤلفه مماسی}};
+\end{tikzpicture}

@@ -13,6 +13,10 @@ The slides remain the source of truth. Each entry names the slide (file and page
 | Ch1_1 p. 7 | $A=2a_x+3a_y+a_z$, … with non-bold unit vectors | bold $\mathbf a_x$, … | the slides write unit vectors in bold everywhere else (e.g. Ch1_2 p. 16) |
 | throughout | $\mathbf{A.B}$ (a full stop for the dot product) in some slides | $\mathbf A\cdot\mathbf B$ | the same product is written with a centred dot elsewhere |
 | throughout | both $\phi$ and $\varphi$ for the azimuth | $\phi$ | one symbol for one quantity |
+| Ch2_3 pp. 4–9 (examples 2-4 to 2-7) | the titles read «مثال ۳-۴», «۳-۵», «۳-۶», «۳-۷» | 2-4, 2-5, 2-6, 2-7 | chapter 2: the examples before are 2-1 to 2-3 (Ch2_2) and the ones after are 2-8 to 2-12 (Ch2_4, Ch2_5); the first digit is a slip |
+| Ch2_1 p. 12 | the annotation reads «شدن میدان الکتریکی روی سطح کره» | «شدت میدان الکتریکی …» | a typing slip (شدن for شدت, "intensity") |
+| Ch2_1 p. 12 | $E_R(4\pi R^2):=\dfrac{q}{\epsilon_0}$ | $=$ | an equation, not a definition; the lines above and below use $=$ |
+| Ch2_4 p. 13 (example 2-10) | $V=\dfrac{1}{4\pi\varepsilon_0}\int_{S'}\dfrac{\rho_\ell\,d\ell'}{\lvert\mathbf R-\mathbf R'\rvert}$ | $\int_{L'}$ | a line charge: the general formula on Ch2_4 p. 8 integrates over $L'$ |
 
 ## Presentation (no change to the content)
 
@@ -26,6 +30,9 @@ The slides remain the source of truth. Each entry names the slide (file and page
 | Ch1_5 pp. 3, 5, 10, 14 | the computer-generated plots (a coloured scalar field with its gradient, a rendered hill with contours, two field screenshots) are reproduced from the slides as images; every other figure is redrawn in TikZ |
 | Ch1_1 p. 2, course outline | the slide's root box reads "الکترومغناطیس مهندسی" (Engineering Electromagnetics) and is kept so; the title of the book is "الکترومغناطیس" as specified for the collection |
 | Persian edition, compound numbers | written in the order of the slides: the groups run right to left (example 1-18 is printed ۱۸-۱, section 1.2 is ۲.۱) |
+| Ch2_4 p. 11 (example 2-8) | the field lines and equipotentials of the dipole are computed from the two charges ($\pm q$ at $z=\pm d/2$) by `tools/genfigs.py`; they follow the slide's sketch |
+| Ch2_5 p. 9 (example 2-12) | the graphs of $E_R$ and $V$ are drawn with $R_i=1$, $R_o=1.6$ and $Q/4\pi\epsilon_0=1$ to show the shapes; the slide gives no values |
+| Ch2 figures with a hand-drawn molecule picture (Ch2_5 p. 10) | redrawn in TikZ with the same elements: the atom in the field, the equivalent dipole, the polarized slab with its surface charges |
 
 ## Statements kept as written but worth a second look
 
@@ -35,3 +42,5 @@ The slides remain the source of truth. Each entry names the slide (file and page
 | Ch1_5 pp. 17, 19 | The theorems are quoted with $\mathbf A$ while the examples use the field $\mathbf F$. |
 | Ch1_5 p. 6 (example 1-14) | The point $(1,1,0)$ is given, but the result $\mathbf E=-\mathbf a_zE_0$ does not depend on it. |
 | Ch1_2 p. 13 | The vector $A=\mathbf a_r(3\cos\varphi)-\mathbf a_\varphi2r+\mathbf a_z5$ is printed with a non-bold $A$. The notes print it in bold, like every other vector. |
+| Ch2_5 p. 10 | «در نتیجه مانند هادی‌ها چگالی بار و میدان الکتریکی داخلی آن‌ها برابر با صفر نیست» is kept as written; the English edition gives the evident meaning ("…are not zero, as they are in conductors"). |
+| Ch2_4 p. 5 | For $q=+1\,\mathrm C$ the work is written $W=\int\nabla V\cdot d\mathbf l$, consistent with $W=-q\int\mathbf E\cdot d\mathbf l$ and $\mathbf E=-\nabla V$. |

@@ -1,0 +1,19 @@
+% Ch2_2, slide 7: a ring of radius a with line charge rho_l; dE at P on the axis at height h,
+% and the contribution of the opposite element (red)
+\begin{tikzpicture}[ELoblique,scale=1]
+  \def\a{2.0}\def\h{2.4}\def\p{40}
+  \coordinate (O) at (0,0,0); \coordinate (P) at (0,0,\h); \coordinate (D) at ({\a*cos(\p)},{\a*sin(\p)},0);
+  \coordinate (Dm) at ({-\a*cos(\p)},{-\a*sin(\p)},0);
+  \draw[ELax] (O)--(3.2,0,0) node[ELlab,anchor=north east]{$x$};
+  \draw[ELax] (O)--(0,3.4,0) node[ELlab,anchor=west]{$y$};
+  \draw[ELcurve,line width=2pt,ELink] plot[domain=0:360,samples=90] ({\a*cos(\x)},{\a*sin(\x)},0);
+  \draw[ELax] (O)--(0,0,4.0) node[ELlab,anchor=south]{$z$};
+  \draw[ELthin] (O)--(D) node[ELlabs,anchor=north,pos=0.5]{$a$};
+  \draw[ELthin] (D)--(P);
+  \draw[ELvec,line width=1pt] (P)--($(D)!1.45!(P)$) node[ELlab,anchor=east]{$d\vect{E}$};
+  \draw[ELcSource,dashed,line width=0.9pt] (Dm)--(P);
+  \draw[ELvec2,line width=1pt] (P)--($(Dm)!1.45!(P)$);
+  \draw[ELthin,{Stealth[length=4pt]}-{Stealth[length=4pt]}] (0,-0.5,0)--(0,-0.5,\h) node[ELlabs,anchor=east,pos=0.5]{$h$};
+  \fill[ELink] (P) circle (2pt); \node[ELlab,anchor=west,xshift=2pt] at (P) {$P$};
+  \node[ELlabs,anchor=north west] at (D) {$d\ell'$};
+\end{tikzpicture}

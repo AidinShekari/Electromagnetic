@@ -54,9 +54,9 @@
 % #1 env, #2 colour, #3 tint, #4 label word, #5 numbered (1/0), #6 icon, #7 closing-rule style
 \newcommand{\ELmakebox}[7]{%
   \NewEnviron{#1}[1]{%
+    \ELtakenum % (before measuring: a box nested in the body must not take this number)
     \ELmeasureraw{\dimexpr\linewidth-20pt\relax}{\BODY}{2.6em}%
     \ELplace
-    \ELtakenum
     \begin{tcolorbox}[ELbase={#2}{#3}{#7},\ELboxopt,title={\ELtabtext{#6}{#4}{\ELthisnum}{##1}}]%
     \BODY\end{tcolorbox}}}
 \ELmakebox{ELdefinition}{ELcDefinition}{ELcDefinitionT}{\ELlangDefinition}{1}{defeq}{}
@@ -71,8 +71,9 @@
 % the important result: the same grammar, closed by a thin gold frame on every side
 \newcommand{\ELimpframe}[2]{\draw[ELcImportant!70,line width=0.6pt] (frame.#2 west) rectangle (frame.#1 east);}
 \NewEnviron{ELimportant}[1]{%
+  \ELtakenum
   \ELmeasureraw{\dimexpr\linewidth-22pt\relax}{\BODY}{2.8em}%
-  \ELplace\ELtakenum
+  \ELplace
   \begin{tcolorbox}[ELbase={ELcImportant}{ELcImportantT}{},\ELboxopt,
     top=7pt,
     overlay unbroken={\ELimpframe{north}{south}\ELtoprule{ELcImportant}},

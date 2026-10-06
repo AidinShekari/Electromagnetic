@@ -1,0 +1,15 @@
+% Ch2_5, slide 7: a point charge +Q at the centre of a conducting spherical shell (radii R_i, R_o);
+% the induced charges and the Gaussian spheres S1 (outside), S2 (in the shell), S3 (inside)
+\begin{tikzpicture}[scale=1]
+  \def\ri{0.95}\def\ro{1.5}
+  \fill[ELfillB,even odd rule] (0,0) circle (\ro) (0,0) circle (\ri);
+  \draw[ELcField!80,line width=0.6pt] (0,0) circle (\ro) (0,0) circle (\ri);
+  \draw[ELdash,line width=0.6pt] (0,0) circle (0.5) (0,0) circle (1.22) (0,0) circle (2.1);
+  \foreach \a in {0,45,...,315}{\node[ELlabs,text=ELcField] at (\a:\ri-0.16) {$-$}; \node[ELlabs,text=ELcSource] at (\a+22:\ro+0.17) {$+$};}
+  \fill[ELcSource] (0,0) circle (1.6pt); \node[ELlabs,anchor=south] at (0,0.04) {$+Q$};
+  \draw[ELthin] (0,0)--(-20:\ri) node[ELlabs,anchor=north,pos=0.45]{$R_i$};
+  \draw[ELthin] (0,0)--(60:\ro) node[ELlabs,anchor=west,pos=0.82]{$R_o$};
+  \node[ELlabs,anchor=north] at (-90:0.5) {$S_3$}; \node[ELlabs,anchor=north east] at (-135:1.22) {$S_2$};
+  \node[ELlabs,anchor=north east] at (-140:2.1) {$S_1$};
+  \draw[ELthin,-{Stealth[length=4pt]}] (2.4,-1.5) node[ELtag,anchor=north west]{\ELL{Conducting shell}{پوسته هادی}}--(-35:1.3);
+\end{tikzpicture}

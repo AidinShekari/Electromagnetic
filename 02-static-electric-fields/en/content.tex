@@ -1,0 +1,1142 @@
+\ELhold
+
+\ELsection{Course Outline}{Course Outline}
+
+\begin{ELunit}
+
+\ELfigure{m02-course-outline}{}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{Static Electric Fields}{Static Electric Fields}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  In electrostatics the electric charges are at rest and the electric fields do not change with time.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    In this case there are no magnetic fields.
+  \end{itemize}
+\item
+  In introductory physics the development of electrostatics usually begins with Coulomb's experimental law for the force between two charges.
+\item
+  In this course, instead of following the historical development of electrostatics, we introduce the subject by postulating the divergence and the curl of the electric field intensity in free space.
+\end{itemize}
+
+\ELfigure{m02-map}{}
+
+\begin{itemize}
+\tightlist
+\item
+  What are the fundamental postulates of electrostatics from which the other relations and laws of the subject can be derived?
+\item
+  How are Coulomb's and Gauss's laws derived from these postulates?
+\item
+  How is the electric field of a point charge, of a number of discrete point charges and of a continuous charge distribution computed?
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{Fundamental Postulates of Electrostatics in Free Space}{Fundamental Postulates of Electrostatics in Free Space}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Electric field intensity}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The force on a small test charge placed in the field, divided by the charge. \ELim{\ELto} \ELim{\mathrm{N/C}} (newtons per coulomb), equivalent to \ELim{\mathrm{V/m}} (volts per metre)
+  \end{itemize}
+\end{itemize}
+
+\begin{ELdefinition}{}
+
+\ELdisp{\vect{E}\ELbr =\lim_{q\to0}\frac{\vect{F}}{q}\qquad\ELbr (\mathrm{V/m})}
+
+\end{ELdefinition}
+
+\end{ELjoin}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  The electric field intensity is proportional to the force and in the same direction.
+\item
+  The two fundamental postulates of electrostatics in free space
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\nabla\cdot\vect{E}\ELbr =\frac{\rho}{\epsilon_0}\qquad\ELbr \qquad\ELbr  \nabla\times\vect{E}\ELbr =0}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\item
+  \ELim{\rho}: volume charge density \ELim{(\mathrm{C/m^3})}; \ELim{\epsilon_0}: permittivity of free space \ELim{(\mathrm{F/m})}
+\item
+  \ELim{\vect{E}} is not solenoidal unless \ELim{\rho=0}
+\item
+  \ELim{\vect{E}} is irrotational
+\item
+  Integral form of the first equation \ELim{\ELto} integration over an arbitrary volume \ELim{V}
+\end{itemize}
+
+\ELdisp{\int_V\nabla\cdot\vect{E}\,dv\ELbr =\frac{1}{\epsilon_0}\int_V\rho\,dv}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{\int_V\rho\,dv}: the total charge contained in the volume \ELim{V} enclosed by the surface \ELim{S}
+\item
+  Using the divergence theorem:
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\oint_S\vect{E}\cdot d\vect{s}\ELbr =\frac{Q}{\epsilon_0}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  This relation is a form of \textbf{Gauss's law}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The total outward flux of the electric field intensity through any closed surface equals the total charge enclosed in the surface divided by \ELim{\epsilon_0}.
+  \end{itemize}
+\item
+  Integral form of the second equation \ELim{\ELto} integration over an arbitrary open surface \ELim{S}
+\end{itemize}
+
+\ELdisp{\int_S(\nabla\times\vect{E})\cdot d\vect{s}\ELbr =0}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  Using Stokes's theorem:
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\oint_C\vect{E}\cdot\dif\vect{\ell}\ELbr =0}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  The scalar line integral of the static electric field intensity around any closed path is zero.
+\item
+  The scalar product \ELim{\vect{E}\cdot\dif\vect{\ell}} integrated over any path is the voltage along that path.
+\item
+  This equation is an expression of \textbf{Kirchhoff's voltage law}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The algebraic sum of the voltage drops around any closed path is zero.
+  \end{itemize}
+\item
+  The line integrals of the irrotational field \ELim{\vect{E}} are independent of the path and depend only on the initial and final points.
+\end{itemize}
+
+\ELfigure{m02-two-paths}{}
+
+\ELdisp{\oint_C\vect{E}\cdot\dif\vect{\ell}\ELbr =0}
+\ELdisp{\int_{C_1}\vect{E}\cdot\dif\vect{\ell}+\int_{C_2}\vect{E}\cdot\dif\vect{\ell}\ELbr =0}
+\ELdisp{\int_{P_1}^{P_2}\vect{E}\cdot\dif\vect{\ell}+\int_{P_2}^{P_1}\vect{E}\cdot\dif\vect{\ell}\ELbr =0}
+\ELdisp{\int_{\substack{P_1\\\text{Along }C_1}}^{P_2}\vect{E}\cdot\dif\vect{\ell}\ELbr =-\int_{\substack{P_2\\\text{Along }C_2}}^{P_1}\vect{E}\cdot\dif\vect{\ell}}
+\ELdisp{\int_{\substack{P_1\\\text{Along }C_1}}^{P_2}\vect{E}\cdot\dif\vect{\ell}\ELbr =\int_{\substack{P_1\\\text{Along }C_2}}^{P_2}\vect{E}\cdot\dif\vect{\ell}}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{Coulomb's Law}{Coulomb’s Law}
+
+\begin{ELunit}
+
+\ELfigure{m02-map-coulomb}{}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{The electric field intensity of a point charge \ELim{q} in free space}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    We consider a hypothetical spherical surface of radius \ELim{R} centred at \ELim{q}.
+  \item
+    Since a point charge has no preferred direction, we expect the field to be radial everywhere and its intensity to be constant over the spherical surface.
+  \end{itemize}
+\end{itemize}
+
+\ELfigure{m02-point-charge}{}
+
+\begin{itemize}
+\tightlist
+\item
+  The electric field intensity on the spherical surface:
+\end{itemize}
+
+\ELdisp{\vect{E}\ELbr =E_R\uvec{R}}
+\ELdisp{\oint_S\vect{E}\cdot d\vect{s}\ELbr =\oint_S(\uvec{R}E_R)\cdot\uvec{R}\,ds\ELbr =\frac{q}{\epsilon_0}}
+\ELdisp{E_R\oint_S ds\ELbr =E_R(4\pi R^2)\ELbr =\frac{q}{\epsilon_0}}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{\vect{E}\ELbr =\uvec{R}E_R\ELbr =\uvec{R}\frac{q}{4\pi\epsilon_0R^2}\qquad\ELbr (\mathrm{V/m})}
+
+\end{ELimportant}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  If the charge is not at the origin of the coordinate system
+\end{itemize}
+
+\ELfigure{m02-offset-charge}{}
+
+\ELdisp{\vect{E}_P\ELbr =\uvec{qP}\frac{q}{4\pi\epsilon_0\abs{\vect{R}-\vect{R}'}^2},\qquad\ELbr  \uvec{qP}\ELbr =\frac{\vect{R}-\vect{R}'}{\abs{\vect{R}-\vect{R}'}}}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{\vect{E}_P\ELbr =\frac{q(\vect{R}-\vect{R}')}{4\pi\epsilon_0\abs{\vect{R}-\vect{R}'}^3}\qquad\ELbr (\mathrm{V/m})}
+
+\end{ELimportant}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  When a point charge \ELim{q_2} is placed in the electric field of another point charge \ELim{q_1}, the force acting on it is
+\end{itemize}
+
+\begin{ELimportant}{Mathematical statement of Coulomb's law}
+
+\ELdisp{\vect{F}_{12}\ELbr =q_2\vect{E}_{12}\ELbr =\uvec{R}\frac{q_1q_2}{4\pi\epsilon_0R^2}\qquad\ELbr (\mathrm{N})}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\ELfigure{m02-two-charges}{}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{The electric field intensity of a set of discrete charges}
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{\vect{E}\ELbr =\frac{1}{4\pi\epsilon_0}\sum_{k=1}^{n}\frac{q_k(\vect{R}-\vect{R}'_k)}{\abs{\vect{R}-\vect{R}'_k}^3}\qquad\ELbr (\mathrm{V/m})}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\ELfigure{m02-discrete-charges}{}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{The electric field intensity of a continuous charge distribution}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The field of a differential charge \ELim{dq} is
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{d\vect{E}\ELbr =\frac{dq(\vect{R}-\vect{R}')}{4\pi\epsilon_0\abs{\vect{R}-\vect{R}'}^3}}
+
+\begin{itemize}
+\tightlist
+\item
+  Line charge distribution
+\end{itemize}
+
+\ELdisp{dq\ELbr =\rho_\ell\,d\ell'\qquad\ELbr \qquad\ELbr  \vect{E}\ELbr =\int_{L'}\frac{\rho_\ell\,d\ell'(\vect{R}-\vect{R}')}{4\pi\epsilon_0\abs{\vect{R}-\vect{R}'}^3}}
+
+\begin{itemize}
+\tightlist
+\item
+  Surface charge distribution
+\end{itemize}
+
+\ELdisp{dq\ELbr =\rho_s\,ds'\qquad\ELbr \qquad\ELbr  \vect{E}\ELbr =\int_{S'}\frac{\rho_s\,ds'(\vect{R}-\vect{R}')}{4\pi\epsilon_0\abs{\vect{R}-\vect{R}'}^3}}
+
+\begin{itemize}
+\tightlist
+\item
+  Volume charge distribution
+\end{itemize}
+
+\ELdisp{dq\ELbr =\rho_v\,dv'\qquad\ELbr \qquad\ELbr  \vect{E}\ELbr =\int_{V'}\frac{\rho_v\,dv'(\vect{R}-\vect{R}')}{4\pi\epsilon_0\abs{\vect{R}-\vect{R}'}^3}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Steps in computing the electric field intensity of a continuous charge distribution}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Choosing an appropriate coordinate system
+  \item
+    Correctly determining the differential element \ELim{d\ell'}, \ELim{ds'} and \ELim{dv'} (note that in these relations the magnitudes of the differential length and surface vectors are used)
+  \item
+    Correctly determining the position vector of the field point \ELim{(\vect{R})}
+  \item
+    Correctly determining the position vector of the source point \ELim{(\vect{R}')}
+  \item
+    Evaluating the integral
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Note that we integrate with respect to the primed coordinates.
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\end{ELunit}
+
+\ELnextnum{2-1}
+
+\begin{ELexample}{}
+
+Determine the electric field intensity of an infinitely long straight line charge of uniform density \ELim{\rho_\ell}.
+
+\ELfigure{m02-ex1}{}
+
+\begin{ELsolution}
+
+\ELdisp{\vect{E}\ELbr =\int_{L'}\frac{\rho_\ell\,d\ell'(\vect{R}-\vect{R}')}{4\pi\epsilon_0\abs{\vect{R}-\vect{R}'}^3}}
+
+\begin{itemize}
+\tightlist
+\item
+  Choosing cylindrical coordinates
+\end{itemize}
+
+\ELdisp{d\ell'\ELbr =dz'\qquad\ELbr  \vect{R}\ELbr =r\uvec{r}\qquad\ELbr  \vect{R}'\ELbr =z'\uvec{z}}
+\ELdisp{\vect{E}\ELbr =\frac{\rho_\ell}{4\pi\epsilon_0}\int_{-\infty}^{\infty}\frac{r\uvec{r}-z'\uvec{z}}{(r^2+z'^2)^{3/2}}\,dz'}
+
+\begin{itemize}
+\tightlist
+\item
+  It is intuitively clear that the field has no component along \ELim{z}.
+\end{itemize}
+
+\ELdisp{\vect{E}\ELbr =\uvec{r}E_r\ELbr =\uvec{r}\frac{\rho_\ell r}{4\pi\epsilon_0}\int_{-\infty}^{\infty}\frac{dz'}{(r^2+z'^2)^{3/2}}}
+\ELdisp{\vect{E}\ELbr =\uvec{r}\frac{\rho_\ell}{2\pi\epsilon_0r}\qquad\ELbr (\mathrm{V/m})}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELnextnum{2-2}
+
+\begin{ELexample}{}
+
+A ring of radius \ELim{a} carries a line charge density \ELim{\rho_\ell}. Find the electric field intensity on the axis of the ring at a distance \ELim{h} from it.
+
+\ELfigure{m02-ex2}{}
+
+\begin{ELsolution}
+
+\ELdisp{\vect{E}\ELbr =\int_{L'}\frac{\rho_\ell\,d\ell'(\vect{R}-\vect{R}')}{4\pi\epsilon_0\abs{\vect{R}-\vect{R}'}^3}}
+
+\begin{itemize}
+\tightlist
+\item
+  Choosing cylindrical coordinates
+\end{itemize}
+
+\ELdisp{d\ell'\ELbr =a\,d\phi'\qquad\ELbr  \vect{R}\ELbr =h\uvec{z}\qquad\ELbr  \vect{R}'\ELbr =a\uvec{r'}}
+\ELdisp{\vect{E}\ELbr =\frac{\rho_\ell}{4\pi\epsilon_0}\int_0^{2\pi}\frac{h\uvec{z}-a\uvec{r'}}{(a^2+h^2)^{3/2}}\,a\,d\phi'}
+
+\begin{itemize}
+\tightlist
+\item
+  It is intuitively clear that the field has no component along \ELim{r}.
+\end{itemize}
+
+\ELdisp{\vect{E}\ELbr =\frac{\rho_\ell ah}{4\pi\epsilon_0(a^2+h^2)^{3/2}}\uvec{z}\int_0^{2\pi}d\phi'\ELbr =\frac{\rho_\ell ah}{2\epsilon_0(a^2+h^2)^{3/2}}\uvec{z}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELnextnum{2-3}
+
+\begin{ELexample}{}
+
+Determine the electric field intensity of an infinite planar charge with a uniform surface charge density \ELim{\rho_s}.
+
+\ELfigure{m02-ex3}{}
+
+\begin{ELsolution}
+
+\ELdisp{\vect{E}\ELbr =\int_{S'}\frac{\rho_s\,ds'(\vect{R}-\vect{R}')}{4\pi\epsilon_0\abs{\vect{R}-\vect{R}'}^3}}
+
+\begin{itemize}
+\tightlist
+\item
+  Choosing cylindrical coordinates
+\end{itemize}
+
+\ELdisp{ds'\ELbr =r'\,dr'\,d\phi'\qquad\ELbr  \vect{R}\ELbr =h\uvec{z}\qquad\ELbr  \vect{R}'\ELbr =r'\uvec{r'}}
+\ELdisp{\vect{E}\ELbr =\frac{\rho_s}{4\pi\epsilon_0}\int_0^{2\pi}\!\!\int_0^{\infty}\frac{h\uvec{z}-r'\uvec{r'}}{(h^2+r'^2)^{3/2}}\,r'\,dr'\,d\phi'}
+
+\begin{itemize}
+\tightlist
+\item
+  It is intuitively clear that the field has no component along \ELim{r}.
+\end{itemize}
+
+\ELdisp{\vect{E}\ELbr =\frac{\rho_sh\uvec{z}}{4\pi\epsilon_0}\int_0^{2\pi}\!\!\int_0^{\infty}\frac{r'\,dr'\,d\phi'}{(h^2+r'^2)^{3/2}}\ELbr =\frac{\rho_s}{2\epsilon_0}\uvec{z}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELhold
+
+\ELsection{Gauss's Law}{Gauss’s Law}
+
+\begin{ELunit}
+
+\ELfigure{m02-map-gauss}{}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{\oint_S\vect{E}\cdot d\vect{s}\ELbr =\frac{Q}{\epsilon_0}}
+
+\end{ELimportant}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{Q}: the total charge contained in the volume \ELim{V} enclosed by the surface \ELim{S}
+\item
+  The total outward flux of the electric field intensity through any closed surface equals the total charge enclosed in the surface divided by \ELim{\epsilon_0}.
+\item
+  The surface \ELim{S} can be any closed surface, chosen for convenience.
+\end{itemize}
+
+\end{ELunit}
+
+\begin{ELremark}{}
+
+Gauss's law always holds, but in using it to determine the electric field intensity the following point must be observed.
+
+\begin{itemize}
+\tightlist
+\item
+  The basis of applying Gauss's law to determine the electric field intensity lies, first, in recognizing the conditions of symmetry and, second, in choosing an appropriate surface over which the normal component of \ELim{\vect{E}} due to a given charge distribution is constant (the Gaussian surface).
+\end{itemize}
+
+\end{ELremark}
+
+\ELnextnum{2-4}
+
+\begin{ELexample}{}
+
+Using Gauss's law, determine the electric field intensity of an infinitely long straight line charge of uniform density \ELim{\rho_\ell} at a distance \ELim{r} from it.
+
+\ELfigure{m02-ex4}{}
+
+\begin{ELsolution}
+
+\ELdisp{\vect{E}\ELbr =\uvec{r}E_r}
+
+\begin{itemize}
+\tightlist
+\item
+  Choosing a cylinder of length \ELim{L} and radius \ELim{r} as the Gaussian surface
+
+  \begin{itemize}
+  \tightlist
+  \item
+    For the top and bottom faces: \ELim{\vect{E}\cdot d\vect{s}=0}
+  \item
+    For the side surface: \ELim{d\vect{s}=\uvec{r}\,r\,d\phi\,dz}
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{\oint_S\vect{E}\cdot d\vect{s}\ELbr =\int_0^L\!\!\int_0^{2\pi}E_r\,r\,d\phi\,dz\ELbr =2\pi rLE_r}
+\ELdisp{Q\ELbr =\rho_\ell L\qquad\ELbr  2\pi rLE_r\ELbr =\frac{\rho_\ell L}{\epsilon_0}\qquad\ELbr  \vect{E}\ELbr =\uvec{r}E_r\ELbr =\uvec{r}\frac{\rho_\ell}{2\pi\epsilon_0r}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELnextnum{2-5}
+
+\begin{ELexample}{}
+
+Determine the electric field intensity of an infinite planar charge with a uniform surface charge density \ELim{\rho_s}.
+
+\ELfigure{m02-ex5}{}
+
+\begin{ELsolution}
+
+\ELdisp{\vect{E}\ELbr =\pm E_z\uvec{z}}
+
+\begin{itemize}
+\tightlist
+\item
+  Choosing a box as the Gaussian surface
+\item
+  For the top face
+\end{itemize}
+
+\ELdisp{\vect{E}\cdot d\vect{s}\ELbr =(\uvec{z}E_z)\cdot(\uvec{z}\,ds)\ELbr =E_z\,ds}
+
+\begin{itemize}
+\tightlist
+\item
+  For the bottom face
+\end{itemize}
+
+\ELdisp{\vect{E}\cdot d\vect{s}\ELbr =(-\uvec{z}E_z)\cdot(-\uvec{z}\,ds)\ELbr =E_z\,ds}
+
+\begin{itemize}
+\tightlist
+\item
+  For the side faces
+\end{itemize}
+
+\ELdisp{\vect{E}\cdot d\vect{s}\ELbr =0}
+
+\begin{itemize}
+\tightlist
+\item
+  Therefore
+\end{itemize}
+
+\ELdisp{\oint_S\vect{E}\cdot d\vect{s}\ELbr =2E_z\int_A ds\ELbr =2E_zA}
+\ELdisp{Q\ELbr =\rho_sA\qquad\ELbr  2E_zA\ELbr =\frac{\rho_sA}{\epsilon_0}}
+
+\begin{ELimportant}{}
+
+\ELdisp{\vect{E}\ELbr =\uvec{z}E_z\ELbr =\uvec{z}\frac{\rho_s}{2\epsilon_0},\qquad\ELbr  z>0}
+\ELdisp{\vect{E}\ELbr =-\uvec{z}E_z\ELbr =-\uvec{z}\frac{\rho_s}{2\epsilon_0},\qquad\ELbr  z<0}
+
+\end{ELimportant}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELnextnum{2-6}
+
+\begin{ELexample}{}
+
+Determine the field \ELim{\vect{E}} of an electron cloud with volume charge density \ELim{\rho=-\rho_0} in the region \ELim{0\leq R\leq b} and \ELim{\rho=0} in the region \ELim{R>b}.
+
+\ELfigure{m02-ex6}{}
+
+\begin{ELsolution}
+
+\ELdisp{\vect{E}\ELbr =\uvec{R}E_R}
+
+\begin{itemize}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\alph{enumi})}
+  \tightlist
+  \item
+    \ELim{0\leq R\leq b}
+  \end{enumerate}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Choosing a sphere as the Gaussian surface
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{d\vect{s}\ELbr =\uvec{R}\,ds}
+\ELdisp{\oint_{S_i}\vect{E}\cdot d\vect{s}\ELbr =E_R\int_{S_i}ds\ELbr =E_R4\pi R^2}
+\ELdisp{Q\ELbr =\int_V\rho\,dv\ELbr =-\rho_0\int_V dv\ELbr =-\rho_0\frac{4\pi}{3}R^3\qquad\ELbr  \vect{E}\ELbr =-\uvec{R}\frac{\rho_0}{3\epsilon_0}R}
+
+\begin{itemize}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\alph{enumi})}
+  \setcounter{enumi}{1}
+  \tightlist
+  \item
+    \ELim{R\geq b}
+  \end{enumerate}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Choosing a sphere as the Gaussian surface
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{d\vect{s}\ELbr =\uvec{R}\,ds}
+\ELdisp{\oint_{S_o}\vect{E}\cdot d\vect{s}\ELbr =E_R\int_{S_o}ds\ELbr =E_R4\pi R^2}
+\ELdisp{Q\ELbr =-\rho_0\frac{4\pi}{3}b^3\qquad\ELbr  \vect{E}\ELbr =-\uvec{R}\frac{\rho_0b^3}{3\epsilon_0R^2}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELnextnum{2-7}
+
+\begin{ELexample}{}
+
+A spherical charge distribution of radius \ELim{b} has the following density. Find the electric field intensity at all points of space.
+\ELdisp{\rho_v\ELbr =\begin{cases}\dfrac{\rho_0R}{b}&0\leq R\leq b\\\noalign{\vskip 2mm}0&R>b\end{cases}}
+
+\ELfigure{m02-ex7}{}
+
+\begin{ELsolution}
+
+\ELdisp{\vect{E}\ELbr =\uvec{R}E_R}
+
+\begin{itemize}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\alph{enumi})}
+  \tightlist
+  \item
+    \ELim{0\leq R\leq b}
+  \end{enumerate}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Choosing a sphere as the Gaussian surface
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{d\vect{s}\ELbr =\uvec{R}\,ds}
+\ELdisp{\oint_{S_i}\vect{E}\cdot d\vect{s}\ELbr =E_R\int_{S_i}ds\ELbr =E_R4\pi R^2}
+\ELdisp{Q\ELbr =\int_v\rho_v\,dv\ELbr =\int_0^{2\pi}\!\!\int_0^{\pi}\!\!\int_0^{R}\frac{\rho_0R}{b}R^2\sin\theta\,dR\,d\theta\,d\phi\ELbr =\frac{\rho_0\pi R^4}{b}}
+\ELdisp{\vect{E}\ELbr =E_R\uvec{R}\ELbr =\frac{\rho_0R^2}{4\epsilon_0b}\uvec{R}}
+
+\begin{itemize}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\alph{enumi})}
+  \setcounter{enumi}{1}
+  \tightlist
+  \item
+    \ELim{R\geq b}
+  \end{enumerate}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Choosing a sphere as the Gaussian surface
+  \end{itemize}
+\end{itemize}
+
+\ELdisp{d\vect{s}\ELbr =\uvec{R}\,ds}
+\ELdisp{\oint_{S_o}\vect{E}\cdot d\vect{s}\ELbr =E_R\int_{S_o}ds\ELbr =E_R4\pi R^2\qquad\ELbr  Q\ELbr =\rho_0\pi b^3}
+\ELdisp{\vect{E}\ELbr =E_R\uvec{R}\ELbr =\frac{\rho_0b^3}{4\epsilon_0R^2}\uvec{R}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELhold
+
+\ELsection{Electric Potential}{Electric Potential}
+
+\begin{ELunit}
+
+\ELfigure{m02-map-potential}{}
+
+\begin{itemize}
+\item
+  What is the concept of the electric potential difference between two points and of the electric potential of a point?
+\item
+  How is the electric potential of a point charge, of a number of discrete point charges and of a continuous charge distribution computed?
+\item
+  How can the electric field intensity be computed from the electric potential, and what is the advantage of this over computing the electric field intensity directly?
+\item
+  Suppose we want to move a point charge \ELim{q}, located in the electric field \ELim{\vect{E}}, by \ELim{d\ell}.
+\end{itemize}
+
+\ELfigure{m02-move-charge}{}
+
+\begin{itemize}
+\item
+  The force exerted on the charge by the electric field:
+  \ELdisp{\vect{F}_E\ELbr =q\vect{E}}
+\item
+  The magnitude of the component of this force along \ELim{d\ell}:
+  \ELdisp{F_{EL}\ELbr =\vect{F}_E\cdot\uvec{\ell}\ELbr =q\vect{E}\cdot\uvec{\ell}}
+\item
+  The force that must be applied to the charge:
+  \ELdisp{F_{apply}\ELbr =-F_{EL}\ELbr =-q\vect{E}\cdot\uvec{\ell}}
+\item
+  The work done in moving the charge by \ELim{d\ell}:
+  \ELdisp{dW\ELbr =F_{apply}\,d\ell\ELbr =-q\vect{E}\cdot\dif\vect{\ell}}
+\item
+  The work done in moving the charge from point \ELim{P_1} to point \ELim{P_2}:
+  \ELdisp{W\ELbr =-q\int_{P_1}^{P_2}\vect{E}\cdot\dif\vect{\ell}}
+\end{itemize}
+
+\ELdisp{\nabla\times\vect{E}\ELbr =0\ELbr \Rightarrow\vect{E}\ELbr =-\nabla V}
+\ELdisp{\nabla V\cdot\uvec{\ell}\ELbr =\frac{dV}{d\ell}}
+\ELdisp{q\ELbr =+1\,\mathrm{C}\qquad\ELbr  W\ELbr =\int_{P_1}^{P_2}\nabla V\cdot\dif\vect{\ell}\quad\ELbr \ELbr \Longrightarrow\quad\ELbr  W\ELbr =\int_{P_1}^{P_2}dV\ELbr =V_2-V_1}
+
+\end{ELunit}
+
+\begin{ELdefinition}{Electric potential difference}
+
+The electric potential difference between two points is the work done by an external source in moving a unit positive charge from one point to the other.
+\ELdisp{V_2-V_1\ELbr =-\int_{P_1}^{P_2}\vect{E}\cdot\dif\vect{\ell}}
+
+\begin{itemize}
+\tightlist
+\item
+  It does not depend on the path of integration
+\end{itemize}
+
+\end{ELdefinition}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  In many cases a reference point at infinity with zero potential is chosen, and the potential differences of the various points are expressed with respect to this reference point.
+\end{itemize}
+
+\begin{ELimportant}{}
+
+\ELdisp{V_P\ELbr =-\int_{\infty}^{P}\vect{E}\cdot\dif\vect{\ell}}
+
+\end{ELimportant}
+
+\end{ELjoin}
+
+\begin{ELremark}{Remark 1}
+
+The minus sign in the potential relation is needed for consistency with the fact that moving against the direction of the field increases the electric potential.
+
+\end{ELremark}
+
+\begin{ELremark}{Remark 2}
+
+The gradient of \ELim{V} is normal to the surfaces of constant \ELim{V}; consequently the electric field lines are normal to the equipotential surfaces.
+
+\end{ELremark}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{The electric potential of a point charge \ELim{q} at a distance \ELim{R} from it}
+\end{itemize}
+
+\ELfigure{m02-potential-point}{}
+
+\ELdisp{V\ELbr =-\int_{\infty}^{R}\left(\frac{q}{4\pi\epsilon_0R^2}\uvec{R}\right)\cdot dR\,\uvec{R}\ELbr =\frac{q}{4\pi\epsilon_0R}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{The electric potential of \ELim{n} discrete point charges}
+\end{itemize}
+
+\ELdisp{V\ELbr =\frac{1}{4\pi\epsilon_0}\sum_{k=1}^{n}\frac{q_k}{\abs{\vect{R}-\vect{R}'_k}}}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\item
+  \ELim{\vect{R}}: position vector of the field point; \ELim{\vect{R}'_k}: position vectors of the source points
+\item
+  \textbf{The electric potential of a continuous charge distribution}
+
+  \begin{itemize}
+  \item
+    Line charge distribution
+    \ELdisp{V\ELbr =\frac{1}{4\pi\epsilon_0}\int_{L'}\frac{\rho_\ell\,d\ell'}{\abs{\vect{R}-\vect{R}'}}}
+  \item
+    Surface charge distribution
+    \ELdisp{V\ELbr =\frac{1}{4\pi\epsilon_0}\int_{S'}\frac{\rho_s\,ds'}{\abs{\vect{R}-\vect{R}'}}}
+  \item
+    Volume charge distribution
+    \ELdisp{V\ELbr =\frac{1}{4\pi\epsilon_0}\int_{V'}\frac{\rho_v\,dv'}{\abs{\vect{R}-\vect{R}'}}}
+  \end{itemize}
+\end{itemize}
+
+\ELnextnum{2-8}
+
+\begin{ELexample}{}
+
+Find the electric potential and the electric field intensity of an electric dipole at an arbitrary point very far from it.
+
+\begin{ELsolution}
+
+\ELdisp{V\ELbr =\frac{1}{4\pi\epsilon_0}\sum_{k=1}^{2}\frac{q_k}{\abs{\vect{R}-\vect{R}'_k}}\ELbr =\frac{1}{4\pi\epsilon_0}\left[\frac{q}{\abs{\vect{R}-\vect{d}/2}}+\frac{-q}{\abs{\vect{R}+\vect{d}/2}}\right]}
+
+\ELfigure{m02-ex8-dipole}{}
+
+\ELdisp{V\ELbr =\frac{q}{4\pi\epsilon_0}\left(\frac{1}{R_+}-\frac{1}{R_-}\right)}
+\ELdisp{\frac{1}{R_+}\ELbr \cong\left(R-\frac{d}{2}\cos\theta\right)^{-1}\ELbr \cong R^{-1}\left(1+\frac{d}{2R}\cos\theta\right)}
+\ELdisp{\frac{1}{R_-}\ELbr \cong\left(R+\frac{d}{2}\cos\theta\right)^{-1}\ELbr \cong R^{-1}\left(1-\frac{d}{2R}\cos\theta\right)}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{\vect{p}=q\vect{d}}: the electric dipole moment vector
+\end{itemize}
+
+\ELdisp{V\ELbr =\frac{qd\cos\theta}{4\pi\epsilon_0R^2}\quad\ELbr \overset{\vect{d}=d\uvec{z}}{\Longrightarrow}\quad\ELbr  V\ELbr =\frac{q\vect{d}\cdot\uvec{R}}{4\pi\epsilon_0R^2}\quad\ELbr \overset{\vect{p}=q\vect{d}}{\Longrightarrow}\quad\ELbr  V\ELbr =\frac{\vect{p}\cdot\uvec{R}}{4\pi\epsilon_0R^2}}
+\ELdisp{\begin{aligned}\vect{E}=-\nabla V&=-\uvec{R}\frac{\partial V}{\partial R}-\uvec{\theta}\frac{\partial V}{R\,\partial\theta}\\&=\frac{p}{4\pi\epsilon_0R^3}(\uvec{R}2\cos\theta+\uvec{\theta}\sin\theta)\end{aligned}}
+
+\ELfigure{m02-ex8-field}{}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\end{ELjoin}
+
+\ELnextnum{2-9}
+
+\begin{ELexample}{}
+
+Find the electric potential and the electric field intensity of a charged disk of radius \ELim{b} with surface charge density \ELim{\rho_s} on its axis.
+
+\ELfigure{m02-ex9}{}
+
+\begin{ELsolution}
+
+\ELdisp{V\ELbr =\frac{1}{4\pi\epsilon_0}\int_{S'}\frac{\rho_s\,ds'}{\abs{\vect{R}-\vect{R}'}}}
+\ELdisp{ds'\ELbr =r'\,dr'\,d\phi'\qquad\ELbr  \vect{R}\ELbr =z\uvec{z}\qquad\ELbr  \vect{R}'\ELbr =r'\uvec{r'}}
+\ELdisp{V\ELbr =\frac{\rho_s}{4\pi\epsilon_0}\int_0^{2\pi}\!\!\int_0^{b}\frac{r'\,dr'\,d\phi'}{\sqrt{z^2+r'^2}}\ELbr =\frac{\rho_s}{2\epsilon_0}\left[\sqrt{z^2+b^2}-z\right]\qquad\ELbr  z>0}
+\ELdisp{\vect{E}\ELbr =-\nabla V\ELbr =\uvec{z}\frac{\rho_s}{2\epsilon_0}\left[1-\frac{z}{\sqrt{z^2+b^2}}\right]\qquad\ELbr  z>0}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELnextnum{2-10}
+
+\begin{ELexample}{}
+
+Find the electric potential and the electric field intensity of a line charge of length \ELim{L} and charge density \ELim{\rho_\ell} along its extension.
+
+\ELfigure{m02-ex10}{}
+
+\begin{ELsolution}
+
+\ELdisp{V\ELbr =\frac{1}{4\pi\epsilon_0}\int_{L'}\frac{\rho_\ell\,d\ell'}{\abs{\vect{R}-\vect{R}'}}}
+\ELdisp{d\ell'\ELbr =dz'\qquad\ELbr  \vect{R}\ELbr =z\uvec{z}\qquad\ELbr  \vect{R}'\ELbr =z'\uvec{z}}
+\ELdisp{V\ELbr =\frac{\rho_\ell}{4\pi\epsilon_0}\int_{-L/2}^{L/2}\frac{dz'}{z-z'}\ELbr =\frac{\rho_\ell}{4\pi\epsilon_0}\ln\left[\frac{z+L/2}{z-L/2}\right]\qquad\ELbr  z>L/2}
+\ELdisp{\vect{E}\ELbr =-\nabla V\ELbr =-\uvec{z}\frac{dV}{dz}\ELbr =\uvec{z}\frac{\rho_\ell L}{4\pi\epsilon_0\left[z^2-(L/2)^2\right]}\qquad\ELbr  z>L/2}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELnextnum{2-11}
+
+\begin{ELexample}{}
+
+A volume charge of density \ELim{\rho=-\rho_0} exists in the region \ELim{0\leq R\leq b}. What is the electric potential at an arbitrary point inside this volume?
+
+\ELfigure{m02-ex11}{}
+
+\begin{ELsolution}
+
+\ELdisp{\vect{E}\ELbr =-\uvec{R}\frac{\rho_0}{3\epsilon_0}R,\qquad\ELbr  0\leq R\leq b}
+\ELdisp{\vect{E}\ELbr =-\uvec{R}\frac{\rho_0b^3}{3\epsilon_0R^2},\qquad\ELbr  R\geq b}
+\ELdisp{\begin{aligned}V=-\int_{\infty}^{R}\vect{E}\cdot\dif\vect{\ell}&=-\int_{\infty}^{b}\frac{-\rho_0b^3}{3\epsilon_0R^2}\uvec{R}\cdot dR\,\uvec{R}-\int_{b}^{R}\frac{-\rho_0R}{3\epsilon_0}\uvec{R}\cdot dR\,\uvec{R}\\&=-\frac{\rho_0b^2}{3\epsilon_0}-\frac{\rho_0}{6\epsilon_0}\left(b^2-R^2\right)\end{aligned}}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\ELhold
+
+\ELsection{Behaviour of the Static Electric Field in Material Media}{Behaviour of the Static Electric Field in Material Media}
+
+\begin{ELunit}
+
+\ELfigure{m02-map-media}{}
+
+\begin{itemize}
+\item
+  Classification of materials according to their electrical properties
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Conductors
+  \item
+    Semiconductors
+  \item
+    Insulators (dielectrics)
+  \end{itemize}
+\item
+  In conductors the electrons of the outer shells of the atoms are held by a weak force and pass easily from one atom to another.
+\item
+  But the electrons in the atoms of insulators are tightly bound to their orbits and under normal conditions cannot be detached.
+\item
+  The electrical properties of semiconductors lie between those of conductors and insulators.
+\item
+  How does the static electric field intensity behave in the presence of a conductor?
+\item
+  How does the static electric field intensity behave in the presence of a dielectric?
+\item
+  What is the concept of electric flux density, and how is it related to the electric field intensity?
+\item
+  What is the concept of the dielectric constant?
+\item
+  How does the static electric field intensity behave at the boundary between two different media?
+\end{itemize}
+
+\end{ELunit}
+
+\ELhold
+
+\ELsection{Conductors in Static Electric Field}{Conductors in Static Electric Field}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  If we release charges inside a conductor, a field forms in it that drives the charges apart and to the surface.
+
+  \begin{itemize}
+  \item
+    Under static conditions the charge and the electric field inside a conductor are zero.
+    \ELdisp{\rho\ELbr =0\qquad\ELbr  \vect{E}\ELbr =0}
+  \item
+    The time needed for the charges to distribute themselves on the surface of the conductor and reach equilibrium depends on the conductivity of the conductor.
+  \end{itemize}
+\item
+  If under static conditions the electric field on the surface of a conductor had a tangential component, it would produce a tangential force, set the charges in motion, and there would be no charge equilibrium.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Therefore, under static conditions the electric field on the surface of a conductor is everywhere normal to the surface. In other words, under static conditions the surface of a conductor is an equipotential surface. In fact, since \ELim{\vect{E}=0} at all points inside the conductor, the whole conductor has the same electric potential.
+  \end{itemize}
+\item
+  \textbf{Boundary conditions at a conductor / free-space interface}
+\end{itemize}
+
+\ELfigure{m02-conductor-boundary}{}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\item
+  Normal component:
+  \ELdisp{\oint_S\vect{E}\cdot d\vect{s}\ELbr =E_n\Delta S\ELbr =\frac{\rho_s\Delta S}{\epsilon_0}\qquad\ELbr \ELbr \Longrightarrow\qquad\ELbr  E_n\ELbr =\frac{\rho_s}{\epsilon_0}}
+\item
+  Tangential component:
+  \ELdisp{\oint\vect{E}\cdot d\vect{L}\ELbr =0}
+  \ELdisp{E_t\Delta w-E_{N,\text{at }b}\tfrac12\Delta h+E_{N,\text{at }a}\tfrac12\Delta h\ELbr =0\qquad\ELbr \ELbr \Longrightarrow\qquad\ELbr  E_t\ELbr =0}
+\end{itemize}
+
+\ELnextnum{2-12}
+
+\begin{ELexample}{}
+
+A point charge \ELim{+Q} is at the centre of a conducting spherical shell of inner radius \ELim{R_i} and outer radius \ELim{R_o}. Find \ELim{\vect{E}} and \ELim{V} in all space.
+
+\ELfigure{m02-ex12}{}
+
+\begin{ELsolution}
+
+\ELdisp{\vect{E}\ELbr =E_R\uvec{R}}
+
+\begin{itemize}
+\tightlist
+\item
+  For \ELim{R>R_o}
+\end{itemize}
+
+\ELdisp{\oint_S\vect{E}\cdot d\vect{s}\ELbr =E_{R1}4\pi R^2\ELbr =\frac{Q}{\epsilon_0}}
+\ELdisp{E_{R1}\ELbr =\frac{Q}{4\pi\epsilon_0R^2}\qquad\ELbr  V_1\ELbr =-\int_{\infty}^{R}(E_{R1})\,dR\ELbr =\frac{Q}{4\pi\epsilon_0R}}
+
+\begin{itemize}
+\tightlist
+\item
+  For \ELim{R_i<R<R_o}
+\end{itemize}
+
+\ELdisp{E_{R2}\ELbr =0\qquad\ELbr  V_2\ELbr =V_1\Big|_{R=R_o}\ELbr =\frac{Q}{4\pi\epsilon_0R_o}}
+
+\begin{itemize}
+\tightlist
+\item
+  For \ELim{R<R_i}
+\end{itemize}
+
+\ELdisp{E_{R3}\ELbr =\frac{Q}{4\pi\epsilon_0R^2}}
+\ELdisp{V_3\ELbr =-\int_{\infty}^{R_o}E_{R1}\,dR-\int_{R_o}^{R_i}E_{R2}\,dR-\int_{R_i}^{R}E_{R3}\,dR}
+\ELdisp{V_3\ELbr =\frac{Q}{4\pi\epsilon_0}\left(\frac1R+\frac{1}{R_o}-\frac{1}{R_i}\right)}
+
+\ELfigure{m02-ex12-plots}{}
+
+\end{ELsolution}
+
+\end{ELexample}
+
+\end{ELjoin}
+
+\ELhold
+
+\ELsection{Dielectrics in Static Electric Field}{Dielectrics in Static Electric Field}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  Ideal dielectrics have no free charges. As a result, their charge density and internal electric field are not zero, as they are in conductors.
+\item
+  Dielectrics have \textbf{bound charges}; applying an external field to a dielectric creates electric dipoles and polarizes the dielectric material.
+\item
+  The induced electric dipoles change the electric field inside and outside the dielectric material.
+\end{itemize}
+
+\ELfigure{m02-polarization}{}
+
+\end{ELunit}
+
+\begin{ELjoin}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Equivalent charge distributions in polarized dielectrics}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    To analyse the macroscopic effect of the induced dipoles, we define the polarization vector \ELim{\vect{P}} as follows
+  \end{itemize}
+\end{itemize}
+
+\begin{ELdefinition}{}
+
+\ELdisp{\vect{P}\ELbr =\lim_{\Delta v\to0}\frac{\sum_{k=1}^{n\Delta v}\vect{p}_k}{\Delta v}\qquad\ELbr (\mathrm{C/m^2})}
+
+\begin{itemize}
+\tightlist
+\item
+  \ELim{n}: number of dipoles per unit volume; \ELim{\vect{p}_k}: dipole moment
+\end{itemize}
+
+\end{ELdefinition}
+
+\end{ELjoin}
+
+\begin{ELunit}
+
+\begin{itemize}
+\tightlist
+\item
+  If \ELim{d\vect{p}} is the dipole moment of a small volume \ELim{dv'}, then
+\end{itemize}
+
+\ELdisp{d\vect{p}\ELbr =\vect{P}\,dv'\qquad\ELbr  dV\ELbr =\frac{\vect{P}\cdot\uvec{R}}{4\pi\epsilon_0R^2}\,dv'\qquad\ELbr  V\ELbr =\frac{1}{4\pi\epsilon_0}\int_{V'}\frac{\vect{P}\cdot\uvec{R}}{R^2}\,dv'}
+\ELdisp{V\ELbr =\frac{1}{4\pi\epsilon_0}\oint_{S'}\frac{\vect{P}\cdot\vect{a}'_n}{R}\,ds'+\frac{1}{4\pi\epsilon_0}\int_{V'}\frac{(-\nabla'\cdot\vect{P})}{R}\,dv'}
+
+\begin{itemize}
+\tightlist
+\item
+  The electric potential, and hence the electric field intensity, of a polarized dielectric can be computed from the effect of two charge distributions, a surface one and a volume one, with the following densities, called the \textbf{polarization charge densities} or \textbf{bound charge densities}
+\end{itemize}
+
+\end{ELunit}
+
+\begin{ELimportant}{}
+
+\ELdisp{\rho_{ps}\ELbr =\vect{P}\cdot\uvec{n}\qquad\ELbr \qquad\ELbr  \rho_p\ELbr =-\nabla\cdot\vect{P}}
+\ELdisp{V\ELbr =\frac{1}{4\pi\epsilon_0}\oint_{S'}\frac{\rho_{ps}}{R}\,ds'+\frac{1}{4\pi\epsilon_0}\int_{V'}\frac{\rho_p}{R}\,dv'}
+
+\end{ELimportant}
+
+\begin{ELremark}{}
+
+Since we are dealing with an electrically neutral dielectric body, the total charge of the body after polarization must still be zero
+\ELdisp{\begin{aligned}\text{Total charge}&=\oint_S\rho_{ps}\,ds+\int_V\rho_p\,dv\\&=\oint_S\vect{P}\cdot\uvec{n}\,ds-\int_V\nabla\cdot\vect{P}\,dv=0\end{aligned}}
+
+\end{ELremark}

@@ -1,0 +1,22 @@
+% Ch2_5, slide 9: E_R and V as functions of R (example 2-12); drawn with R_i = 1, R_o = 1.6 and
+% Q/(4 pi eps0) = 1 to show the shapes of the curves
+\begin{tikzpicture}[scale=1]
+  \def\ri{1}\def\ro{1.6}
+  \begin{scope}
+    \draw[ELax] (0,0)--(5.0,0) node[ELlab,anchor=west]{$R$};
+    \draw[ELax] (0,0)--(0,3.0) node[ELlab,anchor=south]{$E_R$};
+    \draw[ELcurve] plot[domain=0.62:\ri,samples=40] (\x,{1/(\x*\x)}) -- (\ri,0) -- (\ro,0) -- (\ro,{1/(\ro*\ro)});
+    \draw[ELcurve] plot[domain=\ro:4.8,samples=50] (\x,{1/(\x*\x)});
+    \node[ELlabs,anchor=north] at (0,0) {$0$}; \node[ELlabs,anchor=north] at (\ri,0) {$R_i$}; \node[ELlabs,anchor=north] at (\ro,0) {$R_o$};
+  \end{scope}
+  \begin{scope}[shift={(6.6,0)}]
+    \draw[ELax] (0,0)--(5.0,0) node[ELlab,anchor=west]{$R$};
+    \draw[ELax] (0,0)--(0,3.0) node[ELlab,anchor=south]{$V$};
+    \pgfmathsetmacro{\vo}{1/\ro}
+    \draw[ELcurve] plot[domain=0.42:\ri,samples=40] (\x,{1/\x+1/\ro-1/\ri}) -- (\ro,\vo);
+    \draw[ELcurve] plot[domain=\ro:4.8,samples=50] (\x,{1/\x});
+    \draw[ELdash] (0,\vo)--(\ri,\vo) (\ri,\vo)--(\ri,0) (\ro,\vo)--(\ro,0);
+    \node[ELlabs,anchor=east] at (0,\vo) {$\dfrac{Q}{4\pi\epsilon_0R_o}$};
+    \node[ELlabs,anchor=north] at (0,0) {$0$}; \node[ELlabs,anchor=north] at (\ri,0) {$R_i$}; \node[ELlabs,anchor=north] at (\ro,0) {$R_o$};
+  \end{scope}
+\end{tikzpicture}

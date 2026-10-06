@@ -7,10 +7,16 @@
 \newenvironment{ELminitoc}{%
   \par\vspace{0.6em}{\ELheadfont\bfseries\color{ELcMuted}\ELlangChapterContents}\par\vspace{0.3em}%
   \small\setlength{\columnsep}{1.4em}\begin{multicols}{2}\raggedcolumns}{\end{multicols}\par}
+% a contents line that wraps: the title runs on under itself, the leaders and the page number
+% stay on the last line (the classic dotted-line technique)
+\newcommand{\ELtocline}[4]{% indent, number box width, number, title + page (via #4)
+  \par\begingroup\noindent\leftskip=#1\relax\hangindent=#2\relax\hangafter=1
+  \rightskip=2em plus 1fil\parfillskip=-\rightskip\relax
+  \hbox to #2{#3\hfil}#4\par\endgroup}
 \newcommand{\ELtocitem}[2]{% section number in the chapter, title
-  \par\noindent\hyperref[ELsec:\ELmodkey:#1]{\hbox to\linewidth{%
-    \hbox to 2.6em{{\ELheadfont\bfseries\color{ELcNumber}\ELnumc{\arabic{ELchap}.#1}}\hfil}%
-    #2\ELtocleader\hspace{0.4em}{\color{ELcMuted}\ELnum{\pageref{ELsec:\ELmodkey:#1}}}}}\par\vspace{0.15em}}
+  \ELtocline{0pt}{2.6em}{\hyperref[ELsec:\ELmodkey:#1]{{\ELheadfont\bfseries\color{ELcNumber}\ELnumc{\arabic{ELchap}.#1}}}}%
+    {#2\nobreak\ELtocleader\nobreak\hbox to 2em{\hfil{\color{ELcMuted}\hyperref[ELsec:\ELmodkey:#1]{\ELnum{\pageref{ELsec:\ELmodkey:#1}}}}}}%
+  \vspace{0.15em}}
 % the book
 \newenvironment{ELbooktoc}{%
   \pdfbookmark[1]{\ELlangContents}{ELtoc}\phantomsection
@@ -23,5 +29,5 @@
     \hbox to 2.2em{\ELheadfont\bfseries\color{ELcNumber}#2\hfil}%
     {\ELheadfont\bfseries\color{ELcHeading}#3}\ELtocleader\hspace{0.4em}{\ELheadfont\bfseries\color{ELcHeading}\ELnum{\pageref{ELch:#1}}}}}\par}
 \newcommand{\ELtocitemk}[4]{% key, k, number, title
-  \par\noindent\hspace{2.2em}\hyperref[ELsec:#1:#2]{\hbox to\dimexpr\linewidth-2.2em\relax{\small
-    \hbox to 2.8em{\color{ELcMuted}\ELnumc{#3}\hfil}#4\ELtocleader\hspace{0.4em}{\color{ELcMuted}\ELnum{\pageref{ELsec:#1:#2}}}}}\par}
+  {\small\ELtocline{2.2em}{2.8em}{\hyperref[ELsec:#1:#2]{\color{ELcMuted}\ELnumc{#3}}}%
+    {#4\nobreak\ELtocleader\nobreak\hbox to 2em{\hfil{\color{ELcMuted}\hyperref[ELsec:#1:#2]{\ELnum{\pageref{ELsec:#1:#2}}}}}}}}

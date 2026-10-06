@@ -120,7 +120,8 @@ def chapter_dirs():
 
 
 def chapter_block(n, title, other_title, secs, inp):
-    return (f"\\ELsetmodule{{{n}}}{{{title}}}{{{other_title}}}\n"
+    # the page break comes first, so that the last page of the previous chapter keeps its own head
+    return (f"\\clearpage\n\\ELsetmodule{{{n}}}{{{title}}}{{{other_title}}}\n"
             f"\\ELchapterpage{{{n}}}{{{n}}}{{{title}}}{{{other_title}}}\n"
             f"{minitoc(secs)}\\ELchapterend\n\\input{{{inp}}}\n")
 

@@ -1,0 +1,20 @@
+% Ch2_1, slide 13: a point charge q at R' (source point) and the field point P at R
+\begin{tikzpicture}[ELoblique,scale=1]
+  \coordinate (O) at (0,0,0); \coordinate (Q) at (0.6,1.3,1.0); \coordinate (P) at (0.3,2.3,3.0);
+  \draw[ELax] (O)--(2.4,0,0) node[ELlab,anchor=north east]{$x$};
+  \draw[ELax] (O)--(0,4.2,0) node[ELlab,anchor=west]{$y$};
+  \draw[ELax] (O)--(0,0,4.0) node[ELlab,anchor=south]{$z$};
+  \draw[ELdash] ($(Q)$) circle[radius=2.25cm];
+  \draw[ELvec] (O)--(Q) node[ELlab,anchor=north west,pos=0.55]{$\vect{R}'$};
+  \draw[ELvec] (O)--(P) node[ELlab,anchor=east,pos=0.62]{$\vect{R}$};
+  \draw[ELvec] (Q)--(P) node[ELlab,anchor=west,pos=0.5]{$\vect{R}-\vect{R}'$};
+  \draw[ELvec2,line width=1.2pt] (Q)--($(Q)!0.25!(P)$) node[ELlabs,anchor=west]{$\uvec{qP}$};
+  \draw[ELvec2,line width=1.2pt] (P)--($(Q)!1.3!(P)$) node[ELlab,anchor=south]{$\vect{E}$};
+  \fill[ELcSource] (Q) circle (1.8pt); \node[ELlab,anchor=north] at (Q) {$q$};
+  \fill[ELink] (P) circle (1.6pt); \node[ELlab,anchor=west] at (P) {$P$};
+  \node[ELlab,anchor=north east] at (O) {$O$};
+  \node[ELtag,anchor=east,align=center] (tR) at (0,-0.4,4.3) {\ELL{position vector of the field point}{بردار مکان نقطه مشاهده}};
+  \draw[ELthin,-{Stealth[length=4pt]}] (tR.south)--($(O)!0.5!(P)$);
+  \node[ELtag,anchor=north,align=center] (tQ) at (0,2.4,-1.0) {\ELL{position vector of the source point}{بردار مکان نقطه منبع}};
+  \draw[ELthin,-{Stealth[length=4pt]}] (tQ.north)--($(O)!0.5!(Q)$);
+\end{tikzpicture}

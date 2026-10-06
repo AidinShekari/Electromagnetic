@@ -1,0 +1,13 @@
+% ============================================================
+%  Chapter 2 (static electric fields): a point charge q, its radial field lines, the spherical
+%  Gaussian surface of radius R and the equipotential spheres (Coulomb's and Gauss's laws as in
+%  the chapter).  Centred on \ELmotifcx, never mirrored.
+% ============================================================
+\begin{scope}[shift={(\ELmotifcx,4.3)},line cap=round]
+  \foreach \r in {0.9,1.6,2.4,3.3}{\draw[ELblueD,opacity=0.4,line width=0.5pt] (0,0) circle (\r);}
+  \foreach \a in {0,15,...,345}{\draw[ELredD,opacity=0.6,line width=0.55pt,-{Stealth[length=4pt]}] (\a:0.35)--(\a:4.6);}
+  \draw[white,opacity=0.85,dashed,line width=0.8pt] (0,0) circle (2.0);
+  \draw[white,line width=0.8pt] (0,0)--(35:2.0);
+  \draw[white,line width=1.4pt,-{Stealth[length=6pt]}] (35:2.0)--(35:2.9);
+  \fill[ELredD] (0,0) circle (0.16);
+\end{scope}

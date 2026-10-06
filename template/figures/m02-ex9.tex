@@ -1,0 +1,19 @@
+% Ch2_4, slide 12: a charged disk of radius b; the point P(0,0,z) on its axis; the element ds'
+\begin{tikzpicture}[ELoblique,scale=1]
+  \def\b{2.3}\def\z{2.8}
+  \coordinate (O) at (0,0,0); \coordinate (P) at (0,0,\z); \coordinate (D) at ({1.4*cos(35)},{1.4*sin(35)},0);
+  \fill[ELfillA] plot[domain=0:360,samples=90] ({\b*cos(\x)},{\b*sin(\x)},0);
+  \draw[ELcField!80,line width=0.6pt] plot[domain=0:360,samples=90] ({\b*cos(\x)},{\b*sin(\x)},0);
+  \draw[ELax] (O)--(3.4,0,0) node[ELlab,anchor=north east]{$x$};
+  \draw[ELax] (O)--(0,3.6,0) node[ELlab,anchor=west]{$y$};
+  \draw[ELax] (O)--(0,0,3.9) node[ELlab,anchor=south]{$z$};
+  \draw[ELthin] (O)--({\b*cos(150)},{\b*sin(150)},0) node[ELlabs,anchor=south,pos=0.55]{$b$};
+  \draw[ELthin] (O)--(D);
+  \draw[ELthin] (0.7,0,0) arc[start angle=0,end angle=35,radius=0.7];
+  \node[ELlabs,anchor=north] at ({0.85*cos(17)},{0.85*sin(17)},0) {$\phi'$};
+  \fill[ELcSource] plot[domain=32:38] ({1.3*cos(\x)},{1.3*sin(\x)},0) -- plot[domain=38:32] ({1.55*cos(\x)},{1.55*sin(\x)},0) -- cycle;
+  \node[ELlabs,anchor=north west] at ({1.5*cos(30)},{1.5*sin(30)},0) {$dr'$};
+  \draw[ELthin] (D)--(P) node[ELlabs,anchor=west,pos=0.5]{$R$};
+  \fill[ELink] (P) circle (1.8pt); \node[ELlab,anchor=west,xshift=2pt] at (P) {$P(0,0,z)$};
+  \node[ELlab,anchor=south east] at (O) {$O$};
+\end{tikzpicture}

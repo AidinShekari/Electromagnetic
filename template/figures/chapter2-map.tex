@@ -1,0 +1,18 @@
+% The map of chapter 2 (Ch2_1 slides 5, 11; Ch2_3 slide 2; Ch2_4 slide 2; Ch2_5 slide 2).
+% \ELmapon = none | coulomb | gauss | potential | media: the item the slide highlights.
+% A text hierarchy, mirrored between the editions.
+\providecommand{\ELmapon}{none}
+\begin{tikzpicture}[x=\ELrsgn cm,y=1cm]
+  \def\ELon#1#2{\ifnum\strcmp{\ELmapon}{#1}=0 #2\fi}
+  \node[ELtreeroot,text width=3.4cm] (root) at (4.6,0) {\ELL{Static electric fields}{میدان‌های الکتریکی ساکن}};
+  \node[ELtreebox,text width=7.2cm,minimum height=0.78cm,\ELon{post}{ELtreeon}] (post) at (-1.6,4.0) {\ELL{Fundamental postulates of electrostatics in free space}{فرضیات اصلی الکتریسیته ساکن در فضای آزاد}};
+  \node[ELtreeboxR,text width=7.2cm,minimum height=0.78cm,\ELon{coulomb}{ELtreeonR}] (coulomb) at (-1.6,3.0) {\ELL{Coulomb's law}{قانون کولمب}};
+  \node[ELtreebox,text width=7.2cm,minimum height=0.78cm,\ELon{gauss}{ELtreeon}] (gauss) at (-1.6,2.0) {\ELL{Gauss's law}{قانون گوس}};
+  \node[ELtreeboxR,text width=7.2cm,minimum height=0.78cm,\ELon{potential}{ELtreeonR}] (potential) at (-1.6,1.0) {\ELL{Electric potential}{پتانسیل الکتریکی}};
+  \node[ELtreebox,text width=7.2cm,minimum height=0.78cm,\ELon{media}{ELtreeon}] (media) at (-1.6,0.0) {\ELL{Behaviour of the static electric field in material media}{رفتار میدان الکتریکی ساکن در محیط‌های مادی}};
+  \node[ELtreeboxR,text width=7.2cm,minimum height=0.78cm,\ELon{flux}{ELtreeonR}] (flux) at (-1.6,-1.0) {\ELL{Electric flux density and dielectric constant}{چگالی شار الکتریکی و ضریب دی الکتریک}};
+  \node[ELtreebox,text width=7.2cm,minimum height=0.78cm,\ELon{boundary}{ELtreeon}] (boundary) at (-1.6,-2.0) {\ELL{Boundary conditions for static electric fields}{شرایط مرزی میدان‌های الکتریکی ساکن}};
+  \node[ELtreeboxR,text width=7.2cm,minimum height=0.78cm,\ELon{cap}{ELtreeonR}] (cap) at (-1.6,-3.0) {\ELL{Capacitance and capacitors}{ظرفیت و خازن‌ها}};
+  \node[ELtreebox,text width=7.2cm,minimum height=0.78cm,\ELon{energy}{ELtreeon}] (energy) at (-1.6,-4.0) {\ELL{Electrostatic energy}{انرژی الکتریکی ساکن}};
+  \foreach \m in {post,coulomb,gauss,potential,media,flux,boundary,cap,energy}{\draw[ELtreelineG] (root.\ELend)--(\m.\ELstart);}
+\end{tikzpicture}

@@ -62,6 +62,7 @@ $$\vect{A}=\uvec{A}A,\qquad \uvec{A}=\frac{\vect{A}}{\abs{\vect{A}}}=\frac{\vect
 - قوانین حاکم بر جمع بردارها
     - **قانون جابجایی**
 $$\vect{A}+\vect{B}=\vect{B}+\vect{A}$$
+
     - **قانون انجمنی**
 $$\vect{A}+(\vect{B}+\vect{C})=(\vect{A}+\vect{B})+\vect{C}$$
 
@@ -87,6 +88,7 @@ $$k\vect{A}=\uvec{A}(kA)$$
 
 ::: {.definition title="تعریف ریاضی"}
 $$\vect{A}\cdot\vect{B}\triangleq AB\cos\theta_{AB}$$
+
 - برابر است با حاصلضرب اندازه یک بردار در تصویر بردار دیگر بر بردار اول.
 :::
 
@@ -100,6 +102,7 @@ $$\vect{A}\cdot\vect{B}\triangleq AB\cos\theta_{AB}$$
     - اگر بردارها عمود بر هم باشند، مساوی صفر است.
     - جابجاپذیر و توزیع‌پذیر است.
 $$\vect{A}\cdot\vect{B}=\vect{B}\cdot\vect{A},\qquad \vect{A}\cdot(\vect{B}+\vect{C})=\vect{A}\cdot\vect{B}+\vect{A}\cdot\vect{C}$$
+
     - ضرب داخلی یک بردار در خودش
 $$\vect{A}\cdot\vect{A}=A^2,\qquad A=+\sqrt{\vect{A}\cdot\vect{A}}$$
 
@@ -153,8 +156,10 @@ $$\vect{A}\times\vect{B}\triangleq\uvec{n}\abs{AB\sin\theta_{AB}}$$
     - نتیجه ضرب خارجی دو بردار یک کمیت برداری است.
     - جابجاپذیر نیست
 $$\vect{B}\times\vect{A}=-\vect{A}\times\vect{B}$$
+
     - توزیع‌پذیر است
 $$\vect{A}\times(\vect{B}+\vect{C})=\vect{A}\times\vect{B}+\vect{A}\times\vect{C}$$
+
     - انجمن‌پذیر نیست
 $$\vect{A}\times(\vect{B}\times\vect{C})\neq(\vect{A}\times\vect{B})\times\vect{C}$$
 
@@ -655,6 +660,7 @@ $$\int_C\vect{F}\cdot\dif\vect{\ell}$$
 - کاربردهای مهم در الکترومغناطیس
     - محاسبه اختلاف پتانسیل الکتریکی بین نقاط $P_1$ و $P_2$:
 $$V=-\int_{P_1}^{P_2}\vect{E}\cdot\dif\vect{\ell}$$
+
     - قانون مداری آمپر:
 $$\mu_0I=-\oint_C\vect{B}\cdot\dif\vect{\ell}$$
 
@@ -691,6 +697,7 @@ $$d\vect{s}=\uvec{n}\,ds$$
 - کاربردهای مهم در الکترومغناطیس
     - قانون گوس در فضای آزاد:
 $$\oiint_S\vect{E}\cdot d\vect{s}=\frac{Q}{\varepsilon_0}$$
+
     - محاسبه جریان الکتریکی:
 $$\iint_S\vect{J}\cdot d\vect{s}=I$$
 
@@ -732,6 +739,7 @@ $$\int_C\vect{F}\times\dif\vect{\ell}$$
 - کاربردهای مهم در الکترومغناطیس
     - قانون بیوساوار:
 $$\vect{B}=\frac{\mu_0I}{4\pi}\oint_C\frac{\dif\vect{\ell}\times(\vect{R}-\vect{R}')}{\abs{\vect{R}-\vect{R}'}^3}$$
+
     - محاسبه نیروی مغناطیسی وارد بر سیم حامل جریان در میدان مغناطیسی:
 $$\vect{F}=I\oint_C\dif\vect{\ell}\times\vect{B}$$
 

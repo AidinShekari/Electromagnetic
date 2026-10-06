@@ -1,0 +1,9 @@
+% Ch2_1, slide 12: a point charge q at the centre of a spherical surface of radius R
+\begin{tikzpicture}[scale=1]
+  \draw[ELdash,line width=0.7pt] (0,0) circle (1.9);
+  \draw[ELdash] (0,0)--(50:1.9) node[ELlab,anchor=south east,pos=0.55]{$R$};
+  \fill[ELcSource] (0,0) circle (2pt); \node[ELlab,anchor=north east] at (0,0) {$q$};
+  \draw[ELvec,line width=1.3pt] (0,0)--(50:0.6) node[ELlabs,anchor=west,xshift=1pt]{$\uvec{R}$};
+  \fill[ELink] (50:1.9) circle (1.5pt);
+  \draw[ELvec2,line width=1.3pt] (50:1.9)--(50:2.6) node[ELlab,anchor=south]{$\vect{E}$};
+\end{tikzpicture}

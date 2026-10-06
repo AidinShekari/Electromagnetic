@@ -1,0 +1,9 @@
+% Ch2_1, slide 14: the forces between two point charges q1 and q2 at a distance R
+\begin{tikzpicture}[scale=1]
+  \draw[ELcField,line width=0.8pt,fill=ELblueT] (0,0) circle (0.42) node[ELlab]{$+q_1$};
+  \draw[ELcField,line width=0.8pt,fill=ELblueT] (3.4,0) circle (0.42) node[ELlab]{$+q_2$};
+  \draw[ELvec2] (-0.42,0)--(-1.9,0); \node[ELlab,anchor=south east] at (-0.2,0.4) {$\vect{F}_{21}=q_1\vect{E}_{21}$};
+  \draw[ELvec2] (3.82,0)--(5.3,0); \node[ELlab,anchor=south west] at (3.6,0.4) {$\vect{F}_{12}=q_2\vect{E}_{12}$};
+  \draw[ELthin,{Stealth[length=5pt]}-{Stealth[length=5pt]}] (0,-0.9)--(3.4,-0.9);
+  \node[ELlab,anchor=north] at (1.7,-0.95) {$R$};
+\end{tikzpicture}

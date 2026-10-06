@@ -1,0 +1,11 @@
+% Ch2_4, slide 14: a spherical volume charge of radius b; a unit charge brought from infinity to R
+\begin{tikzpicture}[scale=1]
+  \def\b{1.3}
+  \fill[ELfillB] (0,0) circle (\b); \draw[ELcField!80,line width=0.6pt] (0,0) circle (\b);
+  \draw[ELvec,line width=1pt] (0,0)--(40:0.95) node[ELlab,anchor=north west,pos=0.6]{$R$};
+  \draw[ELvec,line width=1pt] (0,0)--(-75:\b) node[ELlab,anchor=east,pos=0.6]{$b$};
+  \draw[ELdash,-{Stealth[length=5pt]}] (40:3.2)--(40:1.0);
+  \fill[ELink] (40:3.25) circle (1.6pt);
+  \node[ELlabs,anchor=west] at (40:3.3) {$+1\,\mathrm{C}$};
+  \node[ELlab,anchor=south] at (40:3.4) {$\infty$};
+\end{tikzpicture}

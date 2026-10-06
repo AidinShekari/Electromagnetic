@@ -1,0 +1,20 @@
+% Ch2_2, slide 5: an infinite line charge along z'; the field dE at P of the element dz' at z'
+% and of the symmetric element (red, dashed)
+\begin{tikzpicture}[scale=1]
+  \draw[ELax,line width=1.3pt] (0,-2.6)--(0,3.0) node[ELlab,anchor=south]{$z'$};
+  \coordinate (P) at (2.4,0); \coordinate (D) at (0,2.0);
+  \draw[ELthin] (0,0)--(P) node[ELlab,anchor=north,pos=0.5]{$r$};
+  \node[ELlab,anchor=east] at (0,0) {$O$};
+  \draw[ELcField,line width=1.6pt] (0,1.85)--(0,2.15);
+  \node[ELlab,anchor=east] at (-0.35,2.0) {$dz'$};
+  \draw[ELthin] (-0.6,0)--(-0.2,0) (-0.6,2.0)--(-0.2,2.0);
+  \draw[ELthin,{Stealth[length=4pt]}-{Stealth[length=4pt]}] (-0.45,0)--(-0.45,2.0) node[ELlabs,anchor=east,pos=0.5]{$z'$};
+  \draw[ELthin,-{Stealth[length=5pt]}] (D)--(P);
+  \draw[ELvec,line width=1pt] (P)--++(0.75,-0.62) node[ELlab,anchor=north west]{$d\vect{E}$};
+  \draw[ELvec,line width=0.8pt] (P)--++(0.75,0) node[ELlab,anchor=west]{$dE_r$};
+  \draw[ELvec,line width=0.8pt] (P)--++(0,-0.62) node[ELlab,anchor=north]{$dE_z$};
+  \draw[ELdash] (0.75+2.4,0)--(3.15,-0.62)--(2.4,-0.62);
+  \draw[ELcSource,dashed,line width=0.9pt] (0,-2.0)--(P);
+  \draw[ELvec2,line width=0.9pt] (P)--++(0.75,0.62);
+  \fill[ELink] (P) circle (1.6pt); \node[ELlab,anchor=south] at ($(P)+(-0.15,0.05)$) {$P$};
+\end{tikzpicture}

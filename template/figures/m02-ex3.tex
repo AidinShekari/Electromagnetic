@@ -1,0 +1,17 @@
+% Ch2_2, slide 9: an infinite plane charge rho_s; dE at P at height h from the element ds'
+\begin{tikzpicture}[ELoblique,scale=1]
+  \def\h{2.4}
+  \coordinate (O) at (0,0,0); \coordinate (P) at (0,0,\h); \coordinate (D) at (1.2,1.4,0);
+  \fill[ELfillA,opacity=0.7] (-2.6,-2.6,0)--(3.2,-2.6,0)--(3.2,3.6,0)--(-2.6,3.6,0)--cycle;
+  \draw[ELcField!80,line width=0.6pt] (-2.6,-2.6,0)--(3.2,-2.6,0)--(3.2,3.6,0)--(-2.6,3.6,0)--cycle;
+  \draw[ELax] (O)--(4.2,0,0) node[ELlab,anchor=north east]{$x$};
+  \draw[ELax] (O)--(0,4.6,0) node[ELlab,anchor=west]{$y$};
+  \draw[ELax] (O)--(0,0,4.0) node[ELlab,anchor=south]{$z$};
+  \draw[ELcSource,line width=0.8pt] (1.05,1.25,0)--(1.35,1.25,0)--(1.35,1.6,0)--(1.05,1.6,0)--cycle;
+  \node[ELlabs,anchor=north west] at (1.35,1.5,0) {$ds'$};
+  \draw[ELthin] (O)--(D);
+  \draw[ELthin] (D)--(P);
+  \draw[ELvec,line width=1pt] (P)--($(D)!1.4!(P)$) node[ELlab,anchor=east]{$d\vect{E}$};
+  \draw[ELthin,{Stealth[length=4pt]}-{Stealth[length=4pt]}] (0,-0.5,0)--(0,-0.5,\h) node[ELlabs,anchor=east,pos=0.5]{$h$};
+  \fill[ELink] (P) circle (2pt); \node[ELlab,anchor=west,xshift=2pt] at (P) {$P$};
+\end{tikzpicture}

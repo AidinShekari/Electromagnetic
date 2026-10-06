@@ -19,6 +19,7 @@ deliberate difference from the source (an unambiguous typo, for example) is list
 | Build pipeline (`tools/`) | done |
 | Design specimen, both editions (`specimen/`) | done (QA only, not course content) |
 | Chapter 1, Vector Analysis (slides `Ch1_1` to `Ch1_5`), both editions | done |
+| Chapter 2, Static Electric Fields (slides `Ch2_1` to `Ch2_5`), both editions | done |
 | Later chapters | waiting for the instructor's slides |
 
 ## Complete book / کتاب کامل
@@ -29,6 +30,7 @@ deliberate difference from the source (an unambiguous typo, for example) is list
 | # | Chapter | فصل | PDF |
 |---|---|---|---|
 | 01 | Vector Analysis | آنالیز برداری | [EN](01-vector-analysis/en/module01-vector-analysis.pdf) · [FA](01-vector-analysis/fa/module01-vector-analysis.pdf) |
+| 02 | Static Electric Fields | میدان‌های الکتریکی ساکن | [EN](02-static-electric-fields/en/module02-static-electric-fields.pdf) · [FA](02-static-electric-fields/fa/module02-static-electric-fields.pdf) |
 
 The book contains only the chapters whose slides have been provided ([source/](source/README.md)).
 
@@ -48,6 +50,7 @@ python3 tools/build.py                 # chapters and the complete book, both la
 python3 tools/build.py --chapter 05    # one chapter, both languages
 python3 tools/build.py --only fa       # one language
 python3 tools/build.py --specimen      # the design specimen
+python3 tools/genfigs.py               # regenerate the computed figures
 python3 tools/contact.py book.pdf out/  # contact sheets of a PDF for visual QA (needs Pillow)
 ```
 

@@ -1,0 +1,18 @@
+% Ch2_3, slide 5: a pillbox (box) Gaussian surface through an infinite surface charge rho_s; the top
+% and bottom faces have area A
+\begin{tikzpicture}[ELoblique,scale=1]
+  \fill[ELfillB,opacity=0.8] (-2.8,-3.2,0)--(2.8,-3.2,0)--(2.8,3.4,0)--(-2.8,3.4,0)--cycle;
+  \draw[ELcField!70,line width=0.5pt] (-2.8,-3.2,0)--(2.8,-3.2,0)--(2.8,3.4,0)--(-2.8,3.4,0)--cycle;
+  \def\bx{0.9}\def\by{1.5}\def\bh{0.45}
+  \foreach \z/\c in {-\bh/ELcField!50,\bh/ELcField!90}{
+    \draw[\c,line width=0.7pt,dashed] (-\bx,-\by,\z)--(\bx,-\by,\z)--(\bx,\by,\z)--(-\bx,\by,\z)--cycle;}
+  \fill[white,opacity=0.85] (-\bx,-\by,\bh)--(\bx,-\by,\bh)--(\bx,\by,\bh)--(-\bx,\by,\bh)--cycle;
+  \draw[ELcField,line width=0.7pt] (-\bx,-\by,\bh)--(\bx,-\by,\bh)--(\bx,\by,\bh)--(-\bx,\by,\bh)--cycle;
+  \foreach \x/\y in {\bx/-\by,\bx/\by,-\bx/-\by}{\draw[ELcField,line width=0.7pt,dashed] (\x,\y,-\bh)--(\x,\y,\bh);}
+  \draw[ELvec2] (0.6,2.6,0.1)--(0.6,2.6,0.9) node[ELlabs,anchor=west]{$\uvec{z}$};
+  \draw[ELvec2] (0.6,2.6,-0.1)--(0.6,2.6,-0.9) node[ELlabs,anchor=west]{$-\uvec{z}$};
+  \node[ELtag,anchor=south] at (0,0.6,\bh+0.05) {\ELL{Area $A$}{مساحت $A$}};
+  \node[ELtag,anchor=north west] at (\bx,0.3,-\bh-0.05) {\ELL{Area $A$}{مساحت $A$}};
+  \node[ELtag,anchor=east] at (\bx,-\by-0.9,0.2) {\ELL{Gaussian surface}{سطح گوسی}};
+  \node[ELtag,anchor=north,align=center] at (2.8,-2.6,0) {\ELL{Infinite uniform surface charge, $\rho_s$}{بار سطحی یکنواخت بینهایت، $\rho_s$}};
+\end{tikzpicture}

@@ -1,0 +1,22 @@
+% Ch2_2, slide 2: the field at P of two point charges q1, q2: E = E1 + E2
+\begin{tikzpicture}[ELoblique,scale=1]
+  \coordinate (O) at (0,0,0); \coordinate (Q1) at (0.5,1.2,2.0); \coordinate (Q2) at (0.6,5.0,1.0);
+  \coordinate (P) at (0.4,3.2,2.6);
+  \draw[ELax] (O)--(2.0,0,0) node[ELlab,anchor=north east]{$x$};
+  \draw[ELax] (O)--(0,6.2,0) node[ELlab,anchor=west]{$y$};
+  \draw[ELax] (O)--(0,0,4.2) node[ELlab,anchor=south]{$z$};
+  \draw[ELvec] (O)--(Q1) node[ELlab,anchor=east,pos=0.55]{$\vect{R}'_1$};
+  \draw[ELvec] (O)--(Q2) node[ELlab,anchor=north,pos=0.6]{$\vect{R}'_2$};
+  \draw[ELvec] (O)--(P) node[ELlab,anchor=north west,pos=0.55]{$\vect{R}$};
+  \draw[ELvec] (Q1)--(P) node[ELlabs,anchor=south east,pos=0.45]{$\vect{R}-\vect{R}'_1$};
+  \draw[ELvec] (Q2)--(P) node[ELlabs,anchor=west,pos=0.5,xshift=3pt]{$\vect{R}-\vect{R}'_2$};
+  \coordinate (E1) at ($(P)!-0.55!(Q1)$); \coordinate (E2) at ($(P)!-0.5!(Q2)$);
+  \draw[ELvec2,line width=1.2pt] (P)--(E1) node[ELlab,anchor=west]{$\vect{E}_1$};
+  \draw[ELvec3,line width=1.2pt] (P)--(E2) node[ELlab,anchor=south east]{$\vect{E}_2$};
+  \coordinate (E) at ($(E1)+(E2)-(P)$);
+  \draw[ELdash] (E1)--(E)--(E2);
+  \draw[ELvec,line width=1.3pt,ELnavy] (P)--(E) node[ELlab,anchor=south]{$\vect{E}$};
+  \fill[ELcSource] (Q1) circle (2pt); \node[ELlab,anchor=east] at (Q1) {$q_1$};
+  \fill[ELcThird] (Q2) circle (2pt); \node[ELlab,anchor=west] at (Q2) {$q_2$};
+  \fill[ELink] (P) circle (1.5pt); \node[ELlabs,anchor=north,yshift=-2pt] at (P) {$P$};
+\end{tikzpicture}

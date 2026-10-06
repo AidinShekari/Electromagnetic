@@ -62,6 +62,7 @@ For every vector quantity both the magnitude and the direction must be known. Le
 - Laws governing the addition of vectors
     - **Commutative law**
 $$\vect{A}+\vect{B}=\vect{B}+\vect{A}$$
+
     - **Associative law**
 $$\vect{A}+(\vect{B}+\vect{C})=(\vect{A}+\vect{B})+\vect{C}$$
 
@@ -87,6 +88,7 @@ $$k\vect{A}=\uvec{A}(kA)$$
 
 ::: {.definition title="Mathematical definition"}
 $$\vect{A}\cdot\vect{B}\triangleq AB\cos\theta_{AB}$$
+
 - It equals the product of the magnitude of one vector and the projection of the other vector on the first.
 :::
 
@@ -100,6 +102,7 @@ $$\vect{A}\cdot\vect{B}\triangleq AB\cos\theta_{AB}$$
     - If the vectors are perpendicular to each other, it is zero.
     - It is commutative and distributive.
 $$\vect{A}\cdot\vect{B}=\vect{B}\cdot\vect{A},\qquad \vect{A}\cdot(\vect{B}+\vect{C})=\vect{A}\cdot\vect{B}+\vect{A}\cdot\vect{C}$$
+
     - The dot product of a vector with itself
 $$\vect{A}\cdot\vect{A}=A^2,\qquad A=+\sqrt{\vect{A}\cdot\vect{A}}$$
 
@@ -153,8 +156,10 @@ $$\vect{A}\times\vect{B}\triangleq\uvec{n}\abs{AB\sin\theta_{AB}}$$
     - The cross product of two vectors is a vector quantity.
     - It is not commutative
 $$\vect{B}\times\vect{A}=-\vect{A}\times\vect{B}$$
+
     - It is distributive
 $$\vect{A}\times(\vect{B}+\vect{C})=\vect{A}\times\vect{B}+\vect{A}\times\vect{C}$$
+
     - It is not associative
 $$\vect{A}\times(\vect{B}\times\vect{C})\neq(\vect{A}\times\vect{B})\times\vect{C}$$
 
@@ -655,6 +660,7 @@ $$\int_C\vect{F}\cdot\dif\vect{\ell}$$
 - Important applications in electromagnetics
     - Computing the electric potential difference between the points $P_1$ and $P_2$:
 $$V=-\int_{P_1}^{P_2}\vect{E}\cdot\dif\vect{\ell}$$
+
     - Ampère's circuital law:
 $$\mu_0I=-\oint_C\vect{B}\cdot\dif\vect{\ell}$$
 
@@ -691,6 +697,7 @@ $$d\vect{s}=\uvec{n}\,ds$$
 - Important applications in electromagnetics
     - Gauss's law in free space:
 $$\oiint_S\vect{E}\cdot d\vect{s}=\frac{Q}{\varepsilon_0}$$
+
     - Computing the electric current:
 $$\iint_S\vect{J}\cdot d\vect{s}=I$$
 
@@ -732,6 +739,7 @@ $$\int_C\vect{F}\times\dif\vect{\ell}$$
 - Important applications in electromagnetics
     - Biot–Savart law:
 $$\vect{B}=\frac{\mu_0I}{4\pi}\oint_C\frac{\dif\vect{\ell}\times(\vect{R}-\vect{R}')}{\abs{\vect{R}-\vect{R}'}^3}$$
+
     - Computing the magnetic force on a current-carrying wire in a magnetic field:
 $$\vect{F}=I\oint_C\dif\vect{\ell}\times\vect{B}$$
 
